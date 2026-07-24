@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en
+name: 'DO San Diego'
+primary: true
+siteGroup: e2985ff9-c91b-4e98-8d27-442ab5a496c0 # DO San Diego
+sortOrder: 1

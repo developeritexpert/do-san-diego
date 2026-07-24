@@ -1,0 +1,22 @@
+dateModified: 1784874593
+email:
+  fromEmail: developeritexpert3@gmail.com
+  fromName: 'DO San Diego'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    bdeb5182-f6c3-4403-9323-0ab9afff1795: 'DO San Diego' # DO San Diego
+    e2985ff9-c91b-4e98-8d27-442ab5a496c0: 'DO San Diego' # DO San Diego
+system:
+  edition: solo
+  live: true
+  name: 'DO San Diego'
+  schemaVersion: 5.10.0.0
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
