@@ -27,7 +27,9 @@
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -60,7 +62,12 @@ a {
 }
 
 /* Typography Helpers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.15;
@@ -191,19 +198,22 @@ h1, h2, h3, h4, h5, h6 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(255,90,78,0.2) 60%, rgba(255,90,78,0.85) 100%);
+  /* background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(255,90,78,0.2) 60%, rgba(255,90,78,0.85) 100%); */
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 88.39%);
+
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 780px;
+  max-width: 903px;
   width: 100%;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 6.625rem);
+  font-weight: 700;
+  line-height: 100%;
   margin-bottom: 20px;
   letter-spacing: -1px;
 }
@@ -230,13 +240,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: all var(--transition-fast);
 }
 
-.pill-tag.active, .pill-tag:hover {
+.pill-tag.active,
+.pill-tag:hover {
   background: #fff;
   color: var(--color-text-main);
 }
 
 .hero-search-box {
-  max-width: 540px;
+  max-width: 965px;
   margin: 0 auto;
 }
 
@@ -258,12 +269,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .search-submit-btn {
-  background: var(--color-accent);
+  /* background: var(--color-accent); */
+  background: linear-gradient(180deg, #F26D40 0%, #EE3F66 100%);
   color: #fff;
   border: none;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
+  width: 104px;
+  height: 55px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -321,7 +333,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-md);
 }
 
-.card-media, .card-media-placeholder {
+.card-media,
+.card-media-placeholder {
   height: 220px;
   background: #e2e8f0;
   position: relative;
@@ -363,7 +376,7 @@ h1, h2, h3, h4, h5, h6 {
    Promo Banners ("Discover Hidden Gems", "Savor Every Bite", "Relax & Stay")
    ========================================================================== */
 .promo-banner-section {
-  padding: 60px 0;
+  padding: 156px 0;
 }
 
 .promo-banner-grid {
@@ -373,7 +386,8 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.promo-img, .promo-img-placeholder {
+.promo-img,
+.promo-img-placeholder {
   width: 100%;
   height: 380px;
   border-radius: var(--radius-lg);
@@ -430,7 +444,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
 
-.brand-title-main, .brand-title-sub {
+.brand-title-main,
+.brand-title-sub {
   font-size: clamp(2.6rem, 5.5vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
@@ -579,6 +594,7 @@ h1, h2, h3, h4, h5, h6 {
   .promo-banner-grid {
     grid-template-columns: 1fr;
   }
+
   .site-nav .nav-list {
     display: none;
   }
@@ -828,6 +844,7 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     min-height: 520px;
   }
+
   .savor-floating-card {
     position: relative;
     top: auto;
@@ -1004,9 +1021,11 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .stay-header-col {
     flex: 0 0 auto;
   }
+
   .stay-card-item {
     flex: 0 0 calc((100% - 24px) / 2);
     max-width: calc((100% - 24px) / 2);
@@ -1105,9 +1124,11 @@ h1, h2, h3, h4, h5, h6 {
   .relax-promo-grid {
     grid-template-columns: 1fr;
   }
+
   .relax-image-col {
     height: 340px;
   }
+
   .relax-card-box {
     padding: 36px 28px;
   }
@@ -1117,11 +1138,14 @@ h1, h2, h3, h4, h5, h6 {
    What To Do Section (Category Carousel with Floating Badges)
    ========================================================================== */
 .section-what-to-do {
-  padding: 70px 0 80px;
+  padding: 126px 0 100px;
+  background: url('../images/com-bg.png') no-repeat center;
+  background-size: 100% 100%;
+  overflow: hidden;
 }
 
 .what-todo-container {
-  max-width: 1220px;
+  max-width: 1488px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -1134,9 +1158,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .what-todo-title {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #111111;
+  /* font-size: 2.8rem; */
+  font-size: 70px;
+  font-weight: 700;
+  color: #fff;
   letter-spacing: -0.5px;
   margin: 0;
 }
@@ -1148,15 +1173,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .what-todo-nav-btn {
-  width: 44px;
-  height: 44px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background: #ffffff;
-  color: #111111;
-  font-size: 1.1rem;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 50px;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -1164,19 +1189,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .what-todo-nav-btn:hover {
-  background: #ff5a4e;
-  color: #ffffff;
-  border-color: #ff5a4e;
+  background: #fff;
+  color: #F26D40;
+  /* border-color: #ff5a4e; */
 }
 
 .what-todo-viewport {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow: visible;
 }
 
 .what-todo-track {
   display: flex;
-  gap: 24px;
+  gap: 30px;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -1184,17 +1210,20 @@ h1, h2, h3, h4, h5, h6 {
   flex: 0 0 calc((100% - 48px) / 3);
   max-width: calc((100% - 48px) / 3);
   box-sizing: border-box;
+  height: auto;
 }
 
 .todo-card-inner {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
+  height: 100%;
 }
 
 .todo-media-box {
   position: relative;
   width: 100%;
-  height: 280px;
+  height: 564px;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -1251,10 +1280,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .todo-card-title {
+  font-family: 'Inter';
   margin-top: 14px;
-  font-size: 1.25rem;
+  font-size: 28px;
   font-weight: 700;
-  color: #111111;
+  color: #fff;
   text-align: center;
 }
 

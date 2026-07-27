@@ -60,4 +60,55 @@
             </div>
         </div>
     </div>
+    <div class="promo-banner-section promo-imageLeft">
+    <div class="container promo-banner-grid">
+
+        <div class="promo-image-col">
+
+            {% set img = entry.featuredImage.one() %}
+
+            {% if img %}
+                <img src="{{ img.url }}" alt="{{ entry.heading }}" class="promo-img" loading="lazy">
+            {% else %}
+                <div class="promo-img-placeholder">
+                    <span>Feature Image</span>
+                </div>
+            {% endif %}
+
+        </div>
+
+        <div class="promo-content-col">
+
+            <div class="promo-card-box">
+
+                <h2 class="promo-title">
+
+                    {% set words = entry.heading|split(' ') %}
+
+                    {% for word in words %}
+
+                        {% if word|lower == entry.highlightedWord|lower %}
+                            <span class="text-accent">{{ word }}</span>
+                        {% else %}
+                            {{ word }}
+                        {% endif %}
+
+                    {% endfor %}
+
+                </h2>
+
+                <div class="promo-description">
+                    {{ entry.description }}
+                </div>
+
+                <a href="{{ entry.buttonUrl }}" class="btn btn-pill-accent">
+                    {{ entry.buttonText|upper }}
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
 </section>
