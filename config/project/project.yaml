@@ -1,12 +1,71 @@
-dateModified: 1784874593
+dateModified: 1785151194
 email:
   fromEmail: developeritexpert3@gmail.com
   fromName: 'DO San Diego'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  general:
+    hasUrls: true
+    name: General
+    settings:
+      path: '@webroot/assets/general'
+    type: craft\fs\Local
+    url: '@web/assets/general'
+  localAssets:
+    hasUrls: true
+    name: 'Local Assets'
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: '@webroot/uploads'
 meta:
   __names__:
+    1cca96bd-0aa8-4428-aa99-f3a69578db17: Homepage # Homepage
+    1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1: 'Featured Image' # Featured Image
+    2b71ef2c-18fb-460c-94a6-0027449ecead: 'Public Schema' # Public Schema
+    2c036b94-c871-48cb-8a3a-42b51a0e8e84: 'Hero Placeholder' # Hero Placeholder
+    4d0c33eb-8b2b-431d-a545-39f445f43fec: 'Experience Categories' # Experience Categories
+    4d8510df-d5ce-4c46-82b2-6d53e9209cbd: 'Hero Heading' # Hero Heading
+    005e810e-1762-4053-8112-618d4f4208dc: Default # Default
+    018e1675-59ab-45eb-a9d8-ed8b1ce634a3: 'Hero Background' # Hero Background
+    34ed1074-e546-45b6-a50e-31783448b609: 'Button URL' # Button URL
+    99e3197b-2bfc-4057-a539-f641a3fa6963: 'Button Text' # Button Text
+    433a5936-a459-473a-8b79-567fef12743e: Experiences # Experiences
+    561cad93-5a12-4113-b3c1-eef1c1ae847e: Stays # Stays
+    626cb2c7-4d93-4f17-91b9-5f13876d48d0: 'Discover Hidden Gems' # Discover Hidden Gems
+    4543d73c-a2da-4c6a-ae7f-14e0b64f082f: DiscoverSection # DiscoverSection
+    7403d06e-61e5-4fc2-8aac-d828dbcc29c9: 'Rich Text' # Rich Text
+    72635ced-9e85-458d-b31a-6fe7a6df534c: 'Layout Orientation' # Layout Orientation
+    6878376d-0aa9-490a-ad5b-3d2a280d9b60: Heading # Heading
+    55848837-a359-45cc-be9a-178c1234fd81: Homepage # Homepage
+    67153374-b2ae-45e6-8d80-b4fdca0858f8: 'Ribbon Text' # Ribbon Text
+    81384375-720b-45af-86cc-63a3d2ac278c: Restaurant # Restaurant
+    b6cd0183-78d4-4ebb-beb7-cd855a4227f3: Stay # Stay
+    b3567cde-9269-4b7e-ab6d-a40caf16c612: Assets # Assets
     bdeb5182-f6c3-4403-9323-0ab9afff1795: 'DO San Diego' # DO San Diego
+    bf919555-bcac-4945-aff6-3cf89c100e09: Experience # Experience
+    c6387eb8-ef0e-4fab-b83b-646e72097105: 'Highlighted Word' # Highlighted Word
+    ca4e9259-9ce6-46b4-81ff-6734c662e6c0: LinkTo # LinkTo
+    ced559b8-20bc-41a9-af29-b7618d6ace8f: 'Plain Text' # Plain Text
+    d4c437bb-447a-4de3-a19d-5237eb79e878: 'Brand Banner' # Brand Banner
+    d15a66ff-44ab-42f1-a205-e667bfe87f06: 'Badge Label' # Badge Label
+    d32f2708-7d30-4a14-a8bc-5514eeba7dac: Restaurants # Restaurants
+    d262dbbc-2012-45ed-9636-a47a474748c7: Description # Description
+    de3f3260-4f63-49be-bd4c-9d3b64bffff1: 'Curated Grid' # Curated Grid
+    e80a6464-538c-477f-bd58-598fd670fd3e: 'Bottom CTA' # Bottom CTA
     e2985ff9-c91b-4e98-8d27-442ab5a496c0: 'DO San Diego' # DO San Diego
+    f0d07ec7-5c61-434e-b6fd-facf46392765: 'Promo Block' # Promo Block
+    f4ee4d97-2af8-460e-937e-154e3d853ae5: 'Hero Subheading' # Hero Subheading
+    f46b0045-f67a-4833-b579-44bc6c474e42: General # General
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.6.0.0
+  cp-nav:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.11
 system:
   edition: solo
   live: true

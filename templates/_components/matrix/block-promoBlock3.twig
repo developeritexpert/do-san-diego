@@ -1,0 +1,50 @@
+{# Relax & Stay Promo Banner Block 3 #}
+{% set headingText = block.heading ?? 'Relax & Stay' %}
+{% set highlightText = block.highlightedWord ?? 'Stay' %}
+{% set descText = block.description ?? 'Discover charming bed & breakfasts that combine comfort, hospitality, and local character. Whether you are planning a romantic getaway, a family vacation, or a peaceful weekend escape, find welcoming accommodations that make you feel right at home.' %}
+{% set btnLabel = block.buttonText ?? 'Find Bed & Breakfasts' %}
+{% set btnUrl = (block.buttonUrl is defined and block.buttonUrl.value is defined and block.buttonUrl.value) ? block.buttonUrl.value : '#' %}
+
+{% set imgUrl = null %}
+{% if block.featuredImage is defined and block.featuredImage is not null %}
+    {% set imgObj = block.featuredImage.one() %}
+    {% if imgObj %}{% set imgUrl = imgObj.getUrl() %}{% endif %}
+{% endif %}
+{% if not imgUrl %}
+    {% set imgUrl = 'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80' %}
+{% endif %}
+
+<section class="relax-promo-section">
+    <div class="relax-container">
+        <div class="relax-promo-grid">
+            <!-- Left Column: Hotel Bedroom Image Card -->
+            <div class="relax-image-col">
+                <img src="{{ imgUrl }}" alt="{{ headingText }}" class="relax-img" loading="lazy" />
+            </div>
+
+            <!-- Right Column: Dark Slate Content Card -->
+            <div class="relax-content-col">
+                <div class="relax-card-box">
+                    <h2 class="relax-title">
+                        {% set words = headingText|split(' ') %}
+                        {% for word in words %}
+                            {% if word|lower == highlightText|lower %}
+                                <span class="text-orange">{{ word }}</span>
+                            {% else %}
+                                {{ word }}
+                            {% endif %}
+                        {% endfor %}
+                    </h2>
+                    
+                    <div class="relax-description">
+                        {{ descText|raw }}
+                    </div>
+
+                    <a href="{{ btnUrl }}" class="relax-btn-pill">
+                        {{ btnLabel }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

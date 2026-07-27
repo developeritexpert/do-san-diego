@@ -1,0 +1,14 @@
+{% extends "_layouts/main.twig" %}
+
+{% set title = "Server Error" %}
+
+{% block content %}
+<section class="error-page section-padding">
+    <div class="container text-center">
+        <h1>500</h1>
+        <h2>Something Went Wrong</h2>
+        <p>We encountered an unexpected server error. Please try again later.</p>
+        <a href="{{ siteUrl }}" class="btn btn-primary">Return Home</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "_layouts/main.twig" %}
+
+{% set title = entry.title %}
+
+{% block content %}
+<article class="entry-detail container">
+    <header class="entry-header">
+        <h1>{{ entry.title }}</h1>
+        {% if entry.locationName is defined %}
+            <p class="location">{{ entry.locationName }}</p>
+        {% endif %}
+    </header>
+
+    {% if entry.featuredImage is defined and entry.featuredImage.one() %}
+        <div class="entry-hero-image">
+            <img src="{{ entry.featuredImage.one().getUrl() }}" alt="{{ entry.title }}" />
+        </div>
+    {% endif %}
+
+    <div class="entry-body">
+        {% if entry.bodyBlocks is defined %}
+            {% for block in entry.bodyBlocks.all() %}
+                {% include "_components/matrix/block-" ~ block.type.handle ~ ".twig" ignore missing %}
+            {% endfor %}
+        {% else %}
+            {{ entry.body ?? '' }}
+        {% endif %}
+    </div>
+</article>
+{% endblock %}

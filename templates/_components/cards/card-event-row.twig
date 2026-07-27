@@ -1,0 +1,16 @@
+{# Card Event Row Component #}
+{% set item = entry ?? cardItem ?? null %}
+{% if item %}
+<article class="card-event-row">
+    <div class="event-date-box">
+        <span class="event-month">{{ item.eventDate is defined ? item.eventDate|date('M') : 'JAN' }}</span>
+        <span class="event-day">{{ item.eventDate is defined ? item.eventDate|date('d') : '01' }}</span>
+    </div>
+    <div class="event-info">
+        <h4 class="event-title"><a href="{{ item.url }}">{{ item.title }}</a></h4>
+        {% if item.venue is defined %}
+            <p class="event-venue">{{ item.venue }}</p>
+        {% endif %}
+    </div>
+</article>
+{% endif %}

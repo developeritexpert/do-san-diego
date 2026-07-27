@@ -1,0 +1,9 @@
+{# Image Macro #}
+{% macro responsiveImage(image, altText, class) %}
+    {% if image %}
+        <img src="{{ image.getUrl() }}"
+             alt="{{ altText ?? image.title }}"
+             class="{{ class ?? '' }}"
+             loading="lazy" />
+    {% endif %}
+{% endmacro %}

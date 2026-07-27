@@ -1,0 +1,16 @@
+currLabel: Section
+customIcon: null
+enabled: true
+handle: section
+icon: null
+layout: 005e810e-1762-4053-8112-618d4f4208dc # Default
+level: 1
+newWindow: false
+parent: null
+prevLabel: Section
+prevLevel: null
+prevParent: null
+prevUrl: 'http://localhost:8080/admin/settings/sections'
+sortOrder: 4
+type: manual
+url: 'http://localhost:8080/admin/settings/sections'

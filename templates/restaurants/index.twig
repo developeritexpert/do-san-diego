@@ -1,0 +1,21 @@
+{% extends "_layouts/main.twig" %}
+
+{% set title = "Where to Eat in San Diego" %}
+
+{% block content %}
+<div class="page-header container">
+    <h1>Where to Eat</h1>
+    <p>Discover the best dining, cafes, and culinary hotspots.</p>
+</div>
+
+<section class="restaurants-grid container">
+    <div class="cards-grid">
+        {% set restaurants = craft.entries().section('restaurants').all() %}
+        {% for item in restaurants %}
+            {% include "_components/cards/card-restaurant.twig" with { cardItem: item } %}
+        {% else %}
+            <p>No restaurants listed yet.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

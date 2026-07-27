@@ -1,0 +1,1266 @@
+/* ==========================================================================
+   DO SAN DIEGO - Main CSS Architecture & Design System
+   ========================================================================== */
+
+:root {
+  --color-primary: #FF5A4E;
+  --color-primary-gradient: linear-gradient(135deg, #FF6B4A 0%, #FF3D57 100%);
+  --color-accent: #FF5E36;
+  --color-accent-hover: #E04823;
+  --color-bg-dark: #12161A;
+  --color-bg-slate: #2B343D;
+  --color-bg-card-dark: #1C232A;
+  --color-bg-light: #FBF8F5;
+  --color-text-main: #1F2429;
+  --color-text-muted: #6C757D;
+  --color-text-light: #FFFFFF;
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 9999px;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.25);
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-gradient {
+  background: var(--color-primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn-primary {
+  background: var(--color-primary-gradient);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 90, 78, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 90, 78, 0.45);
+}
+
+.btn-pill-accent {
+  background-color: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  padding: 10px 26px;
+  box-shadow: 0 4px 15px rgba(255, 94, 54, 0.3);
+}
+
+.btn-pill-accent:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+.btn-cta-pill {
+  background: var(--color-primary-gradient);
+  color: #fff;
+  padding: 14px 36px;
+  font-size: 1rem;
+  box-shadow: 0 10px 30px rgba(255, 90, 78, 0.4);
+}
+
+.btn-cta-pill:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 24px 0;
+}
+
+.header-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo .logo-text {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+
+.site-nav .nav-list {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+}
+
+.site-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.site-nav .nav-link:hover {
+  color: #fff;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 85vh;
+  background: #1e1518 url('/assets/images/hero-bg.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 120px 24px 80px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(255,90,78,0.2) 60%, rgba(255,90,78,0.85) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.pill-tag {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.pill-tag.active, .pill-tag:hover {
+  background: #fff;
+  color: var(--color-text-main);
+}
+
+.hero-search-box {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.search-form {
+  display: flex;
+  background: #fff;
+  border-radius: var(--radius-pill);
+  padding: 6px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  border-radius: var(--radius-pill);
+}
+
+.search-submit-btn {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.search-submit-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+/* ==========================================================================
+   Section Curated Grid & Cards
+   ========================================================================== */
+.section-curated-grid {
+  padding: 80px 24px 40px;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--color-text-main);
+}
+
+.view-all-link {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--color-accent);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-media, .card-media-placeholder {
+  height: 220px;
+  background: #e2e8f0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-badge {
+  display: inline-block;
+  background: rgba(255, 94, 54, 0.1);
+  color: var(--color-accent);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   Promo Banners ("Discover Hidden Gems", "Savor Every Bite", "Relax & Stay")
+   ========================================================================== */
+.promo-banner-section {
+  padding: 60px 0;
+}
+
+.promo-banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.promo-img, .promo-img-placeholder {
+  width: 100%;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+.promo-img-placeholder {
+  background: linear-gradient(135deg, #FF6B4A, #FF3D57);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.promo-card-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.promo-title {
+  font-size: 2.25rem;
+  margin-bottom: 16px;
+}
+
+.promo-description {
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   Brand Banner ("Discover more. Experience more.")
+   ========================================================================== */
+/* ==========================================================================
+   Brand Banner ("Discover more. Experience more.")
+   ========================================================================== */
+.brand-banner-section {
+  padding: 90px 24px;
+  text-align: center;
+  background: #fdfbf7;
+  overflow: hidden;
+}
+
+.brand-banner-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.brand-title-wrap {
+  margin-bottom: 20px;
+}
+
+.brand-title-main, .brand-title-sub {
+  font-size: clamp(2.6rem, 5.5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111;
+  letter-spacing: -1px;
+}
+
+.text-orange-gradient {
+  background: linear-gradient(90deg, #ff5a4e 0%, #ee4347 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Relative container holding logo and curved ribbon behind/around it */
+.brand-logo-and-ribbon-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  min-height: 380px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.do-san-diego-logo-large {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-do-line {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 6.5rem;
+  font-weight: 900;
+  color: #ff5a4e;
+  line-height: 0.9;
+  letter-spacing: -3px;
+}
+
+.d-with-plane {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.airplane-inside {
+  position: absolute;
+  left: 22%;
+  top: 38%;
+  color: #ffffff;
+  transform: rotate(45deg);
+}
+
+.logo-subtitle {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #556270;
+  letter-spacing: 6px;
+  margin-top: 4px;
+}
+
+/* Curved SVG Ribbon wrapper overlaid behind logo */
+.curved-ribbon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.curved-ribbon-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.ribbon-path-text {
+  font-family: var(--font-main, sans-serif);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Bottom CTA Section ("Find Your Perfect Place")
+   ========================================================================== */
+.bottom-cta-section {
+  background: var(--color-bg-slate);
+  color: #fff;
+  padding: 100px 24px;
+  text-align: center;
+}
+
+.cta-heading {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+.cta-subheading {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto 36px;
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   Site Footer
+   ========================================================================== */
+.site-footer {
+  background: var(--color-bg-dark);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 60px 0 30px;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-brand h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  text-align: center;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .promo-banner-grid {
+    grid-template-columns: 1fr;
+  }
+  .site-nav .nav-list {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Where to Eat - Interactive Carousel Styling
+   ========================================================================== */
+.section-where-to-eat {
+  padding: 80px 0 60px;
+  background: #fdfbf7;
+  overflow: hidden;
+}
+
+.eat-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.eat-carousel-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.eat-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.eat-card-item {
+  flex: 0 0 calc((100% - 40px) / 3);
+  max-width: calc((100% - 40px) / 3);
+  box-sizing: border-box;
+  opacity: 0.7;
+  transform: scale(0.92);
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease;
+}
+
+.eat-card-item.active-slide {
+  opacity: 1;
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+.eat-card-inner {
+  display: block;
+  text-decoration: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.eat-image-box {
+  width: 100%;
+  height: 230px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border: 3px solid transparent;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.eat-card-item.active-slide .eat-image-box {
+  border-color: #0076ff;
+  box-shadow: 0 14px 35px rgba(0, 118, 255, 0.28);
+}
+
+.eat-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.eat-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #334155;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Active Center Title Display */
+.eat-active-caption-wrap {
+  text-align: center;
+  margin-top: 18px;
+  height: 28px;
+}
+
+.eat-active-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0076ff;
+  letter-spacing: 0.3px;
+  transition: opacity 0.3s ease;
+}
+
+/* Slider Progress Bar Indicator */
+.eat-slider-indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.eat-indicator-bar {
+  width: 220px;
+  height: 4px;
+  background: #ffe4de;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.eat-indicator-thumb {
+  width: 70px;
+  height: 100%;
+  background: #ff5a4e;
+  border-radius: 4px;
+  position: absolute;
+  left: 0%;
+  transition: left 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (max-width: 768px) {
+  .eat-card-item {
+    flex: 0 0 calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
+  }
+}
+
+/* ==========================================================================
+   Savor Every Bite Promo Block (Exact Match to Figma Reference)
+   ========================================================================== */
+.savor-promo-section {
+  padding: 60px 0 100px;
+  background: #fdfbf7;
+}
+
+.savor-outer-wrap {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.savor-feature-frame {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 3px solid #0076ff;
+  box-shadow: 0 16px 40px rgba(0, 118, 255, 0.15);
+  z-index: 2;
+}
+
+.savor-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark Floating Glass Card on Right Side */
+.savor-floating-card {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  width: 440px;
+  max-width: calc(100% - 60px);
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.92) 0%, rgba(10, 10, 10, 0.88) 100%);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  padding: 44px 38px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  z-index: 3;
+}
+
+.savor-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.savor-title .text-orange {
+  color: #ff5a4e;
+}
+
+.savor-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 28px;
+}
+
+.savor-btn-pill {
+  display: inline-block;
+  align-self: flex-start;
+  background: linear-gradient(90deg, #ff5a4e 0%, #ee4347 100%);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 90, 78, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.savor-btn-pill:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 26px rgba(255, 90, 78, 0.55);
+}
+
+/* Decorative Coral/Orange Gradient Circle in bottom right */
+.savor-decorative-circle {
+  position: absolute;
+  right: -30px;
+  bottom: -60px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff5a4e 0%, #ee4347 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .savor-feature-frame {
+    height: auto;
+    min-height: 520px;
+  }
+  .savor-floating-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px;
+  }
+}
+
+/* ==========================================================================
+   Where to Stay Section Styling (Slate Blue Background + Cards Grid)
+   ========================================================================== */
+.section-where-to-stay {
+  background: #6e7c91;
+  padding: 90px 0 100px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.stay-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Left Header Column */
+.stay-header-col {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stay-section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: 28px;
+  letter-spacing: -1px;
+}
+
+.stay-section-title .text-orange {
+  color: #ff5a4e;
+}
+
+.stay-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stay-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.stay-nav-btn:hover {
+  background: #ffffff;
+  color: #6e7c91;
+  border-color: #ffffff;
+}
+
+/* Right Cards Viewport Column */
+.stay-carousel-viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.stay-carousel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.stay-card-item {
+  flex: 0 0 calc((100% - 48px) / 3);
+  max-width: calc((100% - 48px) / 3);
+  box-sizing: border-box;
+}
+
+.stay-card-inner {
+  display: block;
+  text-decoration: none;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stay-card-inner:hover {
+  transform: translateY(-4px);
+}
+
+.stay-card-media {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.stay-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.stay-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #4a5568;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* Dark Bottom Gradient Overlay inside Cards */
+.stay-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.82) 100%);
+}
+
+.stay-card-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.stay-card-title {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stay-card-arrow {
+  color: #ff5a4e;
+  font-size: 1.3rem;
+  transition: transform 0.25s ease;
+}
+
+.stay-card-inner:hover .stay-card-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 992px) {
+  .stay-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .stay-header-col {
+    flex: 0 0 auto;
+  }
+  .stay-card-item {
+    flex: 0 0 calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+  }
+}
+
+/* ==========================================================================
+   Relax & Stay Promo Block (Side-by-side 2-Column Card Grid)
+   ========================================================================== */
+.relax-promo-section {
+  padding: 60px 0 100px;
+}
+
+.relax-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.relax-promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* Left Image Column */
+.relax-image-col {
+  width: 100%;
+  height: 480px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.relax-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right Content Column */
+.relax-card-box {
+  background: #556272;
+  border-radius: 24px;
+  padding: 56px 48px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.relax-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.05;
+  color: #ffffff;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.relax-title .text-orange {
+  color: #ff5a4e;
+}
+
+.relax-description {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+
+.relax-btn-pill {
+  display: inline-block;
+  align-self: flex-start;
+  background: linear-gradient(90deg, #ff5a4e 0%, #ee4347 100%);
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 90, 78, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.relax-btn-pill:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 26px rgba(255, 90, 78, 0.5);
+}
+
+@media (max-width: 900px) {
+  .relax-promo-grid {
+    grid-template-columns: 1fr;
+  }
+  .relax-image-col {
+    height: 340px;
+  }
+  .relax-card-box {
+    padding: 36px 28px;
+  }
+}
+
+/* ==========================================================================
+   What To Do Section (Category Carousel with Floating Badges)
+   ========================================================================== */
+.section-what-to-do {
+  padding: 70px 0 80px;
+}
+
+.what-todo-container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.what-todo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.what-todo-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.what-todo-nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.what-todo-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  color: #111111;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+.what-todo-nav-btn:hover {
+  background: #ff5a4e;
+  color: #ffffff;
+  border-color: #ff5a4e;
+}
+
+.what-todo-viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.what-todo-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.todo-card-item {
+  flex: 0 0 calc((100% - 48px) / 3);
+  max-width: calc((100% - 48px) / 3);
+  box-sizing: border-box;
+}
+
+.todo-card-inner {
+  display: block;
+  text-decoration: none;
+}
+
+.todo-media-box {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.todo-media-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.todo-card-inner:hover .todo-media-box img {
+  transform: scale(1.04);
+}
+
+.todo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #4a5568;
+}
+
+/* Floating Pill Badge at Top-Right Corner of Card Image */
+.todo-floating-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111111;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff5a4e;
+  display: inline-block;
+}
+
+.todo-card-title {
+  margin-top: 14px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111111;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .todo-card-item {
+    flex: 0 0 calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+  }
+}

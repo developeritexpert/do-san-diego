@@ -1,0 +1,31 @@
+{% set item = entry ?? cardItem ?? null %}
+{% if item %}
+<article class="card card-restaurant">
+    {% set img = null %}
+    {% set itemFieldLayout = item.getFieldLayout() %}
+    {% if itemFieldLayout and itemFieldLayout.getFieldByHandle('featuredImage') and item.getFieldValue('featuredImage') %}
+        {% set img = item.getFieldValue('featuredImage').one() %}
+    {% elseif itemFieldLayout and itemFieldLayout.getFieldByHandle('assets') and item.getFieldValue('assets') %}
+        {% set img = item.getFieldValue('assets').one() %}
+    {% endif %}
+    {% if img %}
+        <div class="card-media">
+            <img src="{{ img.getUrl() }}" alt="{{ item.title }}" loading="lazy" />
+        </div>
+    {% endif %}
+    <div class="card-body">
+        <div class="card-meta">
+            {% set cuisineRel = (itemFieldLayout and itemFieldLayout.getFieldByHandle('cuisineType')) ? item.getFieldValue('cuisineType') : null %}
+            {% set cuisine = (cuisineRel and cuisineRel.one()) ? cuisineRel.one().title : 'Dining' %}
+            <span class="cuisine">{{ cuisine }}</span>
+            {% set priceRange = (itemFieldLayout and itemFieldLayout.getFieldByHandle('priceRange')) ? item.getFieldValue('priceRange') : null %}
+            {% if priceRange %}<span class="price">{{ priceRange }}</span>{% endif %}
+        </div>
+        <h3 class="card-title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+        {% set hood = (itemFieldLayout and itemFieldLayout.getFieldByHandle('neighborhood')) ? item.getFieldValue('neighborhood') : null %}
+        {% if hood %}
+            <p class="card-location">{{ hood }}</p>
+        {% endif %}
+    </div>
+</article>
+{% endif %}

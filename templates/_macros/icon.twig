@@ -1,0 +1,7 @@
+{# SVG Icon Render Helper #}
+{% macro svg(name, class) %}
+    <span class="icon icon-{{ name }} {{ class ?? '' }}" aria-hidden="true">
+        {# Insert inline SVG or sprite reference #}
+        <svg class="icon-svg"><use xlink:href="/assets/icons/sprite.svg#{{ name }}"></use></svg>
+    </span>
+{% endmacro %}

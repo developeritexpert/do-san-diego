@@ -1,0 +1,102 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  bd1d9304-412b-450d-87ea-c9170c91cb7f:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-07-27T06:18:23+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 932a38dc-a760-4720-bdde-8ad1f361afdd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-27T06:20:02+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1 # Featured Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6436a36f-24ff-4e86-a1be-53d5399166a6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-27T06:20:02+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d262dbbc-2012-45ed-9636-a47a474748c7 # Description
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd6bb67d-1f99-4111-83fb-c9146fea18f9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-27T08:50:24+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ca4e9259-9ce6-46b4-81ff-6734c662e6c0 # LinkTo
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 03da9895-5733-4ff0-a060-b3716bbbab4f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0e5a80bd-b6b0-46d0-9b0d-3bbe4efb586a
+        userCondition: null
+    thumbFieldKey: null
+handle: restaurant
+hasTitleField: true
+icon: null
+name: Restaurant
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

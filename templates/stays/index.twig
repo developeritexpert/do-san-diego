@@ -1,0 +1,21 @@
+{% extends "_layouts/main.twig" %}
+
+{% set title = "Places to Stay in San Diego" %}
+
+{% block content %}
+<div class="page-header container">
+    <h1>Places to Stay</h1>
+    <p>Hotels, luxury resorts, boutique stays, and beachside rentals.</p>
+</div>
+
+<section class="stays-grid container">
+    <div class="cards-grid">
+        {% set stays = craft.entries().section('stays').all() %}
+        {% for item in stays %}
+            {% include "_components/cards/card-stay.twig" with { cardItem: item } %}
+        {% else %}
+            <p>No accommodations listed yet.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "_layouts/main.twig" %}
+
+{% set title = "Destinations & Listings" %}
+
+{% block content %}
+<div class="page-header container">
+    <h1>Find Your Perfect Destination</h1>
+    <p>Filter by area, category, or experience type.</p>
+</div>
+
+<section class="listings-grid container">
+    <div class="cards-grid">
+        {% set listings = craft.entries().section('listings').all() %}
+        {% for item in listings %}
+            {% include "_components/cards/card-listing.twig" with { cardItem: item } %}
+        {% else %}
+            <p>No listings found.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

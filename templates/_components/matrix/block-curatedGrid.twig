@@ -1,0 +1,63 @@
+{# What To Do Categories Carousel matching Figma reference image #}
+{% set categories = craft.categories()
+    .group('experienceCategories')
+    .all() %}
+
+<section class="section-what-to-do">
+    <div class="what-todo-container">
+        <!-- Section Header Row: Title on Left, Prev/Next Buttons on Right -->
+        <div class="what-todo-header">
+            <h2 class="what-todo-title">{{ block.heading ?? 'What To Do' }}</h2>
+            <div class="what-todo-nav-buttons">
+                <button class="what-todo-nav-btn" id="todoPrevBtn" aria-label="Previous Category">&larr;</button>
+                <button class="what-todo-nav-btn" id="todoNextBtn" aria-label="Next Category">&rarr;</button>
+            </div>
+        </div>
+
+        <!-- Carousel Track Viewport -->
+        <div class="what-todo-viewport" id="todoCarouselViewport">
+            <div class="what-todo-track" id="todoCarouselTrack">
+                {% set items = categories|length ? categories : [
+                    { title: 'Art & Culture', badgeLabel: 'FREE', imgUrl: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80', url: '#' },
+                    { title: 'Outdoors', badgeLabel: 'BUDGET', imgUrl: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80', url: '#' },
+                    { title: 'Attractions', badgeLabel: 'FREE', imgUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80', url: '#' },
+                    { title: 'History', badgeLabel: 'BUDGET', imgUrl: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80', url: '#' }
+                ] %}
+
+                {% for item in items %}
+                    {% set imgUrl = null %}
+                    {% set itemTitle = item.title ?? 'Category' %}
+                    {% set itemBadge = (item.badgeLabel is defined and item.badgeLabel) ? item.badgeLabel : (loop.index is odd ? 'FREE' : 'BUDGET') %}
+                    {% set itemLink = item.url ?? '#' %}
+
+                    {% if item.assets is defined and item.assets.one() %}
+                        {% set imgUrl = item.assets.one().getUrl() %}
+                    {% elseif item.imgUrl is defined %}
+                        {% set imgUrl = item.imgUrl %}
+                    {% endif %}
+
+                    <div class="todo-card-item">
+                        <a href="{{ itemLink }}" class="todo-card-inner">
+                            <div class="todo-media-box">
+                                {% if imgUrl %}
+                                    <img src="{{ imgUrl }}" alt="{{ itemTitle }}" loading="lazy" />
+                                {% else %}
+                                    <div class="todo-placeholder"><span>{{ itemTitle }}</span></div>
+                                {% endif %}
+                                
+                                <!-- Floating Pill Badge at Top-Right of Card Image -->
+                                <span class="todo-floating-badge">
+                                    <span class="badge-dot"></span>
+                                    {{ itemBadge }}
+                                </span>
+                            </div>
+
+                            <!-- Title Text below Card Image -->
+                            <h3 class="todo-card-title">{{ itemTitle }}</h3>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
