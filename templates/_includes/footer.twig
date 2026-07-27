@@ -1,14 +1,49 @@
+{% set logo = footer.footerLogo.one() %}
+
 <footer class="site-footer">
     <div class="footer-container">
+
         <div class="footer-brand">
-            <h3>DO SAN DIEGO</h3>
-            <p>Your ultimate guide to discovering San Diego’s best experiences, dining, stays, and events.</p>
+
+            {% if logo %}
+                <img src="{{ logo.url }}" alt="{{ siteName }}" class="footer-logo">
+            {% endif %}
+
+            <p>{{ footer.address }}</p>
+
+            <p>{{ footer.phoneNumber }}</p>
+
         </div>
+
         <div class="footer-links">
-            {% include '_includes/nav.twig' %}
+
+            {% for item in footer.footerNavigation %}
+                <a href="#">
+                    {{ item.title }}
+                </a>
+            {% endfor %}
+
         </div>
+
+        <div class="footer-social">
+
+            {% for social in footer.socialLinks %}
+                <a href="#">
+                    {{ social.title }}
+                </a>
+            {% endfor %}
+
+        </div>
+
         <div class="footer-bottom">
-            <p>&copy; {{ "now"|date("Y") }} {{ siteName }}. All rights reserved.</p>
+
+            <p>{{ footer.copyrightText }}</p>
+
+            <a href="{{ footer.areaListingButtonUrl.value }}">
+                {{ footer.areaListingButtonText }}
+            </a>
+
         </div>
+
     </div>
 </footer>

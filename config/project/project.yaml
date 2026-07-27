@@ -1,4 +1,4 @@
-dateModified: 1785151194
+dateModified: 1785156035
 email:
   fromEmail: developeritexpert3@gmail.com
   fromName: 'DO San Diego'
@@ -20,22 +20,34 @@ fs:
     url: '@webroot/uploads'
 meta:
   __names__:
+    0cccb0e7-ff55-41ac-b3c7-92af3da2c530: Label # Label
     1cca96bd-0aa8-4428-aa99-f3a69578db17: Homepage # Homepage
     1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1: 'Featured Image' # Featured Image
+    1e728745-97d0-4855-a067-8c8d1eb5f16d: 'Social Link' # Social Link
     2b71ef2c-18fb-460c-94a6-0027449ecead: 'Public Schema' # Public Schema
     2c036b94-c871-48cb-8a3a-42b51a0e8e84: 'Hero Placeholder' # Hero Placeholder
     4d0c33eb-8b2b-431d-a545-39f445f43fec: 'Experience Categories' # Experience Categories
     4d8510df-d5ce-4c46-82b2-6d53e9209cbd: 'Hero Heading' # Hero Heading
+    5e00b128-fb55-4241-b83e-7da9165b6682: 'Area Listing Button Text' # Area Listing Button Text
     005e810e-1762-4053-8112-618d4f4208dc: Default # Default
+    10cc84bc-74e8-4305-abdb-5367df3aa38d: 'Copyright Text' # Copyright Text
     018e1675-59ab-45eb-a9d8-ed8b1ce634a3: 'Hero Background' # Hero Background
     34ed1074-e546-45b6-a50e-31783448b609: 'Button URL' # Button URL
+    60d78ca8-ecb3-414e-a513-c87fea9d44d1: 'Link url' # Link url
     99e3197b-2bfc-4057-a539-f641a3fa6963: 'Button Text' # Button Text
+    255b6925-5561-4791-ab95-9ab8748927b9: 'Social Links' # Social Links
     433a5936-a459-473a-8b79-567fef12743e: Experiences # Experiences
+    506d76e8-76c2-4023-93fd-43d96ef5272b: Footer # Footer
     561cad93-5a12-4113-b3c1-eef1c1ae847e: Stays # Stays
     626cb2c7-4d93-4f17-91b9-5f13876d48d0: 'Discover Hidden Gems' # Discover Hidden Gems
     4543d73c-a2da-4c6a-ae7f-14e0b64f082f: DiscoverSection # DiscoverSection
+    5288c592-eebe-44d5-ada3-d8a08a8e4837: 'Social Icons' # Social Icons
+    006194d5-4246-400d-9246-c42432c85bf9: 'Footer Logo' # Footer Logo
     7403d06e-61e5-4fc2-8aac-d828dbcc29c9: 'Rich Text' # Rich Text
+    09119c81-3ac3-4a45-956c-8754ee06c4cc: 'Phone Number' # Phone Number
+    46041f04-bce3-40d3-9f46-22c45537a5fe: 'Navigation Item' # Navigation Item
     72635ced-9e85-458d-b31a-6fe7a6df534c: 'Layout Orientation' # Layout Orientation
+    986971ec-c1af-4f0e-a434-17aba27369f2: Address # Address
     6878376d-0aa9-490a-ad5b-3d2a280d9b60: Heading # Heading
     55848837-a359-45cc-be9a-178c1234fd81: Homepage # Homepage
     67153374-b2ae-45e6-8d80-b4fdca0858f8: 'Ribbon Text' # Ribbon Text
@@ -52,9 +64,11 @@ meta:
     d32f2708-7d30-4a14-a8bc-5514eeba7dac: Restaurants # Restaurants
     d262dbbc-2012-45ed-9636-a47a474748c7: Description # Description
     de3f3260-4f63-49be-bd4c-9d3b64bffff1: 'Curated Grid' # Curated Grid
+    df73f1bc-2d1d-45fc-8afe-ae18ab92d8c6: 'Footer Navigation' # Footer Navigation
     e80a6464-538c-477f-bd58-598fd670fd3e: 'Bottom CTA' # Bottom CTA
     e2985ff9-c91b-4e98-8d27-442ab5a496c0: 'DO San Diego' # DO San Diego
     f0d07ec7-5c61-434e-b6fd-facf46392765: 'Promo Block' # Promo Block
+    f3c534b2-3d5a-45a5-ac9a-70688f428aa6: 'Area Listing Button URL' # Area Listing Button URL
     f4ee4d97-2af8-460e-937e-154e3d853ae5: 'Hero Subheading' # Hero Subheading
     f46b0045-f67a-4833-b579-44bc6c474e42: General # General
 plugins:

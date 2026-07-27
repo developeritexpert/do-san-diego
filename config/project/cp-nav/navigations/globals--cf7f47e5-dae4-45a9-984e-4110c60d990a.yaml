@@ -1,0 +1,16 @@
+currLabel: Globals
+customIcon: null
+enabled: true
+handle: globals
+icon: globe
+layout: 005e810e-1762-4053-8112-618d4f4208dc # Default
+level: 1
+newWindow: false
+parent: null
+prevLabel: Globals
+prevLevel: 1
+prevParent: null
+prevUrl: globals
+sortOrder: 12
+type: craft
+url: globals
