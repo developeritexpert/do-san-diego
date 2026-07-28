@@ -316,7 +316,7 @@ h6 {
   font-weight: 700;
   font-size: 70px;
   text-align: center;
-  color: #000;
+  color: #000 ;
 }
 
 .section-where-to-eat .eat-container {
@@ -1030,7 +1030,7 @@ h6 {
   z-index: 0;
 }
 .section-where-to-stay .stay-img img:not(.top-abs-img){
-  width: 100%;
+  width: 100% ;
 }
 .top-abs-img {
   position: absolute;
