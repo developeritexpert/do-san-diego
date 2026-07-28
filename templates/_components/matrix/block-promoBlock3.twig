@@ -19,14 +19,17 @@
         <div class="relax-promo-grid">
             <!-- Left Column: Hotel Bedroom Image Card -->
             <div class="relax-image-col">
-                <img src="{{ imgUrl }}" alt="{{ headingText }}" class="relax-img" loading="lazy" />
+                {# <img src="{{ imgUrl }}" alt="{{ headingText }}" class="relax-img" loading="lazy" />
+                #}
+                <img src="assets/images/relax-stay-img.png">
             </div>
 
             <!-- Right Column: Dark Slate Content Card -->
             <div class="relax-content-col">
                 <div class="relax-card-box">
                     <h2 class="relax-title">
-                        {% set words = headingText|split(' ') %}
+                        {#
+                            {% set words = headingText|split(' ') %}
                         {% for word in words %}
                             {% if word|lower == highlightText|lower %}
                                 <span class="text-orange">{{ word }}</span>
@@ -34,6 +37,9 @@
                                 {{ word }}
                             {% endif %}
                         {% endfor %}
+                        #}
+                        Relax & <span class="text-orange">Stay</span>
+                        
                     </h2>
                     
                     <div class="relax-description">

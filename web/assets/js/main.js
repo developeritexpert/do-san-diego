@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const track = carouselTrack('eatCarouselTrack');
     const activeTitle = document.getElementById('eatActiveTitle');
     const indicatorThumb = document.getElementById('eatIndicatorThumb');
-    
+
     if (track) {
         let cards = Array.from(track.querySelectorAll('.eat-card-item'));
         if (cards.length > 0) {
@@ -160,3 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+
+
+
