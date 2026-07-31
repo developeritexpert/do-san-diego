@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: assets
-instructions: "file/image uploader"
+instructions: 'file/image uploader'
 name: Assets
 searchable: false
 settings:
@@ -10,7 +10,7 @@ settings:
   allowedKinds: null
   branchLimit: null
   defaultPlacement: end
-  defaultUploadLocationSource: "volume:f46b0045-f67a-4833-b579-44bc6c474e42" # General
+  defaultUploadLocationSource: 'volume:f46b0045-f67a-4833-b579-44bc6c474e42' # General
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: 1
@@ -19,15 +19,15 @@ settings:
   restrictFiles: false
   restrictLocation: false
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: "volume:f46b0045-f67a-4833-b579-44bc6c474e42" # General
+  restrictedLocationSource: 'volume:f46b0045-f67a-4833-b579-44bc6c474e42' # General
   restrictedLocationSubpath: null
-  selectionLabel: "Upload a Image"
+  selectionLabel: 'Upload a Image'
   showSearchInput: true
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
-    - "volume:f46b0045-f67a-4833-b579-44bc6c474e42" # General
+    - 'volume:f46b0045-f67a-4833-b579-44bc6c474e42' # General
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

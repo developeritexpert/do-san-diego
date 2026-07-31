@@ -2,9 +2,11 @@ fieldLayouts:
   d2eae378-1f96-4b64-986d-8e2463bad21c:
     cardThumbAlignment: end
     tabs:
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-27T12:35:55+00:00"
+          -
+            dateAdded: '2026-07-27T12:35:55+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -19,7 +21,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-27T12:35:55+00:00"
+          -
+            dateAdded: '2026-07-27T12:35:55+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -34,7 +37,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-27T12:35:55+00:00"
+          -
+            dateAdded: '2026-07-27T12:35:55+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -49,7 +53,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-27T12:35:55+00:00"
+          -
+            dateAdded: '2026-07-27T12:35:55+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -64,7 +69,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-27T12:35:55+00:00"
+          -
+            dateAdded: '2026-07-27T12:35:55+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -79,7 +85,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-27T12:35:55+00:00"
+          -
+            dateAdded: '2026-07-27T12:35:55+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -94,12 +101,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: "General Information"
+        name: 'General Information'
         uid: 5c25d9bf-929e-4d4e-9d15-25a122abc228
         userCondition: null
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-27T12:40:35+00:00"
+          -
+            dateAdded: '2026-07-27T12:40:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -114,12 +123,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: "Footer Navigation"
+        name: 'Footer Navigation'
         uid: 578a816a-4c9c-4697-aee4-3c7d801fe785
         userCondition: null
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-27T12:40:35+00:00"
+          -
+            dateAdded: '2026-07-27T12:40:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -134,7 +145,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: "Social Links"
+        name: 'Social Links'
         uid: 71954e1b-6f53-4e24-a043-90e0fceedefb
         userCondition: null
     thumbFieldKey: null

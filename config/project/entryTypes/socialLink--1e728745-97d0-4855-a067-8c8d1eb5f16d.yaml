@@ -5,13 +5,15 @@ fieldLayouts:
   6e8c23d6-367b-4a36-bb89-e0a3a5a17837:
     cardThumbAlignment: end
     tabs:
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - autocapitalize: true
+          -
+            autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: "2026-07-27T12:27:40+00:00"
+            dateAdded: '2026-07-27T12:27:40+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -34,7 +36,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-27T12:32:21+00:00"
+          -
+            dateAdded: '2026-07-27T12:32:21+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -49,7 +52,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-27T12:32:21+00:00"
+          -
+            dateAdded: '2026-07-27T12:32:21+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -71,7 +75,7 @@ fieldLayouts:
 handle: socialLink
 hasTitleField: true
 icon: null
-name: "Social Link"
+name: 'Social Link'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
@@ -79,4 +83,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: "{title}"
+uiLabelFormat: '{title}'

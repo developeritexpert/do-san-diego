@@ -26,23 +26,63 @@
 		{% endif %}
 	</ul>
 	<div class="footer-address">
-		<p>
-			<strong>Town Of Oro Valley</strong>
-			<br>11000 N. La Cañada Drive Oro Valley AZ, 85737
-		</p>
-		<a class="inner-link" href="tel:(520) 229-4700">
-			<strong>(520) 229-4700</strong>
-		</a>
+		{% set addressData = null %}
+		{% if headerObj and headerObj.address is defined and headerObj.address %}
+			{% if headerObj.address.richText is defined %}
+				{% set addressData = headerObj.address.richText %}
+			{% else %}
+				{% set addressData = headerObj.address %}
+			{% endif %}
+		{% endif %}
+
+		{% if addressData %}
+			{{ addressData|raw }}
+		{% else %}
+			<p>
+				<strong>Town Of Oro Valley</strong>
+				<br>11000 N. La Cañada Drive Oro Valley AZ, 85737
+			</p>
+		{% endif %}
+
+		{% if headerObj and headerObj.phoneNumber is defined and headerObj.phoneNumber %}
+			<a class="inner-link" href="tel:{{ headerObj.phoneNumber|replace({' ': '', '(': '', ')': '', '-': ''}) }}">
+				<strong>{{ headerObj.phoneNumber }}</strong>
+			</a>
+		{% else %}
+			<a class="inner-link" href="tel:(520) 229-4700">
+				<strong>(520) 229-4700</strong>
+			</a>
+		{% endif %}
+
 		<div class="social-links">
 			<h6>Follow Us!</h6>
 			<div class="social-link-cont">
-				<a href="#" class="s-link">
+				{% set fbUrl = '#' %}
+				{% set instaUrl = '#' %}
+				{% set threadsUrl = '#' %}
+
+				{% if headerObj and headerObj.socialLinks is defined %}
+					{% for social in headerObj.socialLinks.all() %}
+						{% set linkUrl = social.linkUrl.url ?? social.linkUrl ?? '#' %}
+						{% set title = social.title|lower %}
+						
+						{% if 'face' in title or 'fb' in title %}
+							{% set fbUrl = linkUrl %}
+						{% elseif 'insta' in title or 'ig' in title %}
+							{% set instaUrl = linkUrl %}
+						{% elseif 'thread' in title or 'tread' in title %}
+							{% set threadsUrl = linkUrl %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+
+				<a href="{{ fbUrl }}" class="s-link" {% if fbUrl != '#' %}target="_blank" rel="noopener"{% endif %}>
 					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/facebook.png">
 				</a>
-				<a href="#" class="s-link">
+				<a href="{{ instaUrl }}" class="s-link" {% if instaUrl != '#' %}target="_blank" rel="noopener"{% endif %}>
 					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/insta.png">
 				</a>
-				<a href="#" class="s-link">
+				<a href="{{ threadsUrl }}" class="s-link" {% if threadsUrl != '#' %}target="_blank" rel="noopener"{% endif %}>
 					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/treads.png">
 				</a>
 			</div>

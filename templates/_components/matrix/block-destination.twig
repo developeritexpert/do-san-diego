@@ -1,0 +1,114 @@
+<section class="find-section">
+	<div class="listing-container">
+		<div class="find-wrpper">
+			<h2>Find Your Perfect
+				<span>Destination</span>
+			</h2>
+
+
+			<div class="find-inner-side">
+				<div class="main-iner-wrp">
+					<div class="filter-sidebar">
+						<div class="filter-block">
+							<h4>Type</h4>
+							<ul class="filter-list">
+								<li>
+									<label><input type="checkbox" checked>
+										All</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										Art &amp; Culture</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										Outdoors</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										Attractions</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										History</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										Popular</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										Tours</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										Shopping</label>
+								</li>
+							</ul>
+						</div>
+
+						<div class="filter-block">
+							<h4>Price Range</h4>
+							<ul class="filter-list">
+								<li>
+									<label><input type="checkbox">
+										Free</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										Budget</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										Mid Range</label>
+								</li>
+								<li>
+									<label><input type="checkbox">
+										No Limit</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="listing-wrap">
+						{% set destinations = craft.entries().section('destinations').all() %}
+
+						{% if destinations|length %}
+							{% for dest in destinations %}
+								<div class="listing-card">
+									<div class="listing-img">
+										{% set img = dest.featuredImage.one() %}
+										{% if img %}
+											<img src="{{ img.url }}" alt="{{ dest.heading ?? dest.title }}">
+										{% else %}
+											<div class="promo-img-placeholder" style="height: 100%; min-height: 200px; display: flex; align-items: center; justify-content: center; background: #e0e0e0;">
+												<span>No Image</span>
+											</div>
+										{% endif %}
+									</div>
+									<div class="listing-details">
+										<span class="listing-tag">Listing #{{ loop.index }}</span>
+										<h3>{{ dest.heading ?? dest.title }}</h3>
+										<p>{{ dest.description|striptags }}</p>
+										<a href="{{ dest.buttonUrl ?? dest.url }}" class="cstm-btn">{{ dest.buttonText ?? 'View Details' }}</a>
+									</div>
+								</div>
+							{% endfor %}
+							{% else %}
+						{# Fallback static content if no destinations are published yet #}
+							{# <div class="listing-card">
+															<div class="listing-img">
+																<img src="./img/listing-img-1.png" alt="Sunset Beach Resort">
+															</div>
+															<div class="listing-details">
+																<span class="listing-tag">Listing #1</span>
+																<h3>Sunset Beach Resort</h3>
+																<p>Enjoy a relaxing beachfront escape with spacious rooms, ocean views, and easy access to local attractions, restaurants, and outdoor activities.</p>
+																<a href="#" class="cstm-btn">View Details</a>
+															</div>
+														</div> #}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</section>

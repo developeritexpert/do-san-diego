@@ -1,17 +1,20 @@
 columnSuffix: null
 handle: typeSlider
 instructions: null
-name: "Type slider"
+name: 'Type slider'
 searchable: false
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:
-    - __assoc__:
-        - - uid
+    -
+      __assoc__:
+        -
+          - uid
           - bf919555-bcac-4945-aff6-3cf89c100e09 # Experience
-        - - group
+        -
+          - group
           - General
   includeTableView: false
   maxEntries: null

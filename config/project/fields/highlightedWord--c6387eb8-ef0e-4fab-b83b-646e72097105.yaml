@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: highlightedWord
 instructions: null
-name: "Highlighted Word"
+name: 'Highlighted Word'
 searchable: false
 settings:
   byteLimit: null

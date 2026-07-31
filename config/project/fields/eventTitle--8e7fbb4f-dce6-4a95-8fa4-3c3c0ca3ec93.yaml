@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: eventTitle
 instructions: null
-name: "Event Title"
+name: 'Event Title'
 searchable: false
 settings:
   byteLimit: null
@@ -9,7 +9,7 @@ settings:
   code: false
   initialRows: 4
   multiline: false
-  placeholder: "Enter you event title"
+  placeholder: 'Enter you event title'
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

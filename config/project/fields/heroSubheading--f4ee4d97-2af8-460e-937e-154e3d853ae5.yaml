@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: heroSubheading
-instructions: "Subtitle text under main heading"
-name: "Hero Subheading"
+instructions: 'Subtitle text under main heading'
+name: 'Hero Subheading'
 searchable: false
 settings:
   byteLimit: null

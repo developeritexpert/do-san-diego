@@ -3,15 +3,25 @@
     .section('stays')
     .all() %}
 
+{% set whatToDoPage = craft.entries().slug('what-to-do').one() %}
+
+
 <section class="section-where-to-stay">
 
 	<div class="stay-img">
+
+
 		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/stay-img.png">
+
 		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/tree-img.png" class="top-abs-img">
+
 		<div class="absolute-txt-img">
 			<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/DO-San-Diego-lyt.png" alt="DO San Diego" loading="lazy">
+
+
 		</div>
 	</div>
+
 
 	<div
 		class="stay-container">
@@ -80,4 +90,6 @@
 			</div>
 		</div>
 	</div>
+
+
 </section>

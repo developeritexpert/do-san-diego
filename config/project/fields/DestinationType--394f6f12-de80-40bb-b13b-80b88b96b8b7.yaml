@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: DestinationType
 instructions: null
-name: "Destination type"
+name: 'Destination type'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -13,7 +13,7 @@ settings:
   selectionLabel: null
   showSearchInput: true
   showSiteMenu: true
-  source: "group:4d0c33eb-8b2b-431d-a545-39f445f43fec" # Experience Categories
+  source: 'group:4d0c33eb-8b2b-431d-a545-39f445f43fec' # Experience Categories
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

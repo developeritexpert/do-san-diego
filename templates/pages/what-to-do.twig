@@ -3,6 +3,16 @@
 {% block content %}
 	{# {% include "_components/promoBanner" %} #}
 
+	{% include "_components/matrix/block-banner.twig" with {
+        block: {
+            description: entry is defined and entry ? (entry.description ?? null) : null,
+            highlightedWord: entry is defined and entry ? (entry.highlightedWord ?? null) : null,
+            buttonText: entry is defined and entry ? (entry.buttonText ?? 'Explore Activities') : 'Explore Activities',
+            buttonUrl: entry is defined and entry ? (entry.buttonUrl ?? siteUrl('listings')) : siteUrl('listings'),
+            assets: entry is defined and entry and entry.assets is defined ? entry.assets.all() : null
+        }
+    } %}
+
 
 	{% include "_components/matrix/block-curatedGrid.twig" with {
         block: {
@@ -11,11 +21,39 @@
             description: entry is defined and entry ? (entry.description ?? null) : null,
             buttonText: entry is defined and entry ? (entry.buttonText ?? 'Explore Activities') : 'Explore Activities',
             buttonUrl: entry is defined and entry ? (entry.buttonUrl ?? siteUrl('listings')) : siteUrl('listings'),
-            featuredImage: entry is defined and entry ? (entry.featuredImage ?? null) : null
+            featuredImage: entry is defined and entry ? (entry.featuredImage ?? null) : null,
+            categoryItems: entry is defined and entry and entry.category is defined ? entry.category.all() : null
         }
     } %}
 
+
 	{% include "_components/matrix/restaurantGrid.twig" with {
+        block: {
+            heading: 'Where to Eat',
+            buttonUrl: siteUrl('restaurants')
+        }
+    } %}
+
+
+	{% include "_components/matrix/block-brandBanner.twig" with {
+        block: {
+            heading: 'Where to Eat',
+            buttonUrl: siteUrl('restaurants')
+        }
+    } %}
+
+	{% include "_components/matrix/stayGrid.twig" with {
+
+
+        block: {
+            heading: 'Where to Eat',
+            buttonUrl: siteUrl('restaurants')
+        }
+    } %}
+
+
+	{% include "_components/matrix/block-bottomCta.twig" with {
+
         block: {
             heading: 'Where to Eat',
             buttonUrl: siteUrl('restaurants')

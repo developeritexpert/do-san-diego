@@ -16,8 +16,26 @@
 <meta
 property="og:type" content="website"/>
 
+
 {# Stylesheets & Assets #}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+{% set currentSlug = craft.app.request.pathInfo %}
+
+{% if currentSlug == 'where-to-stay' %}
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+{% endif %}
+
+
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ getenv('PRIMARY_SITE_URL') }}assets/css/main.css">
+
+
+{% if craft.app.request.segments|length > 0  %}
+
+	<link rel="stylesheet" href="{{ getenv('PRIMARY_SITE_URL') }}assets/css/pp.css">
+
+{% endif %}

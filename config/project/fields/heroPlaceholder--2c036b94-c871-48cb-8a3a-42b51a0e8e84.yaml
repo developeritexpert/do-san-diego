@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: heroPlaceholder
 instructions: "Search bar placeholder\r\n"
-name: "Hero Placeholder"
+name: 'Hero Placeholder'
 searchable: false
 settings:
   byteLimit: null

@@ -1,20 +1,22 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - uid: cdf05252-c718-4d61-be8b-9ae30223d68c # Destination data
+  -
+    uid: cdf05252-c718-4d61-be8b-9ae30223d68c # Destination data
 handle: destinations
 maxAuthors: 1
 minAuthors: 1
 name: Destinations
 previewTargets:
-  - label: "Primary entry page"
-    refresh: "1"
-    urlFormat: "{url}"
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   bdeb5182-f6c3-4403-9323-0ab9afff1795: # DO San Diego
     enabledByDefault: true
     hasUrls: true
     template: destinations/_entry.twig
-    uriFormat: "destinations/{slug}"
+    uriFormat: 'destinations/{slug}'
 type: channel

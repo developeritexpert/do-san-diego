@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // -----------------------------------------------------------------
-  // "Eat" restaurant slider — draggable, with progress bar + keyboard nav
+  // "Eat" restaurant slider â€” draggable, with progress bar + keyboard nav
   // -----------------------------------------------------------------
   (function initEatSlider() {
     const slider = document.querySelector(".main-wrap-slider");
@@ -519,7 +519,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // -----------------------------------------------------------------
   // Mobile nav slide-in toggle (open + close)
-  // Replaces the old single toggle-class listener — that version
+  // Replaces the old single toggle-class listener â€” that version
   // conflicted with this one, since both would fire on click and
   // cancel each other out.
   // -----------------------------------------------------------------
