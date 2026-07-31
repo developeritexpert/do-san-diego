@@ -1,0 +1,70 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  23e0f757-431b-48ca-b46f-811c0a3296a6:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-07-31T10:49:46+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 88a69225-c2d8-45ec-9b18-b6bfa233c7f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-31T10:52:05+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a12a9c43-83b9-4f9d-985f-0d320c3ad07f # category
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9648a49b-8462-43c3-ba6e-1c9b77176fe8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 61a77470-11c7-4443-9cb4-083ea290ff3c
+        userCondition: null
+    thumbFieldKey: null
+handle: categorySlider
+hasTitleField: true
+icon: null
+name: 'category slider'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -5,13 +5,15 @@ fieldLayouts:
   562007ae-5a5a-4a08-940a-765bdc5a610a:
     cardThumbAlignment: end
     tabs:
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - autocapitalize: true
+          -
+            autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: "2026-07-30T12:24:23+00:00"
+            dateAdded: '2026-07-30T12:24:23+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -34,7 +36,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T12:27:57+00:00"
+          -
+            dateAdded: '2026-07-30T12:27:57+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -49,7 +52,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T12:27:57+00:00"
+          -
+            dateAdded: '2026-07-30T12:27:57+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -64,7 +68,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T12:27:57+00:00"
+          -
+            dateAdded: '2026-07-30T12:27:57+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -79,7 +84,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T12:27:57+00:00"
+          -
+            dateAdded: '2026-07-30T12:27:57+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -109,4 +115,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: "{title}"
+uiLabelFormat: '{title}'

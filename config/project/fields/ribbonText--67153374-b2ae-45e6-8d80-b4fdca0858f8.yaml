@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: ribbonText
 instructions: null
-name: "Ribbon Text"
+name: 'Ribbon Text'
 searchable: false
 settings:
   byteLimit: null

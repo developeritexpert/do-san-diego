@@ -1,103 +1,105 @@
-dateModified: 1785484531
+dateModified: 1785495194
 email:
   fromEmail: developeritexpert3@gmail.com
-  fromName: "DO San Diego"
+  fromName: 'DO San Diego'
   transportType: craft\mail\transportadapters\Sendmail
 fs:
   general:
     hasUrls: true
     name: General
     settings:
-      path: "@webroot/assets/general"
+      path: '@webroot/assets/general'
     type: craft\fs\Local
-    url: "@web/assets/general"
+    url: '@web/assets/general'
   localAssets:
     hasUrls: true
-    name: "Local Assets"
+    name: 'Local Assets'
     settings:
-      path: "@webroot/uploads"
+      path: '@webroot/uploads'
     type: craft\fs\Local
-    url: "@webroot/uploads"
+    url: '@webroot/uploads'
 meta:
   __names__:
-    0bc07f78-c007-4596-b9d4-c04cc9438e07: "Things to Do Nearby" # Things to Do Nearby
+    0bc07f78-c007-4596-b9d4-c04cc9438e07: 'Things to Do Nearby' # Things to Do Nearby
     0cccb0e7-ff55-41ac-b3c7-92af3da2c530: Label # Label
     0df6553f-f45d-4850-b322-93e5928dda9c: Reviews # Reviews
     1cca96bd-0aa8-4428-aa99-f3a69578db17: Homepage # Homepage
-    1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1: "Featured Image" # Featured Image
-    1e728745-97d0-4855-a067-8c8d1eb5f16d: "Social Link" # Social Link
-    2b71ef2c-18fb-460c-94a6-0027449ecead: "Public Schema" # Public Schema
-    2c036b94-c871-48cb-8a3a-42b51a0e8e84: "Hero Placeholder" # Hero Placeholder
-    4d0c33eb-8b2b-431d-a545-39f445f43fec: "Experience Categories" # Experience Categories
-    4d8510df-d5ce-4c46-82b2-6d53e9209cbd: "Hero Heading" # Hero Heading
-    5e00b128-fb55-4241-b83e-7da9165b6682: "Area Listing Button Text" # Area Listing Button Text
+    1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1: 'Featured Image' # Featured Image
+    1e728745-97d0-4855-a067-8c8d1eb5f16d: 'Social Link' # Social Link
+    2b71ef2c-18fb-460c-94a6-0027449ecead: 'Public Schema' # Public Schema
+    2c036b94-c871-48cb-8a3a-42b51a0e8e84: 'Hero Placeholder' # Hero Placeholder
+    4d0c33eb-8b2b-431d-a545-39f445f43fec: 'Experience Categories' # Experience Categories
+    4d8510df-d5ce-4c46-82b2-6d53e9209cbd: 'Hero Heading' # Hero Heading
+    5e00b128-fb55-4241-b83e-7da9165b6682: 'Area Listing Button Text' # Area Listing Button Text
     005e810e-1762-4053-8112-618d4f4208dc: Default # Default
-    06b66c1e-e22a-43d3-b02a-c9ce9a5ffc89: "Upcoming events" # Upcoming events
-    7d446b03-5b7b-42d7-a565-2a09111b0985: "Header logo" # Header logo
-    8e7fbb4f-dce6-4a95-8fa4-3c3c0ca3ec93: "Event Title" # Event Title
-    10cc84bc-74e8-4305-abdb-5367df3aa38d: "Copyright Text" # Copyright Text
-    018e1675-59ab-45eb-a9d8-ed8b1ce634a3: "Hero Background" # Hero Background
-    34ed1074-e546-45b6-a50e-31783448b609: "Button URL" # Button URL
-    60d78ca8-ecb3-414e-a513-c87fea9d44d1: "Link url" # Link url
-    99e3197b-2bfc-4057-a539-f641a3fa6963: "Button Text" # Button Text
-    255b6925-5561-4791-ab95-9ab8748927b9: "Social Links" # Social Links
-    274dde5d-08bc-4f2b-8f11-1b96faebbc60: "Rating & Reviews" # Rating & Reviews
-    394f6f12-de80-40bb-b13b-80b88b96b8b7: "Destination type" # Destination type
+    06b66c1e-e22a-43d3-b02a-c9ce9a5ffc89: 'Upcoming events' # Upcoming events
+    7d446b03-5b7b-42d7-a565-2a09111b0985: 'Header logo' # Header logo
+    8e7fbb4f-dce6-4a95-8fa4-3c3c0ca3ec93: 'Event Title' # Event Title
+    10cc84bc-74e8-4305-abdb-5367df3aa38d: 'Copyright Text' # Copyright Text
+    018e1675-59ab-45eb-a9d8-ed8b1ce634a3: 'Hero Background' # Hero Background
+    34ed1074-e546-45b6-a50e-31783448b609: 'Button URL' # Button URL
+    50c67e97-d29d-4d57-a0c9-ff983cd9df03: 'category slider' # category slider
+    60d78ca8-ecb3-414e-a513-c87fea9d44d1: 'Link url' # Link url
+    99e3197b-2bfc-4057-a539-f641a3fa6963: 'Button Text' # Button Text
+    255b6925-5561-4791-ab95-9ab8748927b9: 'Social Links' # Social Links
+    274dde5d-08bc-4f2b-8f11-1b96faebbc60: 'Rating & Reviews' # Rating & Reviews
+    394f6f12-de80-40bb-b13b-80b88b96b8b7: 'Destination type' # Destination type
     433a5936-a459-473a-8b79-567fef12743e: Experiences # Experiences
     498d2817-0f2f-46f4-b95e-19576363bcde: Email # Email
     506d76e8-76c2-4023-93fd-43d96ef5272b: Footer # Footer
     561cad93-5a12-4113-b3c1-eef1c1ae847e: Stays # Stays
-    626cb2c7-4d93-4f17-91b9-5f13876d48d0: "Discover Hidden Gems" # Discover Hidden Gems
-    682b19a1-60ef-473b-821a-fcb7080bba5a: "Type slider" # Type slider
-    909bd986-61d4-47ab-b972-c96541637298: "price range" # price range
+    626cb2c7-4d93-4f17-91b9-5f13876d48d0: 'Discover Hidden Gems' # Discover Hidden Gems
+    682b19a1-60ef-473b-821a-fcb7080bba5a: 'Type slider' # Type slider
+    909bd986-61d4-47ab-b972-c96541637298: 'price range' # price range
     3428bb10-a605-4149-8c71-77993f94cfde: Header # Header
     4543d73c-a2da-4c6a-ae7f-14e0b64f082f: DiscoverSection # DiscoverSection
-    5288c592-eebe-44d5-ada3-d8a08a8e4837: "Social Icons" # Social Icons
-    006194d5-4246-400d-9246-c42432c85bf9: "Footer Logo" # Footer Logo
-    7403d06e-61e5-4fc2-8aac-d828dbcc29c9: "Rich Text" # Rich Text
-    09119c81-3ac3-4a45-956c-8754ee06c4cc: "Phone Number" # Phone Number
-    9512c429-ad12-4286-a33a-672818c7a02d: "Event location" # Event location
+    5288c592-eebe-44d5-ada3-d8a08a8e4837: 'Social Icons' # Social Icons
+    006194d5-4246-400d-9246-c42432c85bf9: 'Footer Logo' # Footer Logo
+    7403d06e-61e5-4fc2-8aac-d828dbcc29c9: 'Rich Text' # Rich Text
+    09119c81-3ac3-4a45-956c-8754ee06c4cc: 'Phone Number' # Phone Number
+    9512c429-ad12-4286-a33a-672818c7a02d: 'Event location' # Event location
     9836bff4-3512-4668-9836-55cc2029f92b: Destinations # Destinations
-    46041f04-bce3-40d3-9f46-22c45537a5fe: "Navigation Item" # Navigation Item
-    51464bfa-23a7-4da9-96cb-628449ff33fe: "what to do" # what to do
-    72635ced-9e85-458d-b31a-6fe7a6df534c: "Layout Orientation" # Layout Orientation
-    89182ff6-b040-42e4-8f78-7e8cc17067f6: "Amenities included" # Amenities included
+    46041f04-bce3-40d3-9f46-22c45537a5fe: 'Navigation Item' # Navigation Item
+    51464bfa-23a7-4da9-96cb-628449ff33fe: 'what to do' # what to do
+    72635ced-9e85-458d-b31a-6fe7a6df534c: 'Layout Orientation' # Layout Orientation
+    89182ff6-b040-42e4-8f78-7e8cc17067f6: 'Amenities included' # Amenities included
     986971ec-c1af-4f0e-a434-17aba27369f2: Address # Address
     6878376d-0aa9-490a-ad5b-3d2a280d9b60: Heading # Heading
     55848837-a359-45cc-be9a-178c1234fd81: Homepage # Homepage
-    67153374-b2ae-45e6-8d80-b4fdca0858f8: "Ribbon Text" # Ribbon Text
+    67153374-b2ae-45e6-8d80-b4fdca0858f8: 'Ribbon Text' # Ribbon Text
     81384375-720b-45af-86cc-63a3d2ac278c: Restaurant # Restaurant
-    94378684-ef3a-4a30-9640-bce0707951ed: "destination subheading highlighted" # destination subheading highlighted
+    94378684-ef3a-4a30-9640-bce0707951ed: 'destination subheading highlighted' # destination subheading highlighted
     a0580c2d-407a-442e-9478-36d1a4413bbd: Map # Map
-    a1cb3c23-2bbb-4482-9586-1aee1abe121e: "Event Date & time" # Event Date & time
-    a13faae7-0d7e-453f-810f-bbeccd14ff63: "header naviagation" # header naviagation
-    ad909e4e-4701-4299-90a9-cd2d37f55255: "Where to Stay" # Where to Stay
-    adaf5901-f66e-4354-ae27-379a2be70d03: "destination subheading" # destination subheading
+    a1cb3c23-2bbb-4482-9586-1aee1abe121e: 'Event Date & time' # Event Date & time
+    a12a9c43-83b9-4f9d-985f-0d320c3ad07f: category # category
+    a13faae7-0d7e-453f-810f-bbeccd14ff63: 'header naviagation' # header naviagation
+    ad909e4e-4701-4299-90a9-cd2d37f55255: 'Where to Stay' # Where to Stay
+    adaf5901-f66e-4354-ae27-379a2be70d03: 'destination subheading' # destination subheading
     aeedff30-0259-43cb-b540-8b108e1c0f48: rating # rating
     b6cd0183-78d4-4ebb-beb7-cd855a4227f3: Stay # Stay
     b3567cde-9269-4b7e-ab6d-a40caf16c612: Assets # Assets
-    bdeb5182-f6c3-4403-9323-0ab9afff1795: "DO San Diego" # DO San Diego
+    bdeb5182-f6c3-4403-9323-0ab9afff1795: 'DO San Diego' # DO San Diego
     bf919555-bcac-4945-aff6-3cf89c100e09: Experience # Experience
-    c00ea25c-aa8e-42a0-adce-0b0ffae4abda: "What to Do" # What to Do
-    c6387eb8-ef0e-4fab-b83b-646e72097105: "Highlighted Word" # Highlighted Word
+    c00ea25c-aa8e-42a0-adce-0b0ffae4abda: 'What to Do' # What to Do
+    c6387eb8-ef0e-4fab-b83b-646e72097105: 'Highlighted Word' # Highlighted Word
     ca4e9259-9ce6-46b4-81ff-6734c662e6c0: LinkTo # LinkTo
-    cdf05252-c718-4d61-be8b-9ae30223d68c: "Destination data" # Destination data
-    ced559b8-20bc-41a9-af29-b7618d6ace8f: "Plain Text" # Plain Text
-    d4c437bb-447a-4de3-a19d-5237eb79e878: "Brand Banner" # Brand Banner
-    d15a66ff-44ab-42f1-a205-e667bfe87f06: "Badge Label" # Badge Label
+    cdf05252-c718-4d61-be8b-9ae30223d68c: 'Destination data' # Destination data
+    ced559b8-20bc-41a9-af29-b7618d6ace8f: 'Plain Text' # Plain Text
+    d4c437bb-447a-4de3-a19d-5237eb79e878: 'Brand Banner' # Brand Banner
+    d15a66ff-44ab-42f1-a205-e667bfe87f06: 'Badge Label' # Badge Label
     d32f2708-7d30-4a14-a8bc-5514eeba7dac: Restaurants # Restaurants
     d262dbbc-2012-45ed-9636-a47a474748c7: Description # Description
-    de0bd869-f21d-46e5-aa74-ca11132b4993: "stay entry" # stay entry
-    de3f3260-4f63-49be-bd4c-9d3b64bffff1: "Curated Grid" # Curated Grid
-    df73f1bc-2d1d-45fc-8afe-ae18ab92d8c6: "Footer Navigation" # Footer Navigation
+    de0bd869-f21d-46e5-aa74-ca11132b4993: 'stay entry' # stay entry
+    de3f3260-4f63-49be-bd4c-9d3b64bffff1: 'Curated Grid' # Curated Grid
+    df73f1bc-2d1d-45fc-8afe-ae18ab92d8c6: 'Footer Navigation' # Footer Navigation
     e0998ec6-929f-42e0-aaa1-7f02c6292509: events # events
-    e80a6464-538c-477f-bd58-598fd670fd3e: "Bottom CTA" # Bottom CTA
-    e2985ff9-c91b-4e98-8d27-442ab5a496c0: "DO San Diego" # DO San Diego
-    f0d07ec7-5c61-434e-b6fd-facf46392765: "Promo Block" # Promo Block
-    f3c534b2-3d5a-45a5-ac9a-70688f428aa6: "Area Listing Button URL" # Area Listing Button URL
-    f4ee4d97-2af8-460e-937e-154e3d853ae5: "Hero Subheading" # Hero Subheading
+    e80a6464-538c-477f-bd58-598fd670fd3e: 'Bottom CTA' # Bottom CTA
+    e2985ff9-c91b-4e98-8d27-442ab5a496c0: 'DO San Diego' # DO San Diego
+    f0d07ec7-5c61-434e-b6fd-facf46392765: 'Promo Block' # Promo Block
+    f3c534b2-3d5a-45a5-ac9a-70688f428aa6: 'Area Listing Button URL' # Area Listing Button URL
+    f4ee4d97-2af8-460e-937e-154e3d853ae5: 'Hero Subheading' # Hero Subheading
     f46b0045-f67a-4833-b579-44bc6c474e42: General # General
-    fe817dd6-bc04-42f8-997f-25fdb9a4508f: "Where to Eat" # Where to Eat
+    fe817dd6-bc04-42f8-997f-25fdb9a4508f: 'Where to Eat' # Where to Eat
 plugins:
   ckeditor:
     edition: standard
@@ -110,7 +112,7 @@ plugins:
 system:
   edition: solo
   live: true
-  name: "DO San Diego"
+  name: 'DO San Diego'
   schemaVersion: 5.10.0.0
   timeZone: America/Los_Angeles
 users:

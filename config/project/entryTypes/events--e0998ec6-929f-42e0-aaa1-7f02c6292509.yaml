@@ -5,13 +5,15 @@ fieldLayouts:
   6f178a3a-5098-4ecd-b3b1-420f12c540f1:
     cardThumbAlignment: end
     tabs:
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - autocapitalize: true
+          -
+            autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: "2026-07-30T10:59:07+00:00"
+            dateAdded: '2026-07-30T10:59:07+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -34,7 +36,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T11:06:54+00:00"
+          -
+            dateAdded: '2026-07-30T11:06:54+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -49,7 +52,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T11:06:54+00:00"
+          -
+            dateAdded: '2026-07-30T11:06:54+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -64,7 +68,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T11:06:54+00:00"
+          -
+            dateAdded: '2026-07-30T11:06:54+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -94,4 +99,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: "{title}"
+uiLabelFormat: '{title}'

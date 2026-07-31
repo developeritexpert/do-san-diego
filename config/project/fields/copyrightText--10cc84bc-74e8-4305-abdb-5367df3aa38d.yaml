@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: copyrightText
 instructions: null
-name: "Copyright Text"
+name: 'Copyright Text'
 searchable: false
 settings:
   byteLimit: null

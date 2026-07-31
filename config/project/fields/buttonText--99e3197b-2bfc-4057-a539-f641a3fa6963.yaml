@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: buttonText
 instructions: 'CTA button label ("EXPLORE ALL")'
-name: "Button Text"
+name: 'Button Text'
 searchable: false
 settings:
   byteLimit: null

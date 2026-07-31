@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: phoneNumber
 instructions: null
-name: "Phone Number"
+name: 'Phone Number'
 searchable: false
 settings:
   byteLimit: null

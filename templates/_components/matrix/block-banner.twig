@@ -1,0 +1,87 @@
+{# {% set isWhatToDoPage = (craft.app.request.getSegment(1) == 'what-to-do') %} #}
+
+{% set isWhatToDoPage = craft.app.request.pathInfo %}
+{% set isWhereToStay = craft.app.request.pathInfo %}
+
+
+{% if isWhatToDoPage == 'what-to-do' %}
+
+	{% set bgImage = getenv('PRIMARY_SITE_URL') ~ 'assets/images/banner-what.png' %}
+{% else %}
+	{% set bgImage = getenv('PRIMARY_SITE_URL') ~ 'assets/images/banner-image.png' %}
+{% endif %}
+
+
+<section class="promo-banner-section promo-imageLeft" style="background: url('{{ bgImage }}') no-repeat center center / cover;">
+	<div class="container promo-banner-grid">
+		<div
+			class="promo-image-col">
+
+			{# Professional Fallback Logic: Check 'data' passed via include, then block, then entry #}
+			{% set promoItem = data ?? block ?? entry ?? null %}
+
+			{% set img = null %}
+			{% if promoItem and promoItem.featuredImage is defined and promoItem.featuredImage|length %}
+				{% set img = promoItem.featuredImage|first %}
+			{% elseif promoItem and promoItem.assets is defined and promoItem.assets|length %}
+				{% set img = promoItem.assets|first %}
+			{% endif %}
+
+			{% set headingVal = promoItem.heading ?? 'What To Do' %}
+			{% set highlightVal = promoItem.highlightedWord ?? '' %}
+			{% set descVal = promoItem.description ?? '' %}
+			{% set btnUrlVal = promoItem.buttonUrl ?? '#' %}
+			{% set btnTextVal = promoItem.buttonText ?? 'EXPLORE ALL' %}
+
+			{% if img %}
+				<img src="{{ img.url }}" alt="{{ headingVal }}" class="promo-img" loading="lazy">
+			{% else %}
+				<div class="promo-img-placeholder">
+					<span>Feature Image</span>
+				</div>
+			{% endif %}
+
+		</div>
+
+		<div class="promo-content-col">
+			<div class="promo-card-box">
+				<h2 class="promo-title">
+					{% set words = headingVal|split(' ') %}
+					{% set foundHighlight = false %}
+
+					{% for word in words %}
+						{% if highlightVal and word|lower == highlightVal|lower %}
+							<span class="text-accent">{{ word }}</span>
+							{% set foundHighlight = true %}
+						{% else %}
+							{{ word }}
+						{% endif %}
+					{% endfor %}
+
+					{# If the highlighted word wasn't inside the heading text, append it! #}
+					{% if highlightVal and not foundHighlight %}
+						<span class="text-orange">{{ highlightVal }}</span>
+					{% endif %}
+				</h2>
+
+				<div class="promo-description">
+					{{ descVal|raw }}
+				</div>
+
+				<a href="{{ btnUrlVal }}" class="btn btn-pill-accent">
+					{{ btnTextVal|upper }}
+				</a>
+
+			</div>
+
+		</div>
+
+	</div>
+	{% if isWhatToDoPage != 'what-to-do' and isWhereToStay != 'where-to-stay'  %}
+
+
+		<div class="absolute-txt-img">
+			<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/DO-San-Diego.png" alt="DO San Diego" loading="lazy">
+		</div>
+	{% endif %}
+</section>

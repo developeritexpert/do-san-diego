@@ -5,9 +5,11 @@ fieldLayouts:
   91b3621b-f0c4-41fb-a10f-60013dd1ef07:
     cardThumbAlignment: end
     tabs:
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-30T07:09:38+00:00"
+          -
+            dateAdded: '2026-07-30T07:09:38+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -22,11 +24,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - autocapitalize: true
+          -
+            autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: "2026-07-30T07:06:08+00:00"
+            dateAdded: '2026-07-30T07:06:08+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -49,7 +52,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:09:38+00:00"
+          -
+            dateAdded: '2026-07-30T07:09:38+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -64,7 +68,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:09:38+00:00"
+          -
+            dateAdded: '2026-07-30T07:09:38+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -79,7 +84,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:09:38+00:00"
+          -
+            dateAdded: '2026-07-30T07:09:38+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -97,9 +103,11 @@ fieldLayouts:
         name: Content
         uid: edc9a29e-129f-4a81-aba0-e8b6bfedf0ea
         userCondition: null
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -114,27 +122,30 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-31T10:53:14+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 682b19a1-60ef-473b-821a-fcb7080bba5a # Type slider
+            fieldUid: a12a9c43-83b9-4f9d-985f-0d320c3ad07f # category
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: cd9cc8ea-d3d6-4d1d-bb91-ab3c964699d3
+            uid: 15206c02-232b-4e0b-ab7c-68d4541a71ea
             userCondition: null
             warning: null
             width: 100
-        name: "Type slider"
+        name: 'Type slider'
         uid: 108916fd-1c83-47fc-93e1-19fe0e4878ac
         userCondition: null
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -149,12 +160,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: "Price range"
+        name: 'Price range'
         uid: eba47761-be46-41f7-87c1-07d1aa5f0e29
         userCondition: null
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -169,7 +182,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -184,7 +198,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -199,7 +214,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -214,12 +230,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: "discover sec"
+        name: 'discover sec'
         uid: 3460f19a-91d7-4a45-b134-03d094214ce2
         userCondition: null
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -234,7 +252,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -249,7 +268,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -264,7 +284,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          - dateAdded: "2026-07-30T07:15:53+00:00"
+          -
+            dateAdded: '2026-07-30T07:15:53+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -279,14 +300,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: "find your perfect sec"
+        name: 'find your perfect sec'
         uid: 30e58580-a4e6-4f73-986c-9b90ad756386
         userCondition: null
     thumbFieldKey: null
 handle: whatToDo
 hasTitleField: true
 icon: null
-name: "What to Do"
+name: 'What to Do'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
@@ -294,4 +315,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: "{title}"
+uiLabelFormat: '{title}'

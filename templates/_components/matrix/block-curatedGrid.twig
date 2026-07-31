@@ -3,12 +3,20 @@
     .group('experienceCategories')
     .all() %}
 
-<section class="section-what-to-do">
+{% set isWhatToDoPage = (craft.app.request.getSegment(1) == 'what-to-do') %}
+
+{% if isWhatToDoPage %}
+	{% set bgImage = getenv('PRIMARY_SITE_URL') ~ 'assets/images/btm-ban.png' %}
+{% endif %}
+
+<section class="section-what-to-do" {% if isWhatToDoPage %} style="background: url('{{ bgImage }}') no-repeat center center / cover;" {% endif %}>
+
+
 	<div
 		class="what-todo-container">
 		<!-- Section Header Row: Title on Left, Prev/Next Buttons on Right -->
 		<div class="what-todo-header">
-			<h2 class="what-todo-title">{{ block.heading4 ?? 'What To Do' }}</h2>
+			<h2 class="what-todo-title">{{ block.heading4 ?? block.heading ?? 'What To Do' }}</h2>
 			<div class="what-todo-nav-buttons">
 				<button class="what-todo-nav-btn" id="todoPrevBtn" aria-label="Previous Category">&larr;</button>
 				<button class="what-todo-nav-btn" id="todoNextBtn" aria-label="Next Category">&rarr;</button>
@@ -18,12 +26,13 @@
 		<!-- Carousel Track Viewport -->
 		<div class="what-todo-viewport" id="todoCarouselViewport">
 			<div class="what-todo-track" id="todoCarouselTrack">
-				{% set items = categories|length ? categories : [
+				{% set fallbackItems = [
                     { title: 'Art  & Culture', badgeLabel: 'FREE', imgUrl: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80', url: '#' },
                     { title: 'Outdoors', badgeLabel: 'BUDGET', imgUrl: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80', url: '#' },
                     { title: 'Attractions', badgeLabel: 'FREE', imgUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80', url: '#' },
                     { title: 'History', badgeLabel: 'BUDGET', imgUrl: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80', url: '#' }
                 ] %}
+				{% set items = (block.categoryItems is defined and block.categoryItems|length) ? block.categoryItems : (categories|length ? categories : fallbackItems) %}
 
 				{% for item in items %}
 					{% set imgUrl = null %}
@@ -31,9 +40,21 @@
 					{% set itemBadge = (item.badgeLabel is defined and item.badgeLabel) ? item.badgeLabel : (loop.index is odd ? 'FREE' : 'BUDGET') %}
 					{% set itemLink = item.url ?? '#' %}
 
-					{% if item.assets is defined and item.assets.one() %}
-						{% set imgUrl = item.assets.one().getUrl() %}
-					{% elseif item.imgUrl is defined %}
+					{% if item.featuredImage is defined and item.featuredImage %}
+						{% set featuredImg = item.featuredImage.one() ?? null %}
+						{% if featuredImg %}
+							{% set imgUrl = featuredImg.getUrl() %}
+						{% endif %}
+					{% endif %}
+
+					{% if not imgUrl and item.assets is defined and item.assets %}
+						{% set assetImg = item.assets.one() ?? null %}
+						{% if assetImg %}
+							{% set imgUrl = assetImg.getUrl() %}
+						{% endif %}
+					{% endif %}
+
+					{% if not imgUrl and item.imgUrl is defined %}
 						{% set imgUrl = item.imgUrl %}
 					{% endif %}
 
@@ -48,11 +69,13 @@
 									</div>
 								{% endif %}
 
-								<!-- Floating Pill Badge at Top-Right of Card Image -->
-								<span class="todo-floating-badge">
-									<span class="badge-dot"></span>
-									{{ itemBadge }}
-								</span>
+								<!-- Floating Pill Badge at Top-Right of Card Image (Only on Homepage) -->
+								{% if craft.app.request.segments|length == 0 %}
+									<span class="todo-floating-badge">
+										<span class="badge-dot"></span>
+										{{ itemBadge }}
+									</span>
+								{% endif %}
 							</div>
 
 							<!-- Title Text below Card Image -->
@@ -63,9 +86,14 @@
 			</div>
 		</div>
 	</div>
-	{% include "_components/promoBanner" %}
+	{% if craft.app.request.segments|length == 0 %}
 
-	<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/gem-img.png" class="btm-abs-img">
+		{% include "_components/promoBanner" %}
 
-	<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/what-to-do-decor.png" class="cntr-abs-img">
+
+		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/gem-img.png" class="btm-abs-img">
+
+		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/what-to-do-decor.png" class="cntr-abs-img">
+	{% endif %}
+
 </section>

@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: featuredImage
-instructions: "Card & promo block image"
-name: "Featured Image"
+instructions: 'Card & promo block image'
+name: 'Featured Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -10,7 +10,7 @@ settings:
   allowedKinds: null
   branchLimit: null
   defaultPlacement: end
-  defaultUploadLocationSource: "volume:f46b0045-f67a-4833-b579-44bc6c474e42" # General
+  defaultUploadLocationSource: 'volume:f46b0045-f67a-4833-b579-44bc6c474e42' # General
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
   maxRelations: 1
@@ -19,7 +19,7 @@ settings:
   restrictFiles: false
   restrictLocation: false
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: "volume:f46b0045-f67a-4833-b579-44bc6c474e42" # General
+  restrictedLocationSource: 'volume:f46b0045-f67a-4833-b579-44bc6c474e42' # General
   restrictedLocationSubpath: null
   selectionLabel: null
   showSearchInput: true
@@ -27,7 +27,7 @@ settings:
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
-    - "volume:f46b0045-f67a-4833-b579-44bc6c474e42" # General
+    - 'volume:f46b0045-f67a-4833-b579-44bc6c474e42' # General
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

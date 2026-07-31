@@ -1,17 +1,20 @@
 columnSuffix: null
 handle: headerNaviagation
 instructions: null
-name: "header naviagation"
+name: 'header naviagation'
 searchable: false
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:
-    - __assoc__:
-        - - uid
+    -
+      __assoc__:
+        -
+          - uid
           - 46041f04-bce3-40d3-9f46-22c45537a5fe # Navigation Item
-        - - group
+        -
+          - group
           - General
   includeTableView: false
   maxEntries: null

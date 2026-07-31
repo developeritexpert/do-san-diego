@@ -2,9 +2,11 @@ fieldLayouts:
   201bfa39-1f33-43e5-a893-609a090833ae:
     cardThumbAlignment: end
     tabs:
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-29T09:53:37+00:00"
+          -
+            dateAdded: '2026-07-29T09:53:37+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -19,12 +21,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: "Header information"
+        name: 'Header information'
         uid: e47a026f-d71d-449f-8672-9f94cb723d83
         userCondition: null
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-29T09:53:37+00:00"
+          -
+            dateAdded: '2026-07-29T09:53:37+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -39,32 +43,52 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: "header Navigation"
+        name: 'header Navigation'
         uid: 839635bf-a030-4ea1-afe4-b01a31a54576
         userCondition: null
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-31T07:53:46+00:00"
+          -
+            dateAdded: '2026-07-31T10:05:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 7403d06e-61e5-4fc2-8aac-d828dbcc29c9 # Rich Text
+            fieldUid: 986971ec-c1af-4f0e-a434-17aba27369f2 # Address
             handle: null
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: be9facb1-3fbf-4862-ba93-c72e0f0aa51e
+            uid: abc48acc-9899-4562-928f-8571e71f6fcb
             userCondition: null
             warning: null
             width: 100
-        name: Address
-        uid: 3f76b725-30da-41b4-8ed4-99a7b4dcc7dd
+          -
+            dateAdded: '2026-07-31T10:12:39+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 09119c81-3ac3-4a45-956c-8754ee06c4cc # Phone Number
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 638775c8-9622-4340-9024-2759f7f31fe1
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Address tab'
+        uid: c884e6b6-b8c6-4dc6-9cd4-608125b81ec4
         userCondition: null
-      - elementCondition: null
+      -
+        elementCondition: null
         elements:
-          - dateAdded: "2026-07-31T07:55:31+00:00"
+          -
+            dateAdded: '2026-07-31T10:05:35+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -75,12 +99,34 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 14f55f04-6a72-4a73-b438-7c03e21ee24b
+            uid: fac61805-adfd-41a6-aad9-23dd1b417727
             userCondition: null
             warning: null
             width: 100
-        name: "Social icons"
-        uid: 3444e3b6-9598-4340-84f4-fcf6430168de
+        name: 'social links'
+        uid: 61664e71-fef5-4006-9733-8188ba546764
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-31T10:14:52+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1 # Featured Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5930900-7aaf-4e23-8e47-e0d199d86694
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'header sidebar image tab'
+        uid: b4664e9e-c34f-4463-a069-8a3af3dc87f5
         userCondition: null
     thumbFieldKey: null
 handle: header
