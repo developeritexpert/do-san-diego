@@ -1,20 +1,17 @@
 columnSuffix: null
 handle: ratingReviews
 instructions: null
-name: 'Rating & Reviews'
+name: "Rating & Reviews"
 searchable: false
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
   enableVersioning: false
   entryTypes:
-    -
-      __assoc__:
-        -
-          - uid
+    - __assoc__:
+        - - uid
           - 0df6553f-f45d-4850-b322-93e5928dda9c # Reviews
-        -
-          - group
+        - - group
           - General
   includeTableView: false
   maxEntries: null

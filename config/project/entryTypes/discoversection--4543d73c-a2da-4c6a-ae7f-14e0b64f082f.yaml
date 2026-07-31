@@ -5,15 +5,13 @@ fieldLayouts:
   108d8f0e-f54e-4894-9e4e-de17328b8baf:
     cardThumbAlignment: end
     tabs:
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            autocapitalize: true
+          - autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-07-27T08:03:38+00:00'
+            dateAdded: "2026-07-27T08:03:38+00:00"
             disabled: false
             elementCondition: null
             id: null
@@ -36,8 +34,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:06:21+00:00'
+          - dateAdded: "2026-07-27T08:06:21+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -52,8 +49,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:06:21+00:00'
+          - dateAdded: "2026-07-27T08:06:21+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -68,8 +64,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:06:21+00:00'
+          - dateAdded: "2026-07-27T08:06:21+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -84,8 +79,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:06:21+00:00'
+          - dateAdded: "2026-07-27T08:06:21+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -100,8 +94,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:06:21+00:00'
+          - dateAdded: "2026-07-27T08:06:21+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -116,8 +109,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:06:21+00:00'
+          - dateAdded: "2026-07-27T08:06:21+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -147,4 +139,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: '{title}'
+uiLabelFormat: "{title}"

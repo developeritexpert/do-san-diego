@@ -5,15 +5,13 @@ fieldLayouts:
   fa5d8269-72ba-4dc6-8df7-ca9e5725a917:
     cardThumbAlignment: end
     tabs:
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            autocapitalize: true
+          - autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-07-30T11:11:18+00:00'
+            dateAdded: "2026-07-30T11:11:18+00:00"
             disabled: false
             elementCondition: null
             id: null
@@ -36,8 +34,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T11:21:34+00:00'
+          - dateAdded: "2026-07-30T11:21:34+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -52,15 +49,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T11:21:34+00:00'
+          - dateAdded: "2026-07-30T11:21:34+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
             fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
             handle: null
             instructions: null
-            label: 'Destination title'
+            label: "Destination title"
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -68,15 +64,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T11:21:34+00:00'
+          - dateAdded: "2026-07-30T11:21:34+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
             fieldUid: d262dbbc-2012-45ed-9636-a47a474748c7 # Description
             handle: null
             instructions: null
-            label: 'Destination short description'
+            label: "Destination short description"
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -84,8 +79,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T11:21:34+00:00'
+          - dateAdded: "2026-07-30T11:21:34+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -100,8 +94,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T11:21:34+00:00'
+          - dateAdded: "2026-07-30T11:21:34+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -116,15 +109,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T11:21:34+00:00'
+          - dateAdded: "2026-07-30T11:21:34+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
             fieldUid: 394f6f12-de80-40bb-b13b-80b88b96b8b7 # Destination type
             handle: null
             instructions: null
-            label: 'Destination Type'
+            label: "Destination Type"
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -132,8 +124,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T11:21:34+00:00'
+          - dateAdded: "2026-07-30T11:21:34+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -151,11 +142,9 @@ fieldLayouts:
         name: Content
         uid: fce8a272-fc97-413b-b2be-065e265b1008
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-30T11:53:40+00:00'
+          - dateAdded: "2026-07-30T11:53:40+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -170,8 +159,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T11:53:40+00:00'
+          - dateAdded: "2026-07-30T11:53:40+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -186,14 +174,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Desination detail content'
+        name: "Desination detail content"
         uid: dbc56bc6-c162-4893-a76c-462434960dbf
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-30T11:53:40+00:00'
+          - dateAdded: "2026-07-30T11:53:40+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -208,14 +194,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Amenities included tab'
+        name: "Amenities included tab"
         uid: 5ff63e55-9b98-49ff-9f8a-1a904675c36f
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-30T12:14:55+00:00'
+          - dateAdded: "2026-07-30T12:14:55+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -230,14 +214,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Things to Do Nearby'
+        name: "Things to Do Nearby"
         uid: 864d9229-9a04-4b7e-ba3d-f17913232b73
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-30T12:14:55+00:00'
+          - dateAdded: "2026-07-30T12:14:55+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -252,8 +234,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T12:14:55+00:00'
+          - dateAdded: "2026-07-30T12:14:55+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -268,8 +249,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T12:14:55+00:00'
+          - dateAdded: "2026-07-30T12:14:55+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -284,8 +264,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T12:14:55+00:00'
+          - dateAdded: "2026-07-30T12:14:55+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -303,11 +282,9 @@ fieldLayouts:
         name: "Location\n& Information"
         uid: 1292311f-c767-4a13-bbac-40670464e015
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-30T12:18:08+00:00'
+          - dateAdded: "2026-07-30T12:18:08+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -322,8 +299,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T12:18:08+00:00'
+          - dateAdded: "2026-07-30T12:18:08+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -338,8 +314,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T12:28:09+00:00'
+          - dateAdded: "2026-07-30T12:28:09+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -354,14 +329,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Rating & Reviews tab'
+        name: "Rating & Reviews tab"
         uid: 80419673-f2d2-472a-9bfc-eea7b01239af
         userCondition: null
     thumbFieldKey: null
 handle: destinationData
 hasTitleField: true
 icon: null
-name: 'Destination data'
+name: "Destination data"
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
@@ -369,4 +344,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: '{title}'
+uiLabelFormat: "{title}"

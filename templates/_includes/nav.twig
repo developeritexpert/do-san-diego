@@ -1,43 +1,29 @@
 <div class="menu-ryt-cont">
 	<div class="close-btn-cont">
-		<img src="{{ url('assets/images/cross.png') }}">
+		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/cross.png">
 	</div>
 	<ul class="menu-list-cont">
-		<li class="menu-list">
-			<div class="hdr-menu-link has-submenu">What to Do</div>
-			<div class="sub-menu-cont">
-				<ul>
-					<li><a href="#">Lorem ipsum</a></li>
-					<li><a href="#">Lorem ipsum</a></li>
-				</ul>
-			</div>
-		</li>
-		<li class="menu-list">
-			<div class="hdr-menu-link has-submenu">
-				Where to Eat
-			</div>
-			<div class="sub-menu-cont">
-				<ul>
-					<li><a href="#">Lorem ipsum</a></li>
-					<li><a href="#">Lorem ipsum</a></li>
-				</ul>
-			</div>
-		</li>
-		<li class="menu-list">
-			<div class="hdr-menu-link has-submenu">
+		{% set headerObj = (header is defined and header) ? header : craft.app.globals.getSetByHandle('header') %}
+		{% set navItems = headerObj and headerObj.headerNaviagation is defined ? headerObj.headerNaviagation.all() : [] %}
 
-				Where to Stay
-			</div>
-			<div class="sub-menu-cont">
-				<ul>
-					<li><a href="#">Lorem ipsum</a></li>
-					<li><a href="#">Lorem ipsum</a></li>
-				</ul>
-			</div>
-		</li>
-		<li class="menu-list">
-			<a href="#" class="hdr-menu-link">Where to Live</a>
-		</li>
+		{% if navItems|length %}
+			{% for item in navItems %}
+				{% set linkUrl = item.linkUrl is defined and item.linkUrl ? (item.linkUrl.getUrl() ?? item.linkUrl.url ?? '#') : '#' %}
+				<li class="menu-list">
+					<a href="{{ linkUrl }}" class="hdr-menu-link">{{ item.title }}</a>
+				</li>
+			{% endfor %}
+		{% else %}
+			<li class="menu-list">
+				<a href="#" class="hdr-menu-link">What to Do</a>
+			</li>
+			<li class="menu-list">
+				<a href="#" class="hdr-menu-link">Where to Eat</a>
+			</li>
+			<li class="menu-list">
+				<a href="#" class="hdr-menu-link">Where to Stay</a>
+			</li>
+		{% endif %}
 	</ul>
 	<div class="footer-address">
 		<p>
@@ -51,13 +37,13 @@
 			<h6>Follow Us!</h6>
 			<div class="social-link-cont">
 				<a href="#" class="s-link">
-					<img src="{{ url('assets/images/facebook.png') }}">
+					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/facebook.png">
 				</a>
 				<a href="#" class="s-link">
-					<img src="{{ url('assets/images/insta.png') }}">
+					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/insta.png">
 				</a>
 				<a href="#" class="s-link">
-					<img src="{{ url('assets/images/treads.png') }}">
+					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/treads.png">
 				</a>
 			</div>
 		</div>

@@ -3,19 +3,20 @@
    ========================================================================== */
 
 :root {
-  --color-primary: #FF5A4E;
-  --color-primary-gradient: linear-gradient(135deg, #FF6B4A 0%, #FF3D57 100%);
-  --color-accent: #FF5E36;
-  --color-accent-hover: #E04823;
-  --color-bg-dark: #12161A;
-  --color-bg-slate: #2B343D;
-  --color-bg-card-dark: #1C232A;
-  --color-bg-light: #FBF8F5;
-  --color-text-main: #1F2429;
-  --color-text-muted: #6C757D;
-  --color-text-light: #FFFFFF;
-  --font-heading:  'Neue Montreal', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-primary: #ff5a4e;
+  --color-primary-gradient: linear-gradient(135deg, #ff6b4a 0%, #ff3d57 100%);
+  --color-accent: #ff5e36;
+  --color-accent-hover: #e04823;
+  --color-bg-dark: #12161a;
+  --color-bg-slate: #2b343d;
+  --color-bg-card-dark: #1c232a;
+  --color-bg-light: #fbf8f5;
+  --color-text-main: #1f2429;
+  --color-text-muted: #6c757d;
+  --color-text-light: #ffffff;
+  --font-heading:
+    "Neue Montreal", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -136,15 +137,14 @@ h6 {
 }
 
 .trans-btn {
-  border: 0.5px solid #FFFFFF;
-  background: #FFFFFF12;
+  border: 0.5px solid #ffffff;
+  background: #ffffff12;
   padding: 13px 33px;
 }
 
 .relax-promo-section .grad-btn,
 .savor-promo-section .btn-cta-pill {
-  background: linear-gradient(180deg, #F26D40 0%, #EE3F66 100%);
-
+  background: linear-gradient(180deg, #f26d40 0%, #ee3f66 100%);
 }
 
 /* ==========================================================================
@@ -198,7 +198,8 @@ h6 {
 .hero-section {
   position: relative;
   min-height: 100vh;
-  background: #1e1518 url('/assets/images/hero-bg.jpg') center center / cover no-repeat;
+  background: #1e1518 url("/assets/images/hero-bg.jpg") center center / cover
+    no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,10 +212,10 @@ h6 {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 88.39%),
-    linear-gradient(180deg, rgba(242, 109, 64, 0) 0%, #F26D40 100%);
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 88.39%),
+    linear-gradient(180deg, rgba(242, 109, 64, 0) 0%, #f26d40 100%);
   /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 88.39%); */
-
 }
 
 .hero-content {
@@ -284,7 +285,7 @@ h6 {
 
 .search-submit-btn {
   /* background: var(--color-accent); */
-  background: linear-gradient(180deg, #F26D40 0%, #EE3F66 100%);
+  background: linear-gradient(180deg, #f26d40 0%, #ee3f66 100%);
   color: #fff;
   border: none;
   width: 104px;
@@ -352,7 +353,9 @@ h6 {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
 }
 
 .card:hover {
@@ -445,7 +448,7 @@ h6 {
 } */
 
 .promo-img-placeholder {
-  background: linear-gradient(135deg, #FF6B4A, #FF3D57);
+  background: linear-gradient(135deg, #ff6b4a, #ff3d57);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -465,7 +468,6 @@ h6 {
   font-size: 70px;
   margin-bottom: 16px;
   max-width: 510px;
-
 }
 
 .promo-card-box * {
@@ -576,7 +578,7 @@ h6 {
 .progress-bar {
   width: 100%;
   height: 8px;
-  background: #F26D401A;
+  background: #f26d401a;
   overflow: hidden;
   margin-top: 20px;
   margin-inline: auto;
@@ -586,7 +588,7 @@ h6 {
 .progress-bar .bar {
   width: 0;
   height: 100%;
-  background: #F26D40;
+  background: #f26d40;
   transition: width 0.4s ease;
   border-radius: 50px;
 }
@@ -768,18 +770,19 @@ h6 {
   color: rgba(255, 255, 255);
   max-width: 600px;
   margin: 0 auto 36px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 22px;
   text-align: center;
-
 }
 
 /* ==========================================================================
    Site Footer
    ========================================================================== */
 .site-footer {
-  background: url("../images/footer-bg.png") no-repeat bottom, #738093;
+  background:
+    url("../images/footer-bg.png") no-repeat bottom,
+    #738093;
   background-size: 100% 100%;
   /* background: var(--color-bg-dark); */
   color: rgba(255, 255, 255, 0.7);
@@ -814,7 +817,7 @@ h6 {
 }
 
 .footer-bottom p {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 400;
   font-size: 18px;
   line-height: 32px;
@@ -832,18 +835,18 @@ h6 {
 
 .footer-address {
   max-width: 249px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 20px;
   line-height: 1.6;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 600;
   font-size: 20px;
   line-height: 1.6;
@@ -856,12 +859,12 @@ h6 {
 }
 
 .footer-address .social-links h6 {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 600;
   font-style: Italic;
   font-size: 20px;
   line-height: 32px;
-  color: #F26D40;
+  color: #f26d40;
   margin-bottom: 12px;
 }
 
@@ -878,7 +881,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.8px solid #F26D40;
+  border: 0.8px solid #f26d40;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -943,7 +946,9 @@ h6 {
   box-sizing: border-box;
   opacity: 0.7;
   transform: scale(0.92);
-  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.45s ease;
+  transition:
+    transform 0.45s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.45s ease;
 }
 
 .eat-card-item.active-slide {
@@ -966,7 +971,9 @@ h6 {
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   border: 3px solid transparent;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .eat-card-item.active-slide .eat-image-box {
@@ -1001,7 +1008,7 @@ h6 {
 
 .eat-active-title,
 .srvce-cntnt h5 {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-size: 28px;
   font-weight: 700;
   color: #738093;
@@ -1070,10 +1077,10 @@ h6 {
 
 .savor-outer-wrap::after {
   position: absolute;
-  content: '';
+  content: "";
   bottom: -30%;
   right: -8%;
-  background: url('../images/circle.png') no-repeat center;
+  background: url("../images/circle.png") no-repeat center;
   background-size: contain;
   width: 334px;
   height: 334px;
@@ -1107,7 +1114,11 @@ h6 {
   width: 100%;
   max-width: 554px;
   /* max-width: calc(100% - 60px); */
-  background: linear-gradient(135deg, rgba(20, 20, 20, 0.92) 0%, rgba(10, 10, 10, 0.88) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 20, 0.92) 0%,
+    rgba(10, 10, 10, 0.88) 100%
+  );
   backdrop-filter: blur(4px);
   border-radius: 22px;
   padding: 44px 38px;
@@ -1128,12 +1139,11 @@ h6 {
   letter-spacing: -0.5px;
   color: #ffffff;
   max-width: 373px;
-
 }
 
 .savor-floating-card .btn-cta-pill,
 .relax-btn-pill {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 18px;
   text-align: center;
@@ -1162,7 +1172,9 @@ h6 {
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(255, 90, 78, 0.4);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .savor-btn-pill:hover {
@@ -1214,11 +1226,13 @@ h6 {
 .section-where-to-stay .stay-img {
   padding-top: 90px;
   position: relative;
-  background: linear-gradient(180deg,
-      #fff 0%,
-      #fff 99.9%,
-      #738093 50%,
-      #738093 100%);
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    #fff 99.9%,
+    #738093 50%,
+    #738093 100%
+  );
   z-index: 0;
 }
 
@@ -1267,8 +1281,7 @@ h6 {
 }
 
 .text-orange {
-  color: #F26D40;
-
+  color: #f26d40;
 }
 
 .stay-nav-buttons {
@@ -1325,7 +1338,9 @@ h6 {
   border-radius: 24px;
   overflow: hidden;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .stay-card-inner:hover {
@@ -1362,7 +1377,11 @@ h6 {
 .stay-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.82) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.82) 100%
+  );
 }
 
 .stay-card-footer {
@@ -1378,7 +1397,7 @@ h6 {
 
 .stay-card-title {
   color: #ffffff;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 700;
   font-size: 28px;
   margin: 0;
@@ -1486,7 +1505,7 @@ h6 {
 
 /* Right Content Column */
 .relax-card-box {
-  background: #5B6472;
+  background: #5b6472;
   border-radius: 24px;
   padding: 76px 93px;
   height: 100%;
@@ -1529,7 +1548,9 @@ h6 {
   font-weight: 600;
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(255, 90, 78, 0.35);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .relax-btn-pill:hover {
@@ -1539,7 +1560,7 @@ h6 {
 
 .relax-btn-pill,
 .bottom-cta-section .trans-btn {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 18px;
   text-align: center;
@@ -1565,7 +1586,9 @@ h6 {
    ========================================================================== */
 .section-what-to-do {
   padding: 126px 0 100px;
-  background: url('../images/com-bg.png') no-repeat center, #fff;
+  background:
+    url("../images/com-bg.png") no-repeat center,
+    #fff;
   background-size: 100% 100%;
   overflow: hidden;
 }
@@ -1617,7 +1640,7 @@ h6 {
 
 .what-todo-nav-btn:hover {
   background: #fff;
-  color: #F26D40;
+  color: #f26d40;
   /* border-color: #ff5a4e; */
 }
 
@@ -1707,7 +1730,7 @@ h6 {
 }
 
 .todo-card-title {
-  font-family: 'Inter';
+  font-family: "Inter";
   margin-top: 14px;
   font-size: 28px;
   font-weight: 700;
@@ -1735,7 +1758,7 @@ h6 {
 }
 
 .search-cont p {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 16px;
   line-height: 100%;
@@ -1772,7 +1795,7 @@ h6 {
   transform-origin: center;
   fill: #fff;
   letter-spacing: 4px;
-  font-family: 'General Sans', sans-serif;
+  font-family: "General Sans", sans-serif;
   font-size: 20px;
 }
 
@@ -1797,8 +1820,8 @@ h6 {
   display: flex;
   padding: 15px 20px;
   justify-content: center;
-  background: #FFFFFF12;
-  border: 0.5px solid #FFFFFF;
+  background: #ffffff12;
+  border: 0.5px solid #ffffff;
   border-radius: 50px;
   line-height: 1;
   gap: 4px;
@@ -1807,11 +1830,11 @@ h6 {
 }
 
 .temp-cont p {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .search-container {
@@ -1830,7 +1853,6 @@ h6 {
   font-weight: 500;
   font-size: 16px;
   color: #fff;
-
 }
 
 .slide-nav {
@@ -1842,10 +1864,10 @@ h6 {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   will-change: transform;
-  -webkit-transition-duration: .2s;
-  transition-duration: .2s;
-  -webkit-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   background: #fff;
@@ -1868,25 +1890,25 @@ h6 {
 }
 
 .bg-overlay {
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, 0.6);
   opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  transition: all .355s;
+  transition: all 0.355s;
   display: none;
   z-index: 1;
 }
 
-.slide-left~.bg-overlay {
+.slide-left ~ .bg-overlay {
   opacity: 1;
   display: block;
 }
 
 .text-pink-gradient {
-  color: #EE3F66;
+  color: #ee3f66;
 }
 
 .menu-inner-cont {
@@ -1897,7 +1919,7 @@ h6 {
 .menu-ryt-cont {
   max-width: 530px;
   width: 100%;
-  background: url('../images/menu-texture.png') no-repeat center;
+  background: url("../images/menu-texture.png") no-repeat center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -1943,7 +1965,7 @@ h6 {
 .hdr-menu-link.active {
   font-style: italic;
   text-decoration: underline;
-  text-decoration-color: #F2B203;
+  text-decoration-color: #f2b203;
   text-underline-offset: 6px;
 }
 
@@ -1976,7 +1998,8 @@ h6 {
 }
 
 .menu-ryt-cont .s-link:hover img {
-  filter: brightness(0) saturate(100%) invert(30%) sepia(92%) saturate(2500%) hue-rotate(320deg) brightness(100%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(30%) sepia(92%) saturate(2500%)
+    hue-rotate(320deg) brightness(100%) contrast(90%);
 }
 
 .sub-menu-cont ul {
@@ -2028,11 +2051,11 @@ h6 {
   height: 50px;
   margin-left: auto;
   display: flex;
-  border: 0.6px solid #FFFFFF40;
+  border: 0.6px solid #ffffff40;
   align-items: center;
   justify-content: center;
   border-radius: 50px;
-  background: #FFFFFF14;
+  background: #ffffff14;
   backdrop-filter: blur(8px);
   position: absolute;
   top: 30px;
@@ -2049,7 +2072,6 @@ h6 {
 }
 
 @media (min-width: 576px) {
-
   .what-todo-container,
   .promo-banner-grid,
   .stay-container,
@@ -2060,7 +2082,6 @@ h6 {
 }
 
 @media (min-width: 768px) {
-
   .what-todo-container,
   .promo-banner-grid,
   .stay-container,
@@ -2071,7 +2092,6 @@ h6 {
 }
 
 @media (min-width: 992px) {
-
   .what-todo-container,
   .promo-banner-grid,
   .stay-container,
@@ -2082,7 +2102,6 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-
   .what-todo-container,
   .promo-banner-grid,
   .stay-container,
@@ -2093,7 +2112,6 @@ h6 {
 }
 
 @media (min-width: 1400px) {
-
   .what-todo-container,
   .promo-banner-grid,
   .stay-container,
@@ -2102,9 +2120,7 @@ h6 {
     max-width: 1344px;
     margin-inline: auto;
   }
-
 }
-
 
 /* RESPONSIVE CSS */
 @media only screen and (max-width: 1799px) {
@@ -2130,7 +2146,6 @@ h6 {
   .cntr-abs-img {
     width: 150px;
   }
-
 }
 
 @media only screen and (max-width: 1699px) {
@@ -2144,7 +2159,6 @@ h6 {
 
   .promo-banner-section {
     padding: 100px 0;
-
   }
 
   .savor-outer-wrap::after {
@@ -2158,7 +2172,6 @@ h6 {
     width: 200px;
     bottom: 45px;
   }
-
 }
 
 @media only screen and (max-width: 1599px) {
@@ -2301,7 +2314,6 @@ h6 {
 }
 
 @media only screen and (max-width: 1499px) {
-
   .hero-content {
     max-width: 610px;
   }
@@ -2682,7 +2694,6 @@ h6 {
     max-width: 230px;
     width: 100%;
     display: inline-block;
-
   }
 
   .close-btn-cont {
@@ -2729,7 +2740,6 @@ h6 {
   .brand-title-main,
   .brand-title-sub {
     font-size: 50px;
-
   }
 
   .do-san-diego-logo-large {
@@ -2800,7 +2810,6 @@ h6 {
   } */
   .relax-card-box {
     padding: 38px;
-
   }
 
   .relax-promo-grid {
@@ -2899,7 +2908,6 @@ h6 {
 
   .footer-address {
     max-width: 190px;
-
   }
 
   .footer-right-div {
@@ -2932,7 +2940,6 @@ h6 {
 
   .relax-title {
     font-size: 42px;
-
   }
 
   .top-abs-img {
@@ -3061,7 +3068,6 @@ h6 {
   }
 
   .stay-carousel-viewport {
-
     width: 100%;
   }
 
@@ -3241,7 +3247,7 @@ h6 {
   }
 
   .promo-banner-grid .trans-btn {
-    background: linear-gradient(180deg, #F26D40 0%, #EE3F66 100%);
+    background: linear-gradient(180deg, #f26d40 0%, #ee3f66 100%);
   }
 
   .hero-title {
@@ -3438,7 +3444,6 @@ h6 {
 
   .section-where-to-eat .section-title {
     font-size: 36px;
-
   }
 
   .savor-floating-card {
@@ -3551,7 +3556,6 @@ h6 {
 }
 
 @media only screen and (max-width: 575px) {
-
   .todo-card-item,
   .stay-card-item {
     flex: 0 0 100%;
@@ -3591,12 +3595,11 @@ h6 {
   }
 
   .search-submit-btn svg {
-    stroke: #F26D40;
+    stroke: #f26d40;
   }
 
   .search-form {
     padding: 6px 10px;
-
   }
 
   .what-todo-header {
@@ -3653,7 +3656,6 @@ h6 {
     width: 80% !important;
     height: 5px;
     margin-top: 12px;
-
   }
 
   .savor-promo-section {

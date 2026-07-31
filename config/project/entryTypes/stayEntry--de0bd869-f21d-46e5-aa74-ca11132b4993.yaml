@@ -5,15 +5,13 @@ fieldLayouts:
   991b1eaf-2c45-4fab-8571-b4078e8f801f:
     cardThumbAlignment: end
     tabs:
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            autocapitalize: true
+          - autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-07-30T09:56:24+00:00'
+            dateAdded: "2026-07-30T09:56:24+00:00"
             disabled: false
             elementCondition: null
             id: null
@@ -36,8 +34,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T10:00:28+00:00'
+          - dateAdded: "2026-07-30T10:00:28+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -52,8 +49,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T10:00:28+00:00'
+          - dateAdded: "2026-07-30T10:00:28+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -68,8 +64,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T10:00:28+00:00'
+          - dateAdded: "2026-07-30T10:00:28+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -84,8 +79,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T10:00:28+00:00'
+          - dateAdded: "2026-07-30T10:00:28+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -103,11 +97,9 @@ fieldLayouts:
         name: Content
         uid: 2c9274e4-c29d-47cf-bf98-d98aba1dae04
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-30T10:00:28+00:00'
+          - dateAdded: "2026-07-30T10:00:28+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -122,14 +114,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Upcoming events'
+        name: "Upcoming events"
         uid: aafc8b00-856a-43b6-8c40-95792de6e1b8
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-30T10:00:28+00:00'
+          - dateAdded: "2026-07-30T10:00:28+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -144,14 +134,14 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Find you perfect destination'
+        name: "Find you perfect destination"
         uid: 73b1e2dd-c6f7-4550-838c-92f2666ebf72
         userCondition: null
     thumbFieldKey: null
 handle: stayEntry
 hasTitleField: true
 icon: null
-name: 'stay entry'
+name: "stay entry"
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
@@ -159,4 +149,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: '{title}'
+uiLabelFormat: "{title}"

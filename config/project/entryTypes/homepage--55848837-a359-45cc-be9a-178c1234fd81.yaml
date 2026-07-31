@@ -5,15 +5,13 @@ fieldLayouts:
   d891e520-65c4-4ae3-82e9-98442285f49b:
     cardThumbAlignment: end
     tabs:
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            autocapitalize: true
+          - autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-07-27T06:14:07+00:00'
+            dateAdded: "2026-07-27T06:14:07+00:00"
             disabled: false
             elementCondition: null
             id: null
@@ -36,8 +34,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T06:17:53+00:00'
+          - dateAdded: "2026-07-27T06:17:53+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -52,8 +49,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T06:17:53+00:00'
+          - dateAdded: "2026-07-27T06:17:53+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -68,8 +64,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T06:17:53+00:00'
+          - dateAdded: "2026-07-27T06:17:53+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -84,8 +79,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T06:17:53+00:00'
+          - dateAdded: "2026-07-27T06:17:53+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -103,18 +97,16 @@ fieldLayouts:
         name: Content
         uid: 4cf88a89-6b53-475f-a5d9-af44ba346358
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-29T12:47:58+00:00'
+          - dateAdded: "2026-07-29T12:47:58+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
             fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
             handle: heading4
-            instructions: 'Section/what to block heading'
-            label: 'What To Do heading'
+            instructions: "Section/what to block heading"
+            label: "What To Do heading"
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -122,8 +114,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:34:09+00:00'
+          - dateAdded: "2026-07-27T08:34:09+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -138,8 +129,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:34:09+00:00'
+          - dateAdded: "2026-07-27T08:34:09+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -154,8 +144,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:34:09+00:00'
+          - dateAdded: "2026-07-27T08:34:09+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -170,8 +159,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:34:09+00:00'
+          - dateAdded: "2026-07-27T08:34:09+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -186,8 +174,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:34:09+00:00'
+          - dateAdded: "2026-07-27T08:34:09+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -202,8 +189,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T08:34:09+00:00'
+          - dateAdded: "2026-07-27T08:34:09+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -218,14 +204,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Discover Hidden Gems'
+        name: "Discover Hidden Gems"
         uid: b411a594-2a1e-4941-b48f-238b2206b4c3
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-27T10:18:36+00:00'
+          - dateAdded: "2026-07-27T10:18:36+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -240,8 +224,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T10:18:36+00:00'
+          - dateAdded: "2026-07-27T10:18:36+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -256,8 +239,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T10:18:36+00:00'
+          - dateAdded: "2026-07-27T10:18:36+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -272,8 +254,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T10:18:36+00:00'
+          - dateAdded: "2026-07-27T10:18:36+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -288,8 +269,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T10:18:36+00:00'
+          - dateAdded: "2026-07-27T10:18:36+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -304,8 +284,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T10:18:36+00:00'
+          - dateAdded: "2026-07-27T10:18:36+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -320,14 +299,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Savor Every Bite'
+        name: "Savor Every Bite"
         uid: ad32ef69-1c31-4b8d-84bb-dba59b0f848b
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-27T11:19:54+00:00'
+          - dateAdded: "2026-07-27T11:19:54+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -342,8 +319,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T11:19:54+00:00'
+          - dateAdded: "2026-07-27T11:19:54+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -358,8 +334,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T11:19:54+00:00'
+          - dateAdded: "2026-07-27T11:19:54+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -374,8 +349,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T11:19:54+00:00'
+          - dateAdded: "2026-07-27T11:19:54+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -390,8 +364,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T11:19:54+00:00'
+          - dateAdded: "2026-07-27T11:19:54+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -406,8 +379,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T11:19:54+00:00'
+          - dateAdded: "2026-07-27T11:19:54+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -422,14 +394,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Relax & Stay'
+        name: "Relax & Stay"
         uid: 9457e851-1447-4b40-8d66-0baa36591e3a
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-30T10:43:10+00:00'
+          - dateAdded: "2026-07-30T10:43:10+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -444,8 +414,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T10:43:10+00:00'
+          - dateAdded: "2026-07-30T10:43:10+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -460,8 +429,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T10:43:10+00:00'
+          - dateAdded: "2026-07-30T10:43:10+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -476,8 +444,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-30T10:43:10+00:00'
+          - dateAdded: "2026-07-30T10:43:10+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -492,7 +459,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Discover sec'
+        name: "Discover sec"
         uid: 2170c55d-cde4-4c17-abe2-01954dad92b3
         userCondition: null
     thumbFieldKey: null
@@ -507,4 +474,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: '{title}'
+uiLabelFormat: "{title}"

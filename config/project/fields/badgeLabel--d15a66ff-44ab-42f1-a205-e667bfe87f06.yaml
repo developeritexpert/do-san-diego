@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: badgeLabel
 instructions: null
-name: 'Badge Label'
+name: "Badge Label"
 searchable: false
 settings:
   byteLimit: null

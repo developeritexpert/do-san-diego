@@ -10,7 +10,7 @@ parent: null
 prevLabel: Section
 prevLevel: null
 prevParent: null
-prevUrl: 'http://localhost:8080/admin/settings/sections'
+prevUrl: "http://localhost:8080/admin/settings/sections"
 sortOrder: 4
 type: manual
-url: 'http://localhost:8080/admin/settings/sections'
+url: "http://localhost:8080/admin/settings/sections"

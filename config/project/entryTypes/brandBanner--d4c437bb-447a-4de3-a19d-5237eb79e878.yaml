@@ -5,15 +5,13 @@ fieldLayouts:
   2d2c004f-3144-48e2-b69d-5cc89576b208:
     cardThumbAlignment: end
     tabs:
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            autocapitalize: true
+          - autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-07-27T06:11:50+00:00'
+            dateAdded: "2026-07-27T06:11:50+00:00"
             disabled: false
             elementCondition: null
             id: null
@@ -36,8 +34,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T06:13:36+00:00'
+          - dateAdded: "2026-07-27T06:13:36+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -52,8 +49,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T06:13:36+00:00'
+          - dateAdded: "2026-07-27T06:13:36+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -68,8 +64,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T06:13:36+00:00'
+          - dateAdded: "2026-07-27T06:13:36+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -91,7 +86,7 @@ fieldLayouts:
 handle: brandBanner
 hasTitleField: true
 icon: null
-name: 'Brand Banner'
+name: "Brand Banner"
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
@@ -99,4 +94,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: '{title}'
+uiLabelFormat: "{title}"

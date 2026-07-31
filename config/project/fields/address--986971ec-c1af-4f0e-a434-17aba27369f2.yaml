@@ -6,15 +6,11 @@ searchable: false
 settings:
   fieldLayouts:
     __assoc__:
-      -
-        - 6aa3e889-c22c-4ec3-8853-1f7e8e5c73f4
-        -
-          __assoc__:
+      - - 6aa3e889-c22c-4ec3-8853-1f7e8e5c73f4
+        - __assoc__:
             0:
               - tabs
-              -
-                -
-                  __assoc__:
+              - - __assoc__:
                     0:
                       - name
                       - Content
@@ -23,9 +19,7 @@ settings:
                       - d545a74f-9033-4793-8a11-2f084b1d64dd
                     4:
                       - elements
-                      -
-                        -
-                          __assoc__:
+                      - - __assoc__:
                             0:
                               - type
                               - craft\fieldlayoutelements\CustomField
@@ -37,7 +31,7 @@ settings:
                               - 100
                             8:
                               - dateAdded
-                              - '2026-07-29T11:30:17+00:00'
+                              - "2026-07-29T11:30:17+00:00"
                             9:
                               - uid
                               - ac8a0272-00e9-48af-accc-957d6705c5fa

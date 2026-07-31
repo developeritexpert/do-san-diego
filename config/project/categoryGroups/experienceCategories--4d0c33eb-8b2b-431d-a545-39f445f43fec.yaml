@@ -3,15 +3,13 @@ fieldLayouts:
   d4a819f5-7f18-4b63-9f7c-6f0e1f14cdea:
     cardThumbAlignment: end
     tabs:
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            autocapitalize: true
+          - autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-07-24T08:10:04+00:00'
+            dateAdded: "2026-07-24T08:10:04+00:00"
             disabled: false
             elementCondition: null
             id: null
@@ -34,8 +32,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-24T08:12:33+00:00'
+          - dateAdded: "2026-07-24T08:12:33+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -50,8 +47,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T06:58:05+00:00'
+          - dateAdded: "2026-07-27T06:58:05+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -69,14 +65,14 @@ fieldLayouts:
         name: Content
         uid: 9cd68988-9466-40c2-b278-4c1ddc1a268f
         userCondition: null
-    thumbFieldKey: 'layoutElement:621fa6c8-b0e4-4608-a27c-7b8019956c9d'
+    thumbFieldKey: "layoutElement:621fa6c8-b0e4-4608-a27c-7b8019956c9d"
 handle: experienceCategories
-name: 'Experience Categories'
+name: "Experience Categories"
 siteSettings:
   bdeb5182-f6c3-4403-9323-0ab9afff1795: # DO San Diego
     hasUrls: true
     template: experience-categories/_category.twig
-    uriFormat: 'experience-categories/{slug}'
+    uriFormat: "experience-categories/{slug}"
 structure:
   maxLevels: null
   uid: 7c8bad32-5174-441a-81db-4e282b54e689

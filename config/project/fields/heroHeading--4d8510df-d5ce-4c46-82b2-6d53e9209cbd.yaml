@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: heroHeading
 instructions: 'Main hero title ("What Do You Want To Do?")'
-name: 'Hero Heading'
+name: "Hero Heading"
 searchable: false
 settings:
   byteLimit: null

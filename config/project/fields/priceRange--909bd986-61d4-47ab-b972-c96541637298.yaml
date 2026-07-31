@@ -1,96 +1,66 @@
 columnSuffix: null
 handle: priceRange
 instructions: null
-name: 'price range'
+name: "price range"
 searchable: false
 settings:
   customOptions: false
   options:
-    -
-      __assoc__:
-        -
-          - label
+    - __assoc__:
+        - - label
           - Free
-        -
-          - value
+        - - value
           - free
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
+        - - icon
+          - ""
+        - - color
+          - ""
+        - - default
+          - ""
+    - __assoc__:
+        - - label
           - Budget
-        -
-          - value
+        - - value
           - budget
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Mid Range'
-        -
-          - value
+        - - icon
+          - ""
+        - - color
+          - ""
+        - - default
+          - ""
+    - __assoc__:
+        - - label
+          - "Mid Range"
+        - - value
           - midRange
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'No Limit'
-        -
-          - value
+        - - icon
+          - ""
+        - - color
+          - ""
+        - - default
+          - ""
+    - __assoc__:
+        - - label
+          - "No Limit"
+        - - value
           - noLimit
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - ''
-        -
-          - value
-          - ''
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
+        - - icon
+          - ""
+        - - color
+          - ""
+        - - default
+          - ""
+    - __assoc__:
+        - - label
+          - ""
+        - - value
+          - ""
+        - - icon
+          - ""
+        - - color
+          - ""
+        - - default
+          - ""
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\RadioButtons

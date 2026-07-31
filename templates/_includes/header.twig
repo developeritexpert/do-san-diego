@@ -20,7 +20,7 @@
 			<div class="search-container">
 				<form action="{{ url('search') }}" method="get" class="search-cont" id="searchForm" style="display: flex; align-items: center;  border-radius: 30px; padding: 5px 15px; transition: all 0.3s ease; ; margin: 0;">
 					<button type="button" id="searchToggleBtn" style="background: none; border: none; padding: 0; display: flex; align-items: center; cursor: pointer; color: white;">
-						<img src="{{ url('assets/images/search-img.png') }}" alt="Search" class="search-icon" style="width: 18px; height: 18px; margin-right: 8px; filter: brightness(0) invert(1);">
+						<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/search-img.png" alt="Search" class="search-icon" style="width: 18px; height: 18px; margin-right: 8px; filter: brightness(0) invert(1);">
 						<span id="searchText" style="font-weight: 500; font-size: 14px; letter-spacing: 1px;">SEARCH</span>
 					</button>
 					<input type="text" name="q" id="searchInput" placeholder="Search..." style="width: 0; opacity: 0; border: none; background: transparent; color: white; outline: none; transition: all 0.3s ease; padding: 0; font-size: 14px;">
@@ -38,12 +38,12 @@
 			<div class="menu-toggle navbar">
 				<button class="navbar-slide-toggler" type="button" data-toggle="slide-left" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 					<p>MENU</p>
-					<span class="navbar-toggler-icon"><img src="{{ url('assets/images/nav-toggle.png') }}"></span>
+					<span class="navbar-toggler-icon"><img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/nav-toggle.png"></span>
 				</button>
 				<div class="collapse11 slide-nav navbar-collapse" id="navbarNavDropdown">
 					<div class="menu-inner-cont">
 						<div class="menu-img-cont">
-							<img src="{{ url('assets/images/menu-img.png') }}" alt="">
+							<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/menu-img.png" alt="">
 						</div>
 						{% include '_includes/nav.twig' %}
 

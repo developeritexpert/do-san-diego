@@ -19,7 +19,9 @@ Ensure your server or local environment meets the following requirements:
 ## Installation Steps
 
 ### Step 1: Clone or Extract Project Files
+
 Extract or clone the project directory to your desired location:
+
 ```bash
 cd /path/to/do-san-diego
 ```
@@ -27,7 +29,9 @@ cd /path/to/do-san-diego
 ---
 
 ### Step 2: Install PHP Dependencies
+
 Run Composer to install all required Craft CMS core packages and plugins:
+
 ```bash
 composer install
 ```
@@ -35,11 +39,13 @@ composer install
 ---
 
 ### Step 3: Environment Configuration (`.env`)
+
 1. Create a `.env` file in the root directory by copying the sample environment file:
    ```bash
    cp .env.example.dev .env
    ```
 2. Open `.env` and configure your database connection and environment settings:
+
    ```ini
    # Database Configuration
    CRAFT_DB_DRIVER="mysql"
@@ -66,12 +72,15 @@ composer install
 ---
 
 ### Step 4: Import Database Dump (If transferring existing content)
+
 If you have an existing database backup (`.sql` dump file):
+
 ```bash
 mysql -u your_database_user -p your_database_name < path/to/database_dump.sql
 ```
 
 Alternatively, if setting up from scratch without an existing database backup:
+
 ```bash
 ./craft setup
 ```
@@ -79,7 +88,9 @@ Alternatively, if setting up from scratch without an existing database backup:
 ---
 
 ### Step 5: Run Craft Upgrades & Apply Project Config
+
 Run Craft's setup migration command to ensure all database migrations, project config changes, and plugins are synchronized:
+
 ```bash
 ./craft up
 ```
@@ -87,7 +98,9 @@ Run Craft's setup migration command to ensure all database migrations, project c
 ---
 
 ### Step 6: Set Directory Permissions
+
 Ensure the following directories have write permissions:
+
 ```bash
 chmod -R 775 storage
 chmod -R 775 web/cpresources
@@ -98,22 +111,26 @@ chmod -R 775 web/cpresources
 ### Step 7: Serve the Application locally
 
 #### Option A: Using PHP built-in server
+
 ```bash
 php -S localhost:8080 -t web
 ```
 
 #### Option B: Using Web Server (Nginx / Apache / Valet)
+
 Point your host document root directly to the **`web/`** directory.
 
 ---
 
 ## Admin Access
+
 - **Control Panel URL**: `http://localhost:8080/admin`
 - Log in using your Craft CMS administrator credentials.
 
 ---
 
 ## Project Structure Overview
+
 - `config/` - Craft CMS project configuration files & schemas
 - `templates/` - Twig templates containing section components & cards
 - `web/` - Public document root (`index.php`, CSS, JS, and image assets)

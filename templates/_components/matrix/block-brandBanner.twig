@@ -18,13 +18,13 @@
 			<!-- DO SAN DIEGO Center Logo matching exact Figma design -->
 			<div class="do-san-diego-logo-large">
 				<div class="logo-do-line">
-					<img src="{{ url('assets/images/do.png') }}" alt="DO">
+					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/do.png" alt="DO">
 				</div>
 				<div class="logo-subtitle">
-					<img src="{{ url('assets/images/san-img.png') }}" alt="San Diego">
+					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/san-img.png" alt="San Diego">
 				</div>
 			</div>
 		</div>
 	</div>
-	<img src="{{ url('assets/images/ribbon-txt.png') }}" alt="" class="btm-abs-img" aria-hidden="true" loading="lazy">
+	<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/ribbon-txt.png" alt="" class="btm-abs-img" aria-hidden="true" loading="lazy">
 </section>
