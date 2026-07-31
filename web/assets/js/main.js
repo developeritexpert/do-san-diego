@@ -507,10 +507,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.getElementById('searchIcon').addEventListener('click', function () {
-        const input = document.getElementById('searchInput');
-        input.style.display = input.style.display === 'block' ? 'none' : 'block';
-    });
 
     // -----------------------------------------------------------------
     // Mobile nav slide-in toggle (open + close)
