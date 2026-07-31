@@ -7,23 +7,39 @@
     <header class="entry-header">
         <h1>{{ entry.title }}</h1>
         <p class="meta">
-            {% if entry.cuisineType is defined and entry.cuisineType.one() %}
-                <span>{{ entry.cuisineType.one().title }}</span>
+            {% set cuisineFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('cuisineType') : null %}
+            {% if cuisineFieldDef %}
+                {% set cuisineVal = entry.getFieldValue('cuisineType') %}
+                {% set cuisine = cuisineVal ? (cuisineVal.one is defined ? cuisineVal.one() : cuisineVal) : null %}
+                {% if cuisine %}
+                    <span>{{ cuisine.title ?? cuisine }}</span>
+                {% endif %}
             {% endif %}
-            {% if entry.neighborhood is defined %}
-                &bull; <span>{{ entry.neighborhood }}</span>
+
+            {% set neighborhoodFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('neighborhood') : null %}
+            {% if neighborhoodFieldDef %}
+                {% set neighborhoodVal = entry.getFieldValue('neighborhood') %}
+                {% if neighborhoodVal %}
+                    &bull; <span>{{ neighborhoodVal }}</span>
+                {% endif %}
             {% endif %}
         </p>
     </header>
 
-    {% if entry.featuredImage is defined and entry.featuredImage.one() %}
-        <div class="entry-hero-image">
-            <img src="{{ entry.featuredImage.one().getUrl() }}" alt="{{ entry.title }}" />
-        </div>
+    {% set featuredImgFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('featuredImage') : null %}
+    {% if featuredImgFieldDef %}
+        {% set featuredImgVal = entry.getFieldValue('featuredImage') %}
+        {% set featuredImg = featuredImgVal ? (featuredImgVal.one is defined ? featuredImgVal.one() : featuredImgVal) : null %}
+        {% if featuredImg %}
+            <div class="entry-hero-image">
+                <img src="{{ featuredImg.url }}" alt="{{ entry.title }}" />
+            </div>
+        {% endif %}
     {% endif %}
 
     <div class="entry-body">
-        {{ entry.body ?? '' }}
+        {% set bodyFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('body') : null %}
+        {{ bodyFieldDef ? entry.getFieldValue('body') : '' }}
     </div>
 </article>
 {% endblock %}

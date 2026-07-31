@@ -1,0 +1,26 @@
+{% extends "_layouts/main.twig" %}
+
+{% block content %}
+	{# {% include "_components/promoBanner" %} #}
+
+
+	{% include "_components/matrix/block-curatedGrid.twig" with {
+        block: {
+            heading: entry is defined and entry ? (entry.heading ?? 'What To Do') : 'What To Do',
+            highlightedWord: entry is defined and entry ? (entry.highlightedWord ?? null) : null,
+            description: entry is defined and entry ? (entry.description ?? null) : null,
+            buttonText: entry is defined and entry ? (entry.buttonText ?? 'Explore Activities') : 'Explore Activities',
+            buttonUrl: entry is defined and entry ? (entry.buttonUrl ?? siteUrl('listings')) : siteUrl('listings'),
+            featuredImage: entry is defined and entry ? (entry.featuredImage ?? null) : null
+        }
+    } %}
+
+	{% include "_components/matrix/restaurantGrid.twig" with {
+        block: {
+            heading: 'Where to Eat',
+            buttonUrl: siteUrl('restaurants')
+        }
+    } %}
+
+
+{% endblock %}

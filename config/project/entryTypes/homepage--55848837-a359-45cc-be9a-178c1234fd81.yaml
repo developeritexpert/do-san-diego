@@ -107,6 +107,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-07-29T12:47:58+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
+            handle: heading4
+            instructions: 'Section/what to block heading'
+            label: 'What To Do heading'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2df17f86-4ca6-4a70-a87a-b3186815ffa4
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-07-27T08:34:09+00:00'
             editCondition: null
             elementCondition: null
@@ -408,6 +424,76 @@ fieldLayouts:
             width: 100
         name: 'Relax & Stay'
         uid: 9457e851-1447-4b40-8d66-0baa36591e3a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-30T10:43:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
+            handle: heading5
+            instructions: Sectoion/discover
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5fda93f5-8de4-41cb-a785-1fa1a418de3c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T10:43:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c6387eb8-ef0e-4fab-b83b-646e72097105 # Highlighted Word
+            handle: highlightedWord4
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b53af6e1-7f2d-417c-afa9-79f0121bc79d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T10:43:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
+            handle: heading6
+            instructions: Section/experince
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6d9aee4-a4b6-433e-b75e-ca16a0622364
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T10:43:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c6387eb8-ef0e-4fab-b83b-646e72097105 # Highlighted Word
+            handle: highlightedWord5
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8848ab8-07b3-4cdc-8d25-22b3eb7b8700
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Discover sec'
+        uid: 2170c55d-cde4-4c17-abe2-01954dad92b3
         userCondition: null
     thumbFieldKey: null
 handle: homepage

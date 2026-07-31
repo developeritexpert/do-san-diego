@@ -12,6 +12,7 @@
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "config": {
+    "check-platform-reqs": false,
     "allow-plugins": {
       "craftcms/plugin-installer": true,
       "yiisoft/yii2-composer": true

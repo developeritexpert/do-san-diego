@@ -1,0 +1,8 @@
+columnSuffix: null
+handle: map
+instructions: null
+name: Map
+searchable: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Json

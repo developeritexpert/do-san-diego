@@ -1,49 +1,102 @@
-{% set logo = footer.footerLogo.one() %}
+{% set footerObj = (footer is defined and footer) ? footer : craft.app.globals.getSetByHandle('footer') %}
+{% set logo = (footerObj and footerObj.footerLogo is defined and footerObj.footerLogo) ? footerObj.footerLogo.one() : null %}
+{% set addressData = null %}
+{% if footerObj and footerObj.address is defined and footerObj.address %}
+    {% if footerObj.address.richText is defined %}
+        {% set addressData = footerObj.address.richText %}
+    {% else %}
+        {% set addressData = footerObj.address %}
+    {% endif %}
+{% elseif footerObj and footerObj.richText is defined and footerObj.richText %}
+    {% set addressData = footerObj.richText %}
+{% endif %}
 
 <footer class="site-footer">
     <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                {% if logo %}
+                    <a href="{{ siteUrl }}" class="footer-logo">
+                        <img src="{{ logo.url }}" alt="{{ siteName }}" class="footer-logo">
+                    </a>
+                {% endif %}
+            </div>
 
-        <div class="footer-brand">
+            <div class="footer-right-div">
+                <div class="footer-address">
+                    {% if addressData %}
+                        <div class="address-text">
+                            {{ addressData|raw }}
+                        </div>
+                    {% else %}
+                        <p><strong>Town  Of Oro Valley</strong> <br>11000 N. La Cañada Drive Oro Valley AZ, 85737</p>
+                    {% endif %}
 
-            {% if logo %}
-                <img src="{{ logo.url }}" alt="{{ siteName }}" class="footer-logo">
-            {% endif %}
+                    {% if footerObj and footerObj.phoneNumber is defined and footerObj.phoneNumber %}
+                        <a class="inner-link" href="tel:{{ footerObj.phoneNumber|replace({' ': '', '(': '', ')': '', '-': ''}) }}">
+                            <strong>{{ footerObj.phoneNumber }}</strong>
+                        </a>
+                    {% else %}
+                        <a class="inner-link" href="tel:(520) 229-4700"><strong>(520) 229-4700</strong></a>
+                    {% endif %}
 
-            <p>{{ footer.address }}</p>
+                    {% if footerObj and footerObj.socialLinks is defined and footerObj.socialLinks.all()|length %}
+                        <div class="social-links">
+                            <h6>Follow Us!</h6>
+                            <div class="social-link-cont">
+                                {% for social in footerObj.socialLinks.all() %}
+                                    {% set icon = (social.socialIcons is defined and social.socialIcons) ? social.socialIcons.one() : null %}
+                                    {% set linkUrl = social.linkUrl.url ?? social.linkUrl ?? '#' %}
+                                    <a href="{{ linkUrl }}" class="s-link" target="_blank" rel="noopener" title="{{ social.title }}">
+                                        {% if icon %}
+                                            <img src="{{ icon.url }}" alt="{{ social.title }}">
+                                        {% else %}
+                                            <span>{{ social.title }}</span>
+                                        {% endif %}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="social-links">
+                            <h6>Follow Us!</h6>
+                            <div class="social-link-cont">
+                                <a href="#" class="s-link"><img src="{{ alias('@web/assets/images/facebook.png') }}"></a>
+                                <a href="#" class="s-link"><img src="{{ alias('@web/assets/images/insta.png') }}"></a>
+                                <a href="#" class="s-link"><img src="{{ alias('@web/assets/images/treads.png') }}"></a>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
 
-            <p>{{ footer.phoneNumber }}</p>
+                <div class="footer-links">
+                    {% if footerObj and footerObj.footerNavigation is defined and footerObj.footerNavigation|length %}
+                        {% for item in footerObj.footerNavigation %}
+                            <a href="{{ item.url ?? '#' }}">
+                                {{ item.title }}
+                            </a>
+                        {% endfor %}
+                    {% else %}
+                        <a href="#">What to Do</a>
+                        <a href="#">Where to Eat</a>
+                        <a href="#">Where to Stay</a>
+                        <a href="#">Where to Live</a>
+                    {% endif %}
+                </div>
+            </div>
 
-        </div>
-
-        <div class="footer-links">
-
-            {% for item in footer.footerNavigation %}
-                <a href="#">
-                    {{ item.title }}
-                </a>
-            {% endfor %}
-
-        </div>
-
-        <div class="footer-social">
-
-            {% for social in footer.socialLinks %}
-                <a href="#">
-                    {{ social.title }}
-                </a>
-            {% endfor %}
-
+            <img src="{{ alias('@web/assets/images/cactus.png') }}" class="right-abs-img" alt="">
         </div>
 
         <div class="footer-bottom">
-
-            <p>{{ footer.copyrightText }}</p>
-
-            <a href="{{ footer.areaListingButtonUrl.value }}">
-                {{ footer.areaListingButtonText }}
-            </a>
-
+            {% if footerObj and footerObj.copyrightText is defined and footerObj.copyrightText %}
+                <p>{{ footerObj.copyrightText|raw }}</p>
+            {% else %}
+                <p>©2026 DO San Diego All Rights Reserved. <a href="#">Privacy Policy</a></p>
+            {% endif %}
         </div>
 
+        <img src="{{ alias('@web/assets/images/birds.png') }}" class="top-abs-img" alt="">
     </div>
 </footer>
+

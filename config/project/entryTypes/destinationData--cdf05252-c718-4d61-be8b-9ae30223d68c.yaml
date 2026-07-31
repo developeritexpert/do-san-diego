@@ -1,0 +1,372 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  fa5d8269-72ba-4dc6-8df7-ca9e5725a917:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-07-30T11:11:18+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: caee8e32-0fe9-48bb-9b50-0e2017950237
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T11:21:34+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1 # Featured Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e43530f2-e6f5-478e-892e-1c902dfe1e70
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T11:21:34+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
+            handle: null
+            instructions: null
+            label: 'Destination title'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ee2dbef-ec7c-44c6-906d-e7fee36a0339
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T11:21:34+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d262dbbc-2012-45ed-9636-a47a474748c7 # Description
+            handle: null
+            instructions: null
+            label: 'Destination short description'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 945dab71-996e-483a-85ff-e4ce5808bf60
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T11:21:34+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 99e3197b-2bfc-4057-a539-f641a3fa6963 # Button Text
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a2c8b87-ae4e-41fc-a0ce-acadc0d30505
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T11:21:34+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 34ed1074-e546-45b6-a50e-31783448b609 # Button URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f10f5d18-a0a2-4d54-9aa1-0660e59a3dea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T11:21:34+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 394f6f12-de80-40bb-b13b-80b88b96b8b7 # Destination type
+            handle: null
+            instructions: null
+            label: 'Destination Type'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3cb98a1d-11ab-4f6e-b4ad-76496743be7f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T11:21:34+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 909bd986-61d4-47ab-b972-c96541637298 # price range
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7fba3022-4eca-4586-9ecc-043ba5b81209
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fce8a272-fc97-413b-b2be-065e265b1008
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-30T11:53:40+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: adaf5901-f66e-4354-ae27-379a2be70d03 # destination subheading
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 931bd497-2393-4ce7-a760-67b80e40c880
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T11:53:40+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 94378684-ef3a-4a30-9640-bce0707951ed # destination subheading highlighted
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1596fed3-0099-4f55-8511-e7febd65b82e
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Desination detail content'
+        uid: dbc56bc6-c162-4893-a76c-462434960dbf
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-30T11:53:40+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 89182ff6-b040-42e4-8f78-7e8cc17067f6 # Amenities included
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 51dc621e-2edc-494b-9710-98b1ee963f37
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Amenities included tab'
+        uid: 5ff63e55-9b98-49ff-9f8a-1a904675c36f
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-30T12:14:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 0bc07f78-c007-4596-b9d4-c04cc9438e07 # Things to Do Nearby
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 64200c25-5be1-49eb-b342-c34faf4f41d8
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Things to Do Nearby'
+        uid: 864d9229-9a04-4b7e-ba3d-f17913232b73
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-30T12:14:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 986971ec-c1af-4f0e-a434-17aba27369f2 # Address
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c55a4f0-bfb4-4e29-bdd1-4999bf423557
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T12:14:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 09119c81-3ac3-4a45-956c-8754ee06c4cc # Phone Number
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b04dee00-0646-47d0-a29f-dc3ff7da819a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T12:14:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 498d2817-0f2f-46f4-b95e-19576363bcde # Email
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc186672-0aae-4286-be19-69f9687593d4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T12:14:55+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a0580c2d-407a-442e-9478-36d1a4413bbd # Map
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 126dea9e-f4a8-4deb-9f26-270f91fe38dc
+            userCondition: null
+            warning: null
+            width: 100
+        name: "Location\n& Information"
+        uid: 1292311f-c767-4a13-bbac-40670464e015
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-30T12:18:08+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
+            handle: heading2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 84e9928b-f828-4b9f-8750-5c44c864db33
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T12:18:08+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c6387eb8-ef0e-4fab-b83b-646e72097105 # Highlighted Word
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a4973480-edf4-49d8-b387-ebfec3c29f04
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T12:28:09+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 274dde5d-08bc-4f2b-8f11-1b96faebbc60 # Rating & Reviews
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cac67b2e-cc2f-43c3-b782-044e7093a227
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Rating & Reviews tab'
+        uid: 80419673-f2d2-472a-9bfc-eea7b01239af
+        userCondition: null
+    thumbFieldKey: null
+handle: destinationData
+hasTitleField: true
+icon: null
+name: 'Destination data'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

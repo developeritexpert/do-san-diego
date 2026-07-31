@@ -1,0 +1,67 @@
+<div class="promo-banner-section promo-imageLeft">
+	<div class="container promo-banner-grid">
+		<div
+			class="promo-image-col">
+
+			{# Professional Fallback Logic: Check 'data' passed via include, then block, then entry #}
+			{% set promoItem = data ?? block ?? entry ?? null %}
+
+			{% set img = null %}
+			{% if promoItem and promoItem.featuredImage is defined and promoItem.featuredImage|length %}
+				{% set img = promoItem.featuredImage.one() ?? promoItem.featuredImage %}
+			{% endif %}
+
+			{% set headingVal = promoItem.heading ?? 'What To Do' %}
+			{% set highlightVal = promoItem.highlightedWord ?? '' %}
+			{% set descVal = promoItem.description ?? '' %}
+			{% set btnUrlVal = promoItem.buttonUrl ?? '#' %}
+			{% set btnTextVal = promoItem.buttonText ?? 'EXPLORE ALL' %}
+
+			{% if img %}
+				<img src="{{ img.url }}" alt="{{ headingVal }}" class="promo-img" loading="lazy">
+			{% else %}
+				<div class="promo-img-placeholder">
+					<span>Feature Image</span>
+				</div>
+			{% endif %}
+
+		</div>
+
+		<div class="promo-content-col">
+			<div class="promo-card-box">
+				<h2 class="promo-title">
+					{% set words = headingVal|split(' ') %}
+					{% set foundHighlight = false %}
+
+					{% for word in words %}
+						{% if highlightVal and word|lower == highlightVal|lower %}
+							<span class="text-accent">{{ word }}</span>
+							{% set foundHighlight = true %}
+						{% else %}
+							{{ word }}
+						{% endif %}
+					{% endfor %}
+
+					{# If the highlighted word wasn't inside the heading text, append it! #}
+					{% if highlightVal and not foundHighlight %}
+						<span class="text-orange">{{ highlightVal }}</span>
+					{% endif %}
+				</h2>
+
+				<div class="promo-description">
+					{{ descVal }}
+				</div>
+
+				<a href="{{ btnUrlVal }}" class="btn btn-pill-accent">
+					{{ btnTextVal|upper }}
+				</a>
+
+			</div>
+
+		</div>
+
+	</div>
+	<div class="absolute-txt-img">
+		<img src="/assets/images/DO-San-Diego.png" alt="DO San Diego" loading="lazy">
+	</div>
+</div>

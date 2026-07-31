@@ -7,42 +7,53 @@
 
 {% set imgUrl = null %}
 {% if block.featuredImage is defined and block.featuredImage is not null %}
-    {% set imgObj = block.featuredImage.one() %}
-    {% if imgObj %}{% set imgUrl = imgObj.getUrl() %}{% endif %}
+	{% set imgObj = block.featuredImage.one() %}
+	{% if imgObj %}
+		{% set imgUrl = imgObj.getUrl() %}
+	{% endif %}
 {% endif %}
 {% if not imgUrl %}
-    {% set imgUrl = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80' %}
+	{% set imgUrl = 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80' %}
 {% endif %}
 
 <section class="savor-promo-section">
-    <div class="savor-outer-wrap">
-        <!-- Main Blue Outlined Feature Frame -->
-        <div class="savor-feature-frame">
-            <img src="{{ imgUrl }}" alt="{{ headingText }}" class="savor-bg-img" loading="lazy" />
+	<div
+		class="savor-outer-wrap">
+		<!-- Main Blue Outlined Feature Frame -->
+		<div class="savor-feature-frame">
+			<img
+			src="{{ imgUrl }}" alt="{{ headingText }}" class="savor-bg-img" loading="lazy"/>
 
-            <!-- Dark Overlay Floating Card Box -->
-            <div class="savor-floating-card">
-                <h2 class="savor-title">
-                    {% set words = headingText|split(' ') %}
-                    {% for word in words %}
-                        {% if word|lower == highlightText|lower %}
-                            <span class="text-orange">{{ word }}</span>
-                        {% else %}
-                            {{ word }}
-                        {% endif %}
-                    {% endfor %}
-                </h2>
-                
-                <div class="savor-description">
-                    {{ descText|raw }}
-                </div>
+			<!-- Dark Overlay Floating Card Box -->
+			<div class="savor-floating-card">
+				<h2 class="savor-title">
+					{% set words = headingText|split(' ') %}
+					{% set foundHighlight = false %}
 
-                <a href="{{ btnUrl }}" class="savor-btn-pill">
-                    {{ btnLabel }}
-                </a>
-            </div>
-        </div>
+					{% for word in words %}
+						{% if word|lower == highlightText|lower %}
+							<span class="text-orange">{{ word }}</span>
+							{% set foundHighlight = true %}
+						{% else %}
+							{{ word }}
+						{% endif %}
+					{% endfor %}
 
-     
-    </div>
+					{% if highlightText and not foundHighlight %}
+						<span class="text-orange">{{ highlightText }}</span>
+					{% endif %}
+				</h2>
+
+				<div class="savor-description">
+					{{ descText|raw }}
+				</div>
+
+				<a href="{{ btnUrl }}" class="savor-btn-pill">
+					{{ btnLabel }}
+				</a>
+			</div>
+		</div>
+
+
+	</div>
 </section>

@@ -4,13 +4,50 @@ instructions: null
 name: Address
 searchable: false
 settings:
-  byteLimit: null
-  charLimit: null
-  code: false
-  initialRows: 4
-  multiline: false
-  placeholder: null
-  uiMode: normal
+  fieldLayouts:
+    __assoc__:
+      -
+        - 6aa3e889-c22c-4ec3-8853-1f7e8e5c73f4
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    0:
+                      - name
+                      - Content
+                    1:
+                      - uid
+                      - d545a74f-9033-4793-8a11-2f084b1d64dd
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-07-29T11:30:17+00:00'
+                            9:
+                              - uid
+                              - ac8a0272-00e9-48af-accc-957d6705c5fa
+                            12:
+                              - fieldUid
+                              - 7403d06e-61e5-4fc2-8aac-d828dbcc29c9 # Rich Text
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
 translationKeyFormat: null
-translationMethod: none
-type: craft\fields\PlainText
+translationMethod: site
+type: craft\fields\ContentBlock

@@ -6,19 +6,26 @@
 <article class="stay-detail container">
     <header class="entry-header">
         <h1>{{ entry.title }}</h1>
-        {% if entry.pricePerNight is defined %}
-            <p class="price-tag">${{ entry.pricePerNight }} / night</p>
+        {% set priceFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('pricePerNight') : null %}
+        {% if priceFieldDef and entry.getFieldValue('pricePerNight') %}
+            <p class="price-tag">${{ entry.getFieldValue('pricePerNight') }} / night</p>
         {% endif %}
     </header>
 
-    {% if entry.featuredImage is defined and entry.featuredImage.one() %}
-        <div class="entry-hero-image">
-            <img src="{{ entry.featuredImage.one().getUrl() }}" alt="{{ entry.title }}" />
-        </div>
+    {% set featuredImgFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('featuredImage') : null %}
+    {% if featuredImgFieldDef %}
+        {% set featuredImgVal = entry.getFieldValue('featuredImage') %}
+        {% set featuredImg = featuredImgVal ? (featuredImgVal.one is defined ? featuredImgVal.one() : featuredImgVal) : null %}
+        {% if featuredImg %}
+            <div class="entry-hero-image">
+                <img src="{{ featuredImg.url }}" alt="{{ entry.title }}" />
+            </div>
+        {% endif %}
     {% endif %}
 
     <div class="entry-body">
-        {{ entry.body ?? '' }}
+        {% set bodyFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('body') : null %}
+        {{ bodyFieldDef ? entry.getFieldValue('body') : '' }}
     </div>
 </article>
 {% endblock %}

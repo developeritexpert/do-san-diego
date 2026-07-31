@@ -3,10 +3,12 @@
 
         <div class="promo-image-col">
 
-            {% set img = entry.featuredImage.one() %}
+            {% set promoItem = block is defined ? block : (entry is defined ? entry : null) %}
+            {% set img = (promoItem and promoItem.featuredImage is defined and promoItem.featuredImage) ? promoItem.featuredImage.one() : null %}
+            {% set headingVal = (promoItem and promoItem.heading is defined) ? promoItem.heading : 'Feature' %}
 
             {% if img %}
-                <img src="{{ img.url }}" alt="{{ entry.heading }}" class="promo-img" loading="lazy">
+                <img src="{{ img.url }}" alt="{{ headingVal }}" class="promo-img" loading="lazy">
             {% else %}
                 <div class="promo-img-placeholder">
                     <span>Feature Image</span>
@@ -21,11 +23,12 @@
 
                 <h2 class="promo-title">
 
-                    {% set words = entry.heading|split(' ') %}
+                    {% set words = headingVal|split(' ') %}
+                    {% set highlightVal = (promoItem and promoItem.highlightedWord is defined) ? promoItem.highlightedWord : '' %}
 
                     {% for word in words %}
 
-                        {% if word|lower == entry.highlightedWord|lower %}
+                        {% if highlightVal and word|lower == highlightVal|lower %}
                             <span class="text-accent">{{ word }}</span>
                         {% else %}
                             {{ word }}
@@ -36,11 +39,14 @@
                 </h2>
 
                 <div class="promo-description">
-                    {{ entry.description }}
+                    {{ (promoItem and promoItem.description is defined) ? promoItem.description : '' }}
                 </div>
 
-                <a href="{{ entry.buttonUrl }}" class="btn btn-pill-accent">
-                    {{ entry.buttonText|upper }}
+                {% set btnUrlVal = (promoItem and promoItem.buttonUrl is defined) ? promoItem.buttonUrl : '#' %}
+                {% set btnTextVal = (promoItem and promoItem.buttonText is defined) ? promoItem.buttonText : 'EXPLORE' %}
+
+                <a href="{{ btnUrlVal }}" class="btn btn-pill-accent">
+                    {{ btnTextVal|upper }}
                 </a>
 
             </div>
