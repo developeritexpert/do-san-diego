@@ -5,15 +5,13 @@ fieldLayouts:
   fbe5b5dc-4c09-4058-8f3c-c5776b6cb1ee:
     cardThumbAlignment: end
     tabs:
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            autocapitalize: true
+          - autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-07-27T05:49:07+00:00'
+            dateAdded: "2026-07-27T05:49:07+00:00"
             disabled: false
             elementCondition: null
             id: null
@@ -36,8 +34,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T05:51:37+00:00'
+          - dateAdded: "2026-07-27T05:51:37+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -52,8 +49,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T05:51:37+00:00'
+          - dateAdded: "2026-07-27T05:51:37+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -68,8 +64,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2026-07-27T05:51:37+00:00'
+          - dateAdded: "2026-07-27T05:51:37+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -91,7 +86,7 @@ fieldLayouts:
 handle: curatedGrid
 hasTitleField: true
 icon: null
-name: 'Curated Grid'
+name: "Curated Grid"
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
@@ -99,4 +94,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: '{title}'
+uiLabelFormat: "{title}"

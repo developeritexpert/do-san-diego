@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: areaListingButtonText
 instructions: null
-name: 'Area Listing Button Text'
+name: "Area Listing Button Text"
 searchable: false
 settings:
   byteLimit: null

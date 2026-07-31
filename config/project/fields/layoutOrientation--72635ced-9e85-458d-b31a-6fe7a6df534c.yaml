@@ -1,45 +1,33 @@
 columnSuffix: null
 handle: layoutOrientation
 instructions: null
-name: 'Layout Orientation'
+name: "Layout Orientation"
 searchable: false
 settings:
   customOptions: false
   options:
-    -
-      __assoc__:
-        -
-          - label
-          - 'Image Left'
-        -
-          - value
+    - __assoc__:
+        - - label
+          - "Image Left"
+        - - value
           - imageLeft
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - '1'
-    -
-      __assoc__:
-        -
-          - label
-          - 'Image Right'
-        -
-          - value
+        - - icon
+          - ""
+        - - color
+          - ""
+        - - default
+          - "1"
+    - __assoc__:
+        - - label
+          - "Image Right"
+        - - value
           - imageRight
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
+        - - icon
+          - ""
+        - - color
+          - ""
+        - - default
+          - ""
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Dropdown

@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: linkUrl
 instructions: null
-name: 'Link url'
+name: "Link url"
 searchable: false
 settings:
   fullGraphqlData: true
@@ -9,32 +9,22 @@ settings:
   showLabelField: false
   typeSettings:
     __assoc__:
-      -
-        - entry
-        -
-          __assoc__:
-            -
-              - sources
-              - '*'
-            -
-              - showUnpermittedSections
-              - ''
-            -
-              - showUnpermittedEntries
-              - ''
-      -
-        - url
-        -
-          __assoc__:
-            -
-              - allowRootRelativeUrls
-              - ''
-            -
-              - allowAnchors
-              - ''
-            -
-              - allowCustomSchemes
-              - ''
+      - - entry
+        - __assoc__:
+            - - sources
+              - "*"
+            - - showUnpermittedSections
+              - ""
+            - - showUnpermittedEntries
+              - ""
+      - - url
+        - __assoc__:
+            - - allowRootRelativeUrls
+              - ""
+            - - allowAnchors
+              - ""
+            - - allowCustomSchemes
+              - ""
   types:
     - entry
     - url

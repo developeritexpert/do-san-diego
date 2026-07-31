@@ -1,74 +1,51 @@
 columnSuffix: null
 handle: amenitiesIncluded
 instructions: null
-name: 'Amenities included'
+name: "Amenities included"
 searchable: false
 settings:
-  addRowLabel: 'Add a row'
+  addRowLabel: "Add a row"
   columns:
     __assoc__:
-      -
-        - col1
-        -
-          __assoc__:
-            -
-              - heading
+      - - col1
+        - __assoc__:
+            - - heading
               - Amenities1
-            -
-              - handle
-              - ''
-            -
-              - width
-              - ''
-            -
-              - type
+            - - handle
+              - ""
+            - - width
+              - ""
+            - - type
               - singleline
-      -
-        - col2
-        -
-          __assoc__:
-            -
-              - heading
+      - - col2
+        - __assoc__:
+            - - heading
               - Amenities2
-            -
-              - handle
-              - ''
-            -
-              - width
-              - ''
-            -
-              - type
+            - - handle
+              - ""
+            - - width
+              - ""
+            - - type
               - singleline
-      -
-        - col3
-        -
-          __assoc__:
-            -
-              - heading
+      - - col3
+        - __assoc__:
+            - - heading
               - Amenities3
-            -
-              - handle
-              - ''
-            -
-              - width
-              - ''
-            -
-              - type
+            - - handle
+              - ""
+            - - width
+              - ""
+            - - type
               - singleline
   defaults:
-    -
-      __assoc__:
-        -
-          - col1
-          - ''
-        -
-          - col2
-          - ''
-        -
-          - col3
-          - ''
-        -
-          - rowId
+    - __assoc__:
+        - - col1
+          - ""
+        - - col2
+          - ""
+        - - col3
+          - ""
+        - - rowId
           - 72810218-9422-4b0c-af75-a16caf17d097
   maxRows: null
   minRows: null

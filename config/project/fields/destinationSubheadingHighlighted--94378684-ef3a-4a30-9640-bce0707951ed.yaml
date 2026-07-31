@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: destinationSubheadingHighlighted
 instructions: null
-name: 'destination subheading highlighted'
+name: "destination subheading highlighted"
 searchable: false
 settings:
   byteLimit: null

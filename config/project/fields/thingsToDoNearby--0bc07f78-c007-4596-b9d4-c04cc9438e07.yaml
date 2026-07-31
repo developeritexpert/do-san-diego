@@ -1,36 +1,27 @@
 columnSuffix: null
 handle: thingsToDoNearby
 instructions: null
-name: 'Things to Do Nearby'
+name: "Things to Do Nearby"
 searchable: false
 settings:
-  addRowLabel: 'Add a row'
+  addRowLabel: "Add a row"
   columns:
     __assoc__:
-      -
-        - col1
-        -
-          __assoc__:
-            -
-              - heading
-              - ''
-            -
-              - handle
-              - ''
-            -
-              - width
-              - ''
-            -
-              - type
+      - - col1
+        - __assoc__:
+            - - heading
+              - ""
+            - - handle
+              - ""
+            - - width
+              - ""
+            - - type
               - singleline
   defaults:
-    -
-      __assoc__:
-        -
-          - col1
-          - ''
-        -
-          - rowId
+    - __assoc__:
+        - - col1
+          - ""
+        - - rowId
           - 55043b43-a1c5-4468-97e9-f872ad412001
   maxRows: null
   minRows: null

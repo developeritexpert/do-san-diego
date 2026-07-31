@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: eventDateTime
 instructions: null
-name: 'Event Date & time'
+name: "Event Date & time"
 searchable: false
 settings:
   byteLimit: null

@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: plainText
-instructions: 'single line, like a title or button label'
-name: 'Plain Text'
+instructions: "single line, like a title or button label"
+name: "Plain Text"
 searchable: false
 settings:
   byteLimit: null

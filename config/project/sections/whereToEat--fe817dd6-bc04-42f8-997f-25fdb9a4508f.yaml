@@ -1,17 +1,15 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  -
-    uid: c00ea25c-aa8e-42a0-adce-0b0ffae4abda # What to Do
+  - uid: c00ea25c-aa8e-42a0-adce-0b0ffae4abda # What to Do
 handle: whereToEat
 maxAuthors: 1
 minAuthors: 1
-name: 'Where to Eat'
+name: "Where to Eat"
 previewTargets:
-  -
-    label: 'Primary entry page'
-    refresh: '1'
-    urlFormat: '{url}'
+  - label: "Primary entry page"
+    refresh: "1"
+    urlFormat: "{url}"
 propagationMethod: all
 siteSettings:
   bdeb5182-f6c3-4403-9323-0ab9afff1795: # DO San Diego

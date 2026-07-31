@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: eventLocation
 instructions: null
-name: 'Event location'
+name: "Event location"
 searchable: false
 settings:
   byteLimit: null

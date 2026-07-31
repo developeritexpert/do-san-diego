@@ -4,15 +4,13 @@ fieldLayouts:
   3da9e1ee-e72d-40a5-8c98-ceccf04fa172:
     cardThumbAlignment: end
     tabs:
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            autocapitalize: true
+          - autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2026-07-24T08:56:50+00:00'
+            dateAdded: "2026-07-24T08:56:50+00:00"
             disabled: false
             elementCondition: null
             id: null
@@ -35,11 +33,10 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            attribute: alt
+          - attribute: alt
             class: null
             cols: null
-            dateAdded: '2026-07-24T08:58:51+00:00'
+            dateAdded: "2026-07-24T08:58:51+00:00"
             disabled: false
             elementCondition: null
             id: null
@@ -67,8 +64,8 @@ fs: general
 handle: general
 name: General
 sortOrder: 1
-subpath: ''
+subpath: ""
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: ''
-transformSubpath: ''
+transformFs: ""
+transformSubpath: ""

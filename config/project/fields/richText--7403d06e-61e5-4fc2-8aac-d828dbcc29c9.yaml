@@ -1,12 +1,12 @@
 columnSuffix: null
 handle: richText
-instructions: 'paragraph text with formatting'
-name: 'Rich Text'
+instructions: "paragraph text with formatting"
+name: "Rich Text"
 searchable: false
 settings:
   advancedLinkFields: null
-  availableTransforms: ''
-  availableVolumes: ''
+  availableTransforms: ""
+  availableVolumes: ""
   characterLimit: null
   css: null
   cssFile: null
@@ -15,12 +15,12 @@ settings:
   defaultUploadLocationVolume: null
   fullGraphqlData: true
   headingLevels:
-    - '1'
-    - '2'
-    - '3'
-    - '4'
-    - '5'
-    - '6'
+    - "1"
+    - "2"
+    - "3"
+    - "4"
+    - "5"
+    - "6"
   imageEntryTypeUid: null
   imageFieldUid: null
   imageMode: img
@@ -37,7 +37,7 @@ settings:
     - __ADMINS__
   toolbar:
     - heading
-    - '|'
+    - "|"
     - bold
     - italic
     - link

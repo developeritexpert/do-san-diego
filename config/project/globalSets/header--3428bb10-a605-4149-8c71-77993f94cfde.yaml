@@ -2,11 +2,9 @@ fieldLayouts:
   201bfa39-1f33-43e5-a893-609a090833ae:
     cardThumbAlignment: end
     tabs:
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-29T09:53:37+00:00'
+          - dateAdded: "2026-07-29T09:53:37+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -21,14 +19,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'Header information'
+        name: "Header information"
         uid: e47a026f-d71d-449f-8672-9f94cb723d83
         userCondition: null
-      -
-        elementCondition: null
+      - elementCondition: null
         elements:
-          -
-            dateAdded: '2026-07-29T09:53:37+00:00'
+          - dateAdded: "2026-07-29T09:53:37+00:00"
             editCondition: null
             elementCondition: null
             elementEditCondition: null
@@ -43,10 +39,50 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: 'header Navigation'
+        name: "header Navigation"
         uid: 839635bf-a030-4ea1-afe4-b01a31a54576
+        userCondition: null
+      - elementCondition: null
+        elements:
+          - dateAdded: "2026-07-31T07:53:46+00:00"
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7403d06e-61e5-4fc2-8aac-d828dbcc29c9 # Rich Text
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be9facb1-3fbf-4862-ba93-c72e0f0aa51e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Address
+        uid: 3f76b725-30da-41b4-8ed4-99a7b4dcc7dd
+        userCondition: null
+      - elementCondition: null
+        elements:
+          - dateAdded: "2026-07-31T07:55:31+00:00"
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 255b6925-5561-4791-ab95-9ab8748927b9 # Social Links
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14f55f04-6a72-4a73-b438-7c03e21ee24b
+            userCondition: null
+            warning: null
+            width: 100
+        name: "Social icons"
+        uid: 3444e3b6-9598-4340-84f4-fcf6430168de
         userCondition: null
     thumbFieldKey: null
 handle: header
 name: Header
-sortOrder: 2
+sortOrder: 1
