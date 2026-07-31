@@ -1,0 +1,57 @@
+<section class="promo-banner-section promo-imageLeft">
+    <div class="container promo-banner-grid">
+
+        <div class="promo-image-col">
+
+            {% set promoItem = block is defined ? block : (entry is defined ? entry : null) %}
+            {% set img = (promoItem and promoItem.featuredImage is defined and promoItem.featuredImage) ? promoItem.featuredImage.one() : null %}
+            {% set headingVal = (promoItem and promoItem.heading is defined) ? promoItem.heading : 'Feature' %}
+
+            {% if img %}
+                <img src="{{ img.url }}" alt="{{ headingVal }}" class="promo-img" loading="lazy">
+            {% else %}
+                <div class="promo-img-placeholder">
+                    <span>Feature Image</span>
+                </div>
+            {% endif %}
+
+        </div>
+
+        <div class="promo-content-col">
+
+            <div class="promo-card-box">
+
+                <h2 class="promo-title">
+
+                    {% set words = headingVal|split(' ') %}
+                    {% set highlightVal = (promoItem and promoItem.highlightedWord is defined) ? promoItem.highlightedWord : '' %}
+
+                    {% for word in words %}
+
+                        {% if highlightVal and word|lower == highlightVal|lower %}
+                            <span class="text-accent">{{ word }}</span>
+                        {% else %}
+                            {{ word }}
+                        {% endif %}
+
+                    {% endfor %}
+
+                </h2>
+
+                <div class="promo-description">
+                    {{ (promoItem and promoItem.description is defined) ? promoItem.description : '' }}
+                </div>
+
+                {% set btnUrlVal = (promoItem and promoItem.buttonUrl is defined) ? promoItem.buttonUrl : '#' %}
+                {% set btnTextVal = (promoItem and promoItem.buttonText is defined) ? promoItem.buttonText : 'EXPLORE' %}
+
+                <a href="{{ btnUrlVal }}" class="btn btn-pill-accent">
+                    {{ btnTextVal|upper }}
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>

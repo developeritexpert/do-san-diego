@@ -1,0 +1,15 @@
+{% extends "_layouts/main.twig" %}
+
+{% set title = entry.title %}
+
+{% block content %}
+<article class="generic-page container">
+    <header class="page-header">
+        <h1>{{ entry.title }}</h1>
+    </header>
+
+    <div class="page-body">
+        {{ entry.body ?? '' }}
+    </div>
+</article>
+{% endblock %}

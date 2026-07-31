@@ -1,0 +1,52 @@
+fieldLayouts:
+  201bfa39-1f33-43e5-a893-609a090833ae:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-29T09:53:37+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7d446b03-5b7b-42d7-a565-2a09111b0985 # Header logo
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 81fcf7c5-cd62-47d4-b511-f11ff7849c1c
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Header information'
+        uid: e47a026f-d71d-449f-8672-9f94cb723d83
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-29T09:53:37+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a13faae7-0d7e-453f-810f-bbeccd14ff63 # header naviagation
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7b428eed-0f9b-4fc2-8753-707e13daf0fe
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'header Navigation'
+        uid: 839635bf-a030-4ea1-afe4-b01a31a54576
+        userCondition: null
+    thumbFieldKey: null
+handle: header
+name: Header
+sortOrder: 2

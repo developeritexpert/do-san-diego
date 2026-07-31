@@ -1,0 +1,30 @@
+{% set item = entry ?? cardItem ?? null %}
+{% if item %}
+<article class="card card-stay">
+    {% set img = null %}
+    {% set itemFieldLayout = item.getFieldLayout() %}
+    {% if itemFieldLayout and itemFieldLayout.getFieldByHandle('featuredImage') and item.getFieldValue('featuredImage') %}
+        {% set img = item.getFieldValue('featuredImage').one() %}
+    {% elseif itemFieldLayout and itemFieldLayout.getFieldByHandle('assets') and item.getFieldValue('assets') %}
+        {% set img = item.getFieldValue('assets').one() %}
+    {% endif %}
+    {% if img %}
+        <div class="card-media">
+            <img src="{{ img.getUrl() }}" alt="{{ item.title }}" loading="lazy" />
+        </div>
+    {% else %}
+        <div class="card-media card-media-placeholder">
+            <span>{{ item.title }}</span>
+        </div>
+    {% endif %}
+    <div class="card-body">
+        {% set propType = (itemFieldLayout and itemFieldLayout.getFieldByHandle('propertyType')) ? item.getFieldValue('propertyType') : 'Resort & Hotel' %}
+        <span class="property-type">{{ propType ?? 'Resort & Hotel' }}</span>
+        <h3 class="card-title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+        {% set priceVal = (itemFieldLayout and itemFieldLayout.getFieldByHandle('pricePerNight')) ? item.getFieldValue('pricePerNight') : null %}
+        {% if priceVal %}
+            <p class="card-price">From <strong>${{ priceVal }}</strong> / night</p>
+        {% endif %}
+    </div>
+</article>
+{% endif %}

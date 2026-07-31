@@ -1,0 +1,31 @@
+{% extends "_layouts/main.twig" %}
+
+{% set title = entry.title %}
+
+{% block content %}
+<article class="stay-detail container">
+    <header class="entry-header">
+        <h1>{{ entry.title }}</h1>
+        {% set priceFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('pricePerNight') : null %}
+        {% if priceFieldDef and entry.getFieldValue('pricePerNight') %}
+            <p class="price-tag">${{ entry.getFieldValue('pricePerNight') }} / night</p>
+        {% endif %}
+    </header>
+
+    {% set featuredImgFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('featuredImage') : null %}
+    {% if featuredImgFieldDef %}
+        {% set featuredImgVal = entry.getFieldValue('featuredImage') %}
+        {% set featuredImg = featuredImgVal ? (featuredImgVal.one is defined ? featuredImgVal.one() : featuredImgVal) : null %}
+        {% if featuredImg %}
+            <div class="entry-hero-image">
+                <img src="{{ featuredImg.url }}" alt="{{ entry.title }}" />
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <div class="entry-body">
+        {% set bodyFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('body') : null %}
+        {{ bodyFieldDef ? entry.getFieldValue('body') : '' }}
+    </div>
+</article>
+{% endblock %}

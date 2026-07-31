@@ -1,0 +1,150 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  108d8f0e-f54e-4894-9e4e-de17328b8baf:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-07-27T08:03:38+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8cb76dc1-e5e3-4606-86a0-bca1e5276eee
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-27T08:06:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4bee4f22-e4a2-428a-9b5f-59ece857ed47
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-27T08:06:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c6387eb8-ef0e-4fab-b83b-646e72097105 # Highlighted Word
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4519842-cbd0-4229-86c7-ef4078b4d0bb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-27T08:06:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d262dbbc-2012-45ed-9636-a47a474748c7 # Description
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1e26be9c-8ffb-42b9-bbcb-a38b2859ece1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-27T08:06:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 99e3197b-2bfc-4057-a539-f641a3fa6963 # Button Text
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba9d53af-3b67-4e0e-92f6-4948fdcd2712
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-27T08:06:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 34ed1074-e546-45b6-a50e-31783448b609 # Button URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8082d49a-7f65-42bc-b8fd-1e929d798cca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-27T08:06:21+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1 # Featured Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ec32fc07-6ad8-4671-9861-39116f1c4ae5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2ecbafb6-7e4b-4f48-bf97-5bc75fa284f9
+        userCondition: null
+    thumbFieldKey: null
+handle: discoversection
+hasTitleField: true
+icon: null
+name: DiscoverSection
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

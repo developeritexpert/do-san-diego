@@ -1,0 +1,8 @@
+{# Matrix Call to Action Block #}
+<div class="matrix-block block-cta">
+    <h3>{{ block.ctaTitle }}</h3>
+    <p>{{ block.ctaText }}</p>
+    {% if block.ctaButtonUrl is defined %}
+        <a href="{{ block.ctaButtonUrl }}" class="btn btn-accent">{{ block.ctaButtonLabel ?? 'Learn More' }}</a>
+    {% endif %}
+</div>
