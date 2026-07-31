@@ -14,7 +14,7 @@
   --color-text-main: #1F2429;
   --color-text-muted: #6C757D;
   --color-text-light: #FFFFFF;
-  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading:  'Neue Montreal', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -1917,6 +1917,7 @@ h6 {
 }
 
 .hdr-menu-link {
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 42px;
   line-height: 1.2;
