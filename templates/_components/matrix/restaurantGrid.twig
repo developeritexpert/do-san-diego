@@ -8,57 +8,57 @@
 		<h2 class="section-title text-center">{{ block.heading ?? 'Where to Eat' }}</h2>
 
 		{# <div class="eat-carousel-viewport" id="eatCarouselViewport">
-																												            <div class="eat-carousel-track" id="eatCarouselTrack">
-																												                {% set items = restaurants|length ? restaurants : [
-																												                    { title: 'Café & Bakery', imgUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80', url: '#' },
-																												                    { title: 'Basta Bar & Dining', imgUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80', url: '#' },
-																												                    { title: 'Speakeasy Pub', imgUrl: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80', url: '#' }
-																												                ] %}
-																												
-																												                {% for item in items %}
-																												                    {% set imgUrl = null %}
-																												                    {% set itemTitle = item.title ?? 'Restaurants' %}
-																												                    {% set itemLink = item.url ?? '#' %}
-																												
-																												                    {% if item.getFieldLayout is defined %}
-																												                        {% set itemFieldLayout = item.getFieldLayout() %}
-																												                        {% if itemFieldLayout and itemFieldLayout.getFieldByHandle('featuredImage') and item.getFieldValue('featuredImage') %}
-																												                            {% set imgObj = item.getFieldValue('featuredImage').one() %}
-																												                            {% if imgObj %}{% set imgUrl = imgObj.getUrl() %}{% endif %}
-																												                        {% elseif itemFieldLayout and itemFieldLayout.getFieldByHandle('assets') and item.getFieldValue('assets') %}
-																												                            {% set imgObj = item.getFieldValue('assets').one() %}
-																												                            {% if imgObj %}{% set imgUrl = imgObj.getUrl() %}{% endif %}
-																												                        {% endif %}
-																												                    {% elseif item.imgUrl is defined %}
-																												                        {% set imgUrl = item.imgUrl %}
-																												                    {% endif %}
-																												
-																												                    <div class="eat-card-item">
-																												                        <a href="{{ itemLink }}" class="eat-card-inner">
-																												                            <div class="eat-image-box">
-																												                                {% if imgUrl %}
-																												                                    <img src="{{ imgUrl }}" alt="{{ itemTitle }}" loading="lazy" />
-																												                                {% else %}
-																												                                    <div class="eat-image-placeholder"><span>{{ itemTitle }}</span></div>
-																												                                {% endif %}
-																												                            </div>
-																												                        </a>
-																												                    </div>
-																												                {% endfor %}
-																												            </div>
-																												        </div> #}
+																														            <div class="eat-carousel-track" id="eatCarouselTrack">
+																														                {% set items = restaurants|length ? restaurants : [
+																														                    { title: 'Café & Bakery', imgUrl: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80', url: '#' },
+																														                    { title: 'Basta Bar & Dining', imgUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80', url: '#' },
+																														                    { title: 'Speakeasy Pub', imgUrl: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80', url: '#' }
+																														                ] %}
+																														
+																														                {% for item in items %}
+																														                    {% set imgUrl = null %}
+																														                    {% set itemTitle = item.title ?? 'Restaurants' %}
+																														                    {% set itemLink = item.url ?? '#' %}
+																														
+																														                    {% if item.getFieldLayout is defined %}
+																														                        {% set itemFieldLayout = item.getFieldLayout() %}
+																														                        {% if itemFieldLayout and itemFieldLayout.getFieldByHandle('featuredImage') and item.getFieldValue('featuredImage') %}
+																														                            {% set imgObj = item.getFieldValue('featuredImage').one() %}
+																														                            {% if imgObj %}{% set imgUrl = imgObj.getUrl() %}{% endif %}
+																														                        {% elseif itemFieldLayout and itemFieldLayout.getFieldByHandle('assets') and item.getFieldValue('assets') %}
+																														                            {% set imgObj = item.getFieldValue('assets').one() %}
+																														                            {% if imgObj %}{% set imgUrl = imgObj.getUrl() %}{% endif %}
+																														                        {% endif %}
+																														                    {% elseif item.imgUrl is defined %}
+																														                        {% set imgUrl = item.imgUrl %}
+																														                    {% endif %}
+																														
+																														                    <div class="eat-card-item">
+																														                        <a href="{{ itemLink }}" class="eat-card-inner">
+																														                            <div class="eat-image-box">
+																														                                {% if imgUrl %}
+																														                                    <img src="{{ imgUrl }}" alt="{{ itemTitle }}" loading="lazy" />
+																														                                {% else %}
+																														                                    <div class="eat-image-placeholder"><span>{{ itemTitle }}</span></div>
+																														                                {% endif %}
+																														                            </div>
+																														                        </a>
+																														                    </div>
+																														                {% endfor %}
+																														            </div>
+																														        </div> #}
 
 		{# Active Center Title Display (Only shown under the active middle card) #}
 		{#  <div class="eat-active-caption-wrap">
-																												            <span class="eat-active-title" id="eatActiveTitle">Restaurants</span>
-																												        </div> #}
+																														            <span class="eat-active-title" id="eatActiveTitle">Restaurants</span>
+																														        </div> #}
 
 		{# Slider Progress Bar & Controls #}
 		{# <div class="eat-slider-indicator">
-																												            <div class="eat-indicator-bar">
-																												                <div class="eat-indicator-thumb" id="eatIndicatorThumb"></div>
-																												            </div>
-																												        </div> #}
+																														            <div class="eat-indicator-bar">
+																														                <div class="eat-indicator-thumb" id="eatIndicatorThumb"></div>
+																														            </div>
+																														        </div> #}
 
 			<div class="service-slider-sec"> <div class="srvce-inner">
 				<div class="main-wrap-slider">
@@ -115,9 +115,4 @@
 		</div>
 
 	</div>
-	{# <div class="absolute-txt-img">
-														<img src="/assets/images/DO-San-Diego-lyt.png" alt="DO San Diego" loading="lazy">
-														</div>
-														#}
-
 </section>
