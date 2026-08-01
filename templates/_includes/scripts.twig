@@ -11,6 +11,6 @@
 	<!-- bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 {% endif %}
-<script defer src="{{ getenv('PRIMARY_SITE_URL') }}assets/js/main.js"></script>
+<script defer src="{{ alias('@web/') }}assets/js/main.js"></script>
 <script defer
-	src="{{ getenv('PRIMARY_SITE_URL') }}assets/js/custom.js"></script>
+	src="{{ alias('@web/') }}assets/js/custom.js"></script>

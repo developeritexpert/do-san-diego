@@ -1,6 +1,6 @@
 <div class="menu-ryt-cont">
 	<div class="close-btn-cont">
-		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/cross.png">
+		<img src="{{ alias('@web/') }}assets/images/cross.png">
 	</div>
 	<ul class="menu-list-cont">
 		{% set headerObj = (header is defined and header) ? header : craft.app.globals.getSetByHandle('header') %}
@@ -77,13 +77,13 @@
 				{% endif %}
 
 				<a href="{{ fbUrl }}" class="s-link" {% if fbUrl != '#' %}target="_blank" rel="noopener"{% endif %}>
-					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/facebook.png">
+					<img src="{{ alias('@web/') }}assets/images/facebook.png">
 				</a>
 				<a href="{{ instaUrl }}" class="s-link" {% if instaUrl != '#' %}target="_blank" rel="noopener"{% endif %}>
-					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/insta.png">
+					<img src="{{ alias('@web/') }}assets/images/insta.png">
 				</a>
 				<a href="{{ threadsUrl }}" class="s-link" {% if threadsUrl != '#' %}target="_blank" rel="noopener"{% endif %}>
-					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/treads.png">
+					<img src="{{ alias('@web/') }}assets/images/treads.png">
 				</a>
 			</div>
 		</div>
