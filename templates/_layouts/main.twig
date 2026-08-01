@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ craft.app.language }}">
-<head>
-    {% include '_includes/head.twig' %}
-    {% block head %}{% endblock %}
-</head>
-<body class="{{ bodyClass ?? '' }}">
-    {% include '_includes/header.twig' %}
+	<head>
+		{% include '_includes/head.twig' %}
+		{% block head %}
+		{% endblock %}
+	</head>
+	<body class="{{ bodyClass ?? '' }}">
+		{% include '_includes/header.twig' %}
 
-    <main id="main-content" role="main">
-        {% block content %}{% endblock %}
-    </main>
+		<main id="main-content" role="main">
+			{% block content %}
+			{% endblock %}
+		</main>
 
-    {% include '_includes/footer.twig' %}
-    {% include '_includes/scripts.twig' %}
-    {% block scripts %}{% endblock %}
-</body>
+		{% include '_includes/footer.twig' %}
+		{% include '_includes/scripts.twig' %}
+		{% block scripts %}
+		{% endblock %}
+	</body>
 </html>

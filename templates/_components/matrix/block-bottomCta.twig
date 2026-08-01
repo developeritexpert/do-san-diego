@@ -1,20 +1,28 @@
 {# Craft CMS 5 Matrix Block: Bottom CTA ("Find Your Perfect Place") #}
 <section class="bottom-cta-section">
-    <div class="bottom-cta-container">
-        <h2 class="cta-heading">
-            Find Your Perfect <span class="text-accent">{{ block.highlightedWord ?? 'Place' }}</span>
-        </h2>
-        {% if block.description is defined and block.description %}
-            <p class="cta-subheading">{{ block.description }}</p>
-        {% else %}
-            <p class="cta-subheading">Search top destinations, places to eat, and hidden gems across San Diego</p>
-        {% endif %}
-        {% if block.buttonText is defined and block.buttonText %}
-            <a href="{{ block.buttonUrl ?? '#' }}" class="btn btn-cta-pill">
-                {{ block.buttonText|upper }}
-            </a>
-        {% else %}
-            <a href="{{ siteUrl('listings') }}" class="btn btn-cta-pill">SEARCH NOW</a>
-        {% endif %}
-    </div>
+	<div class="bottom-cta-container">
+		<h2 class="cta-heading">
+			Find Your Perfect <span class="text-accent">{{ block.highlightedWord
+					?? 'Place' }}</span>
+		</h2>
+		{% if block.description is defined and block.description %}
+			<p class="cta-subheading">
+				{{ block.description }}
+			</p>
+		{% else %}
+			<p class="cta-subheading">
+				Search top destinations, places to eat, and hidden gems across
+				San Diego
+			</p>
+		{% endif %}
+		{% if block.buttonText is defined and block.buttonText %}
+			<a href="{{ block.buttonUrl ?? '#' }}" class="btn btn-cta-pill">
+				{{ block.buttonText|upper }}
+			</a>
+		{% else %}
+			<a href="{{ siteUrl('listings') }}" class="btn btn-cta-pill">
+				SEARCH NOW
+			</a>
+		{% endif %}
+	</div>
 </section>

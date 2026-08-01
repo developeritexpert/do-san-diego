@@ -1,10 +1,12 @@
 {# Matrix Gallery Block #}
 <div class="matrix-block block-gallery">
-    <div class="gallery-grid">
-        {% for img in block.galleryImages.all() %}
-            <div class="gallery-item">
-                <img src="{{ img.getUrl() }}" alt="{{ img.title }}" loading="lazy" />
-            </div>
-        {% endfor %}
-    </div>
+	<div class="gallery-grid">
+		{% for img in block.galleryImages.all() %}
+			<div class="gallery-item">
+				<img src="{{ img.getUrl() }}"
+					alt="{{ img.title }}"
+					loading="lazy" />
+			</div>
+		{% endfor %}
+	</div>
 </div>

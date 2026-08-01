@@ -32,6 +32,70 @@ body {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
 .pb-20 {
   padding-bottom: 20px;
 }
@@ -57,7 +121,7 @@ body {
 }
 
 .pp-contact a:hover {
-  color: #F26D40;
+  color: #f26d40;
 }
 
 .pp-div2 .absolute-txt-img {
@@ -476,8 +540,6 @@ body {
   background: url("/assets/images/hook.svg") center / contain no-repeat;
 }
 
-
-
 .location-badge h4 {
   font-size: 20px;
   font-weight: 700;
@@ -788,6 +850,9 @@ body {
 
 .see-all-btn:hover {
   color: #fff;
+  transform: translateY(-3px);
+  box-shadow: rgba(238, 63, 102, 0.4) 0px 12px 25px;
+  background: linear-gradient(rgb(238, 63, 102) 0%, rgb(242, 109, 64) 100%);
 }
 
 .swiper-slide {
@@ -795,7 +860,6 @@ body {
 }
 
 /* bh */
-
 
 .do-pt {
   padding-top: 180px;
@@ -812,9 +876,9 @@ body {
   padding: 0 15px;
 }
 
-/* .list-banner {
+.list-banner {
   background: url("/assets/images/banner-image.png") no-repeat center center / cover;
-} */
+}
 
 .list-bn-ryt h1 {
   font-size: 86px;
@@ -824,7 +888,7 @@ body {
 }
 
 .list-bn-ryt h1 span {
-  color: #F26D40;
+  color: #f26d40;
 }
 
 .list-bn-ryt a:hover {
@@ -858,18 +922,16 @@ body {
   color: #fff;
 }
 
-
 .list-bn-ldt img {
   border-radius: 30px;
 }
-
 
 .event-section {
   background: url("/assets/images/find-bg.png") no-repeat center center / cover;
 }
 
 .event-section .listing-container {
-  border-top: 1px solid #FFFFFF4D;
+  border-top: 1px solid #ffffff4d;
   padding: 70px 0 120px;
 }
 
@@ -894,7 +956,7 @@ body {
   font-family: "NeueMontreal-Bold";
   font-weight: 700;
   font-size: 36px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 25px 45px;
   background: transparent;
 }
@@ -917,18 +979,18 @@ body {
 }
 
 .event-table tbody tr:nth-child(2) {
-  border: 1px solid #F26D404D;
-  background: #F26D401A;
+  border: 1px solid #f26d404d;
+  background: #f26d401a;
 }
 
 .event-table tbody tr:nth-child(4) {
-  border: 1px solid #EE3F664D;
-  background: #EE3F661A;
+  border: 1px solid #ee3f664d;
+  background: #ee3f661a;
 }
 
 .event-table tbody tr:nth-child(6) {
-  border: 1px solid #F26D404D;
-  background: #F26D401A;
+  border: 1px solid #f26d404d;
+  background: #f26d401a;
   border-bottom: 0;
 }
 
@@ -948,7 +1010,7 @@ body {
 }
 
 .event-table .all-day {
-  color: #F26D40;
+  color: #f26d40;
 }
 
 .event-table tbody td:last-child a {
@@ -971,7 +1033,7 @@ body {
 }
 
 .find-wrpper h2 span {
-  color: #F26D40;
+  color: #f26d40;
 }
 
 .find-section {
@@ -996,7 +1058,7 @@ body {
 }
 
 .filter-sidebar {
-  background: #F26D400A;
+  background: #f26d400a;
   border-radius: 15px;
   padding: 30px;
   display: flex;
@@ -1014,7 +1076,7 @@ body {
   line-height: 1.4;
   font-family: "NeueMontreal-Bold";
   color: #000000;
-  border-bottom: 1px solid #0000000F;
+  border-bottom: 1px solid #0000000f;
   padding: 0 0 20px;
   margin: 0;
 }
@@ -1032,7 +1094,7 @@ body {
 .filter-list input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  border: 1px solid #F26D40;
+  border: 1px solid #f26d40;
   border-radius: 3px;
   cursor: pointer;
   appearance: none;
@@ -1093,13 +1155,13 @@ body {
 
 .listing-details .listing-tag {
   display: inline-block;
-  background: #F26D4014;
-  border: 1px dashed #F26D4026;
+  background: #f26d4014;
+  border: 1px dashed #f26d4026;
   font-weight: 700;
   font-style: Italic;
   font-size: 16px;
   line-height: 100%;
-  color: #F26D40;
+  color: #f26d40;
   padding: 12px 27px;
   border-radius: 120px;
 }
@@ -1189,8 +1251,6 @@ body {
 
 /* bh */
 
-
-
 .single-list-sec .absolute-txt-img {
   position: absolute;
   right: 0;
@@ -1216,7 +1276,6 @@ body {
 .coast-sec-left p {
   margin: 0;
 }
-
 
 .rate-review-sec {
   overflow: hidden;
@@ -1491,7 +1550,6 @@ body {
     height: 480px;
   }
 
-
   .listing-progress-bar {
     margin-top: 20px;
   }
@@ -1592,6 +1650,9 @@ body {
     padding: 0;
     gap: 10px;
   }
+  .location-info p {
+    margin: 0;
+  }
 
   .location-info li {
     gap: 5px;
@@ -1690,7 +1751,6 @@ body {
   .amenities-grid {
     gap: 0px;
     grid-template-columns: repeat(2, 1fr);
-
   }
 
   .related-cards {
@@ -1735,6 +1795,10 @@ body {
     font-size: 25px;
   }
 
+  .location-badge::after,
+  .location-badge::before {
+    top: -24px;
+  }
 
   .coast-sec-left h2 {
     font-size: 45px;
@@ -1963,7 +2027,6 @@ body {
   .pp-cookies {
     padding-bottom: 80px;
   }
-
 
   .pp-point .pp-list {
     margin: 10px 0;
@@ -2222,7 +2285,6 @@ body {
 }
 
 @media (max-width: 575px) {
-
   .pp-div1 .container,
   .container {
     padding-inline: 12px;
@@ -2583,6 +2645,4 @@ body {
   .rate-review-sec {
     padding-top: 25px;
   }
-
-
 }

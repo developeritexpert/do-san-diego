@@ -1,0 +1,193 @@
+﻿Diagnose log at 2026-08-01T10:03:19Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.6.1+786ab03440ddc82e807a97c0e540f5247e44cec6
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 22000)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\Mandeep
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=DESKTOP-1LC4BH3
+GIT_TRACE2_PARENT_SID=17004d04-75fd-41b4-9d42-90fbf91ea01d
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\Mandeep\OneDrive
+ChocolateyLastPathUpdate=133995791497130229
+SESSIONNAME=Console
+TMP=C:\Users\Mandeep\AppData\Local\Temp
+ANTIGRAVITY_TRAJECTORY_ID=c179286d-8a4d-4d36-81c1-fcb69b168341
+PROCESSOR_REVISION=4e03
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL
+USERNAME=Mandeep
+ANTIGRAVITY_EDITOR_APP_ROOT=c:\Users\Mandeep\AppData\Local\Programs\Antigravity IDE\resources\app
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+TEMP=C:\Users\Mandeep\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\Mandeep\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 78 Stepping 3, GenuineIntel
+COLORTERM=truecolor
+USERDOMAIN=DESKTOP-1LC4BH3
+PROCESSOR_LEVEL=6
+NUMBER_OF_PROCESSORS=4
+TMPDIR=C:\Users\Mandeep\AppData\Local\Temp
+VSCODE_IPC_HOOK=\\.\pipe\eeafe0b6-1.107.0-main-sock
+ANTIGRAVITY_CSRF_TOKEN=cb3b5e99-ea24-4508-b2e8-1a60375fb1c9
+ProgramFiles(x86)=C:\Program Files (x86)
+PUBLIC=C:\Users\Public
+VSCODE_NLS_CONFIG={"userLocale":"en-us","osLocale":"en-in","resolvedLanguage":"en","defaultMessagesFile":"C:\\Users\\Mandeep\\AppData\\Local\\Programs\\Antigravity IDE\\resources\\app\\out\\nls.messages.json","locale":"en-us","availableLanguages":{}}
+FPS_BROWSER_USER_PROFILE_STRING=Default
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+ANTIGRAVITY_LS_ADDRESS=localhost:52130
+PLINK_PROTOCOL=ssh
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files (x86)
+PATH=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Mandeep\bin;C:/Users/Mandeep/.gemini/antigravity-ide/bin;C:\Python313\Scripts\;C:\Python313\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Users\Mandeep\AppData\Local\Microsoft\WindowsApps;C:\Users\Mandeep\AppData\Roaming\npm;C:\Users\Mandeep\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mandeep\AppData\Local\Programs\Antigravity\bin;C:\Users\Mandeep\AppData\Local\Microsoft\WinGet\Packages\PHP.PHP.8.3_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Users\Mandeep\AppData\Local\Programs\Antigravity IDE\bin
+ChocolateyInstall=C:\ProgramData\chocolatey
+VSCODE_CODE_CACHE_PATH=C:\Users\Mandeep\AppData\Roaming\Antigravity IDE\CachedData\e0b7a2bcf575cfba10528c4e7c10bd3ce2d7769a
+ProgramW6432=C:\Program Files
+ANTIGRAVITY_SOURCE_METADATA={"tool":{"conversationId":"77513c66-7593-4c29-8b73-102130b976bc","stepIndex":26,"toolCall":{"id":"werwf155","name":"run_command","argumentsJson":"{\"CommandLine\":\"git credential-manager diagnose\",\"Cwd\":\"c:\\\\Users\\\\Mandeep\\\\Desktop\\\\crafttttt\\\\do-san-diego\",\"WaitMsBeforeAsync\":5000,\"toolAction\":\"Running git credential manager diagnostics\",\"toolSummary\":\"Running GCM diagnostics\"}","thinkingSignature":"EuoECucEARFNMg/BCq0//l4TbkrS3IN9AGGp7EU85+Pt+Xb2X6AoQhbZ/66YMJHsv8CqzXpR/16OFIo9I6syVnYcELD7nMyItGpV98wZWk+apHqYKQ7nuMQw434ZYw8XfipZedR322XzIRU86CyB9+m3XR4qFR0GobBYd+xWonP+2JMCIlW2p2nyhJcAV7nEfeYR6FkB8NrXUE0dyzaffJgrw0Moz13Hs+nbsQBj032NDyGXZ90HXRMh1YhPBkcGJgpIPWFj5gTk6/mV/f3S8gEI0A/MKU7ulXABSGlGOkim9uYb3zwcdGg42hNz80aGbSJ7lm7dqRPuvRc6ADJcW81MwJKOk1TRBmkr+vCN8a4/uKl4pyGk51NUKQyhZH6ElPvlmDgBz8Iy9Dz256F9tfQNb/Ao5niFsXfkrPMwRYGCWdfv5xWWvlYt85Pt/GvrfErqLXZCTJlhszjB8290Evny2jPRgY4c/NrB7GDbNwMt97NkxGtt48jVb2RkboIlWMebp9e9Kt/rowjWx0H73op2t1WXXaqCFe53Ip9DUKj0Cob5QEzAxVYK5iHKuwYKDObJO8gmFUrsFcI1UUopTNbDV94XIighPlMbJs4cvN53Rp9THHZpnUSWc+KNi4tgESL7BbS0/X+VPe+xCA4Jf8rnph1q0hMeVwLQYj9P0UouG59aPr4Al6PmW2+5TWCesBzdNqKEhFxoGQ31hqQCKJJMIORwsbUrZGh35PR5IbSKT6fKLuwM0c0T05GWDrNcw6PU+h03dbJtBOCB2PYVdEbktzHtqT2+ZeC8aJ/XOGT8BahOJTpExmlc+Pp6","originalName":"run_command"}}}
+HOME=C:\Users\Mandeep
+ANTIGRAVITY_AGENT=1
+LC_CTYPE=C.UTF-8
+CommonProgramW6432=C:\Program Files\Common Files
+LOGONSERVER=\\DESKTOP-1LC4BH3
+USERPROFILE=C:\Users\Mandeep
+SystemRoot=C:\WINDOWS
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-1LC4BH3
+APPDATA=C:\Users\Mandeep\AppData\Roaming
+HOMEDRIVE=C:
+VSCODE_PID=7464
+PSModulePath=C:\Users\Mandeep\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+VSCODE_CWD=C:\Users\Mandeep\AppData\Local\Programs\Antigravity IDE
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_7464_LJEKCVRYLWSEGHSX
+PROCESSOR_ARCHITEW6432=AMD64
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+PROCESSOR_ARCHITECTURE=x86
+OS=Windows_NT
+ComSpec=C:\WINDOWS\system32\cmd.exe
+SystemDrive=C:
+windir=C:\WINDOWS
+OneDriveConsumer=C:\Users\Mandeep\OneDrive
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\Mandeep\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\Mandeep\AppData\Local\Temp\6ddb401781321021fa65f495'... OK
+Reading from temporary file 'C:\Users\Mandeep\AppData\Local\Temp\6ddb401781321021fa65f495'... OK
+Deleting temporary file 'C:\Users\Mandeep\AppData\Local\Temp\6ddb401781321021fa65f495'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\Mandeep
+UserDataDirectoryPath: C:\Users\Mandeep\.gcm
+GetCurrentDirectory(): C:\Users\Mandeep\Desktop\crafttttt\do-san-diego
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:49911/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.51.0.windows.1'
+Locating current repository...Git repository at 'C:/Users/Mandeep/Desktop/crafttttt/do-san-diego/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=schannel
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/developeritexpert/do-san-diego.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+file:.git/config	branch.main.vscode-merge-base=origin/main
+file:.git/config	branch.dev/changes.remote=origin
+file:.git/config	branch.dev/changes.merge=refs/heads/dev/changes
+file:.git/config	branch.dev/changes.vscode-merge-base=origin/dev/changes
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\Mandeep\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\Mandeep\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+

@@ -1,13 +1,20 @@
-{% set headerObj = (header is defined and header) ? header : craft.app.globals.getSetByHandle('header') %}
-{% set logo = (headerObj and headerObj.headerLogo is defined and headerObj.headerLogo) ? headerObj.headerLogo.one() : null %}
-
+{% set headerObj = header is defined and header
+	? header
+	: craft.app.globals.getSetByHandle('header')
+%}
+{% set logo = headerObj
+	and headerObj.headerLogo is defined
+	and headerObj.headerLogo
+	? headerObj.headerLogo.one()
+	: null
+%}
 
 <header class="site-header">
 	<div class="header-container">
 		{% if logo %}
 			<div class="hdr-left-div">
 				<a href="{{ siteUrl }}" class="site-logo">
-					<img src="{{ logo.url() }}" alt="{{ siteName }}">
+					<img src="{{ logo.url() }}" alt="{{ siteName }}" />
 				</a>
 			</div>
 		{% else %}
@@ -18,42 +25,91 @@
 
 		<div class="hdr-ryt-div">
 			<div class="search-container">
-				<form action="{{ url('search') }}" method="get" class="search-cont" id="searchForm" style="display: flex; align-items: center;  border-radius: 30px; padding: 5px 15px; transition: all 0.3s ease; ; margin: 0;">
-					<button type="button" id="searchToggleBtn" style="background: none; border: none; padding: 0; display: flex; align-items: center; cursor: pointer; color: white;">
-						<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/search-img.png" alt="Search" class="search-icon" style="width: 18px; height: 18px; margin-right: 8px; filter: brightness(0) invert(1);">
-						<span id="searchText" style="font-weight: 500; font-size: 14px; letter-spacing: 1px;">SEARCH</span>
+				<form action="{{ url('search') }}"
+					method="get"
+					class="search-cont"
+					id="searchForm"
+					style="display: flex; align-items: center;  border-radius: 30px; padding: 5px 15px; transition: all 0.3s ease; ; margin: 0;">
+					<button type="button"
+						id="searchToggleBtn"
+						style="background: none; border: none; padding: 0; display: flex; align-items: center; cursor: pointer; color: white;">
+						<img src="{{
+							getenv(
+								'PRIMARY_SITE_URL'
+							)
+							}}assets/images/search-img.png"
+							alt="Search"
+							class="search-icon"
+							style="width: 18px; height: 18px; margin-right: 8px; filter: brightness(0) invert(1);" />
+						<span id="searchText"
+							style="font-weight: 500; font-size: 14px; letter-spacing: 1px;">
+							SEARCH
+						</span>
 					</button>
-					<input type="text" name="q" id="searchInput" placeholder="Search..." style="width: 0; opacity: 0; border: none; background: transparent; color: white; outline: none; transition: all 0.3s ease; padding: 0; font-size: 14px;">
-					<button type="submit" id="searchSubmitBtn" style="display: none; background: none; border: none; color: white; cursor: pointer; padding-left: 10px; font-weight: bold;">&rarr;</button>
+					<input type="text"
+						name="q"
+						id="searchInput"
+						placeholder="Search..."
+						style="width: 0; opacity: 0; border: none; background: transparent; color: white; outline: none; transition: all 0.3s ease; padding: 0; font-size: 14px;" />
+					<button type="submit"
+						id="searchSubmitBtn"
+						style="display: none; background: none; border: none; color: white; cursor: pointer; padding-left: 10px; font-weight: bold;">
+						&rarr;
+					</button>
 				</form>
 			</div>
 			<div class="temp-cont">
 				<div class="temp-icon">
-					<svg width="19" height="20" viewbox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.0002C0 12.765 0.924356 15.1224 2.77354 17.0736C4.62225 19.0249 6.87519 20 9.53188 20C12.1458 20 14.3826 19.0249 16.2422 17.0736C18.1019 15.1228 19.021 12.765 18.9996 10.0002V8.62849C18.9996 8.40579 18.8937 8.29397 18.6814 8.29397L17.5651 8.19351C15.8865 8.1267 14.4572 7.46334 13.2773 6.20342C12.0978 4.94397 11.487 3.42202 11.4447 1.63851L11.3806 0.401336C11.3806 0.200905 11.2747 0.0668104 11.0623 0H9.53188C6.89656 0 4.64885 0.980834 2.78922 2.94297C0.929581 4.90512 0 7.25769 0 10.0002ZM3.09227 10.0002C3.09227 8.32761 3.61287 6.86204 4.65408 5.60212C5.69576 4.3422 6.98159 3.58976 8.51157 3.34431C8.87258 5.30645 9.71808 7.00704 11.0462 8.44512C12.3743 9.8832 13.9841 10.8143 15.8755 11.2374C15.5782 12.8205 14.8343 14.1363 13.644 15.1844C12.4541 16.2316 11.0832 16.7561 9.53188 16.7561C7.76772 16.7561 6.25341 16.0928 4.98895 14.766C3.7245 13.4393 3.09227 11.8506 3.09227 10.0002Z" fill="white"/>
+					<svg width="19"
+						height="20"
+						viewbox="0 0 19 20"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M0 10.0002C0 12.765 0.924356 15.1224 2.77354 17.0736C4.62225 19.0249 6.87519 20 9.53188 20C12.1458 20 14.3826 19.0249 16.2422 17.0736C18.1019 15.1228 19.021 12.765 18.9996 10.0002V8.62849C18.9996 8.40579 18.8937 8.29397 18.6814 8.29397L17.5651 8.19351C15.8865 8.1267 14.4572 7.46334 13.2773 6.20342C12.0978 4.94397 11.487 3.42202 11.4447 1.63851L11.3806 0.401336C11.3806 0.200905 11.2747 0.0668104 11.0623 0H9.53188C6.89656 0 4.64885 0.980834 2.78922 2.94297C0.929581 4.90512 0 7.25769 0 10.0002ZM3.09227 10.0002C3.09227 8.32761 3.61287 6.86204 4.65408 5.60212C5.69576 4.3422 6.98159 3.58976 8.51157 3.34431C8.87258 5.30645 9.71808 7.00704 11.0462 8.44512C12.3743 9.8832 13.9841 10.8143 15.8755 11.2374C15.5782 12.8205 14.8343 14.1363 13.644 15.1844C12.4541 16.2316 11.0832 16.7561 9.53188 16.7561C7.76772 16.7561 6.25341 16.0928 4.98895 14.766C3.7245 13.4393 3.09227 11.8506 3.09227 10.0002Z"
+							fill="white" />
 					</svg>
 				</div>
-				<p id="live-temperature">81°</p>
+				<p id="live-temperature">
+					81°
+				</p>
 			</div>
 			<div class="menu-toggle navbar">
-				<button class="navbar-slide-toggler" type="button" data-toggle="slide-left" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<p>MENU</p>
-					<span class="navbar-toggler-icon"><img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/nav-toggle.png"></span>
+				<button class="navbar-slide-toggler"
+					type="button"
+					data-toggle="slide-left"
+					data-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<p>
+						MENU
+					</p>
+					<span class="navbar-toggler-icon">
+						<img src="{{
+							getenv(
+								'PRIMARY_SITE_URL'
+							)
+							}}assets/images/nav-toggle.png" />
+					</span>
 				</button>
-				<div class="collapse11 slide-nav navbar-collapse" id="navbarNavDropdown">
+				<div class="collapse11 slide-nav navbar-collapse"
+					id="navbarNavDropdown">
 					<div class="menu-inner-cont">
 						<div class="menu-img-cont">
-							<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/menu-img.png" alt="">
+							<img src="{{
+								getenv(
+									'PRIMARY_SITE_URL'
+								)
+								}}assets/images/menu-img.png"
+								alt="" />
 						</div>
 						{% include '_includes/nav.twig' %}
-
 					</div>
 				</div>
 				<div class="bg-overlay"></div>
 			</div>
-
-
 		</div>
-
 	</div>
 </header>

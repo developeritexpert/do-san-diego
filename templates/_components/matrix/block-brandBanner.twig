@@ -1,30 +1,49 @@
 {# Craft CMS 5 Matrix Block: Brand Banner ("Discover more. Experience more. DO SAN DIEGO") #}
-{% set ribbonMessage = (block is defined and block.ribbonText is defined and block.ribbonText) ? block.ribbonText : "We are your trusted local guide, dedicated to showcasing the finest experiences, attractions, restaurants, and events in the area." %}
+{% set ribbonMessage = block is defined
+	and block.ribbonText is defined
+	and block.ribbonText
+	? block.ribbonText
+	: 'We are your trusted local guide, dedicated to showcasing the finest experiences, attractions, restaurants, and events in the area.'
+%}
 
 <section class="brand-banner-section">
 	<div class="brand-banner-container">
 		<div class="brand-title-wrap">
-			<h2 class="brand-title-main">Discover
+			<h2 class="brand-title-main">
+				Discover
 				<span class="text-orange-gradient">more.</span>
 			</h2>
-			<h2 class="brand-title-sub">Experience
+			<h2 class="brand-title-sub">
+				Experience
 				<span class="text-pink-gradient">more.</span>
-
 			</h2>
 		</div>
 
-		<div
-			class="brand-logo-and-ribbon-wrap">
+		<div class="brand-logo-and-ribbon-wrap">
 			<!-- DO SAN DIEGO Center Logo matching exact Figma design -->
 			<div class="do-san-diego-logo-large">
 				<div class="logo-do-line">
-					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/do.png" alt="DO">
+					<img src="{{
+						getenv(
+							'PRIMARY_SITE_URL'
+						)
+						}}assets/images/do.png"
+						alt="DO" />
 				</div>
 				<div class="logo-subtitle">
-					<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/san-img.png" alt="San Diego">
+					<img src="{{
+						getenv(
+							'PRIMARY_SITE_URL'
+						)
+						}}assets/images/san-img.png"
+						alt="San Diego" />
 				</div>
 			</div>
 		</div>
 	</div>
-	<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/ribbon-txt.png" alt="" class="btm-abs-img" aria-hidden="true" loading="lazy">
+	<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/ribbon-txt.png"
+		alt=""
+		class="btm-abs-img"
+		aria-hidden="true"
+		loading="lazy" />
 </section>

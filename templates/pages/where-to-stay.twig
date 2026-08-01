@@ -1,33 +1,50 @@
-{% extends "_layouts/main.twig" %}
+{% extends '_layouts/main.twig' %}
 
 {% block content %}
 	{# {% include "_components/promoBanner" %} #}
 
-	{% include "_components/matrix/block-banner.twig" with {
-          block: {
-                    description: entry is defined and entry ? (entry.description ?? null) : null,
-                    highlightedWord: entry is defined and entry ? (entry.highlightedWord ?? null) : null,
-                    buttonText: entry is defined and entry ? (entry.buttonText ?? 'Explore Activities') : 'Explore Activities',
-                    buttonUrl: entry is defined and entry ? (entry.buttonUrl ?? siteUrl('listings')) : siteUrl('listings'),
-                    assets: (entry is defined and entry and entry.assets is defined and entry.assets) ? entry.assets.all() : null,
-                    featuredImage: (entry is defined and entry and entry.featuredImage is defined and entry.featuredImage) ? entry.featuredImage.all() : null
-          }
-          } %}
+	{% include '_components/matrix/block-banner.twig' with {
+		block: {
+			description: entry is defined and entry
+				? entry.description ?? null
+				: null,
+			highlightedWord: entry is defined and entry
+				? entry.highlightedWord ?? null
+				: null,
+			buttonText: entry is defined and entry
+				? entry.buttonText ?? 'Explore Activities'
+				: 'Explore Activities',
+			buttonUrl: entry is defined and entry
+				? entry.buttonUrl ?? siteUrl('listings')
+				: siteUrl('listings'),
+			assets: entry is defined
+				and entry
+				and entry.assets is defined
+				and entry.assets
+				? entry.assets.all()
+				: null,
+			featuredImage: entry is defined
+				and entry
+				and entry.featuredImage is defined
+				and entry.featuredImage
+				? entry.featuredImage.all()
+				: null
+		}
+	} %}
 
+	{% include '_components/matrix/block-upcoming-events.twig' with {
+		block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
+	} %}
 
-	{% include "_components/matrix/block-upcoming-events.twig" with {
-          block: {
-                    heading: 'Where to Eat',
-                    buttonUrl: siteUrl('restaurants')
-          }
-          } %}
+	{% include '_components/matrix/block-destination.twig' with {
+		block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
+	} %}
 
-	{% include "_components/matrix/block-destination.twig" with {
-          block: {
-                    heading: 'Where to Eat',
-                    buttonUrl: siteUrl('restaurants')
-          }
-          } %}
+	{% include '_components/matrix/stayGrid.twig' with {
+		block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
+	} %}
 
-
+	{% include '_components/matrix/block-bottomCta.twig' with {
+		block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
+	} %}
 {% endblock %}

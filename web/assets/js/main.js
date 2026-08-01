@@ -491,9 +491,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const todoCards = Array.from(todoTrack.querySelectorAll(".todo-card-item"));
     let currentTodoIndex = 0;
 
+    function getSlidesToShow() {
+      if (todoCards.length === 0) return 3;
+      return Math.round(todoTrack.parentElement.offsetWidth / todoCards[0].offsetWidth) || 1;
+    }
+
     function updateTodoSlider() {
       if (todoCards.length === 0) return;
-      const maxIndex = Math.max(0, todoCards.length - 3);
+      const slidesToShow = getSlidesToShow();
+      const maxIndex = Math.max(0, todoCards.length - slidesToShow);
       if (currentTodoIndex < 0) currentTodoIndex = 0;
       if (currentTodoIndex > maxIndex) currentTodoIndex = maxIndex;
 
@@ -502,18 +508,33 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     todoPrev.addEventListener("click", () => {
+      const slidesToShow = getSlidesToShow();
+      const maxIndex = Math.max(0, todoCards.length - slidesToShow);
+      if (maxIndex === 0) return;
+
       if (currentTodoIndex > 0) {
         currentTodoIndex--;
-        updateTodoSlider();
+      } else {
+        currentTodoIndex = maxIndex; // infinite loop wrap around
       }
+      updateTodoSlider();
     });
 
     todoNext.addEventListener("click", () => {
-      const maxIndex = Math.max(0, todoCards.length - 3);
+      const slidesToShow = getSlidesToShow();
+      const maxIndex = Math.max(0, todoCards.length - slidesToShow);
+      if (maxIndex === 0) return;
+
       if (currentTodoIndex < maxIndex) {
         currentTodoIndex++;
-        updateTodoSlider();
+      } else {
+        currentTodoIndex = 0; // infinite loop wrap around
       }
+      updateTodoSlider();
+    });
+
+    window.addEventListener("resize", () => {
+      updateTodoSlider();
     });
   }
 

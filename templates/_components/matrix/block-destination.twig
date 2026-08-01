@@ -94,19 +94,67 @@
 									</div>
 								</div>
 							{% endfor %}
-							{% else %}
-						{# Fallback static content if no destinations are published yet #}
-							{# <div class="listing-card">
-															<div class="listing-img">
-																<img src="./img/listing-img-1.png" alt="Sunset Beach Resort">
-															</div>
-															<div class="listing-details">
-																<span class="listing-tag">Listing #1</span>
-																<h3>Sunset Beach Resort</h3>
-																<p>Enjoy a relaxing beachfront escape with spacious rooms, ocean views, and easy access to local attractions, restaurants, and outdoor activities.</p>
-																<a href="#" class="cstm-btn">View Details</a>
-															</div>
-														</div> #}
+						{% else %}
+							{# Fallback static content if no destinations are published yet #}
+							<div class="listing-card">
+								<div class="listing-img">
+									<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/listing-img-1.png" alt="Sunset Beach Resort">
+								</div>
+								<div class="listing-details">
+									<span class="listing-tag">Listing #1</span>
+									<h3>Sunset Beach Resort</h3>
+									<p>Enjoy a relaxing beachfront escape with spacious rooms, ocean views, and easy access to local attractions, restaurants, and outdoor activities.</p>
+									<a href="#" class="cstm-btn">View Details</a>
+								</div>
+							</div>
+
+							<div class="listing-card">
+								<div class="listing-img">
+									<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/listing-img-2.png" alt="Downtown City Hotel">
+								</div>
+								<div class="listing-details">
+									<span class="listing-tag">Listing #2</span>
+									<h3>Downtown City Hotel</h3>
+									<p>Stay in the heart of the city with modern accommodations, premium amenities, and walking distance to shopping, dining, and entertainment.</p>
+									<a href="#" class="cstm-btn">View Details</a>
+								</div>
+							</div>
+
+							<div class="listing-card">
+								<div class="listing-img">
+									<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/listing-img-3.png" alt="Mountain View Lodge">
+								</div>
+								<div class="listing-details">
+									<span class="listing-tag">Listing #3</span>
+									<h3>Mountain View Lodge</h3>
+									<p>Experience peaceful surroundings and breathtaking mountain scenery, perfect for hiking, family getaways, and weekend retreats.</p>
+									<a href="#" class="cstm-btn">View Details</a>
+								</div>
+							</div>
+
+							<div class="listing-card">
+								<div class="listing-img">
+									<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/Riverside.png" alt="Riverside Bed & Breakfast">
+								</div>
+								<div class="listing-details">
+									<span class="listing-tag">Listing #4</span>
+									<h3>Riverside Bed & Breakfast</h3>
+									<p>A cozy and welcoming stay featuring comfortable rooms, homemade breakfast, and beautiful riverside views just minutes from downtown.</p>
+									<a href="#" class="cstm-btn">View Details</a>
+								</div>
+							</div>
+
+							<div class="listing-card">
+								<div class="listing-img">
+									<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/Harbor.png" alt="Harbor Marina Inn">
+								</div>
+								<div class="listing-details">
+									<span class="listing-tag">Listing #5</span>
+									<h3>Harbor Marina Inn</h3>
+									<p>Relax by the waterfront with comfortable accommodations, nearby boating adventures, fresh seafood restaurants, and scenic walking paths.</p>
+									<a href="#" class="cstm-btn">View Details</a>
+								</div>
+							</div>
 						{% endif %}
 					</div>
 				</div>

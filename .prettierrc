@@ -1,0 +1,7 @@
+{
+  "plugins": ["prettier-plugin-twig-melody"],
+  "printWidth": 120,
+  "tabWidth": 4,
+  "useTabs": true,
+  "twigAlwaysBreakObjects": false
+}

@@ -1,21 +1,33 @@
-{% extends "_layouts/main.twig" %}
+{% extends '_layouts/main.twig' %}
 
-{% set title = "Upcoming Events in San Diego" %}
+{% set title = 'Upcoming Events in San Diego' %}
 
 {% block content %}
-<div class="page-header container">
-    <h1>Events & Happenings</h1>
-    <p>Concerts, festivals, markets, and local community events.</p>
-</div>
+	<div class="page-header container">
+		<h1>
+			Events & Happenings
+		</h1>
+		<p>
+			Concerts, festivals, markets, and local community events.
+		</p>
+	</div>
 
-<section class="events-list container">
-    <div class="events-grid">
-        {% set events = craft.entries().section('events').orderBy('eventDate ascii').all() %}
-        {% for item in events %}
-            {% include "_components/cards/card-event-row.twig" with { cardItem: item } %}
-        {% else %}
-            <p>No upcoming events scheduled right now.</p>
-        {% endfor %}
-    </div>
-</section>
+	<section class="events-list container">
+		<div class="events-grid">
+			{% set events =
+				craft.entries().section('events').orderBy(
+					'eventDate ascii'
+				).all()
+			%}
+			{% for item in events %}
+				{% include '_components/cards/card-event-row.twig' with {
+					cardItem: item
+				} %}
+			{% else %}
+				<p>
+					No upcoming events scheduled right now.
+				</p>
+			{% endfor %}
+		</div>
+	</section>
 {% endblock %}
