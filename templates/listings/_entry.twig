@@ -1,39 +1,61 @@
-{% extends "_layouts/main.twig" %}
+{% extends '_layouts/main.twig' %}
 
 {% set title = entry.title %}
 
 {% block content %}
-<article class="entry-detail container">
-    <header class="entry-header">
-        <h1>{{ entry.title }}</h1>
-        {% set locFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('locationName') : null %}
-        {% if locFieldDef and entry.getFieldValue('locationName') %}
-            <p class="location">{{ entry.getFieldValue('locationName') }}</p>
-        {% endif %}
-    </header>
+	<article class="entry-detail container">
+		<header class="entry-header">
+			<h1>
+				{{ entry.title }}
+			</h1>
+			{% set locFieldDef = entry.getFieldLayout()
+				? entry.getFieldLayout().getFieldByHandle('locationName')
+				: null
+			%}
+			{% if locFieldDef and entry.getFieldValue('locationName') %}
+				<p class="location">
+					{{ entry.getFieldValue('locationName') }}
+				</p>
+			{% endif %}
+		</header>
 
-    {% set featuredImgFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('featuredImage') : null %}
-    {% if featuredImgFieldDef %}
-        {% set featuredImgVal = entry.getFieldValue('featuredImage') %}
-        {% set featuredImg = featuredImgVal ? (featuredImgVal.one is defined ? featuredImgVal.one() : featuredImgVal) : null %}
-        {% if featuredImg %}
-            <div class="entry-hero-image">
-                <img src="{{ featuredImg.url }}" alt="{{ entry.title }}" />
-            </div>
-        {% endif %}
-    {% endif %}
+		{% set featuredImgFieldDef = entry.getFieldLayout()
+			? entry.getFieldLayout().getFieldByHandle('featuredImage')
+			: null
+		%}
+		{% if featuredImgFieldDef %}
+			{% set featuredImgVal = entry.getFieldValue('featuredImage') %}
+			{% set featuredImg = featuredImgVal
+				? featuredImgVal.one is defined
+					? featuredImgVal.one()
+					: featuredImgVal
+				: null
+			%}
+			{% if featuredImg %}
+				<div class="entry-hero-image">
+					<img src="{{ featuredImg.url }}" alt="{{ entry.title }}" />
+				</div>
+			{% endif %}
+		{% endif %}
 
-    <div class="entry-body">
-        {% set bodyBlocksFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('bodyBlocks') : null %}
-        {% if bodyBlocksFieldDef and entry.getFieldValue('bodyBlocks') %}
-            {% set blocks = entry.getFieldValue('bodyBlocks').all() %}
-            {% for block in blocks %}
-                {% include "_components/matrix/block-" ~ block.type.handle ~ ".twig" ignore missing %}
-            {% endfor %}
-        {% else %}
-            {% set bodyFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('body') : null %}
-            {{ bodyFieldDef ? entry.getFieldValue('body') : '' }}
-        {% endif %}
-    </div>
-</article>
+		<div class="entry-body">
+			{% set bodyBlocksFieldDef = entry.getFieldLayout()
+				? entry.getFieldLayout().getFieldByHandle('bodyBlocks')
+				: null
+			%}
+			{% if bodyBlocksFieldDef and entry.getFieldValue('bodyBlocks') %}
+				{% set blocks = entry.getFieldValue('bodyBlocks').all() %}
+				{% for block in blocks %}
+					{% include '_components/matrix/block-' ~ block.type.handle
+						~ '.twig' %}
+				{% endfor %}
+			{% else %}
+				{% set bodyFieldDef = entry.getFieldLayout()
+					? entry.getFieldLayout().getFieldByHandle('body')
+					: null
+				%}
+				{{ bodyFieldDef ? entry.getFieldValue('body') : '' }}
+			{% endif %}
+		</div>
+	</article>
 {% endblock %}

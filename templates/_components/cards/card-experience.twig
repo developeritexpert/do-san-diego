@@ -1,27 +1,50 @@
 {% set item = entry ?? cardItem ?? null %}
 {% if item %}
-<article class="card card-experience">
-    {% set img = null %}
-    {% set itemFieldLayout = item.getFieldLayout() %}
-    {% if itemFieldLayout and itemFieldLayout.getFieldByHandle('featuredImage') and item.getFieldValue('featuredImage') %}
-        {% set img = item.getFieldValue('featuredImage').one() %}
-    {% elseif itemFieldLayout and itemFieldLayout.getFieldByHandle('assets') and item.getFieldValue('assets') %}
-        {% set img = item.getFieldValue('assets').one() %}
-    {% endif %}
-    {% if img %}
-        <div class="card-media">
-            <img src="{{ img.getUrl() }}" alt="{{ item.title }}" loading="lazy" />
-        </div>
-    {% endif %}
-    <div class="card-body">
-        {% set catRel = (itemFieldLayout and itemFieldLayout.getFieldByHandle('category')) ? item.getFieldValue('category') : null %}
-        {% set cat = (catRel and catRel.one()) ? catRel.one().title : 'Experience' %}
-        <span class="card-badge">{{ cat }}</span>
-        <h3 class="card-title"><a href="{{ item.url }}">{{ item.title }}</a></h3>
-        {% set desc = (itemFieldLayout and itemFieldLayout.getFieldByHandle('shortDescription')) ? item.getFieldValue('shortDescription') : null %}
-        {% if desc %}
-            <p class="card-excerpt">{{ desc }}</p>
-        {% endif %}
-    </div>
-</article>
+	<article class="card card-experience">
+		{% set img = null %}
+		{% set itemFieldLayout = item.getFieldLayout() %}
+		{% if
+			itemFieldLayout
+				and itemFieldLayout.getFieldByHandle('featuredImage')
+				and item.getFieldValue('featuredImage') %}
+			{% set img = item.getFieldValue('featuredImage').one() %}
+		{% elseif
+			itemFieldLayout
+				and itemFieldLayout.getFieldByHandle('assets')
+				and item.getFieldValue('assets') %}
+			{% set img = item.getFieldValue('assets').one() %}
+		{% endif %}
+		{% if img %}
+			<div class="card-media">
+				<img src="{{ img.getUrl() }}"
+					alt="{{ item.title }}"
+					loading="lazy" />
+			</div>
+		{% endif %}
+		<div class="card-body">
+			{% set catRel = itemFieldLayout
+				and itemFieldLayout.getFieldByHandle('category')
+				? item.getFieldValue('category')
+				: null
+			%}
+			{% set cat = catRel and catRel.one()
+				? catRel.one().title
+				: 'Experience'
+			%}
+			<span class="card-badge">{{ cat }}</span>
+			<h3 class="card-title">
+				<a href="{{ item.url }}">{{ item.title }}</a>
+			</h3>
+			{% set desc = itemFieldLayout
+				and itemFieldLayout.getFieldByHandle('shortDescription')
+				? item.getFieldValue('shortDescription')
+				: null
+			%}
+			{% if desc %}
+				<p class="card-excerpt">
+					{{ desc }}
+				</p>
+			{% endif %}
+		</div>
+	</article>
 {% endif %}

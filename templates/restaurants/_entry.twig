@@ -1,45 +1,71 @@
-{% extends "_layouts/main.twig" %}
+{% extends '_layouts/main.twig' %}
 
 {% set title = entry.title %}
 
 {% block content %}
-<article class="restaurant-detail container">
-    <header class="entry-header">
-        <h1>{{ entry.title }}</h1>
-        <p class="meta">
-            {% set cuisineFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('cuisineType') : null %}
-            {% if cuisineFieldDef %}
-                {% set cuisineVal = entry.getFieldValue('cuisineType') %}
-                {% set cuisine = cuisineVal ? (cuisineVal.one is defined ? cuisineVal.one() : cuisineVal) : null %}
-                {% if cuisine %}
-                    <span>{{ cuisine.title ?? cuisine }}</span>
-                {% endif %}
-            {% endif %}
+	<article class="restaurant-detail container">
+		<header class="entry-header">
+			<h1>
+				{{ entry.title }}
+			</h1>
+			<p class="meta">
+				{% set cuisineFieldDef = entry.getFieldLayout()
+					? entry.getFieldLayout().getFieldByHandle('cuisineType')
+					: null
+				%}
+				{% if cuisineFieldDef %}
+					{% set cuisineVal = entry.getFieldValue('cuisineType') %}
+					{% set cuisine = cuisineVal
+						? cuisineVal.one is defined
+							? cuisineVal.one()
+							: cuisineVal
+						: null
+					%}
+					{% if cuisine %}
+						<span>{{ cuisine.title ?? cuisine }}</span>
+					{% endif %}
+				{% endif %}
 
-            {% set neighborhoodFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('neighborhood') : null %}
-            {% if neighborhoodFieldDef %}
-                {% set neighborhoodVal = entry.getFieldValue('neighborhood') %}
-                {% if neighborhoodVal %}
-                    &bull; <span>{{ neighborhoodVal }}</span>
-                {% endif %}
-            {% endif %}
-        </p>
-    </header>
+				{% set neighborhoodFieldDef = entry.getFieldLayout()
+					? entry.getFieldLayout().getFieldByHandle('neighborhood')
+					: null
+				%}
+				{% if neighborhoodFieldDef %}
+					{% set neighborhoodVal =
+						entry.getFieldValue('neighborhood')
+					%}
+					{% if neighborhoodVal %}
+						&bull; <span>{{ neighborhoodVal }}</span>
+					{% endif %}
+				{% endif %}
+			</p>
+		</header>
 
-    {% set featuredImgFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('featuredImage') : null %}
-    {% if featuredImgFieldDef %}
-        {% set featuredImgVal = entry.getFieldValue('featuredImage') %}
-        {% set featuredImg = featuredImgVal ? (featuredImgVal.one is defined ? featuredImgVal.one() : featuredImgVal) : null %}
-        {% if featuredImg %}
-            <div class="entry-hero-image">
-                <img src="{{ featuredImg.url }}" alt="{{ entry.title }}" />
-            </div>
-        {% endif %}
-    {% endif %}
+		{% set featuredImgFieldDef = entry.getFieldLayout()
+			? entry.getFieldLayout().getFieldByHandle('featuredImage')
+			: null
+		%}
+		{% if featuredImgFieldDef %}
+			{% set featuredImgVal = entry.getFieldValue('featuredImage') %}
+			{% set featuredImg = featuredImgVal
+				? featuredImgVal.one is defined
+					? featuredImgVal.one()
+					: featuredImgVal
+				: null
+			%}
+			{% if featuredImg %}
+				<div class="entry-hero-image">
+					<img src="{{ featuredImg.url }}" alt="{{ entry.title }}" />
+				</div>
+			{% endif %}
+		{% endif %}
 
-    <div class="entry-body">
-        {% set bodyFieldDef = entry.getFieldLayout() ? entry.getFieldLayout().getFieldByHandle('body') : null %}
-        {{ bodyFieldDef ? entry.getFieldValue('body') : '' }}
-    </div>
-</article>
+		<div class="entry-body">
+			{% set bodyFieldDef = entry.getFieldLayout()
+				? entry.getFieldLayout().getFieldByHandle('body')
+				: null
+			%}
+			{{ bodyFieldDef ? entry.getFieldValue('body') : '' }}
+		</div>
+	</article>
 {% endblock %}

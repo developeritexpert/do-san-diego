@@ -13,10 +13,42 @@ settings:
           __assoc__:
             -
               - heading
-              - ''
+              - Things1
             -
               - handle
+              - things1
+            -
+              - width
               - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Things2
+            -
+              - handle
+              - things2
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - Things3
+            -
+              - handle
+              - things3
             -
               - width
               - ''
@@ -28,6 +60,12 @@ settings:
       __assoc__:
         -
           - col1
+          - ''
+        -
+          - col2
+          - ''
+        -
+          - col3
           - ''
         -
           - rowId

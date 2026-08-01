@@ -1,11 +1,11 @@
 {# Where to Eat - Interactive Restaurant Carousel Component #}
-{% set restaurants = craft.entries()
-    .section('restaurants')
-    .all() %}
+{% set restaurants = craft.entries().section('restaurants').all() %}
 
 <section class="section-where-to-eat">
 	<div class="eat-container">
-		<h2 class="section-title text-center">{{ block.heading ?? 'Where to Eat' }}</h2>
+		<h2 class="section-title text-center">
+			{{ block.heading ?? 'Where to Eat' }}
+		</h2>
 
 		{# <div class="eat-carousel-viewport" id="eatCarouselViewport">
 																														            <div class="eat-carousel-track" id="eatCarouselTrack">
@@ -60,14 +60,42 @@
 																														            </div>
 																														        </div> #}
 
-			<div class="service-slider-sec"> <div class="srvce-inner">
+		<div class="service-slider-sec">
+			<div class="srvce-inner">
 				<div class="main-wrap-slider">
-					{% set items = restaurants|length ? restaurants : [
-                        { title: 'Restaurant 1', imgUrl: alias('@web/assets/images/restaurant-1.png'), url: '#' },
-                        { title: 'Restaurant 2', imgUrl: alias('@web/assets/images/restaurant-2.png'), url: '#' },
-                        { title: 'Restaurant 3', imgUrl: alias('@web/assets/images/restaurant-3.png'), url: '#' },
-                        { title: 'Restaurant 4', imgUrl: alias('@web/assets/images/restaurant-1.png'), url: '#' }
-                    ] %}
+					{% set items = restaurants|length
+						? restaurants
+						: [
+							{
+								title: 'Restaurant 1',
+								imgUrl: alias(
+									'@web/assets/images/restaurant-1.png'
+								),
+								url: '#'
+							},
+							{
+								title: 'Restaurant 2',
+								imgUrl: alias(
+									'@web/assets/images/restaurant-2.png'
+								),
+								url: '#'
+							},
+							{
+								title: 'Restaurant 3',
+								imgUrl: alias(
+									'@web/assets/images/restaurant-3.png'
+								),
+								url: '#'
+							},
+							{
+								title: 'Restaurant 4',
+								imgUrl: alias(
+									'@web/assets/images/restaurant-1.png'
+								),
+								url: '#'
+							}
+						]
+					%}
 
 					{% for item in items %}
 						{% set imgUrl = null %}
@@ -76,13 +104,27 @@
 
 						{% if item.getFieldLayout is defined %}
 							{% set itemFieldLayout = item.getFieldLayout() %}
-							{% if itemFieldLayout and itemFieldLayout.getFieldByHandle('featuredImage') and item.getFieldValue('featuredImage') %}
-								{% set imgObj = item.getFieldValue('featuredImage').one() %}
+							{% if
+								itemFieldLayout
+									and itemFieldLayout.getFieldByHandle(
+										'featuredImage'
+									)
+									and item.getFieldValue('featuredImage') %}
+								{% set imgObj =
+									item.getFieldValue('featuredImage').one()
+								%}
 								{% if imgObj %}
 									{% set imgUrl = imgObj.getUrl() %}
 								{% endif %}
-							{% elseif itemFieldLayout and itemFieldLayout.getFieldByHandle('assets') and item.getFieldValue('assets') %}
-								{% set imgObj = item.getFieldValue('assets').one() %}
+							{% elseif
+								itemFieldLayout
+									and itemFieldLayout.getFieldByHandle(
+										'assets'
+									)
+									and item.getFieldValue('assets') %}
+								{% set imgObj =
+									item.getFieldValue('assets').one()
+								%}
 								{% if imgObj %}
 									{% set imgUrl = imgObj.getUrl() %}
 								{% endif %}
@@ -91,18 +133,27 @@
 							{% set imgUrl = item.imgUrl %}
 						{% endif %}
 
-						<div
-							class="slide-wrap">
+						<div class="slide-wrap">
 							{# <a href="{{ itemLink }}" class="srvce-card-link"> #}
 							<div class="srvce-img">
 								{% if imgUrl %}
-									<img src="{{ imgUrl }}" alt="{{ itemTitle }}" loading="lazy"/>
+									<img src="{{ imgUrl }}"
+										alt="{{ itemTitle }}"
+										loading="lazy" />
 								{% else %}
-									<img src="{{ alias('@web/assets/images/restaurant-1.png') }}" alt="{{ itemTitle }}" loading="lazy"/>
+									<img src="{{
+										alias(
+											'@web/assets/images/restaurant-1.png'
+										)
+										}}"
+										alt="{{ itemTitle }}"
+										loading="lazy" />
 								{% endif %}
 							</div>
 							<div class="srvce-cntnt">
-								<h5>{{ itemTitle }}</h5>
+								<h5>
+									{{ itemTitle }}
+								</h5>
 							</div>
 							{# </a> #}
 						</div>
@@ -113,6 +164,5 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </section>

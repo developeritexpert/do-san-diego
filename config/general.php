@@ -27,6 +27,8 @@ return GeneralConfig::create()
     ->enableTwigSandbox()
     // Force GD image driver to prevent Imagick crashes
     ->imageDriver('gd')
+    // Disable automatic DB backup on updates if mysqldump is not in system PATH
+    ->backupOnUpdate(false)
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',

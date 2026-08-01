@@ -1,10 +1,17 @@
 {# Promo Block Component - Discover Hidden Gems #}
 <section class="promo-block">
-    <div class="promo-container">
-        <h2 class="promo-heading">{{ promoHeading ?? 'Discover Hidden Gems in San Diego' }}</h2>
-        <p class="promo-subheading">{{ promoText ?? 'Explore handpicked secret spots, local favorites, and unforgettable coastal adventures.' }}</p>
-        {% if promoButtonUrl is defined %}
-            <a href="{{ promoButtonUrl }}" class="btn btn-primary">{{ promoButtonLabel ?? 'Explore Now' }}</a>
-        {% endif %}
-    </div>
+	<div class="promo-container">
+		<h2 class="promo-heading">
+			{{ promoHeading ?? 'Discover Hidden Gems in San Diego' }}
+		</h2>
+		<p class="promo-subheading">
+			{{ promoText
+				?? 'Explore handpicked secret spots, local favorites, and unforgettable coastal adventures.' }}
+		</p>
+		{% if promoButtonUrl is defined %}
+			<a href="{{ promoButtonUrl }}" class="btn btn-primary">
+				{{ promoButtonLabel ?? 'Explore Now' }}
+			</a>
+		{% endif %}
+	</div>
 </section>

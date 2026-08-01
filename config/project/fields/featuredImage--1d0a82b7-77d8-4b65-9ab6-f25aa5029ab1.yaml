@@ -13,8 +13,8 @@ settings:
   defaultUploadLocationSource: 'volume:f46b0045-f67a-4833-b579-44bc6c474e42' # General
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: 1
-  minRelations: 1
+  maxRelations: 4
+  minRelations: 4
   previewMode: full
   restrictFiles: false
   restrictLocation: false
@@ -23,11 +23,10 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: null
   showSearchInput: true
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  sources:
-    - 'volume:f46b0045-f67a-4833-b579-44bc6c474e42' # General
+  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
