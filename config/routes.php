@@ -10,5 +10,6 @@
  */
 
 return [
+    '404' => ['template' => '404'],
+    'search' => ['template' => 'search'],
 ];
-

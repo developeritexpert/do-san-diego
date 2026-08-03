@@ -10,12 +10,18 @@
 					</div>
 
 					<div class="pp-point">
-						{{ entry.description }}
+						{{ entry.description ?? '' }}
 					</div>
 
 					<div class="pp-point">
-						{{ entry.description2 }}
-						{{ entry.listData }}
+						{{ entry.description2 ?? '' }}
+						{% if entry.listData is defined and entry.listData.exists() %}
+							<ul class="pp-list">
+								{% for block in entry.listData.all() %}
+									<li>{{ block.description }}</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
 					</div>
 				</div>
 			</div>
@@ -27,17 +33,22 @@
 				<div class="container">
 					<div class="pp-point">
 						<h4>{{ entry.heading ?? 'How We Use Your Information' }}</h4>
-						{{ entry.description3 }}
-						{{ entry.description4 }}
+						{{ entry.description3 ?? '' }}
+						{% if entry.listdata2 is defined and entry.listdata2.exists() %}
+							<ul class="pp-list">
+								{% for block in entry.listdata2.all() %}
+									<li>{{ block.description }}</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
 					</div>
 
 					<div class="pp-point">
-						<h4>Cookies</h4>
 						<div class="pb-20">
-							{{ entry.description5 }}
+							{{ entry.description4 ?? '' }}
 						</div>
 						<div class="pp-cookies">
-							{{ entry.description6 }}
+							{{ entry.description5 ?? '' }}
 						</div>
 					</div>
 				</div>
@@ -46,63 +57,70 @@
 			<div class="pp-div3">
 				<div class="container">
 					<div class="pp-point">
-						<h4>Third-Party Services</h4>
-						{{ entry.richText3 }}
-						{{ entry.description7 }}
-						{{ entry.description8 }}
+						{{ entry.description6 ?? '' }}
+
+
+						{% if entry.listdata3 is defined and entry.listdata3.exists() %}
+							<ul class="pp-list">
+								{% for block in entry.listdata3.all() %}
+									<li>{{ block.description }}</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+						{{ entry.description7 ?? '' }}
+						{{ entry.description8 ?? '' }}
 					</div>
 
 					<div class="pp-point">
-						<h4>Information Sharing</h4>
+
 						<div class="pb-20">
-							{{ entry.richText4 }}
+							{{ entry.richText4 ?? '' }}
 						</div>
-						{{ entry.description9 }}
-						{{ entry.description10 }}
+						{% if entry.listdata4 is defined and entry.listdata4.exists() %}
+							<ul class="pp-list">
+								{% for block in entry.listdata4.all() %}
+									<li>{{ block.description }}</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+						{{ entry.description9 ?? '' }}
+						{{ entry.description10 ?? '' }}
 					</div>
 
 					<div class="pp-point">
-						<h4>Data Security</h4>
-						{{ entry.richText5 }}
+
+						{% if entry.listdata5 is defined and entry.listdata5.exists() %}
+							<ul class="pp-list">
+								{% for block in entry.listdata5.all() %}
+									<li>{{ block.description }}</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
 					</div>
 
 					<div class="pp-point">
-						<h4>Your Rights</h4>
-						{{ entry.description11 }}
-						{{ entry.description12 }}
+
+						{{ entry.description11 ?? '' }}
+						{{ entry.description12 ?? '' }}
 					</div>
 
 					<div class="pp-point">
-						<h4>Data Retention</h4>
-						{{ entry.description13 }}
+
+						{{ entry.description13 ?? '' }}
 					</div>
 
 					<div class="pp-point">
-						<h4>Children's Privacy</h4>
-						{{ entry.description14 }}
+
+						{{ entry.description14 ?? '' }}
 					</div>
 
 					<div class="pp-point">
-						<h4>External Links</h4>
-						{{ entry.description15 }}
+
+						{{ entry.description15 ?? '' }}
 					</div>
 
-					<div class="pp-point">
-						<h4>Changes to This Privacy Policy</h4>
-						<p>
-							We may update this Privacy Policy from time to time to reflect
-														changes in our services, legal requirements, or business
-														practices. Any updates will be posted on this page along with
-														the revised effective date.
-						</p>
-					</div>
 
 					<div class="pp-point">
-						<h4>Contact Us</h4>
-						<p>
-							If you have any questions about this Privacy Policy or how
-														your information is handled, please contact us.
-						</p>
 						<div class="pp-contact">
 							{% if entry.email is defined and entry.email %}
 								<a href="mailto:{{ entry.email }}">
