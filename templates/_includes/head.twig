@@ -32,13 +32,13 @@ href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" r
 
 
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ alias('@web/') }}assets/css/main.css">
+<link rel="stylesheet" href="{{ alias('@web/') }}assets/css/main.css?v={{ now.timestamp }}">
 
 
 {% if craft.app.request.segments|length > 0  %}
 
-	<link rel="stylesheet" href="{{ alias('@web/') }}assets/css/pp.css">
+	<link rel="stylesheet" href="{{ alias('@web/') }}assets/css/pp.css?v={{ now.timestamp }}">
 
 
 {% endif %}
-<link rel="stylesheet" href="{{ alias('@web/') }}assets/css/custom.css">
+<link rel="stylesheet" href="{{ alias('@web/') }}assets/css/custom.css?v={{ now.timestamp }}">
