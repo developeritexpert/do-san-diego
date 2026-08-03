@@ -1,4 +1,4 @@
-name: Deploy on Production do-san-diego App!
+name: Deploy to Production
 
 on:
   push:
@@ -10,22 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Deploy to Production Server
-        uses: appleboy/ssh-action@v0.1.10
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.PROD_HOST }}
-          username: ${{ secrets.PROD_USER }}
-          key: ${{ secrets.PROD_SSH_KEY }}
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
           port: 22
           script: |
             cd public_html/2026/cms/do-san-diego/
             git pull origin main
             composer install --no-dev --optimize-autoloader
             php craft up --interactive=0
-            php craft clear-caches/all 
-
-
-            
+            php craft clear-caches/all
