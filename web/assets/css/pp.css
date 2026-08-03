@@ -870,10 +870,10 @@ body {
 }
 
 .listing-container {
-  max-width: 1470px;
+  /* max-width: 1440px; */
   margin: auto;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 24px;
 }
 
 .list-banner {
@@ -933,6 +933,7 @@ body {
 .event-section .listing-container {
   border-top: 1px solid #ffffff4d;
   padding: 70px 0 120px;
+  padding-inline: 24px !important;
 }
 
 .event-table-wrapper tbody {
@@ -1331,12 +1332,12 @@ body {
   /* =============================== */
 
   .pp-point {
-    max-width: 988px;
+    max-width: 958px;
   }
 
-  .listing-container {
+  /* .listing-container {
     max-width: 95%;
-  }
+  } */
 
   .do-pt {
     padding-top: 160px;
@@ -1650,6 +1651,7 @@ body {
     padding: 0;
     gap: 10px;
   }
+
   .location-info p {
     margin: 0;
   }
@@ -1982,6 +1984,13 @@ body {
     font-size: 15px;
     color: #738093;
   }
+
+  .find-wrpper h2 {
+    font-size: 48px;
+  }
+  .event-wrper h2 {
+    font-size: 40px;
+}
 }
 
 @media (max-width: 767px) {
@@ -1990,9 +1999,9 @@ body {
     margin-bottom: 0px;
   }
 
-  .listing-container {
+  /* .listing-container {
     max-width: 100%;
-  }
+  } */
 
   .pb-20 {
     padding-bottom: 8px;
@@ -2282,9 +2291,13 @@ body {
   .location-info li {
     font-size: 15px;
   }
+   .find-wrpper h2 {
+    font-size: 40px;
+}
 }
 
 @media (max-width: 575px) {
+
   .pp-div1 .container,
   .container {
     padding-inline: 12px;
@@ -2335,7 +2348,7 @@ body {
   }
 
   .event-section .listing-container {
-    padding: 60px 0;
+    padding: 60px 12px !important;
   }
 
   .find-wrpper h2 {
