@@ -1,744 +1,702 @@
 {% extends '_layouts/main.twig' %}
 {% block content %}
-{% set ppBgImage = getenv('PRIMARY_SITE_URL') ~ 'assets/images/pp-bg1.png'
+	{% set ppBgImage = getenv('PRIMARY_SITE_URL') ~ 'assets/images/pp-bg1.png'
 %}
-<section class="single-list-sec" style="background-image: url('{{ ppBgImage }}')">
-	<div class="container">
-		<div class="single-list-hero">
-			{% set titleWords = (entry.heading ?? entry.title)|split(' ') %}
-			{% set lastWord = titleWords|last %}
-			{% set mainTitle =
+	<section class="single-list-sec" style="background-image: url('{{ ppBgImage }}')">
+		<div class="container">
+			<div class="single-list-hero">
+				{% set titleWords = (entry.heading ?? entry.title)|split(' ') %}
+				{% set lastWord = titleWords|last %}
+				{% set mainTitle =
 			titleWords|slice(0, (titleWords|length) - 1)|join(' ')
 			%}
-			<h1>
-				{{ mainTitle }}
-				<span class="span-orange">{{ lastWord }}</span>
-			</h1>
-			<div class="single-list-hero-slide">
-				<div class="listing-slider">
-					{% set heroImages = entry.featuredImage.all() %}
-					{% if heroImages|length %}
-					{% for img in heroImages %}
-					<div class="listing-slide {{
-									loop.first
-										? 'active'
-										: ''
-									}}" data-index="{{ loop.index0 }}">
-						<img src="{{ img.url }}" alt="{{ img.title ?? entry.title }}" />
+				<h1>
+					{{ mainTitle }}
+					<span class="span-orange">{{ lastWord }}</span>
+				</h1>
+				<div class="single-list-hero-slide">
+					<div class="listing-slider">
+						{% set heroImages = entry.featuredImage.all() %}
+						{% if heroImages|length %}
+							{% for img in heroImages %}
+								<div class="listing-slide {{
+																		loop.first
+																			? 'active'
+																			: ''
+																		}}" data-index="{{ loop.index0 }}">
+									<img src="{{ img.url }}" alt="{{ img.title ?? entry.title }}"/>
+								</div>
+							{% endfor %}
+						{% else %}
+							<div class="listing-slide active" data-index="0">
+								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/single-list-img1.png" alt="Resort exterior"/>
+							</div>
+						{% endif %}
 					</div>
-					{% endfor %}
-					{% else %}
-					<div class="listing-slide active" data-index="0">
-						<img src="{{
-									getenv(
-										'PRIMARY_SITE_URL'
-									)
-									}}assets/images/single-list-img1.png" alt="Resort exterior" />
-					</div>
-					{% endif %}
-				</div>
 
-				<div class="listing-progress-bar">
-					<div class="listing-progress-fill"></div>
-				</div>
-
-				<div class="listing-slider-footer">
-					<div class="listing-arrows">
-						<button class="listing-prev">
-							<img src="{{
-									getenv(
-										'PRIMARY_SITE_URL'
-									)
-									}}assets/images/left-arrow.svg" alt="" />
-						</button>
-						<button class="listing-next">
-							<img src="{{
-									getenv(
-										'PRIMARY_SITE_URL'
-									)
-									}}assets/images/right-arrow.svg" alt="" />
-						</button>
+					<div class="listing-progress-bar">
+						<div class="listing-progress-fill"></div>
 					</div>
-					<div class="listing-counter">
-						<span class="current-slide">1</span>
-						<span class="sep">/</span>
-						<span class="total-slides">
-							{{ (heroImages|length) > 0
+
+					<div class="listing-slider-footer">
+						<div class="listing-arrows">
+							<button class="listing-prev">
+								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/left-arrow.svg" alt=""/>
+							</button>
+							<button class="listing-next">
+								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/right-arrow.svg" alt=""/>
+							</button>
+						</div>
+						<div class="listing-counter">
+							<span class="current-slide">1</span>
+							<span class="sep">/</span>
+							<span class="total-slides">
+								{{ (heroImages|length) > 0
 							? heroImages|length
 							: 1 }}
-						</span>
+							</span>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-{% set coastBgImage = getenv('PRIMARY_SITE_URL')
+	{% set coastBgImage = getenv('PRIMARY_SITE_URL')
 ~ 'assets/images/single-list-bg2.png'
 %}
-<section class="coast-sec" style="background-image: url('{{ coastBgImage }}')">
-	<div class="container">
-		<div class="coast-sec-content">
-			<div class="coast-sec-left">
-				{% if entry.destinationSubheading %}
-				<h2>
-					{{ entry.destinationSubheading }}
-					{% if entry.destinationSubheadingHighlighted %}
-					<span class="span-pinkish-red">
-						{{ entry.destinationSubheadingHighlighted }}
-					</span>
+	<section class="coast-sec" style="background-image: url('{{ coastBgImage }}')">
+		<div class="container">
+			<div class="coast-sec-content">
+				<div class="coast-sec-left">
+					{% if entry.destinationSubheading %}
+						<h2>
+							{{ entry.destinationSubheading }}
+							{% if entry.destinationSubheadingHighlighted %}
+								<span class="span-pinkish-red">
+									{{ entry.destinationSubheadingHighlighted }}
+								</span>
+							{% endif %}
+						</h2>
 					{% endif %}
-				</h2>
-				{% endif %}
 
-				{% if entry.description %}
-				<div class="destination-desc">
-					{{
+					{% if entry.description %}
+						<div class="destination-desc">
+							{{
 					entry.description
 					|replace({ '<p>': '
 					<p class="pb-20">' })
 						|raw
 						}}
-				</div>
-				{% endif %}
+						</div>
+					{% endif %}
 
-				<div class="coast-sec-left-boxes">
 					<div class="coast-sec-left-boxes">
-						<div class="coast-sec-left-box">
-							<h5>
-								Amenities included
-							</h5>
-							{% set allAmenities = [] %}
-							{% if
+						<div class="coast-sec-left-boxes">
+							<div class="coast-sec-left-box">
+								<h5>
+									Amenities included
+								</h5>
+								{% set allAmenities = [] %}
+								{% if
 							entry.amenitiesIncluded is defined
 							and entry.amenitiesIncluded %}
-							{% for row in entry.amenitiesIncluded %}
-							{% if
+									{% for row in entry.amenitiesIncluded %}
+										{% if
 							row.col1|default(
 							''
-							) %}{% set allAmenities =
+							) %}
+											{% set allAmenities =
 							allAmenities|merge([row.col1])
-							%}{% endif %}
-							{% if
+							%}
+										{% endif %}
+										{% if
 							row.col2|default(
 							''
-							) %}{% set allAmenities =
+							) %}
+											{% set allAmenities =
 							allAmenities|merge([row.col2])
-							%}{% endif %}
-							{% if
+							%}
+										{% endif %}
+										{% if
 							row.col3|default(
 							''
-							) %}{% set allAmenities =
+							) %}
+											{% set allAmenities =
 							allAmenities|merge([row.col3])
-							%}{% endif %}
-							{% endfor %}
-							{% endif %}
+							%}
+										{% endif %}
+									{% endfor %}
+								{% endif %}
 
-							{% if allAmenities|length %}
-							{% set perCol =
+								{% if allAmenities|length %}
+									{% set perCol =
 							((allAmenities|length) / 3)|round(
 							0,
 							'ceil'
 							)
 							%}
-							{% set cols =
+									{% set cols =
 							allAmenities|batch(max(1, perCol))
 							%}
-							<div class="amenities-grid">
-								{% for col in cols %}
-								<ul class="amenities-col">
-									{% for item in col %}
-									<li class="amenity-item">
-										<span class="check-icon">
-
-										</span>{{ item }}
-									</li>
-									{% endfor %}
-								</ul>
-								{% endfor %}
+									<div class="amenities-grid">
+										{% for col in cols %}
+											<ul class="amenities-col">
+												{% for item in col %}
+													<li class="amenity-item">
+														<span class="check-icon"></span>
+														{{ item }}
+													</li>
+												{% endfor %}
+											</ul>
+										{% endfor %}
+									</div>
+								{% endif %}
 							</div>
-							{% endif %}
 						</div>
-					</div>
 
-					<div class="coast-sec-left-box">
-						<h5>
-							Things to Do Nearby
-						</h5>
-						{% set allThings = [] %}
-						{% if
+						<div class="coast-sec-left-box">
+							<h5>
+								Things to Do Nearby
+							</h5>
+							{% set allThings = [] %}
+							{% if
 						entry.thingsToDoNearby is defined
 						and entry.thingsToDoNearby %}
-						{% for row in entry.thingsToDoNearby %}
-						{% if
+								{% for row in entry.thingsToDoNearby %}
+									{% if
 						row.things1|default(
 						''
-						) %}{% set allThings =
+						) %}
+										{% set allThings =
 						allThings|merge([row.things1])
-						%}{% endif %}
-						{% if
+						%}
+									{% endif %}
+									{% if
 						row.things2|default(
 						''
-						) %}{% set allThings =
+						) %}
+										{% set allThings =
 						allThings|merge([row.things2])
-						%}{% endif %}
-						{% if
+						%}
+									{% endif %}
+									{% if
 						row.things3|default(
 						''
-						) %}{% set allThings =
+						) %}
+										{% set allThings =
 						allThings|merge([row.things3])
-						%}{% endif %}
-						{% endfor %}
-						{% endif %}
+						%}
+									{% endif %}
+								{% endfor %}
+							{% endif %}
 
-						{% if allThings|length %}
-						{% set perColT =
+							{% if allThings|length %}
+								{% set perColT =
 						((allThings|length) / 3)|round(0, 'ceil')
 						%}
-						{% set colsT =
+								{% set colsT =
 						allThings|batch(max(1, perColT))
 						%}
-						<div class="amenities-grid">
-							{% for col in colsT %}
-							<ul class="amenities-col">
-								{% for item in col %}
-								<li class="amenity-item">
-									<span class="check-icon">
-
-									</span>{{ item }}
-								</li>
-								{% endfor %}
-							</ul>
-							{% endfor %}
-						</div>
-						{% endif %}
-					</div>
-				</div>
-
-				<div class="rate-review-sec">
-					<h2>
-						Rating &
-						<span class="span-orange">Reviews</span>
-					</h2>
-
-					<div class="swiper review-slider">
-						<div class="swiper-wrapper">
-							{% if
-							entry.ratingReviews is defined
-							and (entry.ratingReviews|length) %}
-							{% for review in entry.ratingReviews %}
-							<div class="swiper-slide">
-								<div class="review-card">
-									<span class="quote-icon"></span>
-									<h4>
-										{{ review.title
-										?? review.heading
-										?? 'Review' }}
-									</h4>
-									<p>
-										{{ review.review
-										?? review.text
-										?? review.description
-										?? '' }}
-									</p>
-									<div class="review-footer">
-										<div class="review-user">
-											{% set rImg = review.reviewerImage.one()
-											?? review.image.one()
-											?? null
-											%}
-											{% if rImg %}
-											<img src="{{
-																rImg.url
-																}}" alt="{{
-																review.reviewerName
-																	?? review.name
-																	?? 'User'
-																}}" />
-											{% else %}
-											<img src="{{
-																getenv(
-																	'PRIMARY_SITE_URL'
-																)
-																}}assets/images/user1.png" alt="User" />
-											{% endif %}
-											<span>
-												{{ review.reviewerName
-												?? review.name
-												?? 'Guest' }}
-											</span>
-										</div>
-										<div class="review-stars">
-											<img src="{{
-															getenv(
-																'PRIMARY_SITE_URL'
-															)
-															}}assets/images/star.svg" alt="" />
-										</div>
-									</div>
+								<div class="amenities-grid">
+									{% for col in colsT %}
+										<ul class="amenities-col">
+											{% for item in col %}
+												<li class="amenity-item">
+													<span class="check-icon"></span>
+													{{ item }}
+												</li>
+											{% endfor %}
+										</ul>
+									{% endfor %}
 								</div>
-							</div>
-							{% endfor %}
-							{% else %}
-							{# Fallback if no reviews added yet #}
-							<div class="swiper-slide">
-								<div class="review-card">
-									<span class="quote-icon"></span>
-									<h4>
-										A Perfect Beachfront Escape
-									</h4>
-									<p>
-										From the moment we arrived,
-										everything exceeded our
-										expectations. The staff was
-										incredibly welcoming, the room
-										was spotless, and the ocean
-										views were absolutely
-										breathtaking. We especially
-										loved the private beach access
-										and the delicious breakfast each
-										morning. This was one of the
-										most relaxing vacations we've
-										ever had, and we can't wait to
-										come back.
-									</p>
-									<div class="review-footer">
-										<div class="review-user">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/user1.png" alt="Emily R." />
-											<span>Emily R.</span>
-										</div>
-										<div class="review-stars">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/star.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-slide">
-								<div class="review-card">
-									<span class="quote-icon"></span>
-									<h4>
-										Luxury, Comfort, and Relaxation
-									</h4>
-									<p>
-										This resort exceeded all of our
-										expectations. The rooms were
-										spacious and comfortable, the
-										amenities were excellent, and
-										the sunsets from our balcony
-										were unforgettable. We enjoyed
-										every moment, from relaxing by
-										the pool to exploring the nearby
-										boardwalk. If you're looking for
-										a peaceful getaway with
-										outstanding hospitality, Sunset
-										Beach Resort is the perfect
-										choice.
-									</p>
-									<div class="review-footer">
-										<div class="review-user">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/user2.png" alt="Sophia Martinez" />
-											<span>Sophia Martinez</span>
-										</div>
-										<div class="review-stars">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/star.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-slide">
-								<div class="review-card">
-									<span class="quote-icon"></span>
-									<h4>
-										A Perfect Beachfront Escape
-									</h4>
-									<p>
-										From the moment we arrived,
-										everything exceeded our
-										expectations. The staff was
-										incredibly welcoming, the room
-										was spotless, and the ocean
-										views were absolutely
-										breathtaking. We especially
-										loved the private beach access
-										and the delicious breakfast each
-										morning. This was one of the
-										most relaxing vacations we've
-										ever had, and we can't wait to
-										come back.
-									</p>
-									<div class="review-footer">
-										<div class="review-user">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/user1.png" alt="Emily R." />
-											<span>Emily R.</span>
-										</div>
-										<div class="review-stars">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/star.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-slide">
-								<div class="review-card">
-									<span class="quote-icon"></span>
-									<h4>
-										Luxury, Comfort, and Relaxation
-									</h4>
-									<p>
-										This resort exceeded all of our
-										expectations. The rooms were
-										spacious and comfortable, the
-										amenities were excellent, and
-										the sunsets from our balcony
-										were unforgettable. We enjoyed
-										every moment, from relaxing by
-										the pool to exploring the nearby
-										boardwalk. If you're looking for
-										a peaceful getaway with
-										outstanding hospitality, Sunset
-										Beach Resort is the perfect
-										choice.
-									</p>
-									<div class="review-footer">
-										<div class="review-user">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/user2.png" alt="Sophia Martinez" />
-											<span>Sophia Martinez</span>
-										</div>
-										<div class="review-stars">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/star.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-slide">
-								<div class="review-card">
-									<span class="quote-icon"></span>
-									<h4>
-										Luxury, Comfort, and Relaxation
-									</h4>
-									<p>
-										This resort exceeded all of our
-										expectations. The rooms were
-										spacious and comfortable, the
-										amenities were excellent, and
-										the sunsets from our balcony
-										were unforgettable. We enjoyed
-										every moment, from relaxing by
-										the pool to exploring the nearby
-										boardwalk. If you're looking for
-										a peaceful getaway with
-										outstanding hospitality, Sunset
-										Beach Resort is the perfect
-										choice.
-									</p>
-									<div class="review-footer">
-										<div class="review-user">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/user2.png" alt="Sophia Martinez" />
-											<span>Sophia Martinez</span>
-										</div>
-										<div class="review-stars">
-											<img src="{{
-														getenv(
-															'PRIMARY_SITE_URL'
-														)
-														}}assets/images/star.svg" alt="" />
-										</div>
-									</div>
-								</div>
-							</div>
 							{% endif %}
 						</div>
 					</div>
 
-					<div class="review-arrows">
-						<button class="review-prev">
-							<img src="{{
-									getenv(
-										'PRIMARY_SITE_URL'
-									)
-									}}assets/images/o-left-arrow.svg" alt="" />
-						</button>
-						<button class="review-next">
-							<img src="{{
-									getenv(
-										'PRIMARY_SITE_URL'
-									)
-									}}assets/images/o-right-arrow.svg" alt="" />
-						</button>
+					<div class="rate-review-sec">
+						<h2>
+							Rating &
+							<span class="span-orange">Reviews</span>
+						</h2>
+
+						<div class="swiper review-slider">
+							<div class="swiper-wrapper">
+								{% if entry.ratingReviews is defined and entry.ratingReviews.exists() %}
+									{% for review in entry.ratingReviews.all() %}
+										{% set layout = review.getFieldLayout() %}
+										<div class="swiper-slide">
+											<div class="review-card">
+												<span class="quote-icon"></span>
+												<h4>
+													{% if layout and layout.getFieldByHandle('heading') %}
+														{{ review.heading }}
+													{% else %}
+														{{ review.title ?? 'Review' }}
+													{% endif %}
+												</h4>
+												<p>
+													{% if layout and layout.getFieldByHandle('review') %}
+														{{ review.review }}
+													{% elseif layout and layout.getFieldByHandle('text') %}
+														{{ review.text }}
+													{% elseif layout and layout.getFieldByHandle('description') %}
+														{{ review.description }}
+													{% elseif layout and layout.getFieldByHandle('plainText') %}
+														{{ review.plainText }}
+													{% endif %}
+												</p>
+												<div class="review-footer">
+													<div class="review-user">
+														{% set rImg = null %}
+														{% if layout and layout.getFieldByHandle('reviewerImage') %}
+															{% set rImg = review.reviewerImage.one() %}
+														{% elseif layout and layout.getFieldByHandle('image') %}
+															{% set rImg = review.image.one() %}
+														{% endif %}
+														{% set rName = 'Guest' %}
+														{% if layout and layout.getFieldByHandle('reviewerName') %}
+															{% set rName = review.reviewerName %}
+														{% elseif layout and layout.getFieldByHandle('name') %}
+															{% set rName = review.name %}
+														{% endif %}
+
+														{% if rImg %}
+															<img src="{{ rImg.url }}" alt="{{ rName }}"/>
+														{% else %}
+															<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/user1.png" alt="User"/>
+														{% endif %}
+														<span>
+															{{ rName }}
+														</span>
+													</div>
+													<div class="review-stars">
+														<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
+													</div>
+												</div>
+											</div>
+										</div>
+									{% endfor %}
+								{% else %}
+									{# Fallback if no reviews added yet #}
+									<div class="swiper-slide">
+										<div class="review-card">
+											<span class="quote-icon"></span>
+											<h4>
+												A Perfect Beachfront Escape
+											</h4>
+											<p>
+												From the moment we arrived,
+																						everything exceeded our
+																						expectations. The staff was
+																						incredibly welcoming, the room
+																						was spotless, and the ocean
+																						views were absolutely
+																						breathtaking. We especially
+																						loved the private beach access
+																						and the delicious breakfast each
+																						morning. This was one of the
+																						most relaxing vacations we've
+																						ever had, and we can't wait to
+																						come back.
+											</p>
+											<div class="review-footer">
+												<div class="review-user">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user1.png" alt="Emily R."/>
+													<span>Emily R.</span>
+												</div>
+												<div class="review-stars">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<div class="review-card">
+											<span class="quote-icon"></span>
+											<h4>
+												Luxury, Comfort, and Relaxation
+											</h4>
+											<p>
+												This resort exceeded all of our
+																						expectations. The rooms were
+																						spacious and comfortable, the
+																						amenities were excellent, and
+																						the sunsets from our balcony
+																						were unforgettable. We enjoyed
+																						every moment, from relaxing by
+																						the pool to exploring the nearby
+																						boardwalk. If you're looking for
+																						a peaceful getaway with
+																						outstanding hospitality, Sunset
+																						Beach Resort is the perfect
+																						choice.
+											</p>
+											<div class="review-footer">
+												<div class="review-user">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user2.png" alt="Sophia Martinez"/>
+													<span>Sophia Martinez</span>
+												</div>
+												<div class="review-stars">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<div class="review-card">
+											<span class="quote-icon"></span>
+											<h4>
+												A Perfect Beachfront Escape
+											</h4>
+											<p>
+												From the moment we arrived,
+																						everything exceeded our
+																						expectations. The staff was
+																						incredibly welcoming, the room
+																						was spotless, and the ocean
+																						views were absolutely
+																						breathtaking. We especially
+																						loved the private beach access
+																						and the delicious breakfast each
+																						morning. This was one of the
+																						most relaxing vacations we've
+																						ever had, and we can't wait to
+																						come back.
+											</p>
+											<div class="review-footer">
+												<div class="review-user">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user1.png" alt="Emily R."/>
+													<span>Emily R.</span>
+												</div>
+												<div class="review-stars">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<div class="review-card">
+											<span class="quote-icon"></span>
+											<h4>
+												Luxury, Comfort, and Relaxation
+											</h4>
+											<p>
+												This resort exceeded all of our
+																						expectations. The rooms were
+																						spacious and comfortable, the
+																						amenities were excellent, and
+																						the sunsets from our balcony
+																						were unforgettable. We enjoyed
+																						every moment, from relaxing by
+																						the pool to exploring the nearby
+																						boardwalk. If you're looking for
+																						a peaceful getaway with
+																						outstanding hospitality, Sunset
+																						Beach Resort is the perfect
+																						choice.
+											</p>
+											<div class="review-footer">
+												<div class="review-user">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user2.png" alt="Sophia Martinez"/>
+													<span>Sophia Martinez</span>
+												</div>
+												<div class="review-stars">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="swiper-slide">
+										<div class="review-card">
+											<span class="quote-icon"></span>
+											<h4>
+												Luxury, Comfort, and Relaxation
+											</h4>
+											<p>
+												This resort exceeded all of our
+																						expectations. The rooms were
+																						spacious and comfortable, the
+																						amenities were excellent, and
+																						the sunsets from our balcony
+																						were unforgettable. We enjoyed
+																						every moment, from relaxing by
+																						the pool to exploring the nearby
+																						boardwalk. If you're looking for
+																						a peaceful getaway with
+																						outstanding hospitality, Sunset
+																						Beach Resort is the perfect
+																						choice.
+											</p>
+											<div class="review-footer">
+												<div class="review-user">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user2.png" alt="Sophia Martinez"/>
+													<span>Sophia Martinez</span>
+												</div>
+												<div class="review-stars">
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+								{% endif %}
+							</div>
+						</div>
+
+						<div class="review-arrows">
+							<button class="review-prev">
+								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/o-left-arrow.svg" alt=""/>
+							</button>
+							<button class="review-next">
+								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/o-right-arrow.svg" alt=""/>
+							</button>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="coast-sec-right">
-				<div class="location">
-					<div class="location-badge">
-						<h4>
-							<span class="span-orange">Location</span>
-							& Information
-						</h4>
+				<div class="coast-sec-right">
+					<div class="location">
+						<div class="location-badge">
+							<h4>
+								<span class="span-orange">Location</span>
+								& Information
+							</h4>
+						</div>
+
+						<ul class="location-info">
+							{% if entry.address %}
+								<li>
+									<span class="info-icon">
+										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/loc.svg" alt=""/>
+									</span>
+									<p>
+										<span class="pp-span">Address:</span>
+										{{ entry.address|striptags }}
+									</p>
+								</li>
+							{% endif %}
+							{% if entry.phoneNumber %}
+								<li>
+									<span class="info-icon">
+										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/phone.svg" alt=""/>
+									</span>
+									<a href="tel:{{ entry.phoneNumber|replace({
+																						' ': '',
+																						'(': '',
+																						')': '',
+																						'-': ''
+																					}) }}">
+										<span class="pp-span">Phone:</span>
+										{{ entry.phoneNumber }}
+									</a>
+								</li>
+							{% endif %}
+							{% if entry.email %}
+								<li>
+									<span class="info-icon">
+										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/mail.svg" alt=""/>
+									</span>
+									<a href="mailto:{{ entry.email }}">
+										<span class="pp-span">Email:</span>
+										{{ entry.email }}
+									</a>
+								</li>
+							{% endif %}
+						</ul>
+
+						<div class="location-map">
+							{% if entry.map %}
+								{{ entry.map|raw }}
+							{% else %}
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.192672362011!2d-117.84289872430388!3d33.57434637334068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dce1371c0f7b0b%3A0xf3a075608ca0c7cc!2s15%20Crystal%20Cove%2C%20Newport%20Coast%2C%20CA%2092657%2C%20USA!5e0!3m2!1sen!2sin!4v1785500471909!5m2!1sen!2sin" width="600" height="230" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+							{% endif %}
+						</div>
 					</div>
 
-					<ul class="location-info">
-						{% if entry.address %}
-						<li>
-							<span class="info-icon">
-								<img src="{{
-											getenv(
-												'PRIMARY_SITE_URL'
-											)
-											}}assets/images/loc.svg" alt="" />
-							</span>
-							<p>
-								<span class="pp-span">Address:</span>
-								{{ entry.address|striptags }}
-							</p>
-						</li>
-						{% endif %}
-						{% if entry.phoneNumber %}
-						<li>
-							<span class="info-icon">
-								<img src="{{
-											getenv(
-												'PRIMARY_SITE_URL'
-											)
-											}}assets/images/phone.svg" alt="" />
-							</span>
-							<a href="tel:{{ entry.phoneNumber|replace({
-											' ': '',
-											'(': '',
-											')': '',
-											'-': ''
-										}) }}">
-								<span class="pp-span">Phone:</span>
-								{{ entry.phoneNumber }}
-							</a>
-						</li>
-						{% endif %}
-						{% if entry.email %}
-						<li>
-							<span class="info-icon">
-								<img src="{{
-											getenv(
-												'PRIMARY_SITE_URL'
-											)
-											}}assets/images/mail.svg" alt="" />
-							</span>
-							<a href="mailto:{{ entry.email }}">
-								<span class="pp-span">Email:</span>{{ entry.email }}
-							</a>
-						</li>
-						{% endif %}
-					</ul>
-
-					<div class="location-map">
-						{% if entry.map %}
-						{{ entry.map|raw }}
-						{% else %}
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.192672362011!2d-117.84289872430388!3d33.57434637334068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dce1371c0f7b0b%3A0xf3a075608ca0c7cc!2s15%20Crystal%20Cove%2C%20Newport%20Coast%2C%20CA%2092657%2C%20USA!5e0!3m2!1sen!2sin!4v1785500471909!5m2!1sen!2sin"
-							width="600" height="230" style="border: 0" allowfullscreen="" loading="lazy"
-							referrerpolicy="strict-origin-when-cross-origin"></iframe>
-						{% endif %}
-					</div>
+					<a href="#" class="book-btn">Book</a>
 				</div>
-
-				<a href="#" class="book-btn">Book</a>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="related-listings-sec">
-	<div class="container">
-		<h2>
-			You might also
-			<span class="span-orange">like..</span>
-		</h2>
+	<section class="related-listings-sec">
+		<div class="container">
+			<h2>
+				You might also
+				<span class="span-orange">like..</span>
+			</h2>
 
-		<div class="related-cards">
-			{% set relatedListings =
+			<div class="related-cards">
+				{% set relatedListings =
 			craft.entries().section('destinations').id(
 			'not ' ~ entry.id
 			).limit(
 			3
 			).all()
 			%}
-			{% for rel in relatedListings %}
-			<div class="related-card">
-				<div class="related-img">
-					{% set rImg = rel.featuredImage.one() %}
-					{% if rImg %}
-					<img src="{{ rImg.url }}" alt="{{ rel.heading ?? rel.title }}" />
-					{% else %}
-					<div
-						style="height: 100%; min-height: 200px; display: flex; align-items: center; justify-content: center; background: #e0e0e0;">
-						No Image
+				{% for rel in relatedListings %}
+					<div class="related-card">
+						<div class="related-img">
+							{% set rImg = rel.featuredImage.one() %}
+							{% if rImg %}
+								<img src="{{ rImg.url }}" alt="{{ rel.heading ?? rel.title }}"/>
+							{% else %}
+								<div style="height: 100%; min-height: 200px; display: flex; align-items: center; justify-content: center; background: #e0e0e0;">
+									No Image
+								</div>
+							{% endif %}
+						</div>
+						<span class="listing-badge">
+							Listing #{{ loop.index + 1 }}
+						</span>
+						<h4>
+							{{ rel.heading ?? rel.title }}
+						</h4>
+						<p>
+							{{ rel.description|striptags }}
+						</p>
+						<a href="{{ rel.url }}" class="view-details-btn">
+							{{ rel.buttonText ?? 'View Details' }}
+						</a>
 					</div>
-					{% endif %}
-				</div>
-				<span class="listing-badge">
-					Listing #{{ loop.index + 1 }}
-				</span>
-				<h4>
-					{{ rel.heading ?? rel.title }}
-				</h4>
-				<p>
-					{{ rel.description|striptags }}
-				</p>
-				<a href="{{ rel.url }}" class="view-details-btn">
-					{{ rel.buttonText ?? 'View Details' }}
+				{% endfor %}
+			</div>
+
+			<div class="related-cta">
+				<a href="{{ siteUrl('where-to-stay') }}" class="see-all-btn">
+
+					See All Related Listings
 				</a>
 			</div>
-			{% endfor %}
 		</div>
+	</section>
 
-		<div class="related-cta">
-			<a href="/destinations" class="see-all-btn">
-				See All Related Listings
-			</a>
-		</div>
-	</div>
-</section>
-
-{% include '_components/matrix/stayGrid.twig' with {
+	{% include '_components/matrix/stayGrid.twig' with {
 block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
 } %}
 
-{% include '_components/matrix/block-bottomCta.twig' with {
+	{% include '_components/matrix/block-bottomCta.twig' with {
 block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
 } %}
 {% endblock %}
 
 {% block head %}
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<!-- Swiper CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 {% endblock %}
 
 {% block scripts %}
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-	document.addEventListener('DOMContentLoaded', function () {
-		initListingSlider(); initReviewSlider();
-	});
+	<!-- Swiper JS -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+initListingSlider();
+initReviewSlider();
+});
 
-	function initListingSlider() {
-		const container =
-			document.querySelector('.listing-slider'); if (!container) return; const
-				slides = container.querySelectorAll('.listing-slide'); const nextBtn =
-					document.querySelector('.listing-next'); const prevBtn =
-						document.querySelector('.listing-prev'); const currentCounter =
-							document.querySelector('.listing-counter .current-slide'); const
-								progressFill = document.querySelector('.listing-progress-fill');
+function initListingSlider() {
+const container = document.querySelector('.listing-slider');
+if (! container) 
+return;
 
-		if (!slides.length) return; let activeIndex = 0;
+const slides = container.querySelectorAll('.listing-slide');
+const nextBtn = document.querySelector('.listing-next');
+const prevBtn = document.querySelector('.listing-prev');
+const currentCounter = document.querySelector('.listing-counter .current-slide');
+const progressFill = document.querySelector('.listing-progress-fill');
 
-		// Find initial active index
-		slides.forEach((slide, index) => {
-			if (slide.classList.contains('active')) {
-				activeIndex = index;
-			}
-		});
+if (! slides.length) 
+return;
 
-		function goTo(index) {
-			if (index < 0 || index >= slides.length) return;
-			activeIndex = index;
+let activeIndex = 0;
 
-			// Toggle active class
-			slides.forEach((slide, idx) => {
-				slide.classList.toggle('active', idx === activeIndex);
-			});
+// Find initial active index
+slides.forEach((slide, index) => {
+if (slide.classList.contains('active')) {
+activeIndex = index;
+}
+});
 
-			// Update counter
-			if (currentCounter) {
-				currentCounter.textContent = activeIndex + 1;
-			}
+function goTo(index) {
+if (index < 0 || index >= slides.length) 
+return;
 
-			// Update progress fill
-			if (progressFill) {
-				progressFill.style.width = ((activeIndex + 1) / slides.length) * 100 + '%';
-			}
+activeIndex = index;
 
-			// Calculate translation
-			if (activeIndex === 0) {
-				container.style.transform = 'translateX(0px)';
-			} else {
-				const containerWidth = container.parentElement.offsetWidth;
-				const gap = 10; // gap: 10px from CSS
-				const inactiveSlideWidth = containerWidth * 0.33;
-				const translatePx = (activeIndex - 1) * (inactiveSlideWidth + gap);
-				container.style.transform = `translateX(-${translatePx}px)`;
-			}
-		}
+// Toggle active class
+slides.forEach((slide, idx) => {
+slide.classList.toggle('active', idx === activeIndex);
+});
 
-		if (nextBtn) {
-			nextBtn.addEventListener('click', () => {
-				if (activeIndex
-					< slides.length - 1) { goTo(activeIndex + 1); } else { goTo(0); }
-			});
-		}
+// Update counter
+if (currentCounter) {
+currentCounter.textContent = activeIndex + 1;
+}
 
-		if (prevBtn) {
-			prevBtn.addEventListener('click', () => {
-				if (activeIndex
-					> 0) { goTo(activeIndex - 1); } else { goTo(slides.length - 1); }
-			});
-		}
+// Update progress fill
+if (progressFill) {
+progressFill.style.width = ((activeIndex + 1) / slides.length) * 100 + '%';
+}
 
-		container.style.transition = 'transform 0.35s ease';
+// Calculate translation
+if (activeIndex === 0) {
+container.style.transform = 'translateX(0px)';
+} else {
+const containerWidth = container.parentElement.offsetWidth;
+const gap = 10; // gap: 10px from CSS
+const inactiveSlideWidth = containerWidth * 0.33;
+const translatePx = (activeIndex - 1) * (inactiveSlideWidth + gap);
+container.style.transform = `translateX(-${translatePx}px)`;
+}
+}
 
-		window.addEventListener('resize', () => { goTo(activeIndex); });
+if (nextBtn) {
+nextBtn.addEventListener('click', () => {
+if (activeIndex < slides.length - 1) {
+goTo(activeIndex + 1);
+} else {
+goTo(0);
+}
+});
+}
 
-		goTo(activeIndex);
-	}
+if (prevBtn) {
+prevBtn.addEventListener('click', () => {
+if (activeIndex > 0) {
+goTo(activeIndex - 1);
+} else {
+goTo(slides.length - 1);
+}
+});
+}
 
-	function initReviewSlider() {
-		const swiperContainer =
-			document.querySelector('.review-slider'); if (!swiperContainer) return;
+container.style.transition = 'transform 0.35s ease';
 
-		new Swiper('.review-slider', {
-			slidesPerView: 1, spaceBetween: 30, loop:
-				true, navigation: { nextEl: '.review-next', prevEl: '.review-prev', },
-		});
-	}
-</script>
+window.addEventListener('resize', () => {
+goTo(activeIndex);
+});
+
+goTo(activeIndex);
+}
+
+function initReviewSlider() {
+const swiperContainer = document.querySelector('.review-slider');
+if (! swiperContainer) 
+return;
+
+
+new Swiper('.review-slider', {
+slidesPerView: 1,
+spaceBetween: 30,
+loop: true,
+navigation: {
+nextEl: '.review-next',
+prevEl: '.review-prev'
+}
+});
+}
+	</script>
 {% endblock %}
