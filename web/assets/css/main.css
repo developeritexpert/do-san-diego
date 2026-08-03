@@ -1947,11 +1947,16 @@ h6 {
   content: "-";
 }
 
-.hdr-menu-link.active {
+.hdr-menu-link.active,
+.hdr-menu-link:hover {
   font-style: italic;
   text-decoration: underline;
   text-decoration-color: #F2B203;
   text-underline-offset: 6px;
+}
+.hdr-menu-link:hover{
+  color:#fff;
+  font-style: normal;
 }
 
 .menu-ryt-cont .footer-address {
@@ -2061,7 +2066,8 @@ h6 {
   .promo-banner-grid,
   .stay-container,
   .bottom-cta-container,
-  .footer-container {
+  .footer-container,
+  .listing-container {
     max-width: 564px;
   }
 }
@@ -2072,7 +2078,8 @@ h6 {
   .promo-banner-grid,
   .stay-container,
   .bottom-cta-container,
-  .footer-container {
+  .footer-container,
+  .listing-container{
     max-width: 744px;
   }
 }
@@ -2083,7 +2090,8 @@ h6 {
   .promo-banner-grid,
   .stay-container,
   .bottom-cta-container,
-  .footer-container {
+  .footer-container,
+  .listing-container {
     max-width: 984px;
   }
 }
@@ -2094,7 +2102,8 @@ h6 {
   .promo-banner-grid,
   .stay-container,
   .bottom-cta-container,
-  .footer-container {
+  .footer-container,
+  .listing-container{
     max-width: 1164px;
   }
 }
@@ -2105,8 +2114,22 @@ h6 {
   .promo-banner-grid,
   .stay-container,
   .bottom-cta-container,
-  .footer-container {
+  .footer-container,
+  .listing-container {
     max-width: 1344px;
+    margin-inline: auto;
+  }
+
+}
+@media (min-width: 1599px) {
+
+  .what-todo-container,
+  .promo-banner-grid,
+  .stay-container,
+  .bottom-cta-container,
+  .footer-container,
+  .listing-container {
+    max-width: 1488px;
     margin-inline: auto;
   }
 
@@ -2960,7 +2983,7 @@ h6 {
   }
 
   .savor-feature-frame {
-    height: 380px;
+    /* height: 380px; */
     /* background: unset;
     box-shadow: unset;
     min-height: unset; */
@@ -3630,8 +3653,10 @@ h6 {
   .brand-banner-section,
   .stay-container,
   .footer-container,
-  .bottom-cta-section {
-    padding-inline: 12px;
+  .bottom-cta-section,
+  .listing-container,
+  .event-section .listing-container{
+    padding-inline: 12px !important;
   }
 
   .promo-banner-grid {
