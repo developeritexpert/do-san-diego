@@ -122,14 +122,79 @@ p {
           overflow: hidden;
           padding-top: 20px;
 }
+@media (min-width: 1660px) {
+    .rate-review-sec .span-orange {
+        color: #000;
+    }
+}
 
+@media (min-width: 1799px) {
+    .rate-review-sec .span-orange {
+        color: #fff;
+    }
+}
+
+a.btn:focus {
+    box-shadow: unset;
+}
+
+a.btn:hover,
+.savor-btn-pill:hover,
+.relax-btn-pill:hover {
+    color: #fff;
+}
+
+a.inner-link:hover,
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.coast-sec-right .location a:hover {
+    color: #f26d40;
+}
+.coast-sec-right .location a:hover span{
+    color: #738093;
+}
+a.btn:focus {
+          box-shadow: unset;
+}
+
+a.btn:hover,
+.savor-btn-pill:hover,
+.relax-btn-pill:hover {
+          color: #fff;
+}
+
+a.inner-link:hover,
+.footer-links a:hover {
+          color: #fff;
+          text-decoration: underline;
+}
+
+.coast-sec-right .location a:hover {
+          color: #f26d40;
+}
+
+.coast-sec-right .location a:hover span {
+          color: #738093;
+}
+@media (min-width: 1799px) {
+          .rate-review-sec .span-orange {
+                    color: #fff;
+          }
+}
 @media only screen and (max-width: 1699px) {
           .what-to-do-slide-inner {
                     padding-bottom: 280px;
                     background-size: 180% 100% !important;
           }
 }
-
+@media (min-width: 1660px) {
+          .rate-review-sec .span-orange {
+                    color: #000;
+          }
+}
 @media only screen and (max-width: 1599px) {
           .section-where-to-stay.inner-page-sec .top-abs-img {
                     object-fit: contain;
