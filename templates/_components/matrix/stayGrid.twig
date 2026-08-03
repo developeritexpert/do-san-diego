@@ -3,50 +3,37 @@
 
 {% set whatToDoPage = craft.entries().slug('what-to-do').one() %}
 
-<section class="section-where-to-stay">
+<section class="section-where-to-stay {{ craft.app.request.segments|length == 0 ? 'border' : 'inner-page-sec' }}">
+
+
 	<div class="stay-img">
 		{% if (craft.app.request.segments|length) == 0 %}
-			<img src="{{
-				getenv(
-					'PRIMARY_SITE_URL'
-				)
-				}}assets/images/stay-img.png" />
+			<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/stay-img.png"/>
 		{% else %}
-			<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/phad.png"
-				class="not-homepage" />
+			<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/phad.png" class="not-homepage"/>
 		{% endif %}
 
-		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/tree-img.png"
-			class="top-abs-img" />
+		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/tree-img.png" class="top-abs-img"/>
 
 		<div class="absolute-txt-img">
-			<img src="{{
-				getenv(
-					'PRIMARY_SITE_URL'
-				)
-				}}assets/images/DO-San-Diego-lyt.png"
-				alt="DO San Diego"
-				loading="lazy" />
+			<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/DO-San-Diego-lyt.png" alt="DO San Diego" loading="lazy"/>
 		</div>
 	</div>
 
 	{% if (craft.app.request.segments|length) == 0 %}
-		<div class="stay-container">
+		<div
+			class="stay-container">
 			<!-- Left Title & Navigation Buttons Column -->
 			<div class="stay-header-col">
 				<h2 class="stay-section-title">
-					Where<br />to
+					Where<br/>to
 					<span class="text-orange">Stay</span>
 				</h2>
 				<div class="stay-nav-buttons">
-					<button class="stay-nav-btn stay-prev-btn"
-						id="stayPrevBtn"
-						aria-label="Previous Stay">
+					<button class="stay-nav-btn stay-prev-btn" id="stayPrevBtn" aria-label="Previous Stay">
 						&larr;
 					</button>
-					<button class="stay-nav-btn stay-next-btn"
-						id="stayNextBtn"
-						aria-label="Next Stay">
+					<button class="stay-nav-btn stay-next-btn" id="stayNextBtn" aria-label="Next Stay">
 						&rarr;
 					</button>
 				</div>
@@ -122,9 +109,7 @@
 							<a href="{{ itemLink }}" class="stay-card-inner">
 								<div class="stay-card-media">
 									{% if imgUrl %}
-										<img src="{{ imgUrl }}"
-											alt="{{ itemTitle }}"
-											loading="lazy" />
+										<img src="{{ imgUrl }}" alt="{{ itemTitle }}" loading="lazy"/>
 									{% else %}
 										<div class="stay-placeholder">
 											<span>{{ itemTitle }}</span>
