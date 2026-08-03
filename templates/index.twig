@@ -7,11 +7,11 @@
 	{# {% cache %} #}
 
 	{# ==========================================================================
-				SECTION 1: HERO SECTION
-				- Desert/sunset hero header with main title ("What Do You Want To Do?")
-				- Subtitle filter pill buttons (Outdoor, Restaurants, Attractions, Experiences)
-				- Search bar input box
-				========================================================================== #}
+						SECTION 1: HERO SECTION
+						- Desert/sunset hero header with main title ("What Do You Want To Do?")
+						- Subtitle filter pill buttons (Outdoor, Restaurants, Attractions, Experiences)
+						- Search bar input box
+						========================================================================== #}
 		<section class="hero-section" {% if entry.heroBackground is defined and entry.heroBackground.one() %} style="background-image: url('{{ entry.heroBackground.one().getUrl() }}');" {% elseif entry.heroBackgroundImage is defined and entry.heroBackgroundImage.one() %} style="background-image: url('{{ entry.heroBackgroundImage.one().getUrl() }}');" {% endif %}> <div class="hero-overlay"></div>
 		<div class="hero-content">
 			<h1 class="hero-title">{{ entry.heroHeading ?? 'What Do You Want To Do?' }}</h1>
@@ -19,17 +19,18 @@
 				{% if entry.heroSubheading is defined and entry.heroSubheading %}
 					{% set pills = entry.heroSubheading|split('•') %}
 					{% for pill in pills %}
-						<span class="pill-tag {% if loop.first %}active{% endif %}">{{ pill|trim }}</span>
+						<a href="{{ url('what-to-do') }}" class="pill-tag {% if loop.first %}active{% endif %}">{{ pill|trim }}</a>
 					{% endfor %}
 				{% else %}
-					<span class="pill-tag active">Outdoor</span>
-					<span class="pill-tag">Restaurants</span>
-					<span class="pill-tag">Attractions</span>
-					<span class="pill-tag">Experiences</span>
+					<a href="{{ url('what-to-do') }}" class="pill-tag active">Outdoor</a>
+					<a href="{{ url('what-to-do') }}" class="pill-tag">Restaurants</a>
+					<a href="{{ url('what-to-do') }}" class="pill-tag">Attractions</a>
+					<a href="{{ url('what-to-do') }}" class="pill-tag">Experiences</a>
 				{% endif %}
 			</div>
 			<div class="hero-search-box">
-				<form action="{{ siteUrl('listings') }}" method="get" class="search-form">
+				<form action="{{ siteUrl('search') }}" method="get" class="search-form">
+
 					<input type="text" name="q" placeholder="{{ entry.heroPlaceholder ?? entry.heroSearchPlaceholder ?? 'Search location, activity...' }}" class="search-input"/>
 					<button type="submit" class="search-submit-btn" aria-label="Search">
 						<svg width="20" height="20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -79,10 +80,10 @@
 	{% else %}
 
 		{# ==========================================================================
-								SECTION 2: "WHAT TO DO" CATEGORY CARDS GRID
-								- Pink section background
-								- Shows Experience Categories (Art & Culture, Outdoors, Attractions, etc.)
-								========================================================================== #}
+												SECTION 2: "WHAT TO DO" CATEGORY CARDS GRID
+												- Pink section background
+												- Shows Experience Categories (Art & Culture, Outdoors, Attractions, etc.)
+												========================================================================== #}
 		{% include "_components/matrix/block-curatedGrid.twig" with {
                 block: {
                     heading: entry is defined and entry ? (entry.heading ?? 'What To Do') : 'What To Do',
@@ -96,10 +97,10 @@
 
 
 		{# ==========================================================================
-								SECTION 4: "WHERE TO EAT" RESTAURANTS GRID
-								- White section background
-								- Shows featured dining spots, bars & local eateries
-								========================================================================== #}
+												SECTION 4: "WHERE TO EAT" RESTAURANTS GRID
+												- White section background
+												- Shows featured dining spots, bars & local eateries
+												========================================================================== #}
 		{% include "_components/matrix/restaurantGrid.twig" with {
                 block: {
                     heading: 'Where to Eat',
@@ -108,10 +109,10 @@
             } %}
 
 		{# ==========================================================================
-									SECTION 5: "SAVOR EVERY BITE" PROMO BANNER
-									- Food/restaurant photo with dark overlay card box
-									- Highlighted title with orange "Bite" text & "EXPLORE ALL" button
-									========================================================================== #}
+													SECTION 5: "SAVOR EVERY BITE" PROMO BANNER
+													- Food/restaurant photo with dark overlay card box
+													- Highlighted title with orange "Bite" text & "EXPLORE ALL" button
+													========================================================================== #}
 		{% include "_components/matrix/block-promoBlock2.twig" with {
                 block: {
                     heading: entry is defined and entry ? (entry.heading2 ?? null) : null,
@@ -125,22 +126,22 @@
             } %}
 
 		{# ==========================================================================
-				              SECTION 6: BRAND BANNER ("DISCOVER MORE. EXPERIENCE MORE. DO SAN DIEGO")
-				              - Light beige background section with brand logo & wavy vector art
-				              ========================================================================== #}
+								              SECTION 6: BRAND BANNER ("DISCOVER MORE. EXPERIENCE MORE. DO SAN DIEGO")
+								              - Light beige background section with brand logo & wavy vector art
+								              ========================================================================== #}
 		{% include "_components/matrix/block-brandBanner.twig" %}
 
 		{# ==========================================================================
-				                  SECTION 7: "WHERE TO STAY" HOTELS & RESORTS GRID
-				                  - Slate blue background section with mountain/moon vector graphic
-				                  - Cards for Bed & Breakfast, Hotels, and Motels
-				                  ========================================================================== #}
+								                  SECTION 7: "WHERE TO STAY" HOTELS & RESORTS GRID
+								                  - Slate blue background section with mountain/moon vector graphic
+								                  - Cards for Bed & Breakfast, Hotels, and Motels
+								                  ========================================================================== #}
 		{% include "_components/matrix/stayGrid.twig" %}
 
 		{# ==========================================================================
-										            SECTION 8: "RELAX & STAY" PROMO BANNER
-										            - Dark slate box section with hotel bedroom photo on left & stay description
-										            ========================================================================== #}
+														            SECTION 8: "RELAX & STAY" PROMO BANNER
+														            - Dark slate box section with hotel bedroom photo on left & stay description
+														            ========================================================================== #}
 		{% include "_components/matrix/block-promoBlock3.twig" with {
                 block: {
                     heading: entry is defined and entry ? (entry.heading3 ?? null) : null,
@@ -154,9 +155,9 @@
             } %}
 
 		{# ==========================================================================
-										            SECTION 9: BOTTOM CTA / FOOTER BANNER ("FIND YOUR PERFECT PLACE")
-										            - Dark footer banner with cactus graphic, brand info, and quick links
-										            ========================================================================== #}
+														            SECTION 9: BOTTOM CTA / FOOTER BANNER ("FIND YOUR PERFECT PLACE")
+														            - Dark footer banner with cactus graphic, brand info, and quick links
+														            ========================================================================== #}
 		{% include "_components/matrix/block-bottomCta.twig" %}
 
 	{% endif %}
