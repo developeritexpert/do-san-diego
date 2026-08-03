@@ -23,11 +23,12 @@ property="og:type" content="website"/>
 
 {% set currentSlug = craft.app.request.pathInfo %}
 
-{% if currentSlug == 'where-to-stay' or (entry is defined and entry.section.type|default('') in ['channel', 'structure']) %}
+{# {% if currentSlug == 'where-to-stay' or (entry is defined and entry.section.type|default('') in ['channel', 'structure']) %} #}
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-{% endif %}
+{# {% endif %} #}
 
 
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
