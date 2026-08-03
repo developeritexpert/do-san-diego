@@ -5,11 +5,13 @@
 
 {% set isWhatToDoPage = (craft.app.request.getSegment(1) == 'what-to-do') %}
 
+{% set class = "" %}
 {% if isWhatToDoPage %}
 	{% set bgImage = getenv('PRIMARY_SITE_URL') ~ 'assets/images/btm-ban.png' %}
+	{% set class = "what-to-do-slide-inner" %}
 {% endif %}
 
-<section class="section-what-to-do" {% if isWhatToDoPage %} style="background: url('{{ bgImage }}') no-repeat center center / cover;" {% endif %}>
+<section class="section-what-to-do {{ class }}" {% if isWhatToDoPage %} style="background: url('{{ bgImage }}') no-repeat center center / cover;" {% endif %}>
 
 
 	<div
