@@ -84,7 +84,9 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.section-what-to-do {
+  background-size: 100% 100% !important;
+}
 /* Buttons */
 .btn {
   display: inline-flex;
