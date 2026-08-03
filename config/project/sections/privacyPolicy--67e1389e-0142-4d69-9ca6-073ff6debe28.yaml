@@ -2,11 +2,11 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: c00ea25c-aa8e-42a0-adce-0b0ffae4abda # What to Do
-handle: whereToEat
+    uid: 5ca5ba24-4b6a-4724-8080-c4d5bc6e3954 # Privacy policy
+handle: privacyPolicy
 maxAuthors: 1
 minAuthors: 1
-name: 'Where to Eat'
+name: 'Privacy policy'
 previewTargets:
   -
     label: 'Primary entry page'
@@ -17,6 +17,6 @@ siteSettings:
   bdeb5182-f6c3-4403-9323-0ab9afff1795: # DO San Diego
     enabledByDefault: true
     hasUrls: true
-    template: pages/what-to-do.twig
-    uriFormat: where-to-eat
+    template: pages/privacy-policy.twig
+    uriFormat: privacy-policy
 type: single

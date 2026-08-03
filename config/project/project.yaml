@@ -1,4 +1,4 @@
-dateModified: 1785566030
+dateModified: 1785764403
 email:
   fromEmail: developeritexpert3@gmail.com
   fromName: 'DO San Diego'
@@ -20,6 +20,7 @@ fs:
     url: '@webroot/uploads'
 meta:
   __names__:
+    00aba3a2-fe60-4772-a9f0-c70af91dfd9f: listdata4 # listdata4
     0bc07f78-c007-4596-b9d4-c04cc9438e07: 'Things to Do Nearby' # Things to Do Nearby
     0cccb0e7-ff55-41ac-b3c7-92af3da2c530: Label # Label
     0df6553f-f45d-4850-b322-93e5928dda9c: Reviews # Reviews
@@ -30,9 +31,11 @@ meta:
     2c036b94-c871-48cb-8a3a-42b51a0e8e84: 'Hero Placeholder' # Hero Placeholder
     4d0c33eb-8b2b-431d-a545-39f445f43fec: 'Experience Categories' # Experience Categories
     4d8510df-d5ce-4c46-82b2-6d53e9209cbd: 'Hero Heading' # Hero Heading
+    5ca5ba24-4b6a-4724-8080-c4d5bc6e3954: 'Privacy policy' # Privacy policy
     5e00b128-fb55-4241-b83e-7da9165b6682: 'Area Listing Button Text' # Area Listing Button Text
     005e810e-1762-4053-8112-618d4f4208dc: Default # Default
     06b66c1e-e22a-43d3-b02a-c9ce9a5ffc89: 'Upcoming events' # Upcoming events
+    6efce2bd-af1c-4999-b45e-9985d1b2a1f2: list # list
     7d446b03-5b7b-42d7-a565-2a09111b0985: 'Header logo' # Header logo
     8e7fbb4f-dce6-4a95-8fa4-3c3c0ca3ec93: 'Event Title' # Event Title
     10cc84bc-74e8-4305-abdb-5367df3aa38d: 'Copyright Text' # Copyright Text
@@ -40,7 +43,9 @@ meta:
     34ed1074-e546-45b6-a50e-31783448b609: 'Button URL' # Button URL
     50c67e97-d29d-4d57-a0c9-ff983cd9df03: 'category slider' # category slider
     60d78ca8-ecb3-414e-a513-c87fea9d44d1: 'Link url' # Link url
+    67e1389e-0142-4d69-9ca6-073ff6debe28: 'Privacy policy' # Privacy policy
     99e3197b-2bfc-4057-a539-f641a3fa6963: 'Button Text' # Button Text
+    250a1618-6ef5-4dc1-a89b-30ccc7749f36: listdata5 # listdata5
     255b6925-5561-4791-ab95-9ab8748927b9: 'Social Links' # Social Links
     274dde5d-08bc-4f2b-8f11-1b96faebbc60: 'Rating & Reviews' # Rating & Reviews
     394f6f12-de80-40bb-b13b-80b88b96b8b7: 'Destination type' # Destination type
@@ -65,7 +70,9 @@ meta:
     89182ff6-b040-42e4-8f78-7e8cc17067f6: 'Amenities included' # Amenities included
     986971ec-c1af-4f0e-a434-17aba27369f2: Address # Address
     6878376d-0aa9-490a-ad5b-3d2a280d9b60: Heading # Heading
+    30029992-7efc-4944-81d9-da625eb8acb4: 'list data' # list data
     55848837-a359-45cc-be9a-178c1234fd81: Homepage # Homepage
+    59687271-2265-42e3-a40d-2feb6c3e17e4: listdata3 # listdata3
     67153374-b2ae-45e6-8d80-b4fdca0858f8: 'Ribbon Text' # Ribbon Text
     81384375-720b-45af-86cc-63a3d2ac278c: Restaurant # Restaurant
     94378684-ef3a-4a30-9640-bce0707951ed: 'destination subheading highlighted' # destination subheading highlighted
@@ -73,6 +80,7 @@ meta:
     a1cb3c23-2bbb-4482-9586-1aee1abe121e: 'Event Date & time' # Event Date & time
     a12a9c43-83b9-4f9d-985f-0d320c3ad07f: category # category
     a13faae7-0d7e-453f-810f-bbeccd14ff63: 'header naviagation' # header naviagation
+    a103193f-7d53-4162-84a7-f6e8a11f22ab: listdata2 # listdata2
     ad909e4e-4701-4299-90a9-cd2d37f55255: 'Where to Stay' # Where to Stay
     adaf5901-f66e-4354-ae27-379a2be70d03: 'destination subheading' # destination subheading
     aeedff30-0259-43cb-b540-8b108e1c0f48: rating # rating
