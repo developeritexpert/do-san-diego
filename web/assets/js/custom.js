@@ -1,8 +1,10 @@
+
 const searchForm = document.getElementById("searchForm");
 const searchToggleBtn = document.getElementById("searchToggleBtn");
 const searchInput = document.getElementById("searchInput");
 const searchText = document.getElementById("searchText");
 const searchSubmitBtn = document.getElementById("searchSubmitBtn");
+const searchWrapper = document.querySelector(".header-srch-wrapper");
 
 let isSearchOpen = false;
 
@@ -10,6 +12,9 @@ searchToggleBtn.addEventListener("click", function (e) {
   if (!isSearchOpen) {
     e.preventDefault();
     isSearchOpen = true;
+
+    // Add active class
+    searchWrapper.classList.add("active");
 
     searchForm.style.background = "rgba(255, 255, 255, 0.2)";
     searchForm.style.borderColor = "rgba(255, 255, 255, 0.5)";
@@ -32,6 +37,10 @@ document.addEventListener("click", function (e) {
     searchInput.value === ""
   ) {
     isSearchOpen = false;
+
+    // Remove active class
+    searchWrapper.classList.remove("active");
+
     searchForm.style.background = "rgba(255, 255, 255, 0.1)";
     searchForm.style.borderColor = "rgba(255, 255, 255, 0.2)";
 
@@ -44,6 +53,8 @@ document.addEventListener("click", function (e) {
     searchSubmitBtn.style.display = "none";
   }
 });
+
+
 
 fetch(
   "https://api.open-meteo.com/v1/forecast?latitude=32.7157&longitude=-117.1611&current_weather=true&temperature_unit=fahrenheit",
