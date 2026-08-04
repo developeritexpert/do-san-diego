@@ -1,4 +1,29 @@
-dateModified: 1785764403
+dateModified: 1785825355
+elementSources:
+  craft\elements\Category:
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'group:4d0c33eb-8b2b-431d-a545-39f445f43fec' # Experience Categories
+      tableAttributes:
+        - status
+        - link
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'group:88977aea-3cc7-4bbb-88f2-efaabf9a6a8c' # Price range
+      tableAttributes:
+        - status
+        - link
+        - 'field:1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1' # Featured Image
+      type: native
 email:
   fromEmail: developeritexpert3@gmail.com
   fromName: 'DO San Diego'
@@ -67,6 +92,7 @@ meta:
     46041f04-bce3-40d3-9f46-22c45537a5fe: 'Navigation Item' # Navigation Item
     51464bfa-23a7-4da9-96cb-628449ff33fe: 'what to do' # what to do
     72635ced-9e85-458d-b31a-6fe7a6df534c: 'Layout Orientation' # Layout Orientation
+    88977aea-3cc7-4bbb-88f2-efaabf9a6a8c: 'Price range' # Price range
     89182ff6-b040-42e4-8f78-7e8cc17067f6: 'Amenities included' # Amenities included
     986971ec-c1af-4f0e-a434-17aba27369f2: Address # Address
     6878376d-0aa9-490a-ad5b-3d2a280d9b60: Heading # Heading
