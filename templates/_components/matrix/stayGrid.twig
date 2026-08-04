@@ -3,7 +3,7 @@
 
 {% set whatToDoPage = craft.entries().slug('what-to-do').one() %}
 
-<section class="section-where-to-stay {{ craft.app.request.segments|length == 0 ? 'border' : 'inner-page-sec' }}">
+<section class="section-where-to-stay {{ craft.app.request.segments|length == 0 ? ' ' : 'inner-page-sec' }}">
 
 
 	<div class="stay-img">
