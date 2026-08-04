@@ -1,6 +1,7 @@
 <div class="promo-banner-section promo-imageLeft">
 	<div class="container promo-banner-grid">
-		<div class="promo-image-col">
+		<div
+			class="promo-image-col">
 			{# Professional Fallback Logic: Check 'data' passed via include, then block, then entry #}
 			{% set promoItem = data ?? block ?? entry ?? null %}
 
@@ -21,10 +22,7 @@
 			{% set btnTextVal = promoItem.buttonText ?? 'EXPLORE ALL' %}
 
 			{% if img %}
-				<img src="{{ img.url }}"
-					alt="{{ headingVal }}"
-					class="promo-img"
-					loading="lazy" />
+				<img src="{{ img.url }}" alt="{{ headingVal }}" class="promo-img" loading="lazy"/>
 			{% else %}
 				<div class="promo-img-placeholder">
 					<span>Feature Image</span>
@@ -59,19 +57,13 @@
 					{{ descVal }}
 				</div>
 
-				<a href="{{ btnUrlVal }}" class="btn btn-pill-accent">
+				<a href="{{ btnUrlVal }}" class="btn trans-btn">
 					{{ btnTextVal|upper }}
 				</a>
 			</div>
 		</div>
 	</div>
 	<div class="absolute-txt-img">
-		<img src="{{
-			getenv(
-				'PRIMARY_SITE_URL'
-			)
-			}}assets/images/DO-San-Diego.png"
-			alt="DO San Diego"
-			loading="lazy" />
+		<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/DO-San-Diego.png" alt="DO San Diego" loading="lazy"/>
 	</div>
 </div>
