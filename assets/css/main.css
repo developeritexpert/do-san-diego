@@ -5,7 +5,7 @@
 :root {
   --color-primary: #FF5A4E;
   --color-primary-gradient: linear-gradient(135deg, #FF6B4A 0%, #FF3D57 100%);
-  --color-accent: #FF5E36;
+  --color-accent: #F26D40;
   --color-accent-hover: #E04823;
   --color-bg-dark: #12161A;
   --color-bg-slate: #2B343D;
@@ -41,8 +41,8 @@ body {
   color: var(--color-text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-    margin: 0;
-      padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -84,9 +84,11 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .section-what-to-do {
   background-size: 100% 100% !important;
 }
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -108,9 +110,11 @@ h6 {
   color: #fff;
   box-shadow: 0 8px 20px rgba(255, 90, 78, 0.35);
 }
+
 .hdr-ryt-div p {
   margin: 0;
 }
+
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 28px rgba(255, 90, 78, 0.45);
@@ -147,10 +151,101 @@ h6 {
   padding: 13px 33px;
 }
 
+.promo-content-col .promo-card-box .trans-btn {
+  text-transform: capitalize;
+}
+
 .relax-promo-section .grad-btn,
 .savor-promo-section .btn-cta-pill {
   background: linear-gradient(180deg, #F26D40 0%, #EE3F66 100%);
 
+}
+
+.header-srch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hdr-left-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+  NeueMontreal font
+   ========================================================================== */
+@font-face {
+  font-family: "NeueMontreal-Bold";
+  src: url("../font/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../font/NeueMontreal-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
 /* ==========================================================================
@@ -204,7 +299,8 @@ h6 {
 .hero-section {
   position: relative;
   min-height: 100vh;
-  background: #1e1518 url('/assets/images/hero-bg.jpg') center center / cover no-repeat;
+  /* background: #1e1518 url('/assets/images/hero-bg.jpg') center center / cover no-repeat; */
+  background-position: top center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,6 +308,8 @@ h6 {
   color: #fff;
   padding: 180px 24px 80px;
   overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-overlay {
@@ -226,12 +324,12 @@ h6 {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 903px;
+  max-width: 883px;
   width: 100%;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 5vw, 6.625rem);
+  font-size: 106px;
   font-weight: 700;
   line-height: 100%;
   margin-bottom: 20px;
@@ -428,7 +526,7 @@ h6 {
 }
 
 .promo-content-col {
-  max-width: 553px;
+  max-width: 550px;
   width: 100%;
 }
 
@@ -485,6 +583,7 @@ h6 {
 
 .promo-description p {
   font-size: 22px;
+  font-weight: 300;
 }
 
 .promo-banner-section,
@@ -541,6 +640,7 @@ h6 {
   touch-action: pan-y;
   will-change: transform;
   /* overflow: hidden; */
+  padding-bottom: 70px;
 }
 
 .main-wrap-slider.is-dragging {
@@ -577,6 +677,7 @@ h6 {
 
 .slide-wrap.active-slide h5 {
   opacity: 1;
+  margin-bottom: 0px;
 }
 
 .progress-bar {
@@ -629,7 +730,7 @@ h6 {
    Brand Banner ("Discover more. Experience more.")
    ========================================================================== */
 .brand-banner-section {
-  padding: 90px 24px;
+  padding: 40px 24px;
   text-align: center;
   /* background: url('../images/ribbon-txt.png') no-repeat bottom;
   background-size: 100% 100%; */
@@ -772,7 +873,7 @@ h6 {
 
 .cta-subheading {
   color: rgba(255, 255, 255);
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto 36px;
   font-family: 'Inter';
   font-weight: 500;
@@ -910,7 +1011,7 @@ h6 {
    Where to Eat - Interactive Carousel Styling
    ========================================================================== */
 .section-where-to-eat {
-  padding: 80px 0 60px;
+  padding: 80px 0 130px;
   padding-top: 0;
   background: #fff;
   overflow: hidden;
@@ -1066,6 +1167,10 @@ h6 {
   overflow: hidden;
 }
 
+.savor-promo-section .absolute-txt-img img {
+  filter: brightness(0.5);
+}
+
 .savor-outer-wrap {
   position: relative;
   /* max-width: 1100px; */
@@ -1092,7 +1197,7 @@ h6 {
   border-radius: 28px;
   overflow: hidden;
   /* border: 3px solid #0076ff; */
-  box-shadow: 0 16px 40px rgba(0, 118, 255, 0.15);
+  /* box-shadow: 0 16px 40px rgba(0, 118, 255, 0.15); */
   z-index: 2;
 }
 
@@ -1138,7 +1243,8 @@ h6 {
 }
 
 .savor-floating-card .btn-cta-pill,
-.relax-btn-pill {
+.relax-btn-pill,
+.savor-floating-card .savor-btn-pill {
   font-family: 'Inter';
   font-weight: 500;
   font-size: 18px;
@@ -1152,6 +1258,7 @@ h6 {
 
 .savor-description {
   font-size: 22px;
+  font-weight: 300;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.82);
   margin-bottom: 28px;
@@ -1420,8 +1527,9 @@ h6 {
 
 .right-abs-img {
   position: absolute;
-  left: 90%;
-  bottom: 0;
+  left: 88%;
+  /* bottom: 0; */
+  bottom: 34%;
 }
 
 @media (max-width: 991px) {
@@ -1451,7 +1559,7 @@ h6 {
    Relax & Stay Promo Block (Side-by-side 2-Column Card Grid)
    ========================================================================== */
 .relax-promo-section {
-  padding: 60px 0 100px;
+  padding: 30px 0 140px;
   background: #738093;
 }
 
@@ -1518,6 +1626,7 @@ h6 {
 
 .relax-description {
   font-size: 22px;
+  font-weight: 300;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.82);
   margin-bottom: 36px;
@@ -1572,7 +1681,7 @@ h6 {
 .section-what-to-do {
   padding: 126px 0 100px;
   background: url('../images/com-bg.png') no-repeat center, #fff;
-  background-size: 100% 100% !important; 
+  background-size: 100% 100% !important;
   overflow: hidden;
 }
 
@@ -1691,7 +1800,7 @@ h6 {
   top: 14px;
   right: 14px;
   background: rgba(255, 255, 255, 0.95);
-  color: #111111;
+  color: #000;
   font-size: 14px;
   font-weight: 800;
   padding: 4px 12px;
@@ -1740,10 +1849,11 @@ h6 {
   object-fit: contain;
 }
 
-.search-cont p {
+.search-cont p,
+.search-cont span {
   font-family: 'Inter';
   font-weight: 500;
-  font-size: 16px;
+  font-size: 16px !important;
   line-height: 100%;
   text-align: right;
   color: #fff;
@@ -1910,6 +2020,8 @@ h6 {
   flex-direction: column;
   justify-content: space-around;
   padding: 60px 30px 40px;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .menu-list-cont {
@@ -1954,8 +2066,9 @@ h6 {
   text-decoration-color: #F2B203;
   text-underline-offset: 6px;
 }
-.hdr-menu-link:hover{
-  color:#fff;
+
+.hdr-menu-link:hover {
+  color: #fff;
   font-style: normal;
 }
 
@@ -2046,7 +2159,8 @@ h6 {
   border-radius: 50px;
   background: #FFFFFF14;
   backdrop-filter: blur(8px);
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   top: 30px;
   right: 30px;
   cursor: pointer;
@@ -2058,6 +2172,10 @@ h6 {
 
 .menu-ryt-cont .footer-address .inner-link:hover {
   text-decoration: underline;
+}
+
+.footer-bottom p a:hover {
+  color: #F26D40;
 }
 
 @media (min-width: 576px) {
@@ -2079,7 +2197,7 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container{
+  .listing-container {
     max-width: 744px;
   }
 }
@@ -2103,7 +2221,7 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container{
+  .listing-container {
     max-width: 1164px;
   }
 }
@@ -2121,6 +2239,7 @@ h6 {
   }
 
 }
+
 @media (min-width: 1599px) {
 
   .what-todo-container,
@@ -2333,7 +2452,7 @@ h6 {
 @media only screen and (max-width: 1499px) {
 
   .hero-content {
-    max-width: 610px;
+    max-width: 570px;
   }
 
   .hero-title {
@@ -2473,6 +2592,14 @@ h6 {
   .menu-ryt-cont .footer-address {
     font-size: 20px;
   }
+
+  .section-where-to-eat {
+    padding: 80px 0 100px;
+  }
+
+  .main-wrap-slider {
+    padding-bottom: 40px;
+  }
 }
 
 @media only screen and (max-width: 1399px) {
@@ -2564,6 +2691,14 @@ h6 {
 
   .search-submit-btn {
     height: 48px;
+  }
+
+  .section-where-to-eat {
+    padding: 80px 0 60px;
+  }
+
+  .main-wrap-slider {
+    padding-bottom: 20px;
   }
 }
 
@@ -2704,7 +2839,8 @@ h6 {
 
   .search-cont p,
   .temp-cont p,
-  .navbar-slide-toggler {
+  .navbar-slide-toggler,
+  .search-cont span {
     font-size: 16px;
   }
 
@@ -2794,7 +2930,7 @@ h6 {
   }
 
   .hero-content {
-    max-width: 520px;
+    max-width: 500px;
   }
 
   .todo-media-box {
@@ -2914,6 +3050,15 @@ h6 {
   .menu-ryt-cont {
     max-width: 380px;
     padding: 40px 30px 40px;
+  }
+
+  .main-wrap-slider {
+    padding-bottom: 0px;
+  }
+
+  .section-where-to-eat {
+    padding: 40px 0 40px;
+    padding-top: 0;
   }
 }
 
@@ -3097,7 +3242,8 @@ h6 {
 
   .search-cont p,
   .temp-cont p,
-  .navbar-slide-toggler {
+  .navbar-slide-toggler,
+  .search-cont span {
     font-size: 14px;
   }
 
@@ -3133,6 +3279,15 @@ h6 {
 
   .hdr-menu-link.has-submenu::after {
     font-size: 36px;
+  }
+
+  .section-where-to-eat {
+    padding: 40px 0 0px;
+    padding-top: 0;
+  }
+
+  .savor-promo-section {
+    padding: 40px 0 30px;
   }
 }
 
@@ -3279,7 +3434,7 @@ h6 {
   }
 
   .hero-content {
-    max-width: 450px;
+    max-width: 430px;
   }
 
   .hero-pills {
@@ -3459,7 +3614,7 @@ h6 {
   }
 
   .section-where-to-eat {
-    padding: 0px 0 40px;
+    padding: 0px 0 0px;
   }
 
   .promo-title {
@@ -3509,7 +3664,8 @@ h6 {
 
   .search-cont p,
   .temp-cont p,
-  .navbar-slide-toggler p {
+  .navbar-slide-toggler p,
+  .search-cont span {
     display: none;
   }
 
@@ -3577,6 +3733,33 @@ h6 {
 
   .sub-menu-cont ul {
     gap: 8px;
+  }
+
+  .progress-bar {
+    margin-top: 12px;
+  }
+
+  .slide-wrap.active-slide {
+    transform: scale(1.04);
+  }
+
+  .progress-bar {
+    height: 6px;
+  }
+
+  .header-srch-wrapper {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    border-radius: 30px;
+    transition: 0.3s;
+    margin: 0px;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .header-srch-wrapper.active {
+    padding: 5px 15px;
   }
 }
 
@@ -3655,7 +3838,7 @@ h6 {
   .footer-container,
   .bottom-cta-section,
   .listing-container,
-  .event-section .listing-container{
+  .event-section .listing-container {
     padding-inline: 12px !important;
   }
 
@@ -3689,7 +3872,7 @@ h6 {
   }
 
   .savor-promo-section {
-    padding: 0px 0 30px;
+    padding: 30px 0 30px;
   }
 
   .savor-feature-frame,
@@ -3818,7 +4001,7 @@ h6 {
   }
 
   .savor-feature-frame {
-    height: 270px;
+    height: 290px;
   }
 
   .circle-button {
@@ -3830,7 +4013,7 @@ h6 {
   }
 
   .hero-content {
-    max-width: 350px;
+    max-width: 340px;
   }
 
   .menu-img-cont {
@@ -3863,5 +4046,13 @@ h6 {
 
   .sub-menu-cont ul li a {
     font-size: 14px;
+  }
+
+  .savor-btn-pill {
+    padding: 9px 14px;
+  }
+
+  .savor-promo-section .absolute-txt-img {
+    top: 0px;
   }
 }
