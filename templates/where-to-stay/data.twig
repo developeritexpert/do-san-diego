@@ -1,0 +1,19 @@
+{% header "Content-Type: application/json" %}
+{% set listings = craft.entries().section('destinations').all() %}
+
+
+{% set output = [] %}
+{% for listing in listings %}
+	{% set output = output|merge([{
+    id: listing.id,
+    title: listing.title,
+    slug: listing.slug,
+    url: listing.url,
+    description: listing.description,
+    image: listing.featuredImage.one() ? listing.featuredImage.one().url({width: 400}) : null,
+    types: listing.DestinationType is defined and listing.DestinationType ? listing.DestinationType.all()|map(c => c.slug) : [],
+    priceRanges: listing.priceRange is defined and listing.priceRange ? listing.priceRange.all()|map(c => c.slug) : []
+  }]) %}
+{% endfor %}
+
+{{ output|json_encode|raw }}

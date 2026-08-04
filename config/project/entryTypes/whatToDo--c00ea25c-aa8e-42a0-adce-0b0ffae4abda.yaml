@@ -69,6 +69,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-08-04T11:49:33+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c6387eb8-ef0e-4fab-b83b-646e72097105 # Highlighted Word
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a6a0048d-749a-47e1-80d5-a99119a0a5e8
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-07-30T07:09:38+00:00'
             editCondition: null
             elementCondition: null
@@ -157,6 +173,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: d20bc490-e188-41f4-95fd-7eca64087acc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-08-04T11:02:18+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a12a9c43-83b9-4f9d-985f-0d320c3ad07f # category
+            handle: category2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b341655f-3603-4afd-bbf7-319f574021ae
             userCondition: null
             warning: null
             width: 100
