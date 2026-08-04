@@ -12,6 +12,18 @@
 						<div class="filter-block">
 							<h4>Type</h4>
 							<ul class="filter-list">
+
+
+								{% for cat in craft.categories().group('experienceCategories').all() %}
+
+									<li>
+										<label>
+											<input type="checkbox" name="type[]" value="{{ cat.slug }}" {% if cat.slug in craft.app.request.getParam('type') %} checked {% endif %}>
+											{{ cat.title }}
+										</label>
+									</li>
+								{% endfor %}
+
 								<li>
 									<label><input type="checkbox" checked>
 										All</label>

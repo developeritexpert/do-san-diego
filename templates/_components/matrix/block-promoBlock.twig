@@ -17,10 +17,7 @@
 			%}
 
 			{% if img %}
-				<img src="{{ img.url }}"
-					alt="{{ headingVal }}"
-					class="promo-img"
-					loading="lazy" />
+				<img src="{{ img.url }}" alt="{{ headingVal }}" class="promo-img" loading="lazy"/>
 			{% else %}
 				<div class="promo-img-placeholder">
 					<span>Feature Image</span>
@@ -65,7 +62,8 @@
 					: 'EXPLORE'
 				%}
 
-				<a href="{{ btnUrlVal }}" class="btn btn-pill-accent">
+				<a href="{{ btnUrlVal }}" class="btn trans-btn">
+
 					{{ btnTextVal|upper }}
 				</a>
 			</div>
