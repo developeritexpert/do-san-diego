@@ -4,93 +4,19 @@ instructions: null
 name: 'price range'
 searchable: false
 settings:
-  customOptions: false
-  options:
-    -
-      __assoc__:
-        -
-          - label
-          - Free
-        -
-          - value
-          - free
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - Budget
-        -
-          - value
-          - budget
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Mid Range'
-        -
-          - value
-          - midRange
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'No Limit'
-        -
-          - value
-          - noLimit
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - ''
-        -
-          - value
-          - ''
-        -
-          - icon
-          - ''
-        -
-          - color
-          - ''
-        -
-          - default
-          - ''
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSearchInput: true
+  showSiteMenu: true
+  source: 'group:88977aea-3cc7-4bbb-88f2-efaabf9a6a8c' # Price range
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\RadioButtons
+type: craft\fields\Categories

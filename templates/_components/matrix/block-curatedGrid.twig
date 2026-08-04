@@ -1,24 +1,52 @@
 {# What To Do Categories Carousel matching Figma reference image #}
-{% set categories = craft.categories()
-    .group('experienceCategories')
-    .all() %}
-
+{% set isHome = craft.app.request.segments|length == 0 %}
 {% set isWhatToDoPage = (craft.app.request.getSegment(1) == 'what-to-do') %}
+{% set isWhereToEatPage = (craft.app.request.getSegment(1) == 'where-to-eat') %}
 
 {% set class = "" %}
-{% if isWhatToDoPage %}
+{% if isWhatToDoPage or isWhereToEatPage %}
 	{% set bgImage = getenv('PRIMARY_SITE_URL') ~ 'assets/images/btm-ban.png' %}
 	{% set class = "what-to-do-slide-inner" %}
 {% endif %}
 
-<section class="section-what-to-do {{ class }}" {% if isWhatToDoPage %} style="background: url('{{ bgImage }}') no-repeat center center / cover;" {% endif %}>
+{# Default categories for Home page #}
+{% set defaultCategories = craft.categories().group('experienceCategories').all() %}
 
+{# Fetch data from backend for inner pages #}
+{% set items = defaultCategories %}
+{% if not isHome %}
+	{% if block.categoryItems is defined and block.categoryItems|length %}
+		{% set items = block.categoryItems %}
+	{% elseif entry is defined and entry.category is defined and entry.category.all()|length %}
+		{% set items = entry.category.all() %}
+	{% endif %}
+{% endif %}
 
-	<div
-		class="what-todo-container">
+{# Fallback items if absolutely nothing is found #}
+{% set fallbackItems = [
+	{ title: 'Art & Culture', badgeLabel: 'FREE', imgUrl: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80', url: '#' },
+	{ title: 'Outdoors', badgeLabel: 'BUDGET', imgUrl: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80', url: '#' },
+	{ title: 'Attractions', badgeLabel: 'FREE', imgUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80', url: '#' },
+	{ title: 'History', badgeLabel: 'BUDGET', imgUrl: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80', url: '#' }
+] %}
+{% if not items|length %}
+	{% set items = fallbackItems %}
+{% endif %}
+
+{# Determine heading from backend #}
+{% set sectionHeading = block.heading4 ?? block.heading ?? 'What To Do' %}
+{% if not isHome %}
+	{% if entry is defined and entry.heading is defined and entry.heading %}
+		{% set sectionHeading = entry.heading %}
+	{% endif %}
+{% endif %}
+
+<section class="section-what-to-do {{ class }}" {% if isWhatToDoPage or isWhereToEatPage %} style="background: url('{{ bgImage }}') no-repeat center center / cover;" {% endif %}>
+
+	<div class="what-todo-container">
 		<!-- Section Header Row: Title on Left, Prev/Next Buttons on Right -->
 		<div class="what-todo-header">
-			<h2 class="what-todo-title">{{ block.heading4 ?? 'What To Do' }}</h2>
+			<h2 class="what-todo-title">{{ sectionHeading }}</h2>
 			<div class="what-todo-nav-buttons">
 				<button class="what-todo-nav-btn" id="todoPrevBtn" aria-label="Previous Category">&larr;</button>
 				<button class="what-todo-nav-btn" id="todoNextBtn" aria-label="Next Category">&rarr;</button>
@@ -28,14 +56,6 @@
 		<!-- Carousel Track Viewport -->
 		<div class="what-todo-viewport" id="todoCarouselViewport">
 			<div class="what-todo-track" id="todoCarouselTrack">
-				{% set fallbackItems = [
-                    { title: 'Art  & Culture', badgeLabel: 'FREE', imgUrl: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80', url: '#' },
-                    { title: 'Outdoors', badgeLabel: 'BUDGET', imgUrl: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80', url: '#' },
-                    { title: 'Attractions', badgeLabel: 'FREE', imgUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80', url: '#' },
-                    { title: 'History', badgeLabel: 'BUDGET', imgUrl: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80', url: '#' }
-                ] %}
-				{% set items = (block.categoryItems is defined and block.categoryItems|length) ? block.categoryItems : (categories|length ? categories : fallbackItems) %}
-
 				{% for item in items %}
 					{% set imgUrl = null %}
 					{% set itemTitle = item.title ?? 'Category' %}
@@ -61,7 +81,7 @@
 					{% endif %}
 
 					<div class="todo-card-item">
-						<a href="{{ itemLink }}" class="todo-card-inner">
+						<a href="javascript:void(0);" class="todo-card-inner">
 							<div class="todo-media-box">
 								{% if imgUrl %}
 									<img src="{{ imgUrl }}" alt="{{ itemTitle }}" loading="lazy"/>
