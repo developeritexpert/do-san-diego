@@ -33,11 +33,11 @@
 			</p>
 		{% endif %}
 		{% if footerObj.buttonText is defined and footerObj.buttonText %}
-			<a href="{{ footerObj.buttonUrl.url ?? footerObj.buttonUrl ?? '#' }}" class="btn btn-cta-pill">
+			<a href="{{ footerObj.buttonUrl.url ?? footerObj.buttonUrl ?? '#' }}" class="btn trans-btn">
 				{{ footerObj.buttonText|upper }}
 			</a>
 		{% else %}
-			<a href="{{ siteUrl('search') }}" class="btn btn-cta-pill">
+			<a href="{{ siteUrl('search') }}" class="btn trans-btn">
 				SEARCH NOW
 			</a>
 		{% endif %}
