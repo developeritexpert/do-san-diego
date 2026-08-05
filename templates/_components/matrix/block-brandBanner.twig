@@ -6,7 +6,7 @@
 	: 'We are your trusted local guide, dedicated to showcasing the finest experiences, attractions, restaurants, and events in the area.'
 %}
 
-<section class="brand-banner-section ">
+<section class="brand-banner-section {% if craft.app.request.segments|length > 0 %}what-yohgg {% else %} {% endif %} ">
 	<div class="brand-banner-container">
 		<div class="brand-title-wrap">
 			<h2 class="brand-title-main">
