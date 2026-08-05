@@ -20,10 +20,10 @@
 						{% if heroImages|length %}
 							{% for img in heroImages %}
 								<div class="listing-slide {{
-																		loop.first
-																			? 'active'
-																			: ''
-																		}}" data-index="{{ loop.index0 }}">
+																											loop.first
+																												? 'active'
+																												: ''
+																											}}" data-index="{{ loop.index0 }}">
 									<img src="{{ img.url }}" alt="{{ img.title ?? entry.title }}"/>
 								</div>
 							{% endfor %}
@@ -290,18 +290,18 @@
 											</h4>
 											<p>
 												From the moment we arrived,
-																						everything exceeded our
-																						expectations. The staff was
-																						incredibly welcoming, the room
-																						was spotless, and the ocean
-																						views were absolutely
-																						breathtaking. We especially
-																						loved the private beach access
-																						and the delicious breakfast each
-																						morning. This was one of the
-																						most relaxing vacations we've
-																						ever had, and we can't wait to
-																						come back.
+																																		everything exceeded our
+																																		expectations. The staff was
+																																		incredibly welcoming, the room
+																																		was spotless, and the ocean
+																																		views were absolutely
+																																		breathtaking. We especially
+																																		loved the private beach access
+																																		and the delicious breakfast each
+																																		morning. This was one of the
+																																		most relaxing vacations we've
+																																		ever had, and we can't wait to
+																																		come back.
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
@@ -323,18 +323,18 @@
 											</h4>
 											<p>
 												This resort exceeded all of our
-																						expectations. The rooms were
-																						spacious and comfortable, the
-																						amenities were excellent, and
-																						the sunsets from our balcony
-																						were unforgettable. We enjoyed
-																						every moment, from relaxing by
-																						the pool to exploring the nearby
-																						boardwalk. If you're looking for
-																						a peaceful getaway with
-																						outstanding hospitality, Sunset
-																						Beach Resort is the perfect
-																						choice.
+																																		expectations. The rooms were
+																																		spacious and comfortable, the
+																																		amenities were excellent, and
+																																		the sunsets from our balcony
+																																		were unforgettable. We enjoyed
+																																		every moment, from relaxing by
+																																		the pool to exploring the nearby
+																																		boardwalk. If you're looking for
+																																		a peaceful getaway with
+																																		outstanding hospitality, Sunset
+																																		Beach Resort is the perfect
+																																		choice.
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
@@ -356,18 +356,18 @@
 											</h4>
 											<p>
 												From the moment we arrived,
-																						everything exceeded our
-																						expectations. The staff was
-																						incredibly welcoming, the room
-																						was spotless, and the ocean
-																						views were absolutely
-																						breathtaking. We especially
-																						loved the private beach access
-																						and the delicious breakfast each
-																						morning. This was one of the
-																						most relaxing vacations we've
-																						ever had, and we can't wait to
-																						come back.
+																																		everything exceeded our
+																																		expectations. The staff was
+																																		incredibly welcoming, the room
+																																		was spotless, and the ocean
+																																		views were absolutely
+																																		breathtaking. We especially
+																																		loved the private beach access
+																																		and the delicious breakfast each
+																																		morning. This was one of the
+																																		most relaxing vacations we've
+																																		ever had, and we can't wait to
+																																		come back.
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
@@ -389,18 +389,18 @@
 											</h4>
 											<p>
 												This resort exceeded all of our
-																						expectations. The rooms were
-																						spacious and comfortable, the
-																						amenities were excellent, and
-																						the sunsets from our balcony
-																						were unforgettable. We enjoyed
-																						every moment, from relaxing by
-																						the pool to exploring the nearby
-																						boardwalk. If you're looking for
-																						a peaceful getaway with
-																						outstanding hospitality, Sunset
-																						Beach Resort is the perfect
-																						choice.
+																																		expectations. The rooms were
+																																		spacious and comfortable, the
+																																		amenities were excellent, and
+																																		the sunsets from our balcony
+																																		were unforgettable. We enjoyed
+																																		every moment, from relaxing by
+																																		the pool to exploring the nearby
+																																		boardwalk. If you're looking for
+																																		a peaceful getaway with
+																																		outstanding hospitality, Sunset
+																																		Beach Resort is the perfect
+																																		choice.
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
@@ -422,18 +422,18 @@
 											</h4>
 											<p>
 												This resort exceeded all of our
-																						expectations. The rooms were
-																						spacious and comfortable, the
-																						amenities were excellent, and
-																						the sunsets from our balcony
-																						were unforgettable. We enjoyed
-																						every moment, from relaxing by
-																						the pool to exploring the nearby
-																						boardwalk. If you're looking for
-																						a peaceful getaway with
-																						outstanding hospitality, Sunset
-																						Beach Resort is the perfect
-																						choice.
+																																		expectations. The rooms were
+																																		spacious and comfortable, the
+																																		amenities were excellent, and
+																																		the sunsets from our balcony
+																																		were unforgettable. We enjoyed
+																																		every moment, from relaxing by
+																																		the pool to exploring the nearby
+																																		boardwalk. If you're looking for
+																																		a peaceful getaway with
+																																		outstanding hospitality, Sunset
+																																		Beach Resort is the perfect
+																																		choice.
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
@@ -487,11 +487,11 @@
 										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/phone.svg" alt=""/>
 									</span>
 									<a href="tel:{{ entry.phoneNumber|replace({
-																						' ': '',
-																						'(': '',
-																						')': '',
-																						'-': ''
-																					}) }}">
+																																	' ': '',
+																																	'(': '',
+																																	')': '',
+																																	'-': ''
+																																}) }}">
 										<span class="pp-span">Phone:</span>
 										{{ entry.phoneNumber }}
 									</a>
@@ -581,9 +581,9 @@
 block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
 } %}
 
-	{% include '_components/matrix/block-bottomCta.twig' with {
-block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
-} %}
+	{# {% include '_components/matrix/block-bottomCta.twig' with {
+	block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
+	} %} #}
 {% endblock %}
 
 {% block head %}
@@ -605,6 +605,7 @@ const container = document.querySelector('.listing-slider');
 if (! container) 
 return;
 
+
 const slides = container.querySelectorAll('.listing-slide');
 const nextBtn = document.querySelector('.listing-next');
 const prevBtn = document.querySelector('.listing-prev');
@@ -613,6 +614,7 @@ const progressFill = document.querySelector('.listing-progress-fill');
 
 if (! slides.length) 
 return;
+
 
 let activeIndex = 0;
 
@@ -626,6 +628,7 @@ activeIndex = index;
 function goTo(index) {
 if (index < 0 || index >= slides.length) 
 return;
+
 
 activeIndex = index;
 
@@ -689,6 +692,7 @@ function initReviewSlider() {
 const swiperContainer = document.querySelector('.review-slider');
 if (! swiperContainer) 
 return;
+
 
 
 new Swiper('.review-slider', {

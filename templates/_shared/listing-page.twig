@@ -1,0 +1,45 @@
+{% extends '_layouts/main.twig' %}
+
+{% set element = category ?? entry ?? null %}
+
+{% block content %}
+	{% include '_components/matrix/block-banner.twig' with {
+		block: {
+			title: element ? element.title : null,
+			heading: element ? element.heading ?? null : null,
+			description: element
+				? element.description ?? null
+				: null,
+			highlightedWord: element
+				? element.highlightedWord ?? null
+				: null,
+			buttonText: element
+				? element.buttonText ?? 'Explore Activities'
+				: 'Explore Activities',
+			buttonUrl: element
+				? element.buttonUrl ?? siteUrl('listings')
+				: siteUrl('listings'),
+			assets: element
+				and element.assets is defined
+				and element.assets
+				? element.assets.all()
+				: null,
+			featuredImage: element
+				and element.featuredImage is defined
+				and element.featuredImage
+				? element.featuredImage.all()
+				: null
+		}
+	} %}
+
+	{% include '_components/matrix/block-upcoming-events.twig' with {
+		block: { heading: element ? element.heading ?? 'Upcoming Events' : 'Upcoming Events', buttonUrl: siteUrl('events') }
+	} %}
+
+	{% include '_components/matrix/block-destination.twig' with {
+		block: { heading: element ? element.heading2 ?? 'Find your perfect destination' : 'Find your perfect destination', buttonUrl: siteUrl('destinations') }
+	} %}
+
+	{% include '_components/matrix/stayGrid.twig' %}
+
+{% endblock %}

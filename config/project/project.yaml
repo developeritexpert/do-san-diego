@@ -1,4 +1,4 @@
-dateModified: 1785845365
+dateModified: 1785931098
 elementSources:
   craft\elements\Category:
     -
@@ -66,8 +66,10 @@ meta:
     10cc84bc-74e8-4305-abdb-5367df3aa38d: 'Copyright Text' # Copyright Text
     018e1675-59ab-45eb-a9d8-ed8b1ce634a3: 'Hero Background' # Hero Background
     34ed1074-e546-45b6-a50e-31783448b609: 'Button URL' # Button URL
+    45d3ca68-2930-4db8-aaa7-00a2a1ff8939: 'Events Table' # Events Table
     50c67e97-d29d-4d57-a0c9-ff983cd9df03: 'category slider' # category slider
     60d78ca8-ecb3-414e-a513-c87fea9d44d1: 'Link url' # Link url
+    65fab4d9-c2b2-46d3-881d-3eb4550ecb03: 'Where to Live' # Where to Live
     67e1389e-0142-4d69-9ca6-073ff6debe28: 'Privacy policy' # Privacy policy
     99e3197b-2bfc-4057-a539-f641a3fa6963: 'Button Text' # Button Text
     250a1618-6ef5-4dc1-a89b-30ccc7749f36: listdata5 # listdata5

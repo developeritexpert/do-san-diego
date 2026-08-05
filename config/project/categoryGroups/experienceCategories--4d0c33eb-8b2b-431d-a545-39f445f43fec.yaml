@@ -69,13 +69,159 @@ fieldLayouts:
         name: Content
         uid: 9cd68988-9466-40c2-b278-4c1ddc1a268f
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-30T10:00:28+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 1d0a82b7-77d8-4b65-9ab6-f25aa5029ab1 # Featured Image
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5ae2e1c4-fddd-4bb1-8190-5e24fc5a8df5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T10:00:28+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d262dbbc-2012-45ed-9636-a47a474748c7 # Description
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b7500200-64da-4f35-bb8e-05f83bab6ab1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-08-05T08:25:10+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c6387eb8-ef0e-4fab-b83b-646e72097105 # Highlighted Word
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d93971c7-5258-4e96-8490-4ff27ba3d05a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T10:00:28+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 99e3197b-2bfc-4057-a539-f641a3fa6963 # Button Text
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 02b73cdb-1370-491f-8520-db9f30f50654
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-07-30T10:00:28+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 34ed1074-e546-45b6-a50e-31783448b609 # Button URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 19adda30-c95b-4adb-a884-456be8a87106
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Listing Details'
+        uid: c60396b9-6aa3-4805-9a95-1047d77c083f
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-30T10:00:28+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88b821ec-c8e2-4b33-82e5-6311caffdae2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-08-05T00:00:00+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 45d3ca68-2930-4db8-aaa7-00a2a1ff8939 # Events Table
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5bd0ebb-cf38-4141-bbd1-2c789b9320ce
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Upcoming events'
+        uid: aafc8b00-856a-43b6-8c40-95792de6e1b8
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-07-30T10:00:28+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
+            handle: heading2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88950a7c-2367-48c3-b268-4a8061845bb8
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Find you perfect destination'
+        uid: 73b1e2dd-c6f7-4550-838c-92f2666ebf72
+        userCondition: null
     thumbFieldKey: 'layoutElement:621fa6c8-b0e4-4608-a27c-7b8019956c9d'
 handle: experienceCategories
 name: 'Experience Categories'
 siteSettings:
   bdeb5182-f6c3-4403-9323-0ab9afff1795: # DO San Diego
     hasUrls: true
-    template: experience-categories/_category.twig
+    template: _shared/listing-page.twig
     uriFormat: 'experience-categories/{slug}'
 structure:
   maxLevels: null

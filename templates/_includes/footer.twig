@@ -19,6 +19,31 @@
 	{% set addressData = footerObj.richText %}
 {% endif %}
 
+<section class="bottom-cta-section {{ craft.app.request.segments|length > 0 ? 'inner-pages-desti' : '' }}">
+	<div class="bottom-cta-container">
+		<h2 class="cta-heading">
+			{{ footerObj.heading ?? 'Find Your Perfect' }}
+			<span class="text-accent">{{ footerObj.highlightedWord ?? 'Place' }}</span>
+		</h2>
+		{% if footerObj.description is defined and footerObj.description %}
+			{{ footerObj.description|replace({'<p>': '<p class="cta-subheading">'})|raw }}
+		{% else %}
+			<p class="cta-subheading">
+				Explore local neighborhoods, discover hidden gems, and find the perfect area to live, stay, or explore.
+			</p>
+		{% endif %}
+		{% if footerObj.buttonText is defined and footerObj.buttonText %}
+			<a href="{{ footerObj.buttonUrl.url ?? footerObj.buttonUrl ?? '#' }}" class="btn btn-cta-pill">
+				{{ footerObj.buttonText|upper }}
+			</a>
+		{% else %}
+			<a href="{{ siteUrl('search') }}" class="btn btn-cta-pill">
+				SEARCH NOW
+			</a>
+		{% endif %}
+	</div>
+</section>
+
 <footer class="site-footer">
 	<div class="footer-container">
 		<div class="footer-top">

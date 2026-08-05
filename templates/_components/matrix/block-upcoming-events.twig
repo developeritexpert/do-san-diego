@@ -7,6 +7,20 @@
 
 			<div class="event-content">
 				<div class="event-table-wrapper">
+                    {% set listElement = category ?? entry ?? null %}
+                    {% set events = [] %}
+                    
+                    {# First try to get selected events from the category/entry #}
+                    {% if listElement and listElement.eventsTable is defined and listElement.eventsTable %}
+                        {# Handle both relation fields (query) and other types safely #}
+                        {% set events = listElement.eventsTable.all() ?? [] %}
+                    {% endif %}
+                    
+                    {# Fallback to all upcoming events if none are selected #}
+                    {% if not events|length %}
+                        {% set events = craft.entries().section('upcomingEvents').all() %}
+                    {% endif %}
+
 					<table class="event-table">
 						<thead>
 							<tr>
@@ -22,15 +36,11 @@
 							</tr>
 						</thead>
 						<tbody>
-							{% set events =
-								craft.entries().section('upcomingEvents').all()
-							%}
 							{% if events|length %}
 								{% for eventItem in events %}
 									<tr>
 										<td>
-											{{ eventItem.eventTitle
-												?? eventItem.title }}
+											{{ eventItem.eventTitle ?? eventItem.title }}
 										</td>
 										<td>
 											{{
@@ -44,82 +54,41 @@
 										</td>
 										<td>
 											<a href="{{ eventItem.url }}">
-												{{ eventItem.eventLocation
-													?? '' }}
+												{{ eventItem.eventLocation ?? '' }}
 											</a>
 										</td>
 									</tr>
 								{% endfor %}
 							{% else %}
 								<tr>
-									<td>
-										Taste of the City Food Festival
-									</td>
-									<td>
-										Aug 25 – Aug 28 <span class="all-day">(All
-											Day)</span>
-									</td>
-									<td>
-										<a href="#">City Square</a>
-									</td>
+									<td>Taste of the City Food Festival</td>
+									<td>Aug 25 – Aug 28 <span class="all-day">(All Day)</span></td>
+									<td><a href="#">City Square</a></td>
 								</tr>
 								<tr>
-									<td>
-										Family Fun Carnival &amp; Community Fair
-									</td>
-									<td>
-										Sep 30 – Oct 1 <span class="all-day">(All
-											Day)</span>
-									</td>
-									<td>
-										<a href="#">Riverfront Park</a>
-									</td>
+									<td>Family Fun Carnival &amp; Community Fair</td>
+									<td>Sep 30 – Oct 1 <span class="all-day">(All Day)</span></td>
+									<td><a href="#">Riverfront Park</a></td>
 								</tr>
 								<tr>
-									<td>
-										Outdoor Movie Night – Family Feature
-									</td>
-									<td>
-										Oct 3 – Oct 4 <span class="all-day">(All
-											Day)</span>
-									</td>
-									<td>
-										<a href="#">Central Green</a>
-									</td>
+									<td>Outdoor Movie Night – Family Feature</td>
+									<td>Oct 3 – Oct 4 <span class="all-day">(All Day)</span></td>
+									<td><a href="#">Central Green</a></td>
 								</tr>
 								<tr>
-									<td>
-										Annual Arts &amp; Crafts Expo
-									</td>
-									<td>
-										Oct 17
-									</td>
-									<td>
-										<a href="#">Valley Farms</a>
-									</td>
+									<td>Annual Arts &amp; Crafts Expo</td>
+									<td>Oct 17</td>
+									<td><a href="#">Valley Farms</a></td>
 								</tr>
 								<tr>
-									<td>
-										Harvest Festival &amp; Pumpkin Patch
-									</td>
-									<td>
-										Dec 1 – Dec 3 <span class="all-day">(All
-											Day)</span>
-									</td>
-									<td>
-										<a href="#">Heritage Park</a>
-									</td>
+									<td>Harvest Festival &amp; Pumpkin Patch</td>
+									<td>Dec 1 – Dec 3 <span class="all-day">(All Day)</span></td>
+									<td><a href="#">Heritage Park</a></td>
 								</tr>
 								<tr>
-									<td>
-										Holiday Tree Lighting Celebration
-									</td>
-									<td>
-										Dec 14
-									</td>
-									<td>
-										<a href="#">Town Plaza</a>
-									</td>
+									<td>Holiday Tree Lighting Celebration</td>
+									<td>Dec 14</td>
+									<td><a href="#">Town Plaza</a></td>
 								</tr>
 							{% endif %}
 						</tbody>

@@ -59,7 +59,7 @@ name: 'Price range'
 siteSettings:
   bdeb5182-f6c3-4403-9323-0ab9afff1795: # DO San Diego
     hasUrls: true
-    template: price-range/_category.twig
+    template: _shared/listing-page.twig
     uriFormat: 'price-range/{slug}'
 structure:
   maxLevels: null

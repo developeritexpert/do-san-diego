@@ -43,18 +43,33 @@
 				<div class="col-lg-5 col-md-12">
 					<div class="list-bn-ryt">
 						<h1>
-							{% set words = headingVal|split(' ') %}
-							{% set foundHighlight = false %}
-							{% for word in words %}
-								{% if highlightVal and (word|lower) == (highlightVal|lower) %}
-									<span>{{ word }}</span>
-									{% set foundHighlight = true %}
+							{% if category is defined and category %}
+								{% set words = category.title|split(' ') %}
+								{% if words|length == 1 %}
+									{{ category.title }}
 								{% else %}
-									{{ word }}
+									{% for word in words %}
+										{% if loop.last %}
+											<span>{{ word }}</span>
+										{% else %}
+											{{ word }}
+										{% endif %}
+									{% endfor %}
 								{% endif %}
-							{% endfor %}
-							{% if highlightVal and not foundHighlight %}
-								<span>{{ highlightVal }}</span>
+							{% else %}
+								{% set words = headingVal|split(' ') %}
+								{% set foundHighlight = false %}
+								{% for word in words %}
+									{% if highlightVal and (word|lower) == (highlightVal|lower) %}
+										<span>{{ word }}</span>
+										{% set foundHighlight = true %}
+									{% else %}
+										{{ word }}
+									{% endif %}
+								{% endfor %}
+								{% if highlightVal and not foundHighlight %}
+									<span>{{ highlightVal }}</span>
+								{% endif %}
 							{% endif %}
 						</h1>
 

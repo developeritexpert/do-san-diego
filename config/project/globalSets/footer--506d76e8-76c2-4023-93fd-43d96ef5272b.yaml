@@ -148,6 +148,92 @@ fieldLayouts:
         name: 'Social Links'
         uid: 71954e1b-6f53-4e24-a043-90e0fceedefb
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-08-05T08:04:54+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 6878376d-0aa9-490a-ad5b-3d2a280d9b60 # Heading
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4f4b361-9979-4326-9b1b-183620c738d7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-08-05T08:04:54+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: c6387eb8-ef0e-4fab-b83b-646e72097105 # Highlighted Word
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87835ba5-6d0a-4056-9c4e-db2f1662b1f0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-08-05T08:04:54+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: d262dbbc-2012-45ed-9636-a47a474748c7 # Description
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 82ef03c2-43ff-4492-b5f1-19a5fe8a4466
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-08-05T08:04:54+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 99e3197b-2bfc-4057-a539-f641a3fa6963 # Button Text
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 946c0e36-3cab-4188-90db-7da395e495c6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-08-05T08:04:54+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 34ed1074-e546-45b6-a50e-31783448b609 # Button URL
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb5b99fb-8e69-4fb7-a409-4e6b3e1f8da8
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Bottom CTA'
+        uid: cc55674a-1adb-4867-bbfe-5f312ad71004
+        userCondition: null
     thumbFieldKey: null
 handle: footer
 name: Footer
