@@ -6,7 +6,7 @@
 	: 'We are your trusted local guide, dedicated to showcasing the finest experiences, attractions, restaurants, and events in the area.'
 %}
 
-<section class="brand-banner-section">
+<section class="brand-banner-section ">
 	<div class="brand-banner-container">
 		<div class="brand-title-wrap">
 			<h2 class="brand-title-main">
@@ -19,31 +19,18 @@
 			</h2>
 		</div>
 
-		<div class="brand-logo-and-ribbon-wrap">
+		<div
+			class="brand-logo-and-ribbon-wrap">
 			<!-- DO SAN DIEGO Center Logo matching exact Figma design -->
 			<div class="do-san-diego-logo-large">
 				<div class="logo-do-line">
-					<img src="{{
-						getenv(
-							'PRIMARY_SITE_URL'
-						)
-						}}assets/images/do.png"
-						alt="DO" />
+					<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/do.png" alt="DO"/>
 				</div>
 				<div class="logo-subtitle">
-					<img src="{{
-						getenv(
-							'PRIMARY_SITE_URL'
-						)
-						}}assets/images/san-img.png"
-						alt="San Diego" />
+					<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/san-img.png" alt="San Diego"/>
 				</div>
 			</div>
 		</div>
 	</div>
-	<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/ribbon-txt.png"
-		alt=""
-		class="btm-abs-img"
-		aria-hidden="true"
-		loading="lazy" />
+	<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/ribbon-txt.png" alt="" class="btm-abs-img" aria-hidden="true" loading="lazy"/>
 </section>

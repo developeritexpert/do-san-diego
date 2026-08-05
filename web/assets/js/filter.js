@@ -37,6 +37,15 @@ function showLoader() {
 
 $(document).ready(function () {
   $('.filter-type, .filter-price').on('change', function () {
+    // Ensure only one filter is active at a time per group
+    if ($(this).is(':checked')) {
+      if ($(this).hasClass('filter-type')) {
+        $('.filter-type').not(this).prop('checked', false);
+      } else if ($(this).hasClass('filter-price')) {
+        $('.filter-price').not(this).prop('checked', false);
+      }
+    }
+
     showLoader();
     $.ajax({
       url: window.LISTINGS_DATA_URL,
@@ -101,7 +110,7 @@ function renderListings(items) {
       <span class="listing-tag">Listing #${i + 1}</span>
       <h3>${item.title}</h3>
       <p>${item.description}</p>
-      <a href="${item.buttonUrl || '#'}" class="cstm-btn">${item.buttonText || 'View Details'}</a>
+      <a href="${item.url || '#'}" class="cstm-btn">${item.buttonText || 'View Details'}</a>
     </div>
   </div>
   `).join('');

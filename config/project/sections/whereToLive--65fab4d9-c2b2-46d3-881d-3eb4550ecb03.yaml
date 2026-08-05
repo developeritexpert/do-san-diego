@@ -2,13 +2,11 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: b6cd0183-78d4-4ebb-beb7-cd855a4227f3 # Stay
-  -
-    uid: de0bd869-f21d-46e5-aa74-ca11132b4993 # stay entry
-handle: stays
+    uid: c00ea25c-aa8e-42a0-adce-0b0ffae4abda # What to Do
+handle: whereToLive
 maxAuthors: 1
 minAuthors: 1
-name: Stays
+name: 'Where to Live'
 previewTargets:
   -
     label: 'Primary entry page'
@@ -19,6 +17,6 @@ siteSettings:
   bdeb5182-f6c3-4403-9323-0ab9afff1795: # DO San Diego
     enabledByDefault: true
     hasUrls: true
-    template: _shared/listing-page.twig
-    uriFormat: 'stays/{slug}'
-type: channel
+    template: pages/what-to-do.twig
+    uriFormat: where-to-live
+type: single

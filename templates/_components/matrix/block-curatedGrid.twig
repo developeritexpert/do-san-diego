@@ -1,10 +1,7 @@
 {# What To Do Categories Carousel matching Figma reference image #}
 {% set isHome = craft.app.request.segments|length == 0 %}
-{% set isWhatToDoPage = (craft.app.request.getSegment(1) == 'what-to-do') %}
-{% set isWhereToEatPage = (craft.app.request.getSegment(1) == 'where-to-eat') %}
-
 {% set class = "" %}
-{% if isWhatToDoPage or isWhereToEatPage %}
+{% if not isHome %}
 	{% set bgImage = getenv('PRIMARY_SITE_URL') ~ 'assets/images/btm-ban.png' %}
 	{% set class = "what-to-do-slide-inner" %}
 {% endif %}
@@ -34,16 +31,21 @@
 {% endif %}
 
 {# Determine heading from backend #}
-{% set sectionHeading = block.heading4 ?? block.heading ?? 'What To Do' %}
+{% set sectionHeading = block.heading4 ?? block.heading4 ?? 'What To Do' %}
+
 {% if not isHome %}
 	{% if entry is defined and entry.heading is defined and entry.heading %}
+
+
 		{% set sectionHeading = entry.heading %}
+
 	{% endif %}
 {% endif %}
 
-<section class="section-what-to-do {{ class }}" {% if isWhatToDoPage or isWhereToEatPage %} style="background: url('{{ bgImage }}') no-repeat center center / cover;" {% endif %}>
+<section class="section-what-to-do {{ class }}" {% if not isHome %} style="background: url('{{ bgImage }}') no-repeat center center / cover;" {% endif %}>
 
-	<div class="what-todo-container">
+	<div
+		class="what-todo-container">
 		<!-- Section Header Row: Title on Left, Prev/Next Buttons on Right -->
 		<div class="what-todo-header">
 			<h2 class="what-todo-title">{{ sectionHeading }}</h2>
@@ -81,7 +83,7 @@
 					{% endif %}
 
 					<div class="todo-card-item">
-						<a href="javascript:void(0);" class="todo-card-inner">
+						<a href="{{ itemLink }}" class="todo-card-inner">
 							<div class="todo-media-box">
 								{% if imgUrl %}
 									<img src="{{ imgUrl }}" alt="{{ itemTitle }}" loading="lazy"/>
