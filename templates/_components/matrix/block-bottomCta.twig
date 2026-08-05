@@ -16,13 +16,12 @@
 			</p>
 		{% endif %}
 		{% if block.buttonText is defined and block.buttonText %}
-			<a href="{{ block.buttonUrl ?? '#' }}" class="btn btn-cta-pill">
+			<a href="{{ block.buttonUrl ?? '#' }}" class="btn trans-btn">
 				{{ block.buttonText|upper }}
 			</a>
 		{% else %}
-			<a href="{{ siteUrl('search') }}" class="btn btn-cta-pill">
-
-				SEARCH NOW
+			<a href="{{ siteUrl('search') }}" class="btn trans-btn">
+				View Area Listings
 			</a>
 		{% endif %}
 	</div>

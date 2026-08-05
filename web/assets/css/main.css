@@ -173,6 +173,21 @@ h6 {
   justify-content: center;
 }
 
+.what-yohgg {
+  overflow: visible !important;
+}
+
+.what-yohgg::before {
+  position: absolute;
+  content: '';
+  bottom: 75%;
+  right: 0;
+  background: url('../images/moon.png') no-repeat center;
+  background-size: contain;
+  width: 344px;
+  height: 376px;
+}
+
 /* ==========================================================================
   NeueMontreal font
    ========================================================================== */
@@ -641,6 +656,7 @@ h6 {
   will-change: transform;
   /* overflow: hidden; */
   padding-bottom: 70px;
+  /* gap: 20px; */
 }
 
 .main-wrap-slider.is-dragging {
@@ -654,6 +670,10 @@ h6 {
   box-sizing: border-box;
   padding: 0 10px;
 }
+/* .slide-wrap {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+} */
 
 .srvce-img {
   width: 100%;
@@ -664,6 +684,7 @@ h6 {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 20px;
 }
 
 .srvce-cntnt {
@@ -940,7 +961,7 @@ h6 {
 .footer-address {
   max-width: 249px;
   font-family: 'Inter';
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 1.6;
   color: #FFFFFF;
@@ -1661,6 +1682,15 @@ h6 {
   max-width: max-content;
 }
 
+.bottom-cta-section .trans-btn {
+  color: #fff;
+}
+
+.btn.trans-btn:hover {
+  background: #fff;
+  color: #ff5a4e;
+}
+
 @media (max-width: 900px) {
   .relax-promo-grid {
     grid-template-columns: 1fr;
@@ -2021,7 +2051,7 @@ h6 {
   justify-content: space-around;
   padding: 60px 30px 40px;
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .menu-list-cont {
@@ -2247,7 +2277,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 1488px;
     margin-inline: auto;
   }
@@ -2447,6 +2478,11 @@ h6 {
   .hdr-menu-link {
     font-size: 36px;
   }
+
+  .what-yohgg::before {
+    width: 300px;
+    height: 350px;
+  }
 }
 
 @media only screen and (max-width: 1499px) {
@@ -2600,6 +2636,11 @@ h6 {
   .main-wrap-slider {
     padding-bottom: 40px;
   }
+
+  .what-yohgg::before {
+    width: 270px;
+    height: 300px;
+  }
 }
 
 @media only screen and (max-width: 1399px) {
@@ -2699,6 +2740,11 @@ h6 {
 
   .main-wrap-slider {
     padding-bottom: 20px;
+  }
+
+  .what-yohgg::before {
+    width: 240px;
+    height: 260px;
   }
 }
 
@@ -3060,6 +3106,11 @@ h6 {
     padding: 40px 0 40px;
     padding-top: 0;
   }
+
+  .what-yohgg::before {
+    width: 200px;
+    height: 180px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -3289,6 +3340,11 @@ h6 {
   .savor-promo-section {
     padding: 40px 0 30px;
   }
+
+  .what-yohgg::before {
+    width: 150px;
+    height: 110px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -3515,9 +3571,9 @@ h6 {
     min-height: 170px;
   }
 
-  .brand-banner-section {
+  /* .brand-banner-section {
     padding-top: 0;
-  }
+  } */
 
   .section-where-to-stay .stay-img {
     height: 240px;
@@ -3760,6 +3816,12 @@ h6 {
 
   .header-srch-wrapper.active {
     padding: 5px 15px;
+  }
+
+  .what-yohgg::before {
+    width: 120px;
+    height: 80px;
+    bottom: 75%;
   }
 }
 
@@ -4054,5 +4116,13 @@ h6 {
 
   .savor-promo-section .absolute-txt-img {
     top: 0px;
+  }
+
+  .what-yohgg::before {
+    display: none;
+  }
+
+  .what-todo-track {
+    gap: 24px;
   }
 }

@@ -1,13 +1,13 @@
 @media (min-width: 1660px) {
-    .rate-review-sec .span-orange {
+    /* .rate-review-sec .span-orange {
         color: #000;
-    }
+    } */
 }
 
 @media (min-width: 1799px) {
-    .rate-review-sec .span-orange {
+    /* .rate-review-sec .span-orange {
         color: #fff;
-    }
+    } */
 }
 
 /* @media (min-width: 1799px) {
@@ -137,7 +137,7 @@ p {
 
 .review-slider {
     overflow: hidden;
-    padding-top: 20px;
+    padding-top: 20px !important;
 }
 
 
