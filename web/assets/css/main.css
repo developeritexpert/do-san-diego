@@ -767,7 +767,7 @@ h6 {
 }
 
 .brand-banner-section {
-  padding-bottom: 190px;
+  padding-bottom: 0px;
   /* background-color: #fff; */
 }
 
@@ -2210,6 +2210,10 @@ h6 {
   color: #F26D40;
 }
 
+.list-bn-ryt .promo-desc-inner {
+  margin-bottom: 40px;
+}
+
 @media (min-width: 576px) {
 
   .what-todo-container,
@@ -2599,7 +2603,7 @@ h6 {
 
   .brand-banner-section {
     padding: 50px 24px;
-    padding-bottom: 190px;
+    padding-bottom: 0px;
   }
 
   .section-where-to-stay {
@@ -2769,6 +2773,10 @@ h6 {
   .amenities-grid {
     gap: 14px;
   }
+
+  .list-bn-ryt .promo-desc-inner {
+    margin-bottom: 24px;
+  }
 }
 
 @media only screen and (max-width: 1299px) {
@@ -2867,7 +2875,7 @@ h6 {
   }
 
   .brand-banner-section {
-    padding-bottom: 90px;
+    padding-bottom: 0px;
   }
 
   .stay-nav-buttons .stay-nav-btn {
@@ -2972,7 +2980,7 @@ h6 {
   }
 
   .brand-banner-section {
-    padding-bottom: 30px;
+    padding-bottom: 0px;
   }
 
   .top-abs-img {
@@ -3137,6 +3145,10 @@ h6 {
 
   .coast-sec-content {
     justify-content: space-between;
+  }
+
+  .list-bn-ryt .promo-desc-inner {
+    margin-bottom: 16px;
   }
 }
 
@@ -3372,6 +3384,10 @@ h6 {
     width: 150px;
     height: 110px;
   }
+
+  .list-bn-ryt .promo-desc-inner {
+    margin-bottom: 0px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -3473,7 +3489,7 @@ h6 {
 
   .brand-banner-section {
     padding: 40px 24px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
   }
 
   .brand-title-main,
@@ -3850,6 +3866,13 @@ h6 {
     height: 80px;
     bottom: 75%;
   }
+
+  .search-container form {
+    padding: 0px !important;
+    background: unset !important;
+    border: unset !important;
+  }
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -4122,7 +4145,7 @@ h6 {
   }
 
   .hdr-ryt-div {
-    gap: 14px;
+    gap: 10px;
   }
 
   .menu-ryt-cont {
@@ -4151,5 +4174,25 @@ h6 {
 
   .what-todo-track {
     gap: 24px;
+  }
+
+  .search-cont p,
+  .temp-cont p,
+  .navbar-slide-toggler,
+  .search-cont span {
+    font-size: 13px;
+  }
+
+  .hdr-menu-link {
+    font-size: 20px;
+  }
+
+  .menu-list-cont {
+    gap: 10px;
+  }
+
+  .hdr-menu-link.active,
+  .hdr-menu-link:hover {
+    text-underline-offset: 3px;
   }
 }
