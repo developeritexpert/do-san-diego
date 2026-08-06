@@ -58,7 +58,7 @@ a {
 }
 
 .container {
-  max-width: 1240px;
+  /* max-width: 1240px; */
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -146,6 +146,7 @@ h6 {
 }
 
 .trans-btn {
+  color: #fff;
   border: 0.5px solid #FFFFFF;
   background: #FFFFFF12;
   padding: 13px 33px;
@@ -171,6 +172,21 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.what-yohgg {
+  overflow: visible !important;
+}
+
+.what-yohgg::before {
+  position: absolute;
+  content: '';
+  bottom: 75%;
+  right: 0;
+  background: url('../images/moon.png') no-repeat center;
+  background-size: contain;
+  width: 344px;
+  height: 376px;
 }
 
 /* ==========================================================================
@@ -641,6 +657,7 @@ h6 {
   will-change: transform;
   /* overflow: hidden; */
   padding-bottom: 70px;
+  /* gap: 20px; */
 }
 
 .main-wrap-slider.is-dragging {
@@ -655,6 +672,11 @@ h6 {
   padding: 0 10px;
 }
 
+/* .slide-wrap {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+} */
+
 .srvce-img {
   width: 100%;
   overflow: hidden;
@@ -664,6 +686,7 @@ h6 {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 20px;
 }
 
 .srvce-cntnt {
@@ -744,7 +767,7 @@ h6 {
 }
 
 .brand-banner-section {
-  padding-bottom: 190px;
+  padding-bottom: 0px;
   /* background-color: #fff; */
 }
 
@@ -940,7 +963,7 @@ h6 {
 .footer-address {
   max-width: 249px;
   font-family: 'Inter';
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
   line-height: 1.6;
   color: #FFFFFF;
@@ -1661,6 +1684,15 @@ h6 {
   max-width: max-content;
 }
 
+.bottom-cta-section .trans-btn {
+  color: #fff;
+}
+
+.btn.trans-btn:hover {
+  background: #fff;
+  color: #ff5a4e;
+}
+
 @media (max-width: 900px) {
   .relax-promo-grid {
     grid-template-columns: 1fr;
@@ -2021,7 +2053,7 @@ h6 {
   justify-content: space-around;
   padding: 60px 30px 40px;
   height: 100vh;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .menu-list-cont {
@@ -2178,6 +2210,10 @@ h6 {
   color: #F26D40;
 }
 
+.list-bn-ryt .promo-desc-inner {
+  margin-bottom: 40px;
+}
+
 @media (min-width: 576px) {
 
   .what-todo-container,
@@ -2185,7 +2221,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 564px;
   }
 }
@@ -2197,7 +2234,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 744px;
   }
 }
@@ -2209,7 +2247,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 984px;
   }
 }
@@ -2221,7 +2260,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 1164px;
   }
 }
@@ -2233,7 +2273,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 1344px;
     margin-inline: auto;
   }
@@ -2247,7 +2288,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 1488px;
     margin-inline: auto;
   }
@@ -2447,6 +2489,15 @@ h6 {
   .hdr-menu-link {
     font-size: 36px;
   }
+
+  .what-yohgg::before {
+    width: 300px;
+    height: 350px;
+  }
+
+  .coast-sec-left {
+    max-width: 63% !important;
+  }
 }
 
 @media only screen and (max-width: 1499px) {
@@ -2552,7 +2603,7 @@ h6 {
 
   .brand-banner-section {
     padding: 50px 24px;
-    padding-bottom: 190px;
+    padding-bottom: 0px;
   }
 
   .section-where-to-stay {
@@ -2599,6 +2650,11 @@ h6 {
 
   .main-wrap-slider {
     padding-bottom: 40px;
+  }
+
+  .what-yohgg::before {
+    width: 270px;
+    height: 300px;
   }
 }
 
@@ -2700,6 +2756,27 @@ h6 {
   .main-wrap-slider {
     padding-bottom: 20px;
   }
+
+  .what-yohgg::before {
+    width: 240px;
+    height: 260px;
+  }
+
+  .coast-sec-content {
+    gap: 30px;
+  }
+
+  .rate-review-sec h2 {
+    margin-bottom: 34px;
+  }
+
+  .amenities-grid {
+    gap: 14px;
+  }
+
+  .list-bn-ryt .promo-desc-inner {
+    margin-bottom: 24px;
+  }
 }
 
 @media only screen and (max-width: 1299px) {
@@ -2798,7 +2875,7 @@ h6 {
   }
 
   .brand-banner-section {
-    padding-bottom: 90px;
+    padding-bottom: 0px;
   }
 
   .stay-nav-buttons .stay-nav-btn {
@@ -2903,7 +2980,7 @@ h6 {
   }
 
   .brand-banner-section {
-    padding-bottom: 30px;
+    padding-bottom: 0px;
   }
 
   .top-abs-img {
@@ -3059,6 +3136,19 @@ h6 {
   .section-where-to-eat {
     padding: 40px 0 40px;
     padding-top: 0;
+  }
+
+  .what-yohgg::before {
+    width: 200px;
+    height: 180px;
+  }
+
+  .coast-sec-content {
+    justify-content: space-between;
+  }
+
+  .list-bn-ryt .promo-desc-inner {
+    margin-bottom: 16px;
   }
 }
 
@@ -3289,6 +3379,15 @@ h6 {
   .savor-promo-section {
     padding: 40px 0 30px;
   }
+
+  .what-yohgg::before {
+    width: 150px;
+    height: 110px;
+  }
+
+  .list-bn-ryt .promo-desc-inner {
+    margin-bottom: 0px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -3390,7 +3489,7 @@ h6 {
 
   .brand-banner-section {
     padding: 40px 24px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
   }
 
   .brand-title-main,
@@ -3515,9 +3614,9 @@ h6 {
     min-height: 170px;
   }
 
-  .brand-banner-section {
+  /* .brand-banner-section {
     padding-top: 0;
-  }
+  } */
 
   .section-where-to-stay .stay-img {
     height: 240px;
@@ -3663,7 +3762,7 @@ h6 {
   }
 
   .search-cont p,
-  .temp-cont p,
+  /* .temp-cont p, */
   .navbar-slide-toggler p,
   .search-cont span {
     display: none;
@@ -3761,6 +3860,19 @@ h6 {
   .header-srch-wrapper.active {
     padding: 5px 15px;
   }
+
+  .what-yohgg::before {
+    width: 120px;
+    height: 80px;
+    bottom: 75%;
+  }
+
+  .search-container form {
+    padding: 0px !important;
+    background: unset !important;
+    border: unset !important;
+  }
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -4033,7 +4145,7 @@ h6 {
   }
 
   .hdr-ryt-div {
-    gap: 14px;
+    gap: 10px;
   }
 
   .menu-ryt-cont {
@@ -4054,5 +4166,33 @@ h6 {
 
   .savor-promo-section .absolute-txt-img {
     top: 0px;
+  }
+
+  .what-yohgg::before {
+    display: none;
+  }
+
+  .what-todo-track {
+    gap: 24px;
+  }
+
+  .search-cont p,
+  .temp-cont p,
+  .navbar-slide-toggler,
+  .search-cont span {
+    font-size: 13px;
+  }
+
+  .hdr-menu-link {
+    font-size: 20px;
+  }
+
+  .menu-list-cont {
+    gap: 10px;
+  }
+
+  .hdr-menu-link.active,
+  .hdr-menu-link:hover {
+    text-underline-offset: 3px;
   }
 }
