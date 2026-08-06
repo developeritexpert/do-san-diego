@@ -13,15 +13,20 @@
 	{% set headingVal = promoItem.heading ?? null %}
 	{% set descVal = rawDesc %}
 
-	{# If no heading field exists, check if they typed an H1 in the description field #}
+	{# Check if they typed an H1 in the description field #}
+	{% set headingParts = rawDesc|split('</h1>') %}
+	{% set hasH1 = headingParts|length > 1 %}
+
 	{% if not headingVal %}
-		{% set headingParts = rawDesc|split('</h1>') %}
-		{% if headingParts|length > 1 %}
+		{% if hasH1 %}
 			{% set headingVal = headingParts[0]|striptags|trim %}
-			{% set descVal = headingParts[1]|trim %}
 		{% else %}
 			{% set headingVal = promoItem.title ?? 'Discover Hidden Gems' %}
 		{% endif %}
+	{% endif %}
+
+	{% if hasH1 %}
+		{% set descVal = headingParts[1]|trim %}
 	{% endif %}
 
 	{% set btnUrlVal = promoItem.buttonUrl ?? '#' %}

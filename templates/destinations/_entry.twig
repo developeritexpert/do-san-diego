@@ -1,6 +1,6 @@
 {% extends '_layouts/main.twig' %}
 {% block content %}
-	{% set ppBgImage = getenv('PRIMARY_SITE_URL') ~ '/assets/images/pp-bg1.png'
+	{% set ppBgImage = getenv('PRIMARY_SITE_URL') ~ 'assets/images/pp-bg1.png'
 %}
 	<section class="single-list-sec" style="background-image: url('{{ ppBgImage }}')">
 		<div class="container">
@@ -41,10 +41,10 @@
 					<div class="listing-slider-footer">
 						<div class="listing-arrows">
 							<button class="listing-prev">
-								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/left-arrow.svg" alt=""/>
+								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/left-arrow.svg" alt=""/>
 							</button>
 							<button class="listing-next">
-								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/right-arrow.svg" alt=""/>
+								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/right-arrow.svg" alt=""/>
 							</button>
 						</div>
 						<div class="listing-counter">
@@ -61,12 +61,12 @@
 			</div>
 		</div>
 		<div class="absolute-txt-img">
-		<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/DO-San-Diego.png" alt="DO San Diego" loading="lazy"/>
+		<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/DO-San-Diego.png" alt="DO San Diego" loading="lazy"/>
 	</div>
 	</section>
 
 	{% set coastBgImage = getenv('PRIMARY_SITE_URL')
-~ '/assets/images/single-list-bg2.png'
+~ 'assets/images/single-list-bg2.png'
 %}
 	<section class="coast-sec" style="background-image: url('{{ coastBgImage }}')">
 		<div class="container">
@@ -267,14 +267,14 @@
 														{% if rImg %}
 															<img src="{{ rImg.url }}" alt="{{ rName }}"/>
 														{% else %}
-															<img src="{{ getenv('PRIMARY_SITE_URL') }}/assets/images/user1.png" alt="User"/>
+															<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/user1.png" alt="User"/>
 														{% endif %}
 														<span>
 															{{ rName }}
 														</span>
 													</div>
 													<div class="review-stars">
-														<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/star.svg" alt=""/>
+														<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
 													</div>
 												</div>
 											</div>
@@ -305,11 +305,11 @@
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/user1.png" alt="Emily R."/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user1.png" alt="Emily R."/>
 													<span>Emily R.</span>
 												</div>
 												<div class="review-stars">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/star.svg" alt=""/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
 												</div>
 											</div>
 										</div>
@@ -338,11 +338,11 @@
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/user2.png" alt="Sophia Martinez"/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user2.png" alt="Sophia Martinez"/>
 													<span>Sophia Martinez</span>
 												</div>
 												<div class="review-stars">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/star.svg" alt=""/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
 												</div>
 											</div>
 										</div>
@@ -371,11 +371,11 @@
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/user1.png" alt="Emily R."/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user1.png" alt="Emily R."/>
 													<span>Emily R.</span>
 												</div>
 												<div class="review-stars">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/star.svg" alt=""/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
 												</div>
 											</div>
 										</div>
@@ -404,11 +404,11 @@
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/user2.png" alt="Sophia Martinez"/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user2.png" alt="Sophia Martinez"/>
 													<span>Sophia Martinez</span>
 												</div>
 												<div class="review-stars">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/star.svg" alt=""/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
 												</div>
 											</div>
 										</div>
@@ -437,11 +437,11 @@
 											</p>
 											<div class="review-footer">
 												<div class="review-user">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/user2.png" alt="Sophia Martinez"/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/user2.png" alt="Sophia Martinez"/>
 													<span>Sophia Martinez</span>
 												</div>
 												<div class="review-stars">
-													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/star.svg" alt=""/>
+													<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/star.svg" alt=""/>
 												</div>
 											</div>
 										</div>
@@ -452,10 +452,10 @@
 
 						<div class="review-arrows">
 							<button class="review-prev">
-								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/o-left-arrow.svg" alt=""/>
+								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/o-left-arrow.svg" alt=""/>
 							</button>
 							<button class="review-next">
-								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/o-right-arrow.svg" alt=""/>
+								<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/o-right-arrow.svg" alt=""/>
 							</button>
 						</div>
 					</div>
@@ -473,7 +473,7 @@
 							{% if entry.address %}
 								<li>
 									<span class="info-icon">
-										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/loc.svg" alt=""/>
+										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/loc.svg" alt=""/>
 									</span>
 									<p>
 										<span class="pp-span">Address:</span>
@@ -484,7 +484,7 @@
 							{% if entry.phoneNumber %}
 								<li>
 									<span class="info-icon">
-										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/phone.svg" alt=""/>
+										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/phone.svg" alt=""/>
 									</span>
 									<a href="tel:{{ entry.phoneNumber|replace({
 																																	' ': '',
@@ -500,7 +500,7 @@
 							{% if entry.email %}
 								<li>
 									<span class="info-icon">
-										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/mail.svg" alt=""/>
+										<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/mail.svg" alt=""/>
 									</span>
 									<a href="mailto:{{ entry.email }}">
 										<span class="pp-span">Email:</span>
