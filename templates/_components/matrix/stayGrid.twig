@@ -8,15 +8,15 @@
 
 	<div class="stay-img">
 		{% if (craft.app.request.segments|length) == 0 %}
-			<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/stay-img.png"/>
+			<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/stay-img.png"/>
 		{% else %}
-			<img src="{{ getenv('PRIMARY_SITE_URL') }}/assets/images/phad.png" class="not-homepage"/>
+			<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/phad.png" class="not-homepage"/>
 		{% endif %}
 
-		<img src="{{ getenv('PRIMARY_SITE_URL') }}/assets/images/tree-img.png" class="top-abs-img"/>
+		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/tree-img.png" class="top-abs-img"/>
 
 		<div class="absolute-txt-img">
-			<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}/assets/images/DO-San-Diego-lyt.png" alt="DO San Diego" loading="lazy"/>
+			<img src="{{ getenv( 'PRIMARY_SITE_URL' ) }}assets/images/DO-San-Diego-lyt.png" alt="DO San Diego" loading="lazy"/>
 		</div>
 	</div>
 
