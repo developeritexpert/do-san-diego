@@ -217,8 +217,8 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 220px;
-  height: 220px;
+  width: 334px;
+  height: 334px;
   background: url("../images/half-circle.png") no-repeat bottom right / contain;
   pointer-events: none;
 }
@@ -323,13 +323,13 @@ body {
 }
 
 .listing-slide {
-  width: 33%;
+  width: 32%;
   flex-shrink: 0;
   transition: width 0.35s ease;
 }
 
 .listing-slide.active {
-  width: 67%;
+  width: 66%;
 }
 
 .listing-slide img {
@@ -402,8 +402,14 @@ body {
 }
 
 /* ---- */
-.coast-sec {
+/* .coast-sec {
   background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-bottom: 90px;
+} */
+.coast-sec {
+  background-size: 100% 54%;
   background-position: top;
   background-repeat: no-repeat;
   padding-bottom: 90px;
@@ -623,6 +629,10 @@ body {
   max-width: 900px;
 }
 
+.review-slider .swiper-slide {
+  height: auto;
+}
+
 .review-card {
   background: #fff;
   border-radius: 12px;
@@ -711,6 +721,7 @@ body {
 .review-next {
   width: 45px;
   height: 45px;
+  background: transparent;
   border-radius: 50%;
   border: 1px solid #f0d4c8;
   display: flex;
@@ -738,8 +749,8 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 220px;
-  height: 220px;
+  width: 334px;
+  height: 334px;
   background: url("../images/half-circle-2.png") left bottom / contain no-repeat;
   z-index: 0;
 }
@@ -866,7 +877,11 @@ body {
 }
 
 .do-pb {
-  padding-bottom: 100px;
+  padding-bottom: 136px;
+}
+
+.list-banner.do-pb:not(.what-to-sec-baaner) {
+  padding-bottom: 111px;
 }
 
 .listing-container {
@@ -878,6 +893,13 @@ body {
 
 .list-banner {
   background: url("../images/banner-image.png") no-repeat center center / cover;
+}
+
+.list-banner.what-to-sec-baaner {
+  background-image: url('https://coral-tapir-490772.hostingersite.com/assets/images/pp-bg1.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .list-bn-ryt h1 {
@@ -906,8 +928,8 @@ body {
 
 .list-bn-ryt {
   width: 100%;
-  max-width: 94%;
-  margin-left: auto;
+  /* max-width: 94%;
+  margin-left: auto; */
 }
 
 .list-bn-ryt a {
@@ -932,7 +954,7 @@ body {
 
 .event-section .listing-container {
   border-top: 1px solid #ffffff4d;
-  padding: 70px 0 120px;
+  padding: 70px 0 105px;
   padding-inline: 24px !important;
 }
 
@@ -1046,9 +1068,9 @@ body {
   content: "";
   position: absolute;
   bottom: 10%;
-  left: -6%;
-  width: 200px;
-  height: 200px;
+  left: -9%;
+  width: 334px;
+  height: 334px;
   background: url("../images/cricl.svg") no-repeat center center;
   background-size: contain;
   pointer-events: none;
@@ -1128,7 +1150,7 @@ body {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 24px;
 }
 
 .listing-card {
@@ -1234,7 +1256,7 @@ body {
   top: 10px;
   left: 100%;
   width: 100%;
-  height: 150px;
+  height: 367px;
   background: url("../images/linee-image.svg") no-repeat center / contain;
   pointer-events: none;
   animation: moveImage 12s linear infinite;
@@ -1343,7 +1365,8 @@ body {
     padding-top: 160px;
   }
 
-  .do-pb {
+  .do-pb,
+  .list-banner.do-pb:not(.what-to-sec-baaner) {
     padding-bottom: 90px;
   }
 
@@ -1442,6 +1465,10 @@ body {
     font-size: 16px;
   }
 
+  .filter-list {
+    gap: 18px;
+  }
+
   .listing-details h3 {
     font-size: 25px;
   }
@@ -1456,6 +1483,15 @@ body {
 
   .pp-cookies {
     padding-bottom: 210px;
+  }
+
+  .rate-review-sec h2 {
+    margin-bottom: 30px;
+  }
+
+  .location-badge {
+    max-width: 240px;
+    padding: 12px 20px;
   }
 }
 
@@ -1533,9 +1569,9 @@ body {
     gap: 20px;
   }
 
-  .amenities-grid {
+  /* .amenities-grid {
     gap: 0px;
-  }
+  } */
 
   .single-list-sec {
     padding-top: 100px;
@@ -1595,7 +1631,7 @@ body {
 
   .rate-review-sec h2 {
     font-size: 45px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
   }
 
   .review-card {
@@ -1624,7 +1660,7 @@ body {
   }
 
   .review-arrows {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .coast-sec-content {
@@ -1704,7 +1740,8 @@ body {
     padding-top: 120px;
   }
 
-  .do-pb {
+  .do-pb,
+  .list-banner.do-pb:not(.what-to-sec-baaner) {
     padding-bottom: 70px;
   }
 
@@ -1723,6 +1760,10 @@ body {
 
   .find-section {
     padding: 60px 0;
+  }
+
+  .amenity-item {
+    align-items: baseline;
   }
 }
 
@@ -1762,11 +1803,15 @@ body {
 
   .coast-sec-right,
   .coast-sec-left {
-    max-width: 100%;
+    max-width: 100% !important;
+  }
+
+  .coast-sec-right {
+    position: static;
   }
 
   .single-list-sec {
-    padding-top: 90px;
+    /* padding-top: 90px; */
     padding-bottom: 30px;
   }
 
@@ -1828,7 +1873,7 @@ body {
 
   .rate-review-sec h2 {
     font-size: 45px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
   }
 
   .quote-icon::before {
@@ -1842,9 +1887,7 @@ body {
     padding-top: 12px;
   }
 
-  .review-arrows {
-    margin-top: 10px;
-  }
+
 
   .coast-sec-content {
     gap: 25px;
@@ -1988,15 +2031,20 @@ body {
   .find-wrpper h2 {
     font-size: 48px;
   }
+
   .event-wrper h2 {
     font-size: 40px;
-}
+  }
+
+  .coast-sec {
+    background-size: 100% 20%;
+  }
 }
 
 @media (max-width: 767px) {
   .rate-review-sec h2 {
     font-size: 40px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
   }
 
   /* .listing-container {
@@ -2087,7 +2135,7 @@ body {
   }
 
   .single-list-sec {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     padding-bottom: 30px;
   }
 
@@ -2175,10 +2223,6 @@ body {
 
   .review-footer {
     padding-top: 12px;
-  }
-
-  .review-arrows {
-    margin-top: 10px;
   }
 
   .coast-sec-content {
@@ -2285,15 +2329,20 @@ body {
   }
 
   .coast-sec-left p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .location-info li {
     font-size: 15px;
   }
-   .find-wrpper h2 {
+
+  .find-wrpper h2 {
     font-size: 40px;
-}
+  }
+
+  .filter-list {
+    gap: 16px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -2308,7 +2357,7 @@ body {
   }
 
   .do-pt {
-    padding-top: 80px;
+    padding-top: 120px;
   }
 
   .list-bn-ldt img {
@@ -2324,7 +2373,8 @@ body {
     margin-top: 2px;
   }
 
-  .do-pb {
+  .do-pb,
+  .list-banner.do-pb:not(.what-to-sec-baaner) {
     padding-bottom: 50px;
   }
 
@@ -2448,7 +2498,7 @@ body {
   }
 
   .single-list-sec {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     padding-bottom: 30px;
   }
 
@@ -2505,7 +2555,7 @@ body {
 
   .rate-review-sec h2 {
     font-size: 30px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
   }
 
   .review-card {
@@ -2531,10 +2581,6 @@ body {
 
   .review-footer {
     padding-top: 12px;
-  }
-
-  .review-arrows {
-    margin-top: 10px;
   }
 
   .coast-sec-content {
@@ -2657,5 +2703,17 @@ body {
 
   .rate-review-sec {
     padding-top: 25px;
+  }
+
+  .filter-list {
+    gap: 10px;
+  }
+
+  .quote-icon {
+    left: 16px;
+  }
+
+  .related-cta {
+    margin-top: 30px;
   }
 }
