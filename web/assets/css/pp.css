@@ -629,6 +629,10 @@ body {
   max-width: 900px;
 }
 
+.review-slider .swiper-slide {
+  height: auto;
+}
+
 .review-card {
   background: #fff;
   border-radius: 12px;
@@ -1618,7 +1622,7 @@ body {
 
   .rate-review-sec h2 {
     font-size: 45px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
   }
 
   .review-card {
@@ -1647,7 +1651,7 @@ body {
   }
 
   .review-arrows {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 
   .coast-sec-content {
@@ -1786,11 +1790,15 @@ body {
 
   .coast-sec-right,
   .coast-sec-left {
-    max-width: 100%;
+    max-width: 100% !important;
+  }
+
+  .coast-sec-right {
+    position: static;
   }
 
   .single-list-sec {
-    padding-top: 90px;
+    /* padding-top: 90px; */
     padding-bottom: 30px;
   }
 
@@ -1852,7 +1860,7 @@ body {
 
   .rate-review-sec h2 {
     font-size: 45px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
   }
 
   .quote-icon::before {
@@ -1866,9 +1874,7 @@ body {
     padding-top: 12px;
   }
 
-  .review-arrows {
-    margin-top: 10px;
-  }
+
 
   .coast-sec-content {
     gap: 25px;
@@ -2016,15 +2022,16 @@ body {
   .event-wrper h2 {
     font-size: 40px;
   }
+
   .coast-sec {
     background-size: 100% 20%;
-}
+  }
 }
 
 @media (max-width: 767px) {
   .rate-review-sec h2 {
     font-size: 40px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
   }
 
   /* .listing-container {
@@ -2115,7 +2122,7 @@ body {
   }
 
   .single-list-sec {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     padding-bottom: 30px;
   }
 
@@ -2203,10 +2210,6 @@ body {
 
   .review-footer {
     padding-top: 12px;
-  }
-
-  .review-arrows {
-    margin-top: 10px;
   }
 
   .coast-sec-content {
@@ -2313,7 +2316,7 @@ body {
   }
 
   .coast-sec-left p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .location-info li {
@@ -2482,7 +2485,7 @@ body {
   }
 
   .single-list-sec {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     padding-bottom: 30px;
   }
 
@@ -2539,7 +2542,7 @@ body {
 
   .rate-review-sec h2 {
     font-size: 30px;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
   }
 
   .review-card {
@@ -2565,10 +2568,6 @@ body {
 
   .review-footer {
     padding-top: 12px;
-  }
-
-  .review-arrows {
-    margin-top: 10px;
   }
 
   .coast-sec-content {
@@ -2695,5 +2694,13 @@ body {
 
   .filter-list {
     gap: 10px;
+  }
+
+  .quote-icon {
+    left: 16px;
+  }
+
+  .related-cta {
+    margin-top: 30px;
   }
 }
