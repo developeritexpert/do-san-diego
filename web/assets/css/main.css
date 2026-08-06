@@ -58,7 +58,7 @@ a {
 }
 
 .container {
-  max-width: 1240px;
+  /* max-width: 1240px; */
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -146,6 +146,7 @@ h6 {
 }
 
 .trans-btn {
+  color: #fff;
   border: 0.5px solid #FFFFFF;
   background: #FFFFFF12;
   padding: 13px 33px;
@@ -670,6 +671,7 @@ h6 {
   box-sizing: border-box;
   padding: 0 10px;
 }
+
 /* .slide-wrap {
   flex: 0 0 auto;
   box-sizing: border-box;
@@ -2215,7 +2217,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 564px;
   }
 }
@@ -2227,7 +2230,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 744px;
   }
 }
@@ -2239,7 +2243,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 984px;
   }
 }
@@ -2251,7 +2256,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 1164px;
   }
 }
@@ -2263,7 +2269,8 @@ h6 {
   .stay-container,
   .bottom-cta-container,
   .footer-container,
-  .listing-container {
+  .listing-container,
+  .container {
     max-width: 1344px;
     margin-inline: auto;
   }
@@ -2482,6 +2489,10 @@ h6 {
   .what-yohgg::before {
     width: 300px;
     height: 350px;
+  }
+
+  .coast-sec-left {
+    max-width: 63% !important;
   }
 }
 
@@ -2745,6 +2756,18 @@ h6 {
   .what-yohgg::before {
     width: 240px;
     height: 260px;
+  }
+
+  .coast-sec-content {
+    gap: 30px;
+  }
+
+  .rate-review-sec h2 {
+    margin-bottom: 34px;
+  }
+
+  .amenities-grid {
+    gap: 14px;
   }
 }
 
@@ -3110,6 +3133,10 @@ h6 {
   .what-yohgg::before {
     width: 200px;
     height: 180px;
+  }
+
+  .coast-sec-content {
+    justify-content: space-between;
   }
 }
 
@@ -3719,7 +3746,7 @@ h6 {
   }
 
   .search-cont p,
-  .temp-cont p,
+  /* .temp-cont p, */
   .navbar-slide-toggler p,
   .search-cont span {
     display: none;
