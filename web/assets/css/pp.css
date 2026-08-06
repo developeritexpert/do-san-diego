@@ -1484,6 +1484,15 @@ body {
   .pp-cookies {
     padding-bottom: 210px;
   }
+
+  .rate-review-sec h2 {
+    margin-bottom: 30px;
+  }
+
+  .location-badge {
+    max-width: 240px;
+    padding: 12px 20px;
+  }
 }
 
 @media (max-width: 1299px) {
@@ -1560,9 +1569,9 @@ body {
     gap: 20px;
   }
 
-  .amenities-grid {
+  /* .amenities-grid {
     gap: 0px;
-  }
+  } */
 
   .single-list-sec {
     padding-top: 100px;
@@ -1751,6 +1760,10 @@ body {
 
   .find-section {
     padding: 60px 0;
+  }
+
+  .amenity-item {
+    align-items: baseline;
   }
 }
 
