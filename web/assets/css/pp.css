@@ -855,7 +855,8 @@ body {
   text-decoration: none;
   padding: 15px 40px;
   border-radius: 120px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
@@ -2342,6 +2343,10 @@ body {
 
   .filter-list {
     gap: 16px;
+  }
+
+  .see-all-btn {
+    font-size: 16px;
   }
 }
 
