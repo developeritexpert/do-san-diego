@@ -5,88 +5,101 @@
 {% set bgImg = getenv('PRIMARY_SITE_URL') ~ 'assets/images/pp-bg2.png' %}
 
 {% block content %}
-<section class="pp-sec" style="background-image: url('{{ bgImg }}'); background-size: cover; background-position: center; min-height: 100vh; padding-top: 150px; padding-bottom: 80px; position: relative;">
-    <div class="container" style="position: relative; z-index: 2;">
-        <div class="pp-title text-center" style="margin-bottom: 40px;">
-            <h1 style="font-size: 3.5rem; color: #1a1a1a; margin-bottom: 10px;">Search <span class="span-orange" style="color: #ff6b35;">Results</span></h1>
-            <p style="color: #555; font-size: 1.2rem;">Find the best of San Diego</p>
-        </div>
+	<section class="pp-sec" style="background-image: url('{{ bgImg }}'); background-size: cover; background-position: center; min-height: 100vh; padding-top: 150px; padding-bottom: 80px; position: relative;">
+		<div class="container" style="position: relative; z-index: 2;">
+			<div class="pp-title text-center" style="margin-bottom: 40px;">
+				<h1 style="font-size: 3.5rem; color: #1a1a1a; margin-bottom: 10px;">Search
+					<span class="span-orange" style="color: #ff6b35;">Results</span>
+				</h1>
+				<p style="color: #555; font-size: 1.2rem;">Find the best of San Diego</p>
+			</div>
 
-        <div class="search-bar-container" style="max-width: 650px; margin: 0 auto 60px auto;">
-            <form action="{{ url('search') }}" method="get" style="display: flex; gap: 10px; background: white; padding: 10px; border-radius: 50px; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
-                <input type="search" name="q" value="{{ searchQuery }}" placeholder="Search for destinations, hotels, food..." style="flex: 1; padding: 15px 25px; border-radius: 30px; border: none; font-size: 1.1rem; outline: none; background: transparent;">
-                <button type="submit" style="padding: 15px 35px; background-color: #ff6b35; color: white; border: none; border-radius: 30px; cursor: pointer; font-size: 1.1rem; font-weight: 600; box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3); transition: transform 0.2s ease;">Search</button>
-            </form>
-        </div>
+			<div class="search-bar-container" style="max-width: 650px; margin: 0 auto 60px auto;">
+				<form action="{{ url('search') }}" method="get" style="display: flex; gap: 10px; background: white; padding: 10px; border-radius: 50px; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
+					<input type="search" name="q" value="{{ searchQuery }}" placeholder="Search for destinations, hotels, food..." style="flex: 1; padding: 15px 25px; border-radius: 30px; border: none; font-size: 1.1rem; outline: none; background: transparent;">
+					<button type="submit" style="padding: 15px 35px; background-color: #ff6b35; color: white; border: none; border-radius: 30px; cursor: pointer; font-size: 1.1rem; font-weight: 600; box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3); transition: transform 0.2s ease;">Search</button>
+				</form>
+			</div>
 
-        <div class="search-results-list" style="max-width: 900px; margin: 0 auto;">
-            {% if searchQuery %}
-                {% if results|length %}
-                    <div style="background: rgba(255, 255, 255, 0.9); padding: 15px 25px; border-radius: 12px; margin-bottom: 30px; display: inline-block;">
-                        <p style="margin: 0; font-size: 1.1rem; color: #555;">Found <strong>{{ results|length }}</strong> result(s) for <strong style="color: #1a1a1a;">"{{ searchQuery }}"</strong></p>
-                    </div>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 25px;">
-                        {% for entry in results %}
-                            <div class="search-card" style="background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 15px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                                    <h3 style="font-size: 1.7rem; margin: 0; color: #1a1a1a; font-weight: 700;">
-                                        <a href="{{ entry.url }}" style="color: inherit; text-decoration: none;">
-                                            {{ entry.title }}
-                                        </a>
-                                    </h3>
-                                    <span style="background: #fff0e6; color: #ff6b35; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">
-                                        {{ entry.section.name ?? 'Result' }}
-                                    </span>
-                                </div>
-                                
-                                {% set layout = entry.getFieldLayout() %}
-                                {% set snippet = '' %}
-                                {% if layout %}
-                                    {% if layout.getFieldByHandle('description') %}
-                                        {% set snippet = entry.description %}
-                                    {% elseif layout.getFieldByHandle('plainText') %}
-                                        {% set snippet = entry.plainText %}
-                                    {% elseif layout.getFieldByHandle('richText') %}
-                                        {% set snippet = entry.richText|striptags|truncate(250) %}
-                                    {% endif %}
-                                {% endif %}
-                                
-                                {% if snippet %}
-                                    <p style="color: #666; font-size: 1.05rem; line-height: 1.6; margin: 0;">{{ snippet|striptags|truncate(250) }}</p>
-                                {% endif %}
-                                
-                                <div style="margin-top: 5px;">
-                                    <a href="{{ entry.url }}" style="color: #ff6b35; font-weight: 700; text-decoration: none; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 5px;">
-                                        Read More <span>&rarr;</span>
-                                    </a>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% else %}
-                    <div style="text-align: center; padding: 60px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                        <div style="font-size: 4rem; margin-bottom: 20px;">🔍</div>
-                        <h4 style="font-size: 1.8rem; color: #1a1a1a; margin-bottom: 15px;">No Results Found</h4>
-                        <p style="color: #666; font-size: 1.1rem;">We couldn't find anything matching <strong>"{{ searchQuery }}"</strong>.<br>Please try again with different keywords or browse our categories.</p>
-                    </div>
-                {% endif %}
-            {% else %}
-                <div style="text-align: center; padding: 60px 20px; background: rgba(255, 255, 255, 0.7); border-radius: 20px; backdrop-filter: blur(5px);">
-                    <div style="font-size: 3rem; margin-bottom: 15px; opacity: 0.7;">✨</div>
-                    <p style="color: #555; font-size: 1.2rem; margin: 0;">Enter a search term above to find the best places in San Diego.</p>
-                </div>
-            {% endif %}
-        </div>
-    </div>
-    
-    <img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/DO-San-Diego.png" alt="" style="position: absolute; top: 20%; left: 5%; max-width: 200px; opacity: 0.1; pointer-events: none;" />
-</section>
+			<div class="search-results-list" style="max-width: 900px; margin: 0 auto;">
+				{% if searchQuery %}
+					{% if results|length %}
+						<div style="background: rgba(255, 255, 255, 0.9); padding: 15px 25px; border-radius: 12px; margin-bottom: 30px; display: inline-block;">
+							<p style="margin: 0; font-size: 1.1rem; color: #555;">Found
+								<strong>{{ results|length }}</strong>
+								result(s) for
+								<strong style="color: #1a1a1a;">"{{ searchQuery }}"</strong>
+							</p>
+						</div>
 
-<style>
-    .search-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0,0,0,0.1) !important;
-    }
-</style>
+						<div style="display: flex; flex-direction: column; gap: 25px;">
+							{% for entry in results %}
+								<div class="search-card" style="background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); display: flex; flex-direction: column; gap: 15px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+									<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+										<h3 style="font-size: 1.7rem; margin: 0; color: #1a1a1a; font-weight: 700;">
+											<a href="{{ entry.url }}" style="color: inherit; text-decoration: none;">
+												{{ entry.title }}
+											</a>
+										</h3>
+										<span style="background: #fff0e6; color: #ff6b35; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600;">
+											{{ entry.section.name ?? 'Result' }}
+										</span>
+									</div>
+
+									{% set layout = entry.getFieldLayout() %}
+									{% set snippet = '' %}
+									{% if layout %}
+										{% if layout.getFieldByHandle('description') %}
+											{% set snippet = entry.description %}
+										{% elseif layout.getFieldByHandle('plainText') %}
+											{% set snippet = entry.plainText %}
+										{% elseif layout.getFieldByHandle('richText') %}
+											{% set snippet = entry.richText|striptags|truncate(250) %}
+										{% endif %}
+									{% endif %}
+
+									{% if snippet %}
+										<p style="color: #666; font-size: 1.05rem; line-height: 1.6; margin: 0;">{{ snippet|striptags|truncate(250) }}</p>
+									{% endif %}
+
+									<div style="margin-top: 5px;">
+										<a href="{{ entry.url }}" style="color: #ff6b35; font-weight: 700; text-decoration: none; font-size: 1.05rem; display: inline-flex; align-items: center; gap: 5px;">
+											Read More
+											<span>&rarr;</span>
+										</a>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					{% else %}
+						<div style="text-align: center; padding: 60px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+							<div style="font-size: 4rem; margin-bottom: 20px;">🔍</div>
+							<h4 style="font-size: 1.8rem; color: #1a1a1a; margin-bottom: 15px;">No Results Found</h4>
+							<p style="color: #666; font-size: 1.1rem;">We couldn't find anything matching
+								<strong>"{{ searchQuery }}"</strong>.<br>Please try again with different keywords or browse our categories.</p>
+						</div>
+					{% endif %}
+				{% else %}
+					<div style="text-align: center; padding: 60px 20px; background: rgba(255, 255, 255, 0.7); border-radius: 20px; backdrop-filter: blur(5px);">
+						<div style="font-size: 3rem; margin-bottom: 15px; opacity: 0.7;">✨</div>
+						<p style="color: #555; font-size: 1.2rem; margin: 0;">Enter a search term above to find the best places in San Diego.</p>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+
+		<img src="{{ getenv('PRIMARY_SITE_URL') }}assets/images/DO-San-Diego.png" alt="" style="position: absolute; top: 20%; left: 5%; max-width: 200px; opacity: 0.1; pointer-events: none;"/>
+	</section>
+
+	{% include '_components/matrix/stayGrid.twig' with {
+		block: { heading: 'Where to Eat', buttonUrl: siteUrl('restaurants') }
+	} %}
+
+
+	<style>
+		.search-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+		}
+	</style>
 {% endblock %}
