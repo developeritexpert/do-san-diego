@@ -179,6 +179,44 @@ fieldLayouts:
         name: 'Find you perfect destination'
         uid: 73b1e2dd-c6f7-4550-838c-92f2666ebf72
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-08-07T12:00:00+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a12a9c43-83b9-4f9d-985f-0d320c3ad07f
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b82c3c6f-6c17-48f5-9b2f-2f6a6c4c3b1a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-08-07T12:00:00+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 909bd986-61d4-47ab-b972-c96541637298
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d52b1b3a-9e1d-48d6-9f3e-5b1b4c3e8a1f
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Categories & Details'
+        uid: a1b2c3d4-e5f6-4a1b-9c2d-3e4f5a6b7c8d
+        userCondition: null
     thumbFieldKey: null
 handle: stayEntry
 hasTitleField: true
