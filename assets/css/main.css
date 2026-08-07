@@ -367,7 +367,7 @@ h6 {
   color: #fff;
   padding: 6px 18px;
   border-radius: var(--radius-pill);
-  font-size: 0.85rem;
+  font-size: 18px;
   font-weight: 500;
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -963,7 +963,7 @@ h6 {
 .footer-address {
   max-width: 249px;
   font-family: 'Inter';
-  font-weight: 400;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.6;
   color: #FFFFFF;
@@ -1676,7 +1676,8 @@ h6 {
 }
 
 .relax-btn-pill,
-.bottom-cta-section .trans-btn {
+.bottom-cta-section .trans-btn,
+.promo-content-col .promo-card-box .trans-btn {
   font-family: 'Inter';
   font-weight: 500;
   font-size: 18px;
@@ -1834,7 +1835,7 @@ h6 {
   background: rgba(255, 255, 255, 0.95);
   color: #000;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 600;
   padding: 4px 12px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -2656,6 +2657,10 @@ h6 {
     width: 270px;
     height: 300px;
   }
+
+  .pill-tag {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 1399px) {
@@ -2708,7 +2713,8 @@ h6 {
   }
 
   .relax-btn-pill,
-  .bottom-cta-section .trans-btn {
+  .bottom-cta-section .trans-btn,
+  .promo-content-col .promo-card-box .trans-btn  {
     font-size: 16px;
   }
 
@@ -2776,6 +2782,10 @@ h6 {
 
   .list-bn-ryt .promo-desc-inner {
     margin-bottom: 24px;
+  }
+
+  .pill-tag {
+    font-size: 14px;
   }
 }
 
@@ -3440,7 +3450,8 @@ h6 {
   }
 
   .relax-btn-pill,
-  .bottom-cta-section .trans-btn {
+  .bottom-cta-section .trans-btn,
+  .promo-content-col .promo-card-box .trans-btn  {
     font-size: 14px;
   }
 
